@@ -16,7 +16,7 @@ For links tapped in Chrome to **open Ghal Bol directly** (not only “Open with�
 
 **URL:** `https://ghalbol.com/.well-known/assetlinks.json` (and `www.ghalbol.com` — same file via Hosting)
 
-**In repo:** `web/.well-known/assetlinks.json` (holds the release signing fingerprint). Deploy with [WEB_SITE.md](WEB_SITE.md). Get the SHA-256 from Play Console → App integrity → App signing key certificate.
+**In repo:** `sites/ghalbol/static/.well-known/assetlinks.json` (holds the release signing fingerprint). Deploy with [WEB_SITE.md](WEB_SITE.md). Get the SHA-256 from Play Console → App integrity → App signing key certificate.
 
 Example (replace SHA-256 cert fingerprints if template):
 
@@ -47,7 +47,7 @@ Print a fingerprint (and a debug package JSON stub):
 ./scripts/print_android_assetlinks_sha.sh /path/to.jks upload
 ```
 
-Paste the SHA into `web/.well-known/assetlinks.json` as a second target for `com.ghalbol.debug` when testing App Links on sideload builds.
+Paste the SHA into `sites/ghalbol/static/.well-known/assetlinks.json` as a second target for `com.ghalbol.debug` when testing App Links on sideload builds.
 
 ## 3. Verify on device
 
@@ -65,7 +65,7 @@ If verification fails, Android keeps opening the browser until `assetlinks.json`
 | **Chrome / Samsung Internet** (address bar browser) | `ghalbol://` link works when Play app installed | Copy app link → paste in Ghal Bol |
 | **WhatsApp / Instagram / in-app WebView** | **Does not work** — WebView cannot launch `ghalbol://` or `intent://` (toast: “App not installed…”) | ⋮ → **Open in Chrome**, or copy app link → paste in app |
 
-This is **not** “friend didn’t install Ghal Bol.” Same APK from Play; different **browser shell**. See `web/index.html` and the banner on the invite page when UA is embedded.
+This is **not** “friend didn’t install Ghal Bol.” Same APK from Play; different **browser shell**. See `sites/ghalbol/static/index.html` and the banner on the invite page when UA is embedded.
 
 **Verified HTTPS App Links:** If `pm get-app-links com.ghalbol` shows `ghalbol.com: verified`, tapping `https://ghalbol.com/connect/…` in **Chrome** should open the app directly (no web page). If the web page appears, the link was opened in an in-app browser or App Links are not verified on that device.
 

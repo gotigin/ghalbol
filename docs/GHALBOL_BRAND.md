@@ -50,7 +50,8 @@ ghalbol-workspace/          # Brand root
 ├── apps/                   # Products: apps/ghalbol/ (Ghal Bol chat) today
 │   └── ghalbol/            # App crate `ghalbol_app`: src/, resources/, env/, scripts/
 ├── tools/                  # Per-product dev tooling: tools/<product>-dev, tools/<product>-windows-dev
-├── dist/                   # Build outputs: dist/windows/, dist/windows-dev/ (Linux tarball → web/downloads/)
+├── dist/                   # Build outputs: dist/windows/, dist/windows-dev/ (Linux tarball → sites/ghalbol/static/downloads/)
+├── sites/                  # Public websites (ghalbol.com under sites/ghalbol/)
 └── scripts/                # Shared build/packaging tooling
 ```
 

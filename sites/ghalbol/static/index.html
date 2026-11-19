@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GhalBol — Ghal Bol chat</title>
+  <meta name="description" content="GhalBol is the communication brand. Ghal Bol is the encrypted chat product — 1:1 text and voice/video calls, no phone number, device-owned identity.">
+  <link rel="canonical" href="https://ghalbol.com/">
+  <link rel="icon" type="image/png" href="/media/icon.png">
+  <link rel="apple-touch-icon" href="/media/icon.png">
+  <meta property="og:title" content="GhalBol — Ghal Bol">
+  <meta property="og:description" content="GhalBol brand · Ghal Bol chat — peer-to-peer encrypted messaging and calls.">
+  <meta property="og:url" content="https://ghalbol.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://ghalbol.com/media/feature.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --surface: #eef2f8;
+      --hub: #e4eaf3;
+      --panel: #ffffff;
+      --ink: #0b1220;
+      --muted: #5a6b7d;
+      --faint: #7a8b9c;
+      --border: #c5d0de;
+      --primary: #0183fb;
+      --primary-hover: #0170d8;
+      --navy: #10236d;
+      --online: #01c98a;
+      --danger-bg: #fde8e6;
+      --danger-ink: #5c1a16;
+      --display: "Outfit", system-ui, sans-serif;
+      --text: "Source Sans 3", system-ui, sans-serif;
+      --max: 1080px;
+      --narrow: 640px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--text);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(1, 131, 251, 0.16), transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, rgba(16, 35, 109, 0.10), transparent 50%),
+        linear-gradient(180deg, var(--surface) 0%, var(--hub) 100%);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+    a { color: var(--primary); }
+    a:hover { color: var(--primary-hover); }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 20px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--navy);
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.01em;
+    }
+    .brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: block;
+    }
+    .topnav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+    .ghost {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--border);
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+    .ghost:hover { background: var(--panel); color: var(--navy); }
+    .shell {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px 72px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 36px;
+      align-items: center;
+      padding: 36px 0 56px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      font-family: var(--display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: var(--display);
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+    }
+    .lede {
+      margin: 0 0 24px;
+      font-size: 1.2rem;
+      line-height: 1.45;
+      color: var(--muted);
+      max-width: 34rem;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 18px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border: 0;
+      font-family: var(--text);
+    }
+    .btn.primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn.primary:hover { background: var(--primary-hover); color: #fff; }
+    .btn.secondary {
+      background: var(--panel);
+      color: var(--ink);
+      border: 1px solid var(--border);
+    }
+    .btn.secondary:hover { color: var(--navy); }
+    .btn.block {
+      display: block;
+      width: 100%;
+      margin: 12px 0;
+    }
+    .hero-visual {
+      position: relative;
+      min-height: 280px;
+    }
+    .hero-visual .feature {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+      box-shadow: 0 24px 60px rgba(16, 35, 109, 0.18);
+      border: 1px solid rgba(197, 208, 222, 0.8);
+    }
+    .hero-visual .mark {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      background: var(--panel);
+      padding: 8px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 28px rgba(11, 18, 32, 0.12);
+    }
+    section.band {
+      margin: 0 0 28px;
+      padding: 36px 28px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(197, 208, 222, 0.85);
+    }
+    section.band.alt {
+      background: linear-gradient(160deg, rgba(16, 35, 109, 0.94), rgba(1, 131, 251, 0.88));
+      border: 0;
+      color: #f9f9fc;
+    }
+    section.band.alt .eyebrow { color: #b7dcff; }
+    section.band.alt h2 { color: #fff; }
+    section.band.alt p, section.band.alt li { color: rgba(249, 249, 252, 0.88); }
+    h2 {
+      margin: 0 0 12px;
+      font-family: var(--display);
+      font-size: clamp(1.55rem, 3vw, 2.1rem);
+      line-height: 1.15;
+      color: var(--navy);
+    }
+    .band p {
+      margin: 0 0 12px;
+      line-height: 1.5;
+      color: var(--muted);
+      max-width: 46rem;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .feature-item {
+      padding: 18px 16px;
+      border-radius: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+    .feature-item h3 {
+      margin: 0 0 8px;
+      font-family: var(--display);
+      font-size: 1.05rem;
+      color: var(--navy);
+    }
+    .feature-item p {
+      margin: 0;
+      font-size: 0.98rem;
+      color: var(--muted);
+    }
+    .steps {
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+    .steps li {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 12px;
+      align-items: start;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .steps .n {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--primary);
+      color: #fff;
+      font-family: var(--display);
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+    }
+    .band.alt .steps .n {
+      background: #fff;
+      color: var(--navy);
+    }
+    .platforms {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .platform {
+      padding: 20px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+    }
+    .platform h3 {
+      margin: 0 0 8px;
+      font-family: var(--display);
+      color: #fff;
+    }
+    .platform p { margin: 0 0 14px; }
+    .footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--faint);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .footer a { color: var(--navy); font-weight: 600; text-decoration: none; }
+    .footer a:hover { color: var(--primary); }
+    .page-narrow {
+      max-width: var(--narrow);
+      margin: 0 auto;
+      padding: 24px 0 48px;
+    }
+    .page-narrow h1 {
+      text-align: center;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+    }
+    .center { text-align: center; }
+    .warn {
+      background: var(--danger-bg);
+      border-radius: 12px;
+      padding: 14px;
+      color: var(--danger-ink);
+      margin: 12px 0;
+    }
+    code { word-break: break-all; }
+    .privacy-body h2 {
+      margin-top: 28px;
+      font-size: 1.25rem;
+    }
+    .privacy-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 18px;
+      font-size: 0.95rem;
+    }
+    .privacy-body th, .privacy-body td {
+      border: 1px solid var(--border);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .privacy-body th { background: var(--hub); }
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; padding-top: 16px; }
+      .hero-visual { order: -1; }
+      .feature-grid, .platforms { grid-template-columns: 1fr; }
+      .topbar { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <img src="/media/icon.png" width="40" height="40" alt="">
+      <span>GhalBol</span>
+    </a>
+    <nav class="topnav" aria-label="Site">
+      <a class="ghost" href="/#product">Ghal Bol</a>
+      <a class="ghost" href="/download/linux">Linux</a>
+      <a class="ghost" href="/privacy">Privacy</a>
+      <a class="ghost" href="https://play.google.com/store/apps/details?id=com.ghalbol">Play Store</a>
+    </nav>
+  </header>
+  <main id="app" class="shell"></main>
+  <script>
+    const PLAY = "https://play.google.com/store/apps/details?id=com.ghalbol";
+    const LINUX_FILE = "/downloads/ghalbol-linux-x64.tar.gz";
+
+    function pathParts() {
+      return location.pathname.split("/").filter(Boolean);
+    }
+
+    function aliasFromQuery() {
+      const alias = new URLSearchParams(location.search).get("alias");
+      return alias && alias.trim() ? alias.trim() : "";
+    }
+
+    function isHexKey(value) {
+      return /^[0-9a-fA-F]{64,66}$/.test(value);
+    }
+
+    function embeddedBrowser() {
+      const ua = navigator.userAgent || "";
+      return /WhatsApp|Instagram|FBAN|FBAV|Line\/|Telegram/i.test(ua);
+    }
+
+    async function copyText(text, label) {
+      try {
+        await navigator.clipboard.writeText(text);
+        alert(label + " copied");
+      } catch (e) {
+        prompt("Copy this " + label, text);
+      }
+    }
+
+    function home() {
+      document.title = "GhalBol — Ghal Bol chat";
+      return `
+        <section class="hero">
+          <div>
+            <p class="eyebrow">GhalBol · Communication brand</p>
+            <h1>Communication products you own.</h1>
+            <p class="lede"><strong>GhalBol</strong> is the brand. <strong>Ghal Bol</strong> is the chat app under it — encrypted 1:1 messaging and calls, no phone number, keys and transcripts on your device.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="#product">Meet Ghal Bol</a>
+              <a class="btn secondary" href="${PLAY}">Get Ghal Bol on Play</a>
+            </div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <img class="feature" src="/media/feature.png" width="1536" height="1024" alt="">
+            <img class="mark" src="/media/icon.png" width="88" height="88" alt="">
+          </div>
+        </section>
+
+        <section class="band" id="product">
+          <p class="eyebrow">Product</p>
+          <h2>Ghal Bol</h2>
+          <p>The shipping chat app under the GhalBol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers.</p>
+          <div class="feature-grid">
+            <article class="feature-item">
+              <h3>End-to-end chat</h3>
+              <p>Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.</p>
+            </article>
+            <article class="feature-item">
+              <h3>Voice &amp; video calls</h3>
+              <p>Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.</p>
+            </article>
+            <article class="feature-item">
+              <h3>Device-owned identity</h3>
+              <p>Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.</p>
+            </article>
+          </div>
+          <div class="cta-row" style="margin-top:20px">
+            <a class="btn primary" href="${PLAY}">Google Play</a>
+            <a class="btn secondary" href="/download/linux">Linux download</a>
+          </div>
+        </section>
+
+        <section class="band alt" id="invite">
+          <p class="eyebrow">Ghal Bol · Invites</p>
+          <h2>Scan once. Connect when online.</h2>
+          <p>Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.</p>
+          <ol class="steps">
+            <li><span class="n">1</span><span>Share your <code>https://ghalbol.com/connect/…</code> link or QR from Invite in Ghal Bol.</span></li>
+            <li><span class="n">2</span><span>They open it in Ghal Bol (or install from Play / Linux first).</span></li>
+            <li><span class="n">3</span><span>When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.</span></li>
+          </ol>
+        </section>
+
+        <section class="band" id="platforms">
+          <p class="eyebrow">Ghal Bol · Platforms</p>
+          <h2>Android and Linux today</h2>
+          <p>Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as <code>com.ghalbol</code>.</p>
+          <div class="platforms" style="grid-template-columns: 1fr 1fr;">
+            <div class="feature-item">
+              <h3>Android</h3>
+              <p>Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.</p>
+              <a class="btn primary block" href="${PLAY}">Open Play Store</a>
+            </div>
+            <div class="feature-item">
+              <h3>Linux x86_64</h3>
+              <p>Extract the release archive, then <code>./install.sh</code> (per-user) or <code>./run.sh</code> to try in place.</p>
+              <a class="btn secondary block" href="/download/linux">Linux download</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="band">
+          <p class="eyebrow">Brand</p>
+          <h2>Under the GhalBol brand</h2>
+          <p><strong>GhalBol</strong> (ghalbol.com) is the communication product family — parallel to how Kumkaj brands business OS apps. <strong>Ghal Bol</strong> is the first product: the chat app. More communication products can join later, each with its own UI, sharing the <code>ghalbol_core</code> stack.</p>
+        </section>
+
+        <footer class="footer">
+          <p><a href="/privacy">Privacy policy</a> · <a href="${PLAY}">Ghal Bol on Play</a> · <a href="/download/linux">Linux</a></p>
+          <p>© 2026 GhalBol · product <strong>Ghal Bol</strong> · <a href="https://ghalbol.com">ghalbol.com</a></p>
+        </footer>
+      `;
+    }
+
+    function linux() {
+      document.title = "Ghal Bol for Linux";
+      return `
+        <div class="page-narrow">
+          <p class="eyebrow center">Desktop</p>
+          <h1>Ghal Bol for Linux</h1>
+          <p class="center">x86_64 production bundle. Extract the archive, then run <code>./install.sh</code> (per-user into <code>~/.local</code>) or <code>./run.sh</code> to try it in place.</p>
+          <a class="btn primary block" id="linux-dl" href="${LINUX_FILE}">Download Linux bundle</a>
+          <a class="btn secondary block" href="/">Back to home</a>
+        </div>
+      `;
+    }
+
+    function invite(key) {
+      document.title = "Join on Ghal Bol";
+      const alias = aliasFromQuery();
+      const https = location.origin + "/connect/" + key + (alias ? "?alias=" + encodeURIComponent(alias) : "");
+      const app = "ghalbol://connect/" + key;
+      const display = alias ? alias : key.slice(0, 8) + "…" + key.slice(-4);
+      const embedded = embeddedBrowser();
+      const warn = embedded
+        ? `<div class="warn"><strong>Opened inside another app (e.g. WhatsApp)</strong><p>This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.</p></div>`
+        : `<p>Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).</p>`;
+      const open = embedded ? "" : `<a class="btn primary block" href="${app}">Open in Ghal Bol</a>`;
+      return `
+        <div class="page-narrow">
+          <p class="eyebrow center">Invitation</p>
+          <h1>Join on Ghal Bol</h1>
+          <p class="center"><strong>${display}</strong></p>
+          ${warn}
+          ${open}
+          <button class="btn primary block" id="copy-web" type="button">Copy web link</button>
+          <button class="btn primary block" id="copy-app" type="button">Copy app link</button>
+          <h2>Install the app</h2>
+          <a class="btn primary block" href="${PLAY}">Google Play</a>
+          <a class="btn secondary block" href="/download/linux">Linux download</a>
+          <a class="btn secondary block" href="/">Home</a>
+        </div>
+      `;
+    }
+
+    function privacy() {
+      document.title = "Ghal Bol privacy";
+      return `
+        <div class="page-narrow privacy-body">
+          <p class="eyebrow center">Legal</p>
+          <h1>Privacy policy</h1>
+<p><strong>Last updated:</strong> October 2026</p>
+<p><strong>App:</strong> Ghal Bol (<code>com.ghalbol</code>)</p>
+<p><strong>Publisher:</strong> Ghal Bol / <a href="https://ghalbol.com">ghalbol.com</a></p>
+<p>This Privacy Policy explains how the Ghal Bol mobile and desktop applications (“the app”) and the optional <strong>coordination</strong> and <strong>delivery</strong> services we operate handle information. Ghal Bol keeps <strong>chat history on devices</strong>; the delivery server holds temporary E2E ciphertext only until delivery is acknowledged. <strong>Calls</strong> are designed to travel peer-to-peer (or through an opaque coord bridge) and are not stored as call content on our servers.</p>
+<h2>Summary</h2>
+<table>
+<tr><th>Topic</th><th>What we do</th></tr>
+<tr><td>Account</td><td><strong>No</strong> phone number, email, or cloud account required</td></tr>
+<tr><td>Messages</td><td>End-to-end encrypted on your device; the delivery server holds only <strong>ciphertext it cannot read</strong>, until the recipient acknowledges it</td></tr>
+<tr><td>Identity</td><td><strong>Local</strong> cryptographic key on your device; public key used for invites and discovery</td></tr>
+<tr><td>Coordination server</td><td>Stores <strong>only</strong> presence and connection endpoints</td></tr>
+<tr><td>Ads / analytics</td><td><strong>No</strong> advertising SDKs; <strong>no</strong> third-party analytics in the core app. The public website may use Firebase Analytics for page metrics only</td></tr>
+<tr><td>Sale of data</td><td><strong>We do not sell</strong> your personal information</td></tr>
+</table>
+<h2>Who this applies to</h2>
+<p>This policy applies to anyone who installs or uses Ghal Bol and, where relevant, to data processed by the <strong>default production coordination server</strong> at <code>https://coord.ghalbol.com</code>. Advanced users may point the app at a <strong>different coordination server</strong> (including one they run themselves); that operator’s practices would then apply to coordination data sent to that server.</p>
+<h2>What Ghal Bol is (and is not)</h2>
+<p>Ghal Bol provides <strong>encrypted 1:1 text chat</strong>, <strong>delivery/read receipts</strong>, and <strong>voice/video calls</strong> between people who connect via <strong>QR code or invite link</strong>. It is <strong>not</strong> a traditional cloud messenger: there is <strong>no central chat archive</strong> operated by us. When the recipient is offline, a message waits on the delivery server as end-to-end encrypted ciphertext and is removed once the recipient&#x27;s device acknowledges it (or when it expires). Each device keeps its own chat history.</p>
+<h2>Information stored on your device</h2>
+<p>The app keeps data <strong>locally</strong> under your control, including:</p>
+<ul>
+<li><strong>Cryptographic identity</strong> — a local key pair (<code>secp256k1</code>, <code>ed25519</code>, or <code>ecdsa-p256</code>). The private key is stored in an encrypted <strong>keystore</strong> (<code>keystore_v1.json</code>, protected with your <strong>app password</strong> using Argon2id and ChaCha20-Poly1305).</li>
+<li><strong>Contacts</strong> — names, public keys, chat previews, unread counts, and trust/block flags (<code>contacts_v1.json</code>).</li>
+<li><strong>Chat transcripts</strong> — message text, timestamps, and delivery state on <strong>your device only</strong> (<code>chat_transcript_v1.json</code>).</li>
+<li><strong>Preferences</strong> — including the coordination server URL you use.</li>
+<li><strong>In-app diagnostic log</strong> (optional, for troubleshooting) — kept in app memory and exportable <strong>only if you choose</strong> to share it.</li>
+</ul>
+<p>Your <strong>app password</strong> is used to unlock the keystore on the device. It is <strong>not</strong> transmitted to Ghal Bol servers.</p>
+<h2>How chat and calls move</h2>
+<p>When you send a <strong>chat message</strong>, your device encrypts the payload; opaque ciphertext goes to the delivery mailbox; the recipient decrypts locally. <strong>Calls</strong> use native connect (LAN when possible, otherwise the coord byte bridge). Media remains end-to-end encrypted. Chat text uses the delivery mailbox, not the bridge.</p>
+<h2>Coordination server (presence only)</h2>
+<p>Default: <code>https://coord.ghalbol.com</code>. Stores public key, reachable endpoints, optional IP hints, and last heartbeat — with short TTL. No message archive.</p>
+<h2>Invite links and QR codes</h2>
+<p>Invites contain your <strong>public key</strong> and optional display alias — never your private key.</p>
+<h2>Permissions</h2>
+<p>Internet / network state; Wi‑Fi multicast (LAN discovery); camera (QR + video); microphone (calls / voice notes); notifications (Android).</p>
+<h2>Contact</h2>
+<ul>
+<li><strong>Email:</strong> privacy@ghalbol.com</li>
+<li><strong>Website:</strong> https://ghalbol.com</li>
+</ul>
+<p>Full policy source: repository <code>docs/PRIVACY_POLICY.md</code>.</p>
+          <a class="btn secondary block" href="/">Back to home</a>
+        </div>
+      `;
+    }
+
+    function badInvite() {
+      document.title = "Join on Ghal Bol";
+      return `
+        <div class="page-narrow">
+          <h1>Join on Ghal Bol</h1>
+          <p>Use a link like <code>https://ghalbol.com/connect/&lt;public_key_hex&gt;</code></p>
+          <a class="btn secondary block" href="/">Back to home</a>
+        </div>
+      `;
+    }
+
+    function render() {
+      const parts = pathParts();
+      const root = document.getElementById("app");
+      if (parts.length === 0) {
+        root.innerHTML = home();
+        return;
+      }
+      if (parts[0] === "privacy") {
+        root.innerHTML = privacy();
+        return;
+      }
+      if (parts[0] === "download" && parts[1] === "linux") {
+        root.innerHTML = linux();
+        const link = document.getElementById("linux-dl");
+        if (link) {
+          link.addEventListener("click", () => {
+            setTimeout(() => alert("Download started — check your browser downloads."), 0);
+          });
+        }
+        return;
+      }
+      if (parts[0] === "connect") {
+        const key = parts[1] || "";
+        if (!isHexKey(key)) {
+          root.innerHTML = badInvite();
+          return;
+        }
+        const alias = aliasFromQuery();
+        const https = location.origin + "/connect/" + key + (alias ? "?alias=" + encodeURIComponent(alias) : "");
+        const app = "ghalbol://connect/" + key;
+        root.innerHTML = invite(key);
+        document.getElementById("copy-web").onclick = () => copyText(https, "Web link");
+        document.getElementById("copy-app").onclick = () => copyText(app, "App link");
+        return;
+      }
+      root.innerHTML = home();
+    }
+
+    render();
+  </script>
+  <script src="/js/firebase-init.js" defer></script>
+</body>
+</html>

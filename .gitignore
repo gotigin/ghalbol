@@ -33,16 +33,16 @@ Thumbs.db
 # IDE
 .idea/
 
-# Firebase CLI
+# Firebase CLI (site-local .firebaserc under sites/*/ is committed, like Wadhu)
 .firebase/
 firebase-debug.log
 firestore-debug.log
 ui-debug.log
-.firebaserc
+/.firebaserc
 
 # Logs and profiling dumps
 *.log
 *.profraw
 
 # Built by scripts/package_linux_release.sh for Firebase deploy; never committed.
-/web/downloads/*.tar.gz
+/sites/ghalbol/static/downloads/*.tar.gz

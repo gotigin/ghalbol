@@ -17,7 +17,7 @@ if [[ ! -f "$KEYSTORE" ]]; then
 fi
 
 echo "keystore=$KEYSTORE alias=$ALIAS"
-echo "--- SHA-256 (colon-separated, for web/.well-known/assetlinks.json) ---"
+echo "--- SHA-256 (colon-separated, for sites/ghalbol/static/.well-known/assetlinks.json) ---"
 keytool -list -v -keystore "$KEYSTORE" -alias "$ALIAS" -storepass "$STOREPASS" -keypass "$KEYPASS" 2>/dev/null \
   | awk -F': ' '/SHA256:/{print $2; exit}'
 

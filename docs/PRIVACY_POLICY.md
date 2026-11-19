@@ -16,7 +16,7 @@ This Privacy Policy explains how the Ghal Bol mobile and desktop applications (â
 | Messages | End-to-end encrypted on your device; the delivery server holds only **ciphertext it cannot read**, until the recipient acknowledges it |
 | Identity | **Local** cryptographic key on your device; public key used for invites and discovery |
 | Coordination server | Stores **only** presence and connection endpoints (see below) |
-| Ads / analytics | **No** advertising SDKs; **no** third-party analytics in the core app |
+| Ads / analytics | **No** advertising SDKs; **no** third-party analytics in the core app. The public website ([ghalbol.com](https://ghalbol.com)) may use Firebase Analytics for page metrics only |
 | Sale of data | **We do not sell** your personal information |
 
 ---
@@ -135,7 +135,7 @@ You can deny permissions; related features may not work (e.g. no QR scan without
 | **Ghal Bol delivery server** | Temporary text mailbox | Opaque E2E ciphertext until delivery ack; metadata for acks/TTL |
 | **On-device camera / QR decode** | Decode invitation QR | Processing is **on-device** |
 
-We do **not** integrate advertising networks or third-party analytics SDKs in the core application code paths described in our open-source tree.
+We do **not** integrate advertising networks or third-party analytics SDKs in the core application code paths described in our open-source tree. The **public website** may load Firebase Analytics for aggregate page metrics; that does not apply to chat or call content in the app.
 
 **Google Play:** Distribution through Google Play is subject to [Googleâ€™s policies](https://policies.google.com/) in addition to this document.
 

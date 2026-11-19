@@ -16,7 +16,7 @@ On x86_64 Linux, with the Makepad system libraries installed (X11, Wayland, EGL/
 ./scripts/package_linux_release.sh
 ```
 
-That builds with the production env and `MAKEPAD_PACKAGE_DIR=.`, and writes `web/downloads/ghalbol-linux-x64.tar.gz` (gitignored): the binary, `ghalbol_app/resources/`, `makepad_widgets/resources/` (icon, CJK and emoji fonts), `install.sh`, `uninstall.sh` and `run.sh`. Extract it, then `./install.sh` (per-user, into `~/.local/lib/ghalbol/` with a menu entry) or `./run.sh` to try it in place.
+That builds with the production env and `MAKEPAD_PACKAGE_DIR=.`, and writes `sites/ghalbol/static/downloads/ghalbol-linux-x64.tar.gz` (gitignored): the binary, `ghalbol_app/resources/`, `makepad_widgets/resources/` (icon, CJK and emoji fonts), `install.sh`, `uninstall.sh` and `run.sh`. Extract it, then `./install.sh` (per-user, into `~/.local/lib/ghalbol/` with a menu entry) or `./run.sh` to try it in place.
 
 Debug data directory: `~/.local/share/com.ghalbol.debug/`. Release: `~/.local/share/com.ghalbol/`.
 
@@ -115,13 +115,14 @@ See [ghalbol_coord/deploy/README.md](../ghalbol_coord/deploy/README.md). After r
 
 ### P2.1 Privacy
 
-`https://ghalbol.com/privacy` is served from `web/index.html`. The long form is [PRIVACY_POLICY.md](PRIVACY_POLICY.md).
+`https://ghalbol.com/privacy` is served from `sites/ghalbol/static/index.html`. The long form is [PRIVACY_POLICY.md](PRIVACY_POLICY.md). Preview locally first: `./sites/ghalbol/scripts/preview-web.sh` ([WEB_SITE.md](WEB_SITE.md)).
 
 ### P2.2 Linux download and deploy
 
 ```bash
 ./scripts/package_linux_release.sh
-./scripts/deploy_web_firebase.sh
+./sites/ghalbol/scripts/preview-web.sh    # local check
+./sites/ghalbol/scripts/deploy-firebase.sh
 ```
 
 Confirm `/`, `/download/linux`, `/privacy`, `/downloads/ghalbol-linux-x64.tar.gz`, and `/.well-known/assetlinks.json`.

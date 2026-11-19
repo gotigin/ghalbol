@@ -54,7 +54,7 @@ ghalbol/
 │   ├── check_android.sh          # Android type-check without the SDK (CI)
 │   └── with-android-env.sh       # Android NDK environment setup
 ├── env/                          # Optional developer overrides (gitignored .env.*) + templates
-├── web/                          # ghalbol.com static site + Firebase hosting
+├── sites/                        # ghalbol.com (sites/ghalbol — Firebase Hosting)
 └── .gitignore                    # Ignored files pattern
 ```
 
