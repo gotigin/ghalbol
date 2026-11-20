@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GhalBol — Ghal Bol chat</title>
-  <meta name="description" content="GhalBol is the communication brand. Ghal Bol is the encrypted chat product — 1:1 text and voice/video calls, no phone number, device-owned identity.">
+  <title>Ghal Bol — encrypted messenger</title>
+  <meta name="description" content="Ghal Bol is the communication brand of GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED. Encrypted 1:1 chat and voice/video calls, no phone number, device-owned identity. Gotigin is the trademark.">
   <link rel="canonical" href="https://ghalbol.com/">
   <link rel="icon" type="image/png" href="/media/icon.png">
   <link rel="apple-touch-icon" href="/media/icon.png">
-  <meta property="og:title" content="GhalBol — Ghal Bol">
-  <meta property="og:description" content="GhalBol brand · Ghal Bol chat — peer-to-peer encrypted messaging and calls.">
+  <meta property="og:title" content="Ghal Bol">
+  <meta property="og:description" content="Encrypted messenger under the Ghal Bol brand. Trademark Gotigin. Company GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED.">
   <meta property="og:url" content="https://ghalbol.com/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://ghalbol.com/media/feature.png">
@@ -344,10 +344,10 @@
   <header class="topbar">
     <a class="brand" href="/">
       <img src="/media/icon.png" width="40" height="40" alt="">
-      <span>GhalBol</span>
+      <span>Ghal Bol</span>
     </a>
     <nav class="topnav" aria-label="Site">
-      <a class="ghost" href="/#product">Ghal Bol</a>
+      <a class="ghost" href="/#product">Messenger</a>
       <a class="ghost" href="/download/linux">Linux</a>
       <a class="ghost" href="/privacy">Privacy</a>
       <a class="ghost" href="https://play.google.com/store/apps/details?id=com.ghalbol">Play Store</a>
@@ -385,29 +385,38 @@
       }
     }
 
+    function legalFoot() {
+      return `
+        <footer class="footer">
+          <p><a href="/privacy">Privacy policy</a> · <a href="${PLAY}">Play</a> · <a href="/download/linux">Linux</a> · <a href="https://gotigin.com">gotigin.com</a></p>
+          <p>Gotigin · GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED · Ghal Bol</p>
+          <p>© 2026 GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED</p>
+        </footer>`;
+    }
+
     function home() {
-      document.title = "GhalBol — Ghal Bol chat";
+      document.title = "Ghal Bol — encrypted messenger";
       return `
         <section class="hero">
           <div>
-            <p class="eyebrow">GhalBol · Communication brand</p>
-            <h1>Communication products you own.</h1>
-            <p class="lede"><strong>GhalBol</strong> is the brand. <strong>Ghal Bol</strong> is the chat app under it — encrypted 1:1 messaging and calls, no phone number, keys and transcripts on your device.</p>
+            <p class="eyebrow">Gotigin · Ghal Bol</p>
+            <h1>Encrypted chat you own.</h1>
+            <p class="lede"><strong>Ghal Bol</strong> is the communication brand of <strong>GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED</strong>. The messenger is 1:1 text and voice/video calls — no phone number, keys and transcripts on your device. <strong>Gotigin</strong> is the trademark.</p>
             <div class="cta-row">
-              <a class="btn primary" href="#product">Meet Ghal Bol</a>
-              <a class="btn secondary" href="${PLAY}">Get Ghal Bol on Play</a>
+              <a class="btn primary" href="#product">See the messenger</a>
+              <a class="btn secondary" href="${PLAY}">Get it on Play</a>
             </div>
           </div>
-          <div class="hero-visual" aria-hidden="true">
-            <img class="feature" src="/media/feature.png" width="1536" height="1024" alt="">
+          <div class="hero-visual">
+            <img class="feature" src="/media/feature.png" width="1536" height="1024" alt="Ghal Bol">
             <img class="mark" src="/media/icon.png" width="88" height="88" alt="">
           </div>
         </section>
 
         <section class="band" id="product">
           <p class="eyebrow">Product</p>
-          <h2>Ghal Bol</h2>
-          <p>The shipping chat app under the GhalBol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers.</p>
+          <h2>Ghal Bol messenger</h2>
+          <p>The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (<code>com.ghalbol</code>).</p>
           <div class="feature-grid">
             <article class="feature-item">
               <h3>End-to-end chat</h3>
@@ -458,15 +467,11 @@
         </section>
 
         <section class="band">
-          <p class="eyebrow">Brand</p>
-          <h2>Under the GhalBol brand</h2>
-          <p><strong>GhalBol</strong> (ghalbol.com) is the communication product family — parallel to how Kumkaj brands business OS apps. <strong>Ghal Bol</strong> is the first product: the chat app. More communication products can join later, each with its own UI, sharing the <code>ghalbol_core</code> stack.</p>
+          <p class="eyebrow">Names</p>
+          <h2>Trademark, company, brand</h2>
+          <p><strong>Gotigin</strong> is the trademark (<em>Where Technology Meets Discovery</em>). <strong>GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED</strong> is the company. <strong>Ghal Bol</strong> is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay <code>ghalbol</code> — one word. There is no separate camel-case brand.</p>
         </section>
-
-        <footer class="footer">
-          <p><a href="/privacy">Privacy policy</a> · <a href="${PLAY}">Ghal Bol on Play</a> · <a href="/download/linux">Linux</a></p>
-          <p>© 2026 GhalBol · product <strong>Ghal Bol</strong> · <a href="https://ghalbol.com">ghalbol.com</a></p>
-        </footer>
+        ${legalFoot()}
       `;
     }
 
@@ -479,6 +484,7 @@
           <p class="center">x86_64 production bundle. Extract the archive, then run <code>./install.sh</code> (per-user into <code>~/.local</code>) or <code>./run.sh</code> to try it in place.</p>
           <a class="btn primary block" id="linux-dl" href="${LINUX_FILE}">Download Linux bundle</a>
           <a class="btn secondary block" href="/">Back to home</a>
+          ${legalFoot()}
         </div>
       `;
     }
@@ -507,6 +513,7 @@
           <a class="btn primary block" href="${PLAY}">Google Play</a>
           <a class="btn secondary block" href="/download/linux">Linux download</a>
           <a class="btn secondary block" href="/">Home</a>
+          ${legalFoot()}
         </div>
       `;
     }
@@ -517,9 +524,16 @@
         <div class="page-narrow privacy-body">
           <p class="eyebrow center">Legal</p>
           <h1>Privacy policy</h1>
-<p><strong>Last updated:</strong> October 2026</p>
-<p><strong>App:</strong> Ghal Bol (<code>com.ghalbol</code>)</p>
-<p><strong>Publisher:</strong> Ghal Bol / <a href="https://ghalbol.com">ghalbol.com</a></p>
+<p><strong>Last updated:</strong> 20 November 2026</p>
+<table>
+<tr><th>Trademark</th><td><strong>Gotigin</strong></td></tr>
+<tr><th>Company</th><td><strong>GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED</strong> (“we”, “us”)</td></tr>
+<tr><th>Brand</th><td><strong>Ghal Bol</strong> — <a href="https://ghalbol.com">ghalbol.com</a></td></tr>
+<tr><th>Product</th><td>Ghal Bol messenger (<code>com.ghalbol</code>)</td></tr>
+<tr><th>CIN</th><td>U62011GJ2026PTC179660</td></tr>
+<tr><th>Registered office</th><td>C/O Mearaj AB, Gosiya Manzil, Darbargadh, Dhoraji, Rajkot, Gujarat 360410, India</td></tr>
+<tr><th>Contact</th><td><a href="mailto:mearaj@gotigin.com">mearaj@gotigin.com</a></td></tr>
+</table>
 <p>This Privacy Policy explains how the Ghal Bol mobile and desktop applications (“the app”) and the optional <strong>coordination</strong> and <strong>delivery</strong> services we operate handle information. Ghal Bol keeps <strong>chat history on devices</strong>; the delivery server holds temporary E2E ciphertext only until delivery is acknowledged. <strong>Calls</strong> are designed to travel peer-to-peer (or through an opaque coord bridge) and are not stored as call content on our servers.</p>
 <h2>Summary</h2>
 <table>
@@ -553,13 +567,19 @@
 <p>Invites contain your <strong>public key</strong> and optional display alias — never your private key.</p>
 <h2>Permissions</h2>
 <p>Internet / network state; Wi‑Fi multicast (LAN discovery); camera (QR + video); microphone (calls / voice notes); notifications (Android).</p>
+<h2>Children</h2>
+<p>Ghal Bol is <strong>not directed at children under 13</strong>. We do not knowingly collect personal information from children. If you believe a child has provided information through the app, contact us and we will take appropriate steps.</p>
+<h2>Your choices</h2>
+<p>You can change the coordination server, export or delete the local identity, block contacts on this device, and uninstall the app to remove local data. Presence on the coordination server expires on its own. We do not host a cloud copy of your chats to delete.</p>
 <h2>Contact</h2>
 <ul>
-<li><strong>Email:</strong> privacy@ghalbol.com</li>
-<li><strong>Website:</strong> https://ghalbol.com</li>
+<li><strong>Email:</strong> <a href="mailto:mearaj@gotigin.com">mearaj@gotigin.com</a></li>
+<li><strong>Product site:</strong> <a href="https://ghalbol.com">https://ghalbol.com</a></li>
+<li><strong>Company site:</strong> <a href="https://gotigin.com">https://gotigin.com</a></li>
 </ul>
-<p>Full policy source: repository <code>docs/PRIVACY_POLICY.md</code>.</p>
+<p>This page is the public privacy policy for the Ghal Bol messenger.</p>
           <a class="btn secondary block" href="/">Back to home</a>
+          ${legalFoot()}
         </div>
       `;
     }
@@ -571,6 +591,7 @@
           <h1>Join on Ghal Bol</h1>
           <p>Use a link like <code>https://ghalbol.com/connect/&lt;public_key_hex&gt;</code></p>
           <a class="btn secondary block" href="/">Back to home</a>
+          ${legalFoot()}
         </div>
       `;
     }
@@ -588,12 +609,6 @@
       }
       if (parts[0] === "download" && parts[1] === "linux") {
         root.innerHTML = linux();
-        const link = document.getElementById("linux-dl");
-        if (link) {
-          link.addEventListener("click", () => {
-            setTimeout(() => alert("Download started — check your browser downloads."), 0);
-          });
-        }
         return;
       }
       if (parts[0] === "connect") {

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Desktop live-dev for THIS app (GhalBol Chat): loads
+# Desktop live-dev for THIS app (Ghal Bol messenger): loads
 # apps/ghalbol/env/development.env then runs with --hot --remote.
 # Usage: ./apps/ghalbol/scripts/dev.sh   or: cargo ghalbol-dev
 set -euo pipefail

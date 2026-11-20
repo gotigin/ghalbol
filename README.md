@@ -1,10 +1,10 @@
-# GhalBol — Brand for Communication Products
+# Ghal Bol
 
-**GhalBol** (ghalbol.com) — brand family for real-time and asynchronous communication products. Currently shipping **Ghal Bol**, an end-to-end encrypted messenger with voice/video calls and text messaging.
+**Ghal Bol** (ghalbol.com) is the communication brand of **GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED**. **Gotigin** is the trademark. The shipping product is the **Ghal Bol messenger** — end-to-end encrypted text with voice and video calls. Names: [`docs/GHALBOL_BRAND.md`](docs/GHALBOL_BRAND.md).
 
 ## Workspace Structure (Kumkaj Model)
 
-This workspace follows the Kumkaj brand pattern: **GhalBol** is the communication-product family; concrete apps live under `apps/` and own their UI independently (**copy-then-diverge**). Unlike Kumkaj, GhalBol **does** share `ghalbol_core` (crypto, delivery, calls) across communication products — UI still stays per-app.
+This workspace follows the Kumkaj pattern: **Ghal Bol** is the brand; concrete apps live under `apps/` and own their UI independently (**copy-then-diverge**). Unlike Kumkaj, Ghal Bol **does** share `ghalbol_core` (crypto, delivery, calls) across communication products — UI still stays per-app. Do not spell the brand **GhalBol**.
 
 ```
 ghalbol/
@@ -20,7 +20,7 @@ ghalbol/
 ├── ghalbol_delivery/            # Delivery server (text mailbox)
 ├── ghalbol_ddns/                # DDNS helper for home deployment
 ├── apps/                         # Product apps — each brand's products live here
-│   └── ghalbol/                  # Ghal Bol Chat (current product)
+│   └── ghalbol/                  # Ghal Bol messenger (current product)
 │       ├── Cargo.toml            # App crate config
 │       ├── build.rs              # Env baking (development.env → binary)
 │       ├── src/                  # Makepad 2 UI source
@@ -63,18 +63,11 @@ ghalbol/
 ### Apps own their UI; `ghalbol_core` owns product logic
 - Each `apps/<product>/` owns its UI, resources, env and scripts
 - `ghalbol_core` is the Rust library with product logic (crypto, keystore, delivery, calls, contacts, transcripts) — see `AGENTS.md`
-- Future GhalBol products under `apps/` copy UI code from the best-fitting sibling, then diverge
+- Future Ghal Bol products under `apps/` copy UI code from the best-fitting sibling, then diverge
 - For app code, reuse is **copy-then-diverge**; duplication is preferable to coupling
 
-### Brand Naming Convention
-| Type | Convention | Example |
-|------|-----------|---------|
-| Brand | CamelCase | GhalBol, ghalbol.com |
-| Product name | Title case + space | Ghal Bol |
-| Package names | kebab-case | `ghalbol-app` (future), `ghalbol_app` (current) |
-| Directory names | snake_case or kebab-case | `ghalbol_core/`, `apps/ghalbol/` |
-| App ID prod | `com.ghalbol` | Production Android app id |
-| App ID dev | `com.ghalbol.debug` | Debug Android app id |
+### Names
+Order is **Gotigin** (trademark) → **GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED** (company) → **Ghal Bol** (brand) → **Ghal Bol messenger** (product). Package identifiers stay `ghalbol` with no space. Full table: [`docs/GHALBOL_BRAND.md`](docs/GHALBOL_BRAND.md).
 
 ### Per-App Environment
 Each app under `apps/` has its own `env/` directory:
@@ -109,7 +102,7 @@ cargo run -p ghalbol_app
 
 ## Adding a New Product
 
-When adding a new communication product under the GhalBol brand:
+When adding a new communication product under the Ghal Bol brand:
 
 1. **Create `apps/<product>/`** with its own `Cargo.toml`, `src/`, `resources/`, `env/`, `scripts/`
 2. **Create `tools/<product>-dev/` and `tools/<product>-windows-dev/`** as thin wrapper binaries
@@ -121,5 +114,5 @@ See [`docs/GHALBOL_BRAND.md`](docs/GHALBOL_BRAND.md) for brand doctrine and nami
 
 ---
 
-**Current product:** Ghal Bol — E2EE messenger (voice/video calls + text via delivery mailbox)
+**Current product:** Ghal Bol messenger — E2EE text plus voice/video calls (public app name Ghal Bol)
 **Infrastructure shared across products:** ghalbol_coord, ghalbol_delivery, ghalbol_ddns

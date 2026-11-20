@@ -6,7 +6,7 @@ Connectivity: [TRANSPORT.md](TRANSPORT.md) § **Connectivity lifecycle**, § **N
 
 | Document | Contents |
 |----------|----------|
-| [GHALBOL_BRAND.md](GHALBOL_BRAND.md) | Brand doctrine: GhalBol family, product layout, naming |
+| [GHALBOL_BRAND.md](GHALBOL_BRAND.md) | Names: Gotigin trademark, company, Ghal Bol brand, messenger product |
 | [DESIGN.md](DESIGN.md) | **Canonical** layers, truthful ticks, room open/close, transcripts, trust, process |
 | [MAKEPAD_UI.md](MAKEPAD_UI.md) | Makepad 2 shell (`ghalbol_app`); palette, intent→face, hub peers, scrolling, `host` |
 | [TRANSPORT.md](TRANSPORT.md) | Calls (native connect) + delivery text policy; network truth; bridge/CGNAT |

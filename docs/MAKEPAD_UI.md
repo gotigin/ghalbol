@@ -1,6 +1,6 @@
 # Makepad 2 UI
 
-`ghalbol_app` is the only **Ghal Bol** (chat) UI under the **GhalBol** brand. It is Makepad 2: Splash `script_mod!`, `Script` / `ScriptHook`, and `AppMain::script_mod`. Face and shell lessons follow the same Makepad truths shipped in the Kumkaj sibling workspace (idle/active Overlay selection, intent→face, 720 breakpoint chrome) — see [`.cursor/rules/makepad-layout-faces.mdc`](../.cursor/rules/makepad-layout-faces.mdc). Each product keeps its own copy of faces; there is no shared UI crate.
+`ghalbol_app` is the **Ghal Bol** messenger UI. **Ghal Bol** is the brand (not a camel-case “GhalBol”). It is Makepad 2: Splash `script_mod!`, `Script` / `ScriptHook`, and `AppMain::script_mod`. Face and shell lessons follow the same Makepad truths shipped in the Kumkaj sibling workspace (idle/active Overlay selection, intent→face, 720 breakpoint chrome) — see [`.cursor/rules/makepad-layout-faces.mdc`](../.cursor/rules/makepad-layout-faces.mdc). Each product keeps its own copy of faces; there is no shared UI crate.
 
 The dependency is pinned in `apps/ghalbol/Cargo.toml` to a Makepad git revision (`makepad-widgets` 2.0.0; `scripts/build_android_app.sh` installs `cargo-makepad` from the same revision).
 

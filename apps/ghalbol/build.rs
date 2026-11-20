@@ -102,12 +102,12 @@ fn main() {
         }
     } else if ghalbol_env == "production" {
         panic!(
-            "GhalBol production env file missing at {} — refusing release bake with defaults",
+            "Ghal Bol production env file missing at {} — refusing release bake with defaults",
             env_path.display()
         );
     } else {
         println!(
-            "cargo:warning=GhalBol env file missing at {} — using built-in defaults",
+            "cargo:warning=Ghal Bol env file missing at {} — using built-in defaults",
             env_path.display()
         );
     }
@@ -127,7 +127,7 @@ fn main() {
             let v = vars.get(req).map(String::as_str).unwrap_or("");
             if v.is_empty() {
                 panic!(
-                    "GhalBol production env file at {} missing required key {}",
+                    "Ghal Bol production env file at {} missing required key {}",
                     env_path.display(),
                     req
                 );

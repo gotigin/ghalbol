@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# GhalBol Chat — development Windows x86_64 package (debug app id).
+# Ghal Bol messenger — development Windows x86_64 package (debug app id).
 # Uses --release so the .exe stays sane (~tens of MB). Cargo debug PE with
 # Makepad was ~400MB — unusable to copy. Identity still comes from
 # development.env → com.ghalbol.debug (separate install/data from prod).
@@ -63,7 +63,7 @@ stage_desktop_package "$STAGE" windows
 SIZE="$(du -h "$STAGE/$WIN_EXE" | awk '{print $1}')"
 
 cat >"$STAGE/README.txt" <<EOF
-GhalBol Chat Windows (development)
+Ghal Bol messenger — Windows (development)
 ===================================
 App id:   ${GHALBOL_APP_ID}
 Label:    ${GHALBOL_APP_LABEL}

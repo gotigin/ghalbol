@@ -1,8 +1,16 @@
 # Ghal Bol — Privacy Policy
 
-**Last updated:** October 2026  
-**App:** Ghal Bol (`com.ghalbol`)  
-**Publisher:** Ghal Bol / [ghalbol.com](https://ghalbol.com)
+**Last updated:** 20 November 2026
+
+| | |
+| --- | --- |
+| **Trademark** | **Gotigin** |
+| **Company** | **GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED** (“we”, “us”) |
+| **Brand** | **Ghal Bol** — [ghalbol.com](https://ghalbol.com) |
+| **Product** | Ghal Bol messenger (`com.ghalbol`) |
+| CIN | U62011GJ2026PTC179660 |
+| Registered office | C/O Mearaj AB, Gosiya Manzil, Darbargadh, Dhoraji, Rajkot, Gujarat 360410, India |
+| Contact | [mearaj@gotigin.com](mailto:mearaj@gotigin.com) |
 
 This Privacy Policy explains how the Ghal Bol mobile and desktop applications (“the app”) and the optional **coordination** and **delivery** services we operate handle information. Ghal Bol keeps **chat history on devices**; the delivery server holds temporary E2E ciphertext only until delivery is acknowledged. **Calls** are designed to travel peer-to-peer (or through an opaque coord bridge) and are not stored as call content on our servers.
 
@@ -189,18 +197,12 @@ We may update this Privacy Policy from time to time. The **“Last updated”** 
 
 Questions or privacy requests:
 
-- **Email:** privacy@ghalbol.com  
-- **Website:** https://ghalbol.com  
-
-Replace the email above with your live support address if it differs on the website.
+- **Email:** [mearaj@gotigin.com](mailto:mearaj@gotigin.com)
+- **Product site:** https://ghalbol.com
+- **Company site:** https://gotigin.com
 
 ---
 
 ## Play Store / repository hosting
 
-For **Google Play Console**, provide a **public HTTPS URL** to this document, for example:
-
-- `https://github.com/<your-org>/<your-repo>/blob/main/docs/PRIVACY_POLICY.md` (GitHub renders markdown), or  
-- `https://ghalbol.com/privacy` if you mirror this file on your website.
-
-Keep the URL stable across releases.
+For **Google Play Console**, the public URL is [https://ghalbol.com/privacy](https://ghalbol.com/privacy). Keep that URL stable across releases.

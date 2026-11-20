@@ -1,6 +1,6 @@
 # sites/
 
-Public websites for the GhalBol brand, following the same layout as
+Public websites for the Ghal Bol brand, following the same layout as
 Kumkaj (`kumkaj-workspace/sites/`) and Wadhu (`wadhu-workspace/sites/`):
 
 ```text

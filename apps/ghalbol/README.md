@@ -1,13 +1,13 @@
-# Ghal Bol Chat — Product App
+# Ghal Bol messenger
 
-This directory contains the **Ghal Bol** E2EE messenger app, built on Makepad 2.
+This directory contains the **Ghal Bol** messenger (E2EE chat and calls), built on Makepad 2. **Ghal Bol** is the brand. **Gotigin** is the trademark. The company is **GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED**.
 
 ## Overview
 
 - **Package name:** `ghalbol_app` (Makepad crate name)
 - **App ID (prod):** `com.ghalbol`  
 - **App ID (dev):** `com.ghalbol.debug`
-- **Product brand:** GhalBol — family of communication products
+- **Brand:** Ghal Bol (communication). Product: this messenger (`com.ghalbol`)
 - **Shared core:** `ghalbol_core/` (identity, P2P, delivery, crypto)
 
 ## Directory Layout

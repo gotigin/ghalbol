@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-# GhalBol Windows cross-compile helpers.
+# Ghal Bol Windows cross-compile helpers.
 # Resource staging (MAKEPAD_PACKAGE_DIR layout) lives in desktop-resources.sh.
 
 windows_default_target() {

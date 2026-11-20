@@ -1,6 +1,6 @@
 # Ghal Bol — system design
 
-How the **Ghal Bol** chat product works today under the **GhalBol** brand ([GHALBOL_BRAND.md](GHALBOL_BRAND.md)). Wire detail is in [GHALBOL_DM_MSG_V1.md](GHALBOL_DM_MSG_V1.md). Invites are in [GHALBOL_URI_SCHEME.md](GHALBOL_URI_SCHEME.md). Connectivity is in [TRANSPORT.md](TRANSPORT.md). UI shell and faces: [MAKEPAD_UI.md](MAKEPAD_UI.md).
+How the **Ghal Bol** messenger works today. **Ghal Bol** is the brand; **Gotigin** is the trademark; the company is **GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED** ([GHALBOL_BRAND.md](GHALBOL_BRAND.md)). Wire detail is in [GHALBOL_DM_MSG_V1.md](GHALBOL_DM_MSG_V1.md). Invites are in [GHALBOL_URI_SCHEME.md](GHALBOL_URI_SCHEME.md). Connectivity is in [TRANSPORT.md](TRANSPORT.md). UI shell and faces: [MAKEPAD_UI.md](MAKEPAD_UI.md).
 
 ## Goals
 

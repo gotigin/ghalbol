@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Production Windows x86_64 package for GhalBol.
+# Production Windows x86_64 package for the Ghal Bol messenger.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
@@ -59,7 +59,7 @@ stage_desktop_package "$STAGE" windows
 SIZE="$(du -h "$STAGE/$WIN_EXE" | awk '{print $1}')"
 
 cat >"$STAGE/README.txt" <<EOF
-GhalBol Chat Windows (production)
+Ghal Bol messenger — Windows (production)
 =================================
 App id:   ${GHALBOL_APP_ID}
 Label:    ${GHALBOL_APP_LABEL}

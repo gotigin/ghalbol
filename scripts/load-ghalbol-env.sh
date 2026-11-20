@@ -1,24 +1,24 @@
 #!/usr/bin/env bash
 set -euo pipefail
 # Source from other scripts:  source "$ROOT/scripts/load-ghalbol-env.sh" development
-# Exports keys from GhalBol's env file and sets GHALBOL_ENV.
+# Exports keys from the Ghal Bol env file and sets GHALBOL_ENV.
 #
 # Product env files live with each app crate (apps/<app>/env/, not the
-# workspace root) so every GhalBol product owns its own ids/labels.
+# workspace root) so every Ghal Bol product owns its own ids/labels.
 # Which app: GHALBOL_ENV_DIR wins, else GHALBOL_APP_DIR, else apps/ghalbol.
 load_ghalbol_env() {
   local name="${1:?usage: load_ghalbol_env development|production}"
   case "$name" in
     development|production) ;;
     *)
-      echo "Invalid GhalBol env profile: $name (want development|production)" >&2
+      echo "Invalid Ghal Bol env profile: $name (want development|production)" >&2
       return 1
       ;;
   esac
   local root="${GHALBOL_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
   local file="${GHALBOL_ENV_DIR:-${GHALBOL_APP_DIR:-$root/apps/ghalbol}/env}/${name}.env"
   if [[ ! -f "$file" ]]; then
-    echo "Missing GhalBol env file: $file" >&2
+    echo "Missing Ghal Bol env file: $file" >&2
     return 1
   fi
   # Do not inherit product ids from the caller shell — a stale export must not
@@ -60,5 +60,5 @@ load_ghalbol_env() {
       return 1
     fi
   done
-  echo "GhalBol env: $name (APP_ID=${GHALBOL_APP_ID} LABEL=${GHALBOL_APP_LABEL})"
+  echo "Ghal Bol env: $name (APP_ID=${GHALBOL_APP_ID} LABEL=${GHALBOL_APP_LABEL})"
 }

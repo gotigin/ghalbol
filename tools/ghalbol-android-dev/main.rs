@@ -2,7 +2,7 @@
 //! Delegates to `apps/ghalbol/scripts/android-dev.sh` (builds Android APK for dev).
 //!
 //! Usage:
-//!   cargo ghalbol-android-dev   # Build GhalBol debug APK
+//!   cargo ghalbol-android-dev   # Build the Ghal Bol debug APK
 
 use std::env;
 use std::path::PathBuf;

@@ -39,7 +39,7 @@ stage_desktop_package() {
 
   # Manifest baked into the package (install copies it into the install dir).
   {
-    echo "# Packaged with GhalBol — identifies prod vs debug install."
+    echo "# Packaged with Ghal Bol — identifies prod vs debug install."
     echo "GHALBOL_ENV=${GHALBOL_ENV:?}"
     echo "GHALBOL_APP_ID=${GHALBOL_APP_ID:?}"
     echo "GHALBOL_APP_LABEL=${GHALBOL_APP_LABEL:?}"
