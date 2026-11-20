@@ -428,7 +428,10 @@ impl App {
         ];
         for (path, bytes) in marks {
             let img = self.ui.image(cx, path);
-            let _ = img.load_image_from_data(cx, bytes);
+            // A mark that fails to decode leaves a bare label; say so in the log.
+            if let Err(err) = img.load_image_from_data(cx, bytes) {
+                log!("nav mark {path:?} did not load: {err:?}");
+            }
         }
         self.nav_icons_loaded = true;
     }

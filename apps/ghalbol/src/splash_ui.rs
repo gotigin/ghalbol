@@ -7,6 +7,10 @@ script_mod! {
     use mod.prelude.widgets.*
     use mod.widgets.*
 
+    // `mod.state` is created in `App::script_mod` just before this script
+    // runs. The window tree below reads it as `state.…`.
+    let state = mod.state
+
     startup() do #(App::script_component(vm)){
         ui: Root{
             on_startup: ||{
@@ -285,31 +289,31 @@ script_mod! {
                                 width: Fill height: Fit flow: Overlay
                                 tab_chats := RailTab{ text: "Chats" }
                                 tab_chats_on := RailTabOn{ text: "Chats" visible: false }
-                                mark_chats := NavMark{ abs_pos: vec2(10, 13) }
+                                NavMarkSlot{ mark_chats := NavMark{} }
                             }
                             rail_contacts_slot := View{
                                 width: Fill height: Fit flow: Overlay
                                 tab_contacts := RailTab{ text: "Contacts" }
                                 tab_contacts_on := RailTabOn{ text: "Contacts" visible: false }
-                                mark_contacts := NavMark{ abs_pos: vec2(10, 13) }
+                                NavMarkSlot{ mark_contacts := NavMark{} }
                             }
                             rail_invite_slot := View{
                                 width: Fill height: Fit flow: Overlay
                                 tab_invite := RailTab{ text: "Invite" }
                                 tab_invite_on := RailTabOn{ text: "Invite" visible: false }
-                                mark_invite := NavMark{ abs_pos: vec2(10, 13) }
+                                NavMarkSlot{ mark_invite := NavMark{} }
                             }
                             rail_settings_slot := View{
                                 width: Fill height: Fit flow: Overlay
                                 tab_settings := RailTab{ text: "Settings" }
                                 tab_settings_on := RailTabOn{ text: "Settings" visible: false }
-                                mark_settings := NavMark{ abs_pos: vec2(10, 13) }
+                                NavMarkSlot{ mark_settings := NavMark{} }
                             }
                             Filler{}
                             rail_lock_slot := View{
                                 width: Fill height: Fit flow: Overlay
                                 lock_button := RailTab{ text: "Lock" }
-                                mark_lock := NavMark{ abs_pos: vec2(10, 13) }
+                                NavMarkSlot{ mark_lock := NavMark{} }
                             }
                         }
                         rail_divider := SolidView{
@@ -351,8 +355,8 @@ script_mod! {
                                             draw_text.color: #0B1220
                                             draw_text.text_style.font_size: 16
                                             width: Fill
-                                            draw_text.max_lines: 1
-                                            draw_text.text_overflow: Ellipsis
+                                            max_lines: 1
+                                            text_overflow: Ellipsis
                                         }
                                     }
                                     roster_actions := ActionBar{
@@ -390,7 +394,11 @@ script_mod! {
                                         ui.chat_log.render()
                                     }
                                     on_render: ||{
-                                        if state.roster.len() == 0
+                                        // Two statements, not `if … else for …`: as the
+                                        // closure's last statement that form dropped the
+                                        // empty view, so a new identity saw a blank list
+                                        // and a search with no match kept the old rows.
+                                        if state.roster.len() == 0 {
                                             View{
                                                 width: Fill
                                                 height: Fit
@@ -398,18 +406,29 @@ script_mod! {
                                                 spacing: 12
                                                 padding: 28
                                                 align: Center
-                                                Label{
+                                                Selectable{
+                                                    width: Fill
+                                                    height: Fit
+                                                    label_align: Center
                                                     text: state.roster_empty_title
                                                     draw_text.color: #0B1220
                                                     draw_text.text_style.font_size: 18
+                                                    draw_text.max_lines: 2
                                                 }
-                                                Label{
+                                                // Wraps: a plain Label ran off the right
+                                                // edge of a phone.
+                                                Selectable{
                                                     width: Fill
+                                                    height: Fit
+                                                    label_align: Center
                                                     text: state.roster_empty_body
-                                                    draw_text.color: #7A8B9C
+                                                    draw_text.color: #5A6B7D
+                                                    draw_text.text_style.font_size: 13
+                                                    draw_text.max_lines: 4
                                                 }
                                             }
-                                        else for i, row in state.roster {
+                                        }
+                                        for i, row in state.roster {
                                             // Open room = green wash, unread = blue wash with a
                                             // count badge (Flutter roster chrome).
                                             if row.pk == state.selected_pk
@@ -483,8 +502,8 @@ script_mod! {
                                             draw_text.color: #0B1220
                                             draw_text.text_style.font_size: 17
                                             width: Fill
-                                            draw_text.max_lines: 1
-                                            draw_text.text_overflow: Ellipsis
+                                            max_lines: 1
+                                            text_overflow: Ellipsis
                                         }
                                     }
                                     chat_actions := HScroll{
@@ -512,8 +531,8 @@ script_mod! {
                                             text: "You have not added this person yet."
                                             draw_text.color: #0B1220
                                             draw_text.text_style.font_size: 13
-                                            draw_text.max_lines: 2
-                                            draw_text.text_overflow: Ellipsis
+                                            max_lines: 2
+                                            text_overflow: Ellipsis
                                         }
                                         trust_add_button := Quiet{
                                             text: "Add"
@@ -557,21 +576,30 @@ script_mod! {
                                     on_render: ||{
                                         // Labels, not Selectable: nothing in the scrolling log may
                                         // take key focus from the composer.
+                                        // Label's own max_lines / text_overflow, not
+                                        // draw_text.…: Label copies its own two fields
+                                        // over draw_text on every draw.
                                         call_label := Label{
                                             width: Fill
+                                            max_lines: 4
+                                            text_overflow: Ellipsis
                                             text: state.call_line
                                             if state.call_line_is_error == "1"
                                                 draw_text.color: #C62828
                                             else
                                                 draw_text.color: #7A8B9C
                                         }
-                                        if state.lines.len() == 0
+                                        // Two statements (see roster_list): `if … else
+                                        // for …` dropped this label, so an empty room and
+                                        // a load error both showed a blank log.
+                                        if state.lines.len() == 0 {
                                             Label{
                                                 width: Fill
                                                 text: state.transcript
                                                 draw_text.color: #5A6B7D
                                             }
-                                        else for i, line in state.lines {
+                                        }
+                                        for i, line in state.lines {
                                             // Outgoing (right) / inbound (left). Opposite-side
                                             // gutter (~48) so chips are not full-bleed; ticks +
                                             // caption live inside the bubble meta row (Flutter).
@@ -584,12 +612,12 @@ script_mod! {
                                                     padding: Inset{left: 48. right: 8. top: 0. bottom: 0.}
                                                     if line.action != ""
                                                         View{
-                                                            width: Fit{max: FitBound.Abs(280)}
+                                                            width: Fit{max: FitBound.Rel{base: Base.Line, factor: 1.0}}
                                                             height: Fit
                                                             flow: Down
                                                             spacing: 2
                                                             Bubble{
-                                                                width: Fit{max: FitBound.Abs(280)}
+                                                                width: Fit{max: FitBound.Rel{base: Base.Line, factor: 1.0}}
                                                                 draw_bg.color: #D6E8FF
                                                                 draw_bg.color_hover: #BFD9FF
                                                                 draw_bg.color_down: #A8CBFF
@@ -666,12 +694,12 @@ script_mod! {
                                                     padding: Inset{left: 8. right: 48. top: 0. bottom: 0.}
                                                     if line.action == "fetch"
                                                         View{
-                                                            width: Fit{max: FitBound.Abs(280)}
+                                                            width: Fit{max: FitBound.Rel{base: Base.Line, factor: 1.0}}
                                                             height: Fit
                                                             flow: Down
                                                             spacing: 4
                                                             RoundedView{
-                                                                width: Fit{max: FitBound.Abs(280)}
+                                                                width: Fit{max: FitBound.Rel{base: Base.Line, factor: 1.0}}
                                                                 height: Fit
                                                                 flow: Down
                                                                 spacing: 6
@@ -680,12 +708,12 @@ script_mod! {
                                                                 draw_bg.border_size: 0.0
                                                                 draw_bg.color: #FFFFFF
                                                                 Label{
-                                                                    width: Fit{max: FitBound.Abs(256)}
+                                                                    width: Fit{max: FitBound.Rel{base: Base.Line, factor: 1.0}}
                                                                     text: line.body
                                                                     draw_text.color: #0B1220
                                                                     draw_text.text_style.font_size: 14
-                                                                    draw_text.max_lines: 2
-                                                                    draw_text.text_overflow: Ellipsis
+                                                                    max_lines: 2
+                                                                    text_overflow: Ellipsis
                                                                 }
                                                                 Label{
                                                                     text: line.detail
@@ -719,12 +747,12 @@ script_mod! {
                                                         }
                                                     else if line.action == "file"
                                                         View{
-                                                            width: Fit{max: FitBound.Abs(280)}
+                                                            width: Fit{max: FitBound.Rel{base: Base.Line, factor: 1.0}}
                                                             height: Fit
                                                             flow: Down
                                                             spacing: 4
                                                             RoundedView{
-                                                                width: Fit{max: FitBound.Abs(280)}
+                                                                width: Fit{max: FitBound.Rel{base: Base.Line, factor: 1.0}}
                                                                 height: Fit
                                                                 flow: Down
                                                                 spacing: 6
@@ -733,12 +761,12 @@ script_mod! {
                                                                 draw_bg.border_size: 0.0
                                                                 draw_bg.color: #FFFFFF
                                                                 Label{
-                                                                    width: Fit{max: FitBound.Abs(256)}
+                                                                    width: Fit{max: FitBound.Rel{base: Base.Line, factor: 1.0}}
                                                                     text: line.body
                                                                     draw_text.color: #0B1220
                                                                     draw_text.text_style.font_size: 14
-                                                                    draw_text.max_lines: 2
-                                                                    draw_text.text_overflow: Ellipsis
+                                                                    max_lines: 2
+                                                                    text_overflow: Ellipsis
                                                                 }
                                                                 Label{
                                                                     text: line.detail
@@ -781,12 +809,12 @@ script_mod! {
                                                         }
                                                     else if line.action != ""
                                                         View{
-                                                            width: Fit{max: FitBound.Abs(280)}
+                                                            width: Fit{max: FitBound.Rel{base: Base.Line, factor: 1.0}}
                                                             height: Fit
                                                             flow: Down
                                                             spacing: 2
                                                             Bubble{
-                                                                width: Fit{max: FitBound.Abs(280)}
+                                                                width: Fit{max: FitBound.Rel{base: Base.Line, factor: 1.0}}
                                                                 draw_bg.color: #FFFFFF
                                                                 draw_bg.color_hover: #E4EAF3
                                                                 draw_bg.color_down: #DCE4F0
@@ -1066,6 +1094,9 @@ script_mod! {
                             bottom_nav_scroll := HScroll{
                                 width: Fill
                                 height: 64
+                                // All four peers fit a 360 px phone; a narrower
+                                // window (or a long translation) scrolls.
+                                spacing: 6
                                 padding: Inset{left: 4. right: 4. top: 4. bottom: 4.}
                                 bottom_chats_slot := View{
                                     width: Fit height: Fit flow: Overlay
@@ -1275,8 +1306,8 @@ script_mod! {
                                     text: ""
                                     draw_text.color: #FFFFFF
                                     draw_text.text_style.font_size: 24
-                                    draw_text.max_lines: 2
-                                    draw_text.text_overflow: Ellipsis
+                                    max_lines: 2
+                                    text_overflow: Ellipsis
                                 }
                             }
                             call_copy := View{
@@ -1295,8 +1326,8 @@ script_mod! {
                                         else
                                             draw_text.color: #AEC4CF
                                         draw_text.text_style.font_size: 16
-                                        draw_text.max_lines: 3
-                                        draw_text.text_overflow: Ellipsis
+                                        max_lines: 3
+                                        text_overflow: Ellipsis
                                     }
                                 }
                             }

@@ -336,7 +336,14 @@
       .hero { grid-template-columns: 1fr; padding-top: 16px; }
       .hero-visual { order: -1; }
       .feature-grid, .platforms { grid-template-columns: 1fr; }
-      .topbar { align-items: flex-start; flex-direction: column; }
+      .topbar { align-items: stretch; flex-direction: column; }
+      .topnav { justify-content: flex-start; }
+    }
+    /* Phone: the four links share one row and fill it (they sat right-aligned
+       with "Play Store" alone on a second row). */
+    @media (max-width: 480px) {
+      .topnav { gap: 6px; }
+      .topnav .ghost { flex: 1 1 auto; text-align: center; padding: 11px 8px; font-size: 0.86rem; }
     }
   </style>
 </head>
@@ -453,7 +460,7 @@
           <p class="eyebrow">Ghal Bol · Platforms</p>
           <h2>Android and Linux today</h2>
           <p>Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as <code>com.ghalbol</code>.</p>
-          <div class="platforms" style="grid-template-columns: 1fr 1fr;">
+          <div class="platforms">
             <div class="feature-item">
               <h3>Android</h3>
               <p>Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.</p>

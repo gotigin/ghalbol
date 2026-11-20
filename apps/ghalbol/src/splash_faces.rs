@@ -6,11 +6,17 @@ script_mod! {
     use mod.prelude.widgets.*
     use mod.widgets.*
 
+    // Each face is a `let` here and is exported onto `mod.widgets` at the end
+    // of this script. A face built on another face (`let IconBtn = Quiet{`)
+    // needs the local name: `use mod.widgets.*` is read once, at the top, so
+    // a name assigned to `mod.widgets` later in this script is not in scope.
+    // Never wrap a face in `set_type_default()`: that call replaces the
+    // default object of the whole widget type (every Button, every View).
 
     // Multi-script UI fonts: Makepad falls through FontFamily members when a
     // glyph is missing. Cover Indian scheduled scripts + major world scripts.
     // CJK (zh/ja/ko) comes from Makepad's LXGW WenKai; emoji from Noto Color.
-    mod.widgets.WorldFonts = set_type_default() do FontFamily{
+    let WorldFonts = FontFamily{
         latin := FontMember{res: crate_resource("self:resources/fonts/NotoSans-Regular.ttf") asc: -0.1 desc: 0.0}
         devanagari := FontMember{res: crate_resource("self:resources/fonts/NotoSansDevanagari-Regular.ttf") asc: 0.0 desc: 0.0}
         bengali := FontMember{res: crate_resource("self:resources/fonts/NotoSansBengali-Regular.ttf") asc: 0.0 desc: 0.0}
@@ -41,7 +47,7 @@ script_mod! {
         icons := FontMember{res: crate_resource("makepad_widgets:resources/fa-solid-900.ttf") asc: 0.0 desc: 0.0}
         emoji := FontMember{res: crate_resource("makepad_widgets:resources/NotoColorEmoji.ttf") asc: 0.0 desc: 0.0}
     }
-    mod.widgets.WorldFontsBold = set_type_default() do FontFamily{
+    let WorldFontsBold = FontFamily{
         latin := FontMember{res: crate_resource("self:resources/fonts/NotoSans-Regular.ttf") asc: -0.1 desc: 0.0}
         devanagari := FontMember{res: crate_resource("self:resources/fonts/NotoSansDevanagari-Regular.ttf") asc: 0.0 desc: 0.0}
         bengali := FontMember{res: crate_resource("self:resources/fonts/NotoSansBengali-Regular.ttf") asc: 0.0 desc: 0.0}
@@ -82,13 +88,11 @@ script_mod! {
     mod.widgets.Button.draw_text.text_style.font_family = WorldFonts
     mod.widgets.TextInput.draw_text.text_style.font_family = WorldFonts
 
-    let state = mod.state
-
     // Intent → face (same job → same look). Quiet/Go/Stop keep legacy names as
     // aliases for secondary / submit-primary / destroy so call sites stay stable.
     // Never promote a navigate/hub jump to filled primary — use HubDestBtn / MenuRow.
     // Palette: cool shell + electric blue CTAs + navy chrome (from app_icon.png).
-    mod.widgets.Quiet = set_type_default() do Button{
+    let Quiet = Button{
         width: Fit
         height: Fit
         padding: Inset{left: 20. right: 20. top: 14. bottom: 14.}
@@ -113,7 +117,7 @@ script_mod! {
         draw_text.color_focus: #0B1220
         draw_text.text_style.font_size: 13
     }
-    mod.widgets.Go = set_type_default() do Button{
+    let Go = Button{
         width: Fit
         height: Fit
         padding: Inset{left: 22. right: 22. top: 14. bottom: 14.}
@@ -138,7 +142,7 @@ script_mod! {
         draw_text.color_focus: #FFFFFF
         draw_text.text_style.font_size: 13
     }
-    mod.widgets.Stop = set_type_default() do Button{
+    let Stop = Button{
         width: Fit
         height: Fit
         padding: Inset{left: 20. right: 20. top: 14. bottom: 14.}
@@ -164,7 +168,7 @@ script_mod! {
         draw_text.text_style.font_size: 13
     }
     // Full-width multi-word CTAs — wrap + center; never Chip/ellipsis.
-    mod.widgets.StackPrimaryBtn = set_type_default() do Go{
+    let StackPrimaryBtn = Go{
         width: Fill
         height: Fit
         flow: Right{wrap: true}
@@ -173,7 +177,7 @@ script_mod! {
         draw_text.max_lines: 4
         draw_text.text_overflow: Clip
     }
-    mod.widgets.StackSecondaryBtn = set_type_default() do Quiet{
+    let StackSecondaryBtn = Quiet{
         width: Fill
         height: Fit
         flow: Right{wrap: true}
@@ -182,14 +186,14 @@ script_mod! {
         draw_text.max_lines: 4
         draw_text.text_overflow: Clip
     }
-    mod.widgets.ActionStack = set_type_default() do View{
+    let ActionStack = View{
         width: Fill
         height: Fit
         flow: Down
         spacing: 10
     }
     // Navigate elsewhere (hub destination) — never filled primary.
-    mod.widgets.HubDestBtn = set_type_default() do Quiet{
+    let HubDestBtn = Quiet{
         width: Fill
         height: Fit
         padding: Inset{left: 20. right: 20. top: 16. bottom: 16.}
@@ -200,7 +204,7 @@ script_mod! {
         draw_text.text_overflow: Ellipsis
         draw_text.text_style.font_size: 14
     }
-    mod.widgets.Field = set_type_default() do TextInput{
+    let Field = TextInput{
         width: Fill
         height: Fit
         padding: Inset{left: 16. right: 16. top: 14. bottom: 14.}
@@ -237,7 +241,7 @@ script_mod! {
     // Square Font Awesome toolbar control (WorldFonts falls through to FA).
     // grab_key_focus false — tapping next to the composer must not steal IME
     // focus (Android otherwise dismisses the keyboard mid-tap and drops the click).
-    mod.widgets.IconBtn = set_type_default() do Quiet{
+    let IconBtn = Quiet{
         width: 44
         height: 44
         padding: Inset{left: 0. right: 0. top: 0. bottom: 0.}
@@ -248,7 +252,7 @@ script_mod! {
         draw_text.text_style.font_size: 18
         draw_text.text_style.font_family: WorldFonts
     }
-    mod.widgets.IconGo = set_type_default() do Go{
+    let IconGo = Go{
         width: 44
         height: 44
         padding: Inset{left: 0. right: 0. top: 0. bottom: 0.}
@@ -262,7 +266,7 @@ script_mod! {
     // Read-only selectable body text — Makepad Label is not selectable.
     // Looks like a Label; drag to select / copy. Override draw_text.color as needed.
     // empty_text must be "" — theme default is "Your text here".
-    mod.widgets.Selectable = set_type_default() do TextInput{
+    let Selectable = TextInput{
         width: Fill
         height: Fit
         is_read_only: true
@@ -306,8 +310,11 @@ script_mod! {
     // Flutter: chip is content-sized (max ~280), not a full-width slab. Row
     // padding below provides the opposite-side gutter (out=left, in=right).
     // Labels only — never Selectable/TextInput (those steal IME focus from the composer).
-    mod.widgets.TextBubble = set_type_default() do RoundedView{
-        width: Fit{max: FitBound.Abs(280)}
+    // Width follows the body label, which is bounded by the row it sits in
+    // (Base.Line). A fixed 280 px cap ran off the right edge of a 320 px
+    // phone and of the room column in a narrow split window.
+    let TextBubble = RoundedView{
+        width: Fit
         height: Fit
         flow: Down
         spacing: 4
@@ -316,13 +323,18 @@ script_mod! {
         draw_bg.border_size: 0.0
         draw_bg.border_radius: 12.0
         draw_bg.color: #FFFFFF
+        // `max_lines` and `text_overflow` are Label's own fields: Label copies
+        // them over `draw_text` on every draw, so `draw_text.max_lines` on a
+        // Label does nothing. Without them a Fit{max} label is laid out on
+        // one line and clipped at the bound — a long message showed only its
+        // first few words.
         body := Label{
-            width: Fit{max: FitBound.Abs(256)}
+            width: Fit{max: FitBound.Rel{base: Base.Line, factor: 1.0}}
             text: ""
             draw_text.color: #0B1220
             draw_text.text_style.font_size: 15
-            draw_text.max_lines: 48
-            draw_text.text_overflow: Ellipsis
+            max_lines: 48
+            text_overflow: Ellipsis
         }
         meta := View{
             width: Fit
@@ -335,8 +347,8 @@ script_mod! {
                 text: ""
                 draw_text.color: #7A8B9C
                 draw_text.text_style.font_size: 11
-                draw_text.max_lines: 1
-                draw_text.text_overflow: Ellipsis
+                max_lines: 1
+                text_overflow: Ellipsis
             }
             // Ticks use FA PUA: check + check-double are single glyphs. NotoSans
             // has no ✓, so "✓✓" fell through to two wide FA checks with a gap.
@@ -349,13 +361,13 @@ script_mod! {
             }
         }
     }
-    mod.widgets.Panel = set_type_default() do SolidView{
+    let Panel = SolidView{
         show_bg: true
         draw_bg.color: #FFFFFF
         width: Fill
         height: Fill
     }
-    mod.widgets.Bar = set_type_default() do SolidView{
+    let Bar = SolidView{
         show_bg: true
         draw_bg.color: #EEF2F8
         width: Fill
@@ -367,9 +379,11 @@ script_mod! {
     }
     // Side-rail peer — idle face. Selection is Overlay idle+active (Makepad Button
     // has no selected bit). Idle must NOT reuse active fill on hover/focus.
-    mod.widgets.RailTab = set_type_default() do Button{
+    let RailTab = Button{
         width: Fill
         height: Fit
+        // Explicit, so `NavMarkSlot` can line its mark up with the label.
+        margin: Inset{left: 0. right: 0. top: 4. bottom: 4.}
         padding: Inset{left: 40. right: 12. top: 12. bottom: 12.}
         align: Align{x: 0.0 y: 0.5}
         flow: Right{wrap: true}
@@ -393,9 +407,11 @@ script_mod! {
         draw_text.text_overflow: Ellipsis
         draw_text.text_style.font_size: 13
     }
-    mod.widgets.RailTabOn = set_type_default() do Button{
+    let RailTabOn = Button{
         width: Fill
         height: Fit
+        // Explicit, so `NavMarkSlot` can line its mark up with the label.
+        margin: Inset{left: 0. right: 0. top: 4. bottom: 4.}
         padding: Inset{left: 40. right: 12. top: 12. bottom: 12.}
         align: Align{x: 0.0 y: 0.5}
         flow: Right{wrap: true}
@@ -420,14 +436,17 @@ script_mod! {
         draw_text.text_style.font_size: 13
     }
     // Phone bottom peers (<720) — scrollable chips; same idle/active Overlay rule.
-    mod.widgets.NavChip = set_type_default() do Button{
-        width: Fit{min: FitBound.Abs(88.)}
+    // Phone bottom peers carry no mark, so the label is centred with even
+    // padding. (They used the rail's 36 px mark gutter: labels sat off-centre
+    // and only three of the four peers fitted a 360 px phone.)
+    let NavChip = Button{
+        width: Fit{min: FitBound.Abs(72.)}
         height: 56
-        padding: Inset{left: 36. right: 12. top: 8. bottom: 8.}
-        align: Align{x: 0.0 y: 0.5}
+        padding: Inset{left: 14. right: 14. top: 8. bottom: 8.}
+        align: Align{x: 0.5 y: 0.5}
         grab_key_focus: false
         reset_hover_on_click: true
-        label_walk: Walk{width: Fit, height: Fit, margin: Inset{left: 0. right: 2.}}
+        label_walk: Walk{width: Fit, height: Fit, margin: Inset{left: 0. right: 0.}}
         icon_walk: Walk{width: 0. height: 0.}
         draw_bg.border_size: 0.0
         draw_bg.border_radius: 12.0
@@ -442,14 +461,14 @@ script_mod! {
         draw_text.color_focus: #5A6B7D
         draw_text.text_style.font_size: 12
     }
-    mod.widgets.NavChipOn = set_type_default() do Button{
-        width: Fit{min: FitBound.Abs(88.)}
+    let NavChipOn = Button{
+        width: Fit{min: FitBound.Abs(72.)}
         height: 56
-        padding: Inset{left: 36. right: 12. top: 8. bottom: 8.}
-        align: Align{x: 0.0 y: 0.5}
+        padding: Inset{left: 14. right: 14. top: 8. bottom: 8.}
+        align: Align{x: 0.5 y: 0.5}
         grab_key_focus: false
         reset_hover_on_click: true
-        label_walk: Walk{width: Fit, height: Fit, margin: Inset{left: 0. right: 2.}}
+        label_walk: Walk{width: Fit, height: Fit, margin: Inset{left: 0. right: 0.}}
         icon_walk: Walk{width: 0. height: 0.}
         draw_bg.border_size: 0.0
         draw_bg.border_radius: 12.0
@@ -464,16 +483,27 @@ script_mod! {
         draw_text.color_focus: #FFFFFF
         draw_text.text_style.font_size: 12
     }
-    mod.widgets.NavMark = set_type_default() do Image{
+    // Rail mark. It sits in a `NavMarkSlot` laid over the tab (Overlay slot):
+    // the slot's padding and align place it. `abs_pos` here is window space,
+    // which put every mark outside its tab.
+    let NavMark = Image{
         width: 22
         height: 22
-        margin: Inset{left: 10. right: 0. top: 0. bottom: 0.}
+        fit: ImageFit.Stretch
+    }
+    let NavMarkSlot = View{
+        width: Fit
+        height: 42
+        // Same top margin as RailTab, so the mark centres on a one-line label.
+        margin: Inset{left: 0. right: 0. top: 4. bottom: 0.}
+        align: Align{x: 0.0 y: 0.5}
+        padding: Inset{left: 12. right: 0. top: 0. bottom: 0.}
     }
     // Hub roster row (Flutter `chat_hub_screen` chrome): avatar initial, title,
     // availability, preview, right-side "Unknown" chip + unread count badge.
     // No cursor / Button children — `roster_list.on_item_tap` owns the press so a
     // vertical drag scrolls the list and a plain tap opens the room (native feel).
-    mod.widgets.RosterRow = set_type_default() do RoundedView{
+    let RosterRow = RoundedView{
         width: Fill
         height: Fit
         flow: Right
@@ -506,24 +536,24 @@ script_mod! {
                 text: ""
                 draw_text.color: #0B1220
                 draw_text.text_style.font_size: 15
-                draw_text.max_lines: 1
-                draw_text.text_overflow: Ellipsis
+                max_lines: 1
+                text_overflow: Ellipsis
             }
             status := Label{
                 width: Fill
                 text: ""
                 draw_text.color: #0183FB
                 draw_text.text_style.font_size: 12
-                draw_text.max_lines: 1
-                draw_text.text_overflow: Ellipsis
+                max_lines: 1
+                text_overflow: Ellipsis
             }
             preview := Label{
                 width: Fill
                 text: ""
                 draw_text.color: #7A8B9C
                 draw_text.text_style.font_size: 13
-                draw_text.max_lines: 1
-                draw_text.text_overflow: Ellipsis
+                max_lines: 1
+                text_overflow: Ellipsis
             }
         }
         side := View{
@@ -561,7 +591,7 @@ script_mod! {
             }
         }
     }
-    mod.widgets.MenuRow = set_type_default() do Quiet{
+    let MenuRow = Quiet{
         width: Fill
         height: Fit
         padding: Inset{left: 20. right: 20. top: 16. bottom: 16.}
@@ -572,8 +602,9 @@ script_mod! {
         draw_text.text_overflow: Ellipsis
         draw_text.text_style.font_size: 14
     }
-    mod.widgets.Bubble = set_type_default() do Quiet{
-        width: Fit{max: FitBound.Abs(280)}
+    // Bounded by its row (Base.Line), like TextBubble's body.
+    let Bubble = Quiet{
+        width: Fit{max: FitBound.Rel{base: Base.Line, factor: 1.0}}
         height: Fit
         // Tapping a media row must not pull key focus (and the IME) off the composer.
         grab_key_focus: false
@@ -587,7 +618,7 @@ script_mod! {
         draw_text.text_style.font_size: 14
     }
     // Vertical body scroller — sibling of fixed chrome (bars/composer), never wraps them.
-    mod.widgets.VScroll = set_type_default() do ScrollYView{
+    let VScroll = ScrollYView{
         width: Fill
         height: Fill
         flow: Down
@@ -599,7 +630,7 @@ script_mod! {
     }
     // Horizontal toolbar scroller. Strip must be clearly taller than the chips
     // so Android has empty band above/below to pan. See MAKEPAD_UI.md § Scrolling.
-    mod.widgets.HScroll = set_type_default() do ScrollXView{
+    let HScroll = ScrollXView{
         width: Fill
         height: 96
         flow: Right
@@ -614,7 +645,7 @@ script_mod! {
         }
     }
     // Hub action strip — tall finger band; title above stays compact (no HScroll).
-    mod.widgets.ActionBar = set_type_default() do ScrollXView{
+    let ActionBar = ScrollXView{
         show_bg: true
         draw_bg.color: #EEF2F8
         width: Fill
@@ -634,11 +665,41 @@ script_mod! {
     // tappable for horizontal pan (full Quiet padding fills the strip).
     // Named BarChip (not Chip) so it never clashes with RosterRow.side.chip
     // (the Unknown badge) in Splash property paths.
-    mod.widgets.BarChip = set_type_default() do Quiet{
+    let BarChip = Quiet{
         height: Fit
         padding: Inset{left: 12. right: 12. top: 6. bottom: 6.}
         draw_text.text_style.font_size: 12
         grab_key_focus: false
     }
 
+    // Export for `splash_ui.rs` (`use mod.widgets.*`).
+    mod.widgets.WorldFonts = WorldFonts
+    mod.widgets.WorldFontsBold = WorldFontsBold
+    mod.widgets.Quiet = Quiet
+    mod.widgets.Go = Go
+    mod.widgets.Stop = Stop
+    mod.widgets.StackPrimaryBtn = StackPrimaryBtn
+    mod.widgets.StackSecondaryBtn = StackSecondaryBtn
+    mod.widgets.ActionStack = ActionStack
+    mod.widgets.HubDestBtn = HubDestBtn
+    mod.widgets.Field = Field
+    mod.widgets.IconBtn = IconBtn
+    mod.widgets.IconGo = IconGo
+    mod.widgets.Selectable = Selectable
+    mod.widgets.TextBubble = TextBubble
+    mod.widgets.Panel = Panel
+    mod.widgets.Bar = Bar
+    mod.widgets.RailTab = RailTab
+    mod.widgets.RailTabOn = RailTabOn
+    mod.widgets.NavChip = NavChip
+    mod.widgets.NavChipOn = NavChipOn
+    mod.widgets.NavMark = NavMark
+    mod.widgets.NavMarkSlot = NavMarkSlot
+    mod.widgets.RosterRow = RosterRow
+    mod.widgets.MenuRow = MenuRow
+    mod.widgets.Bubble = Bubble
+    mod.widgets.VScroll = VScroll
+    mod.widgets.HScroll = HScroll
+    mod.widgets.ActionBar = ActionBar
+    mod.widgets.BarChip = BarChip
 }
