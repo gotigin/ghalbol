@@ -44,12 +44,19 @@ if [[ ! -f "$SITE/public/.well-known/assetlinks.json" ]]; then
   exit 1
 fi
 
-echo "Deploy Firebase Hosting → project ghalbol"
+# Always pass --project (the default in .firebaserc): without it the CLI uses
+# whatever `firebase use` last set for this folder, which can be another site.
+PROJECT="$(sed -n 's/.*"default"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' "$SITE/.firebaserc" 2>/dev/null | head -1)"
+if [[ -z "$PROJECT" ]]; then
+  echo "error: no default project in sites/ghalbol/.firebaserc" >&2
+  exit 1
+fi
+echo "Deploy Firebase Hosting → project $PROJECT"
 cd "$SITE"
 if [[ "$DRY" -eq 1 ]]; then
-  firebase deploy --only hosting --dry-run
+  firebase deploy --only hosting --project "$PROJECT" --dry-run
 else
-  firebase deploy --only hosting
+  firebase deploy --only hosting --project "$PROJECT"
 fi
 
 echo "Done → https://ghalbol.com/ (confirm /privacy, /download/linux, /.well-known/assetlinks.json)"
