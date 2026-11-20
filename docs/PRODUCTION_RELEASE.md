@@ -113,9 +113,19 @@ See [ghalbol_coord/deploy/README.md](../ghalbol_coord/deploy/README.md). After r
 
 ## P2 — Site and store
 
-### P2.1 Privacy
+### P2.1 Privacy and store URLs
 
-`https://ghalbol.com/privacy` is served from `sites/ghalbol/static/index.html`. The long form is [PRIVACY_POLICY.md](PRIVACY_POLICY.md). Preview locally first: `./sites/ghalbol/scripts/preview-web.sh` ([WEB_SITE.md](WEB_SITE.md)).
+Served from `sites/ghalbol/static/index.html`. Canonical Markdown: [PRIVACY_POLICY.md](PRIVACY_POLICY.md) and [legal/README.md](legal/README.md).
+
+| URL | Use |
+| --- | --- |
+| https://ghalbol.com/privacy | Play and Microsoft Store privacy policy |
+| https://ghalbol.com/terms | Terms |
+| https://ghalbol.com/support | Support URL |
+| https://ghalbol.com/data-deletion | Data deletion |
+| https://ghalbol.com/about | Names |
+
+Play packaging: [PUBLISH_PLAY_STORE.md](PUBLISH_PLAY_STORE.md). Windows: [PUBLISH_WINDOWS_STORE.md](PUBLISH_WINDOWS_STORE.md). Preview: `./sites/ghalbol/scripts/preview-web.sh`.
 
 ### P2.2 Linux download and deploy
 
@@ -125,7 +135,7 @@ See [ghalbol_coord/deploy/README.md](../ghalbol_coord/deploy/README.md). After r
 ./sites/ghalbol/scripts/deploy-firebase.sh
 ```
 
-Confirm `/`, `/download/linux`, `/privacy`, `/downloads/ghalbol-linux-x64.tar.gz`, and `/.well-known/assetlinks.json`.
+Confirm `/`, `/download/linux`, `/privacy`, `/terms`, `/support`, `/data-deletion`, `/about`, `/downloads/ghalbol-linux-x64.tar.gz`, and `/.well-known/assetlinks.json`.
 
 ### P2.3 Play listing
 

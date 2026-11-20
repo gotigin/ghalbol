@@ -55,7 +55,7 @@ Expect **Everyone** or **Teen** depending on questionnaire answers. No user-gene
 | Data shared with third parties | No sale; QR scanning is on-device (no ML Kit / Play Services scanner dependency) |
 | Device or other IDs / backups | No Android Auto Backup of app data (`allowBackup=false`); identity lives only in app-private storage until the user exports a keystore backup |
 
-Link privacy policy URL: `https://ghalbol.com/privacy` (publish [PRIVACY_POLICY.md](PRIVACY_POLICY.md) there first).
+Link privacy policy URL: `https://ghalbol.com/privacy`. Also set support `https://ghalbol.com/support`, terms `https://ghalbol.com/terms`, and data deletion `https://ghalbol.com/data-deletion`. Paste answers from [DATA_SAFETY.md](DATA_SAFETY.md). Upload steps: [PUBLISH_PLAY_STORE.md](PUBLISH_PLAY_STORE.md).
 
 ## Contact details
 

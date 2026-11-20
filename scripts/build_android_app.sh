@@ -123,7 +123,38 @@ if [[ "$MODE" == "run" ]]; then
 fi
 
 export RUSTFLAGS="${RUSTFLAGS:--D warnings}"
-cargo makepad android --sdk-path="$SDK_DIR" "$MODE" -p ghalbol_app "${EXTRA[@]}"
+
+# Play upload key. Defaults match sibling Gotigin apps: $HOME/ghalbol-release.jks
+# plus a one-line ${keystore}.password (mode 600). Never print the password.
+# Debug installs stay debug-signed. Missing keystore still builds, and Play will reject it.
+SIGN_ARGS=()
+if [[ "$GHALBOL_ENV" == "production" && ( "$MODE" == "build" || "$MODE" == "build-aab" ) ]]; then
+  ks="${GHALBOL_ANDROID_KEYSTORE:-$HOME/ghalbol-release.jks}"
+  if [[ -f "$ks" ]]; then
+    if [[ -n "${GHALBOL_ANDROID_KEYSTORE_PASS:-}" ]]; then
+      export MAKEPAD_KEYSTORE_PASS="$GHALBOL_ANDROID_KEYSTORE_PASS"
+    elif [[ -f "${ks}.password" ]]; then
+      MAKEPAD_KEYSTORE_PASS="$(awk 'NR==1{sub(/\r$/,""); print; exit}' "${ks}.password")"
+      export MAKEPAD_KEYSTORE_PASS
+    else
+      echo "Release keystore at $ks has no password." >&2
+      echo "  put it in ${ks}.password (mode 600) or set GHALBOL_ANDROID_KEYSTORE_PASS" >&2
+      exit 1
+    fi
+    alias="${GHALBOL_ANDROID_KEY_ALIAS:-}"
+    if [[ -z "$alias" && -f "${ks}.makepad" ]]; then
+      alias="$(sed -n 's/^[[:space:]]*alias[[:space:]]*=[[:space:]]*"\{0,1\}\([^"]*\)"\{0,1\}[[:space:]]*$/\1/p' "${ks}.makepad" | head -1)"
+    fi
+    alias="${alias:-upload}"
+    SIGN_ARGS=(--keystore="$ks" --keystore-key-alias="$alias")
+    echo "Play signing: $ks alias=$alias" >&2
+  else
+    echo "NOTE: no release keystore at $ks — this package is debug-signed. Play rejects it." >&2
+    echo "      Create $ks and ${ks}.password, or set GHALBOL_ANDROID_KEYSTORE." >&2
+  fi
+fi
+
+cargo makepad android --sdk-path="$SDK_DIR" "$MODE" -p ghalbol_app "${EXTRA[@]}" "${SIGN_ARGS[@]}"
 if [[ "$MODE" == "build" || "$MODE" == "build-aab" ]]; then
   echo "Finished. Artifacts under target/makepad-android-apk/."
 fi

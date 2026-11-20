@@ -1,10 +1,10 @@
-# GhalBol Chat — the communication app under the GhalBol brand.
-# Links ghalbol_core in-process (Makepad 2 UI + Rust product logic).
+# Ghal Bol messenger — the shipping product under the Ghal Bol brand.
+# Gotigin is the trademark. Links ghalbol_core in-process (Makepad 2 UI + Rust product logic).
 [package]
 name = "ghalbol_app"
 version = "0.1.0"
 edition = "2024"
-description = "Ghal Bol — E2EE messenger (voice/video + text). Part of the GhalBol brand family."
+description = "Ghal Bol messenger — E2EE voice/video and text. Brand: Ghal Bol. Trademark: Gotigin."
 license = "MIT OR Apache-2.0"
 publish = false
 # Bakes env/development.env or production.env into the binary. Must stay in [package]

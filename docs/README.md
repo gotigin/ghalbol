@@ -7,6 +7,11 @@ Connectivity: [TRANSPORT.md](TRANSPORT.md) § **Connectivity lifecycle**, § **N
 | Document | Contents |
 |----------|----------|
 | [GHALBOL_BRAND.md](GHALBOL_BRAND.md) | Names: Gotigin trademark, company, Ghal Bol brand, messenger product |
+| [STORY.md](STORY.md) | What the messenger is, in product language |
+| [legal/README.md](legal/README.md) | Public privacy, terms, support, deletion, about URLs |
+| [PUBLISH_PLAY_STORE.md](PUBLISH_PLAY_STORE.md) | Play AAB, upload key, version code 10 |
+| [PUBLISH_WINDOWS_STORE.md](PUBLISH_WINDOWS_STORE.md) | Windows sideload today; MSIX not packed yet |
+| [DATA_SAFETY.md](DATA_SAFETY.md) | Play Data safety answers |
 | [DESIGN.md](DESIGN.md) | **Canonical** layers, truthful ticks, room open/close, transcripts, trust, process |
 | [MAKEPAD_UI.md](MAKEPAD_UI.md) | Makepad 2 shell (`ghalbol_app`); palette, intent→face, hub peers, scrolling, `host` |
 | [TRANSPORT.md](TRANSPORT.md) | Calls (native connect) + delivery text policy; network truth; bridge/CGNAT |

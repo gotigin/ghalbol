@@ -488,6 +488,7 @@ script_mod! {
                                         }
                                     }
                                     chat_actions := HScroll{
+                                        width: Fill
                                         spacing: 6
                                         call_button := IconBtn{ text: "\u{f095}" }
                                         video_button := IconBtn{ text: "\u{f03d}" }
@@ -1063,6 +1064,7 @@ script_mod! {
                             padding: Inset{left: 8. right: 8. top: 8. bottom: 8.}
                             align: Align{y: 0.5}
                             bottom_nav_scroll := HScroll{
+                                width: Fill
                                 height: 64
                                 padding: Inset{left: 4. right: 4. top: 4. bottom: 4.}
                                 bottom_chats_slot := View{

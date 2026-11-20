@@ -39,6 +39,10 @@ break App Links verification.
 | `/downloads/ghalbol-linux-x64.tar.gz` | Static file (when present under `static/downloads/`) |
 | `/connect/<public-key-hex>` | Invite handoff — `ghalbol://connect/…`, copy web / app link |
 | `/privacy` | Privacy policy (keep in sync with [PRIVACY_POLICY.md](PRIVACY_POLICY.md)) |
+| `/terms` | Terms ([legal/TERMS.md](legal/TERMS.md)) |
+| `/support` | Support URL for Play and Microsoft Store |
+| `/data-deletion` | Data deletion instructions |
+| `/about` | Trademark, company, brand |
 | `/.well-known/assetlinks.json` | Digital Asset Links for verified HTTPS → app |
 
 Optional query on invites: `?alias=Name` only. The public key is 64 or 66 hex
@@ -101,7 +105,7 @@ cd sites/ghalbol && npm install
 | Local preview | `./sites/ghalbol/scripts/preview-web.sh` looks right |
 | `assetlinks.json` | Play app-signing SHA-256 in `sites/ghalbol/static/.well-known/assetlinks.json` |
 | Linux tarball | Present under `static/downloads/` if the download button should work |
-| Verify live | `/`, `/download/linux`, `/privacy`, the tarball URL, `/.well-known/assetlinks.json` |
+| Verify live | `/`, `/download/linux`, `/privacy`, `/terms`, `/support`, `/data-deletion`, `/about`, the tarball URL, `/.well-known/assetlinks.json` |
 
 ## Analytics
 

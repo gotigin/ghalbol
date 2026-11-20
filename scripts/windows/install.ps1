@@ -72,7 +72,7 @@ $key = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\$appId"
 New-Item -Path $key -Force | Out-Null
 Set-ItemProperty -Path $key -Name 'DisplayName' -Value $label
 Set-ItemProperty -Path $key -Name 'DisplayIcon' -Value "$exe,0"
-Set-ItemProperty -Path $key -Name 'Publisher' -Value 'GhalBol'
+Set-ItemProperty -Path $key -Name 'Publisher' -Value 'GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED'
 Set-ItemProperty -Path $key -Name 'InstallLocation' -Value $installDir
 Set-ItemProperty -Path $key -Name 'UninstallString' -Value "powershell.exe -NoProfile -ExecutionPolicy Bypass -File `"$installDir\uninstall.ps1`""
 Set-ItemProperty -Path $key -Name 'NoModify' -Value 1 -Type DWord

@@ -76,6 +76,12 @@ Portable run (no install):
 Uninstall:
   Start Menu → Uninstall Ghal Bol
   or double-click Uninstall.bat
+
+Publisher: GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED
+Trademark: Gotigin
+Brand:     Ghal Bol
+Privacy:   https://ghalbol.com/privacy
+Support:   https://ghalbol.com/support
 EOF
 
 rm -rf "$OUT"

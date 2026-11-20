@@ -6,7 +6,7 @@ privacy, and App Links.
 
 ```text
 static/                 ← source tree (edit here)
-  index.html            ← brand landing + SPA routes (/connect, /privacy, /download/linux)
+  index.html            ← brand landing + SPA routes (/connect, /privacy, /terms, /support, /data-deletion, /about, /download/linux)
   media/                ← icon.png, feature.png (app art)
   .well-known/assetlinks.json
   downloads/            ← Linux tarball before deploy (gitignored .tar.gz)
@@ -42,6 +42,10 @@ the Makepad app — Hosting-only + client Analytics is intentional.
 | Home | http://127.0.0.1:8080/ |
 | Linux | http://127.0.0.1:8080/download/linux |
 | Privacy | http://127.0.0.1:8080/privacy |
+| Terms | http://127.0.0.1:8080/terms |
+| Support | http://127.0.0.1:8080/support |
+| Data deletion | http://127.0.0.1:8080/data-deletion |
+| About | http://127.0.0.1:8080/about |
 | Invite | http://127.0.0.1:8080/connect/\<64-or-66-hex\>?alias=Name |
 
 Re-serve last stage: `./sites/ghalbol/scripts/preview-web.sh --no-build`.
@@ -65,6 +69,10 @@ One-time: `npm i -g firebase-tools && firebase login`.
 | `/downloads/ghalbol-linux-x64.tar.gz` | Static file when present |
 | `/connect/<public-key-hex>` | Invite handoff (`ghalbol://`, copy links) |
 | `/privacy` | Privacy (mirrors `docs/PRIVACY_POLICY.md`) |
+| `/terms` | Terms (`docs/legal/TERMS.md`) |
+| `/support` | Support (`docs/legal/SUPPORT.md`) |
+| `/data-deletion` | Data deletion (`docs/legal/DATA_DELETION.md`) |
+| `/about` | About (`docs/legal/ABOUT.md`) |
 | `/.well-known/assetlinks.json` | Android App Links |
 
 Details: [`docs/WEB_SITE.md`](../../docs/WEB_SITE.md),

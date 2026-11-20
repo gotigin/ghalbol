@@ -388,7 +388,8 @@
     function legalFoot() {
       return `
         <footer class="footer">
-          <p><a href="/privacy">Privacy policy</a> · <a href="${PLAY}">Play</a> · <a href="/download/linux">Linux</a> · <a href="https://gotigin.com">gotigin.com</a></p>
+          <p><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/support">Support</a> · <a href="/data-deletion">Data deletion</a> · <a href="/about">About</a></p>
+          <p><a href="${PLAY}">Play</a> · <a href="/download/linux">Linux</a> · <a href="https://gotigin.com">gotigin.com</a></p>
           <p>Gotigin · GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED · Ghal Bol</p>
           <p>© 2026 GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED</p>
         </footer>`;
@@ -577,11 +578,81 @@
 <li><strong>Product site:</strong> <a href="https://ghalbol.com">https://ghalbol.com</a></li>
 <li><strong>Company site:</strong> <a href="https://gotigin.com">https://gotigin.com</a></li>
 </ul>
-<p>This page is the public privacy policy for the Ghal Bol messenger.</p>
+<p>This page is the public privacy policy for the Ghal Bol messenger. <a href="/terms">Terms</a> · <a href="/support">Support</a> · <a href="/data-deletion">Data deletion</a> · <a href="/about">About</a></p>
           <a class="btn secondary block" href="/">Back to home</a>
           ${legalFoot()}
         </div>
       `;
+    }
+
+    function page(title, body) {
+      document.title = title;
+      return `
+        <div class="page-narrow privacy-body">
+          <p class="eyebrow center">Ghal Bol</p>
+          ${body}
+          <a class="btn secondary block" href="/">Back to home</a>
+          ${legalFoot()}
+        </div>`;
+    }
+
+    function terms() {
+      return page("Ghal Bol terms", `
+        <h1>Terms of use</h1>
+        <p><strong>Last updated:</strong> 20 November 2026</p>
+        <p>By installing or using the Ghal Bol messenger or this site, you agree to these terms. <strong>Ghal Bol</strong> is a brand of <strong>GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED</strong>. <strong>Gotigin</strong> is the trademark. CIN U62011GJ2026PTC179660. Registered office: Gosiya Manzil, Darbargadh, Dhoraji, Rajkot, Gujarat 360410, India.</p>
+        <p>Ghal Bol is encrypted 1:1 chat and calls. Transcripts stay on devices. There is no phone-number account and no cloud chat archive operated by us.</p>
+        <p>Source in this workspace is licensed as stated on each package (typically MIT OR Apache-2.0). Store installs also follow that store’s terms for payment and distribution.</p>
+        <p>Do not use Ghal Bol to harass, defraud, or disrupt the coordination or delivery servers, and do not direct it at children under 13. Keep the app password and keystore backups confidential.</p>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, GHAL BOL IS PROVIDED “AS IS” AND “AS AVAILABLE”. These terms are governed by the laws of India. Courts at Rajkot, Gujarat have jurisdiction, subject to mandatory consumer protections.</p>
+        <p>Contact: <a href="mailto:mearaj@gotigin.com">mearaj@gotigin.com</a></p>
+      `);
+    }
+
+    function support() {
+      return page("Ghal Bol support", `
+        <h1>Support</h1>
+        <p><strong>Last updated:</strong> 20 November 2026</p>
+        <table>
+          <tr><th>Email</th><td><a href="mailto:mearaj@gotigin.com">mearaj@gotigin.com</a></td></tr>
+          <tr><th>Phone</th><td>+91 99677 17702</td></tr>
+          <tr><th>Company</th><td>GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED</td></tr>
+          <tr><th>Office</th><td>Gosiya Manzil, Darbargadh, Dhoraji, Rajkot, Gujarat 360410, India</td></tr>
+        </table>
+        <p>Use this address for Google Play and Microsoft Store support fields. We can help with install, invite links, privacy, and <a href="/data-deletion">data deletion</a>.</p>
+        <p>Chat text, the app password, and the private key are not on our servers. We cannot recover a forgotten app password.</p>
+      `);
+    }
+
+    function deletion() {
+      return page("Ghal Bol data deletion", `
+        <h1>Data deletion</h1>
+        <p><strong>Last updated:</strong> 20 November 2026</p>
+        <p>There is no cloud chat account. Transcripts live on each device. Delivery ciphertext is temporary. Coordination presence expires when heartbeats stop.</p>
+        <ol>
+          <li>In the app, delete the local identity, or</li>
+          <li>Android: Settings → Apps → Ghal Bol → Storage → Clear data, or uninstall.</li>
+          <li>Linux: uninstall, then delete <code>~/.local/share/com.ghalbol/</code> if it remains.</li>
+          <li>Windows: uninstall and remove local data when asked.</li>
+        </ol>
+        <p>Export a keystore backup first if you still need that identity.</p>
+        <p>To delete a support email, write to <a href="mailto:mearaj@gotigin.com">mearaj@gotigin.com</a> with the subject <strong>Ghal Bol data deletion</strong>. We handle that mailbox thread within 30 days, except records kept for legal or abuse prevention.</p>
+      `);
+    }
+
+    function about() {
+      return page("About Ghal Bol", `
+        <h1>About</h1>
+        <p><strong>Last updated:</strong> 20 November 2026</p>
+        <table>
+          <tr><th>Trademark</th><td><strong>Gotigin</strong> — <em>Where Technology Meets Discovery</em></td></tr>
+          <tr><th>Company</th><td><strong>GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED</strong><br>CIN U62011GJ2026PTC179660<br>Gosiya Manzil, Darbargadh, Dhoraji, Rajkot, Gujarat 360410, India</td></tr>
+          <tr><th>Brand</th><td><strong>Ghal Bol</strong> — communication products</td></tr>
+          <tr><th>Product</th><td>Ghal Bol messenger (<code>com.ghalbol</code>)</td></tr>
+          <tr><th>Contact</th><td><a href="mailto:mearaj@gotigin.com">mearaj@gotigin.com</a></td></tr>
+        </table>
+        <p>Encrypted 1:1 chat and voice/video calls. Identity and transcripts stay on the device. People connect with a QR or an invite link. No phone number. The brand is not spelled GhalBol.</p>
+      `);
     }
 
     function badInvite() {
@@ -605,6 +676,22 @@
       }
       if (parts[0] === "privacy") {
         root.innerHTML = privacy();
+        return;
+      }
+      if (parts[0] === "terms") {
+        root.innerHTML = terms();
+        return;
+      }
+      if (parts[0] === "support") {
+        root.innerHTML = support();
+        return;
+      }
+      if (parts[0] === "data-deletion") {
+        root.innerHTML = deletion();
+        return;
+      }
+      if (parts[0] === "about") {
+        root.innerHTML = about();
         return;
       }
       if (parts[0] === "download" && parts[1] === "linux") {
