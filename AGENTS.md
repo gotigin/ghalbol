@@ -1,6 +1,6 @@
 # AI agent guide — Ghal Bol workspace
 
-**Read this file first** in a new session. Then **`docs/DESIGN.md`** before changing P2P, acks, invites, or persistence. Transport: **`docs/TRANSPORT.md`** — especially § **Connectivity lifecycle**, § **Network truth**, § **Asymmetric LAN↔WAN mux recovery**. UI shell: **`docs/MAKEPAD_UI.md`**. Names: **`docs/GHALBOL_BRAND.md`**. Makepad faces (selection / wrap / intent): **`.cursor/rules/makepad-layout-faces.mdc`**.
+**Read this file first** in a new session. Then **`docs/DESIGN.md`** before changing P2P, acks, invites, or persistence. Transport: **`docs/TRANSPORT.md`** — especially § **Connectivity lifecycle**, § **Network truth**, § **Asymmetric LAN↔WAN mux recovery**. UI shell: **`docs/MAKEPAD_UI.md`**. Names: **`docs/GHALBOL_BRAND.md`**. Makepad faces (selection / wrap / intent): **`.cursor/rules/makepad-layout-faces.mdc`**. Responsive (narrow **and** graceful growth on wide): **`.cursor/rules/responsive-graceful-wide.mdc`** · DESIGN § Always responsive.
 
 **Names:** **Gotigin** = trademark. **GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED** = company. **Ghal Bol** = communication brand (parallel to Kumkaj’s BOS brand). The shipping product is the **Ghal Bol messenger** under `apps/ghalbol/` (public app name Ghal Bol, `com.ghalbol`). Do not invent a camel-case **GhalBol** brand. UI is per-product; `ghalbol_core` is the shared communication logic stack. Identifiers (`ghalbol_*`, `ghalbol://`, on-disk names) stay one word.
 

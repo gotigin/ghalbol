@@ -121,6 +121,31 @@ Do not cache live endpoints (coord presence, mDNS port, bridge tokens) on disk.
 
 On Linux, launch writes `~/.config/autostart/com.ghalbol.desktop` (debug: `com.ghalbol.debug.desktop`) so the app starts at login. If a keystore exists and the session is locked, the app asks for the password. A brief focus change does not turn read acks off. On Android, `host::set_app_visible(false)` runs when the app goes to the background: the open room stays, and new read acks wait until it is visible again.
 
+## Always responsive (every Ghal Bol surface)
+
+Layouts must fit the window — no cropped columns, no controls past the
+right edge, no “designed for one width” grids. Hub chrome already switches
+at **720** css px (bottom chips vs side rail); content inside each mode
+still reflows ([MAKEPAD_UI.md](MAKEPAD_UI.md)).
+
+**Responsive ≠ “looks OK on phone, stays phone on desk.”** Fitting a
+narrow viewport is half the job. The other half is **graceful growth**:
+when the content column has horizontal room, Fit chips and short paired
+controls that can sit on one line **must** sit on one line. Empty white
+space beside a forever-stacked toolbar on a 1280+ window is a bug — not
+“safe responsiveness.” Agents that only verify a phone screenshot and
+leave the desk layout as multi-row Fit stacks are wrong.
+
+| Do | Don't |
+|---|---|
+| Stack / wrap **only** when measured width cannot hold the Fit children on one row | Hard-code `flow: Down` for a Fit chip toolbar because phone once broke |
+| `apply_shell_layout` / width checks unlock to `Right` once wide enough | Ship a phone stack unchanged at every width |
+| Check **320–390 and 1280 / 1920** | Ship after phone-only screenshots |
+
+Same Gotigin-wide law as Kumkaj / Wadhu `docs/DESIGN.md` § Always
+responsive — keep those files in sync when the rule tightens. Cursor:
+[`.cursor/rules/responsive-graceful-wide.mdc`](../.cursor/rules/responsive-graceful-wide.mdc).
+
 ## Code map
 
 | Area | Path |

@@ -10,7 +10,7 @@ Canonical docs: [`docs/MAKEPAD_UI.md`](../../docs/MAKEPAD_UI.md) § Layout token
 
 **Names:** **Gotigin** is the trademark; **Ghal Bol** is the brand; this crate is the Ghal Bol messenger under `apps/ghalbol/`. Do not spell the brand **GhalBol**. UI is per-product (copy-then-diverge); do not add a shared UI crate that couples future apps.
 
-**Responsive:** size grids from the widget turtle/walk width. Phone chrome &lt; **720** css px = bottom nav chips; ≥ **720** = side rail. **Text:** display copy is selectable (`Selectable`) unless it sits inside a tap target.
+**Responsive:** size grids from the widget turtle/walk width. Phone chrome &lt; **720** css px = bottom nav chips; ≥ **720** = side rail. **Graceful growth is mandatory** (DESIGN § Always responsive · `responsive-graceful-wide.mdc`): phone-safe stacking must unlock to one `Right` row on wide content — never leave Fit chip toolbars forever Down with empty desk space beside them. Verify 320–390 **and** 1280 / 1920. **Text:** display copy is selectable (`Selectable`) unless it sits inside a tap target.
 
 ## Intent → face (same job → same look)
 
