@@ -7,7 +7,9 @@ privacy, and App Links.
 ```text
 static/                 ← source tree (edit here)
   index.html            ← brand landing + SPA routes (/connect, /privacy, /terms, /support, /data-deletion, /about, /download/linux)
-  media/                ← icon.png, feature.png (app art)
+  media/                ← what the page loads: icon.webp, feature.webp; link-preview.jpg
+                          (icon.png, feature.png, app_icon.png are the full-size art, kept for links)
+  favicon.png
   .well-known/assetlinks.json
   downloads/            ← Linux tarball before deploy (gitignored .tar.gz)
   js/firebase-init.js   ← built by npm (gitignored); from client/
@@ -17,6 +19,22 @@ public/                 ← staged Hosting root (gitignored)
 ```
 
 Chat runs in **`ghalbol_app`** / Android — not in the browser.
+
+## Pictures and link previews
+
+- The page draws `media/icon.webp` (192 px, transparent corners) and
+  `media/feature.webp` (1072 px wide). It used to load `icon.png` and the
+  1.6 MB `feature.png`: a first visit was 2.05 MB and is now about 0.4 MB.
+  Keep new page art at the size it is drawn.
+- `media/link-preview.jpg` is the picture chat apps and social sites show
+  for a pasted ghalbol.com link: a 1200×630 JPEG of the real first screen,
+  named by the Open Graph and Twitter tags in `index.html` (one set serves
+  WhatsApp, X, LinkedIn, Facebook, Telegram, Discord, Slack, iMessage). The
+  old tag named `feature.png`, too big for WhatsApp to show. After the
+  first screen changes: `preview-web.sh` in one terminal, then
+  `./sites/ghalbol/scripts/make-link-preview.sh http://127.0.0.1:8080/`,
+  commit the picture, deploy. `stage-public.sh` adds a hash of the file to
+  its address, because those apps keep a preview for days.
 
 ## Firebase
 

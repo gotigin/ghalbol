@@ -57,5 +57,20 @@ else
   ' "$INDEX" >"$INDEX.tmp" && mv "$INDEX.tmp" "$INDEX"
 fi
 
+# The link-preview picture's address carries a short hash of the file:
+# WhatsApp, Telegram and Facebook keep a preview for days and only fetch
+# again for a new address.
+PREVIEW="$OUT/media/link-preview.jpg"
+if [[ ! -f "$PREVIEW" ]]; then
+  echo "error: missing static/media/link-preview.jpg — run sites/ghalbol/scripts/make-link-preview.sh" >&2
+  exit 1
+fi
+PREVIEW_V="$(sha256sum "$PREVIEW" | cut -c1-10)"
+sed -i -E "s#(https://ghalbol\\.com/media/link-preview\\.jpg)(\\?v=[0-9a-f]+)?\"#\\1?v=${PREVIEW_V}\"#g" "$INDEX"
+if ! grep -q "link-preview.jpg?v=${PREVIEW_V}" "$INDEX"; then
+  echo "error: link-preview tags missing from index.html" >&2
+  exit 1
+fi
+
 printf '%s\n' "$BUILD_ID" >"$OUT/build-id.txt"
 echo "Staged public/ (build-id=$BUILD_ID)"
