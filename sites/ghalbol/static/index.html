@@ -2,7 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <script>
+  /* Android Chrome Desktop-site: fake innerWidth ~980 — clamp the document. */
+  (function () {
+    try {
+      var touch = "ontouchstart" in window || (navigator.maxTouchPoints || 0) > 0;
+      if (!touch) return;
+      function clamp() {
+        var ws = [window.innerWidth, window.outerWidth, screen.width].filter(function (x) { return x > 0; });
+        if (!ws.length) return;
+        var w = Math.min.apply(null, ws);
+        document.documentElement.style.maxWidth = w + "px";
+      }
+      clamp();
+      window.addEventListener("resize", clamp);
+    } catch (_e) {}
+  })();
+  </script>
   <title>Ghal Bol — encrypted messenger</title>
   <meta name="description" content="Ghal Bol is the communication brand of GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED. Encrypted 1:1 chat and voice/video calls, no phone number, device-owned identity. Gotigin is the trademark.">
   <link rel="canonical" href="https://ghalbol.com/">
