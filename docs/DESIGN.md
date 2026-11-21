@@ -142,10 +142,10 @@ leave the desk layout as multi-row Fit stacks are wrong.
 | `apply_shell_layout` / width checks unlock to `Right` once wide enough | Ship a phone stack unchanged at every width |
 | Check **320–390 and 1280 / 1920** | Ship after phone-only screenshots |
 
-**Exception — user-owned density:** columns-per-row / density the person
-(or an explicit product pick) controls must not be “fixed” into more
-columns just because the window is wide. Graceful growth is for chrome
-and Fit toolbars, not those grids.
+**Exceptions (judge intent):** graceful growth targets chrome / Fit
+toolbars that waste horizontal space — not every stack on a wide window.
+User-owned density is one clear class; other intentional layouts are
+mostly obvious. Still take care — if unsure, leave it.
 
 Same Gotigin-wide law as Kumkaj / Wadhu `docs/DESIGN.md` § Always
 responsive — keep those files in sync when the rule tightens. Cursor:
