@@ -69,9 +69,11 @@
       --narrow: 640px;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overscroll-behavior: none; }
     body {
       margin: 0;
+      overscroll-behavior: none;
+      -webkit-font-smoothing: antialiased;
       font-family: var(--text);
       background:
         radial-gradient(1200px 600px at 10% -10%, rgba(1, 131, 251, 0.16), transparent 55%),
