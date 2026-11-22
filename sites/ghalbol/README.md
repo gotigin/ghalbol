@@ -66,6 +66,7 @@ the Makepad app — Hosting-only + client Analytics is intentional.
 | Terms | http://127.0.0.1:8080/terms |
 | Support | http://127.0.0.1:8080/support |
 | Data deletion | http://127.0.0.1:8080/data-deletion |
+| Cancellation | http://127.0.0.1:8080/cancellation |
 | About | http://127.0.0.1:8080/about |
 | Invite | http://127.0.0.1:8080/connect/\<64-or-66-hex\>?alias=Name |
 
@@ -93,7 +94,10 @@ One-time: `npm i -g firebase-tools && firebase login`.
 | `/terms` | Terms (`docs/legal/TERMS.md`) |
 | `/support` | Support (`docs/legal/SUPPORT.md`) |
 | `/data-deletion` | Data deletion (`docs/legal/DATA_DELETION.md`) |
+| `/cancellation` | No website subscription; store / local uninstall |
 | `/about` | About (`docs/legal/ABOUT.md`) |
+| `/robots.txt` | Crawl rules + sitemap pointer |
+| `/sitemap.xml` | Home, download/linux, legal pages |
 | `/.well-known/assetlinks.json` | Android App Links |
 
 Details: [`docs/WEB_SITE.md`](../../docs/WEB_SITE.md),

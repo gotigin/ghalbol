@@ -85,7 +85,9 @@ Stage/deploy pick it up from `static/`.
 ### One-time setup
 
 1. [Firebase console](https://console.firebase.google.com/) — project **`ghalbol`** + **Hosting**.
-2. Custom domains **ghalbol.com** and **www.ghalbol.com**.
+2. Custom domains **ghalbol.com** and **www.ghalbol.com**. Prefer a Hosting
+   **www → apex** redirect in the Firebase domain console (not expressible in
+   `firebase.json` alone); live www currently answers 200 without redirect.
 3. Web app registered (Analytics config is in `client/firebase-init.js`).
 4. Locally:
 
@@ -111,7 +113,7 @@ cd sites/ghalbol && npm install
 | Local preview | `./sites/ghalbol/scripts/preview-web.sh` looks right |
 | `assetlinks.json` | Play app-signing SHA-256 in `sites/ghalbol/static/.well-known/assetlinks.json` |
 | Linux tarball | Present under `static/downloads/` if the download button should work |
-| Verify live | `/`, `/download/linux`, `/privacy`, `/terms`, `/support`, `/data-deletion`, `/about`, the tarball URL, `/.well-known/assetlinks.json` |
+| Verify live | `/`, `/download/linux`, `/privacy`, `/terms`, `/support`, `/data-deletion`, `/cancellation`, `/about`, `/robots.txt`, `/sitemap.xml`, the tarball URL, `/.well-known/assetlinks.json` |
 
 ## Analytics
 
