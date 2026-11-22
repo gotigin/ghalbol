@@ -66,11 +66,23 @@ if [[ ! -f "$PREVIEW" ]]; then
   exit 1
 fi
 PREVIEW_V="$(sha256sum "$PREVIEW" | cut -c1-10)"
-sed -i -E "s#(https://ghalbol\\.com/media/link-preview\\.jpg)(\\?v=[0-9a-f]+)?\"#\\1?v=${PREVIEW_V}\"#g" "$INDEX"
-if ! grep -q "link-preview.jpg?v=${PREVIEW_V}" "$INDEX"; then
-  echo "error: link-preview tags missing from index.html" >&2
-  exit 1
-fi
+# Home + static secondary shells (privacy/terms/support/about/data-deletion).
+for html in "$INDEX" \
+  "$OUT/privacy/index.html" \
+  "$OUT/terms/index.html" \
+  "$OUT/support/index.html" \
+  "$OUT/about/index.html" \
+  "$OUT/data-deletion/index.html"; do
+  if [[ ! -f "$html" ]]; then
+    echo "error: missing $html" >&2
+    exit 1
+  fi
+  sed -i -E "s#(https://ghalbol\\.com/media/link-preview\\.jpg)(\\?v=[0-9a-f]+)?\"#\\1?v=${PREVIEW_V}\"#g" "$html"
+  if ! grep -q "link-preview.jpg?v=${PREVIEW_V}" "$html"; then
+    echo "error: link-preview tags missing from $html" >&2
+    exit 1
+  fi
+done
 
 printf '%s\n' "$BUILD_ID" >"$OUT/build-id.txt"
 echo "Staged public/ (build-id=$BUILD_ID)"

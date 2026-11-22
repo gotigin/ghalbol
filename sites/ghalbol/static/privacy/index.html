@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ghal Bol privacy</title>
+  <meta name="description" content="How Ghal Bol handles information — device-owned chat, no phone-number account.">
+  <link rel="canonical" href="https://ghalbol.com/privacy">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/media/apple-touch-icon.png">
+  <meta name="theme-color" content="#eef2f8">
+  <meta name="robots" content="max-image-preview:large">
+  <meta property="og:site_name" content="Ghal Bol">
+  <meta property="og:title" content="Ghal Bol privacy">
+  <meta property="og:description" content="How Ghal Bol handles information — device-owned chat, no phone-number account.">
+  <meta property="og:url" content="https://ghalbol.com/privacy">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:image" content="https://ghalbol.com/media/link-preview.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The ghalbol.com home page: Encrypted chat you own.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ghal Bol privacy">
+  <meta name="twitter:description" content="How Ghal Bol handles information — device-owned chat, no phone-number account.">
+  <meta name="twitter:image" content="https://ghalbol.com/media/link-preview.jpg">
+  <meta name="twitter:image:alt" content="The ghalbol.com home page: Encrypted chat you own.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/legal.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <img src="/media/icon.webp" width="40" height="40" alt="">
+      <span>Ghal Bol</span>
+    </a>
+    <nav class="topnav" aria-label="Site">
+      <a class="ghost" href="/#product">Messenger</a>
+      <a class="ghost" href="/download/linux">Linux</a>
+      <a class="ghost" href="/privacy">Privacy</a>
+      <a class="ghost" href="https://play.google.com/store/apps/details?id=com.ghalbol">Play Store</a>
+    </nav>
+  </header>
+  <main class="page-narrow">
+    <p class="eyebrow">Legal</p>
+
+    <h1>Privacy policy</h1>
+<p><strong>Last updated:</strong> 20 November 2026</p>
+<table>
+<tr><th>Trademark</th><td><strong>Gotigin</strong></td></tr>
+<tr><th>Company</th><td><strong>GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED</strong> (“we”, “us”)</td></tr>
+<tr><th>Brand</th><td><strong>Ghal Bol</strong> — <a href="https://ghalbol.com">ghalbol.com</a></td></tr>
+<tr><th>Product</th><td>Ghal Bol messenger (<code>com.ghalbol</code>)</td></tr>
+<tr><th>CIN</th><td>U62011GJ2026PTC179660</td></tr>
+<tr><th>Registered office</th><td>C/O Mearaj AB, Gosiya Manzil, Darbargadh, Dhoraji, Rajkot, Gujarat 360410, India</td></tr>
+<tr><th>Contact</th><td><a href="mailto:mearaj@gotigin.com">mearaj@gotigin.com</a></td></tr>
+</table>
+<p>This Privacy Policy explains how the Ghal Bol mobile and desktop applications (“the app”) and the optional <strong>coordination</strong> and <strong>delivery</strong> services we operate handle information. Ghal Bol keeps <strong>chat history on devices</strong>; the delivery server holds temporary E2E ciphertext only until delivery is acknowledged. <strong>Calls</strong> are designed to travel peer-to-peer (or through an opaque coord bridge) and are not stored as call content on our servers.</p>
+<h2>Summary</h2>
+<table>
+<tr><th>Topic</th><th>What we do</th></tr>
+<tr><td>Account</td><td><strong>No</strong> phone number, email, or cloud account required</td></tr>
+<tr><td>Messages</td><td>End-to-end encrypted on your device; the delivery server holds only <strong>ciphertext it cannot read</strong>, until the recipient acknowledges it</td></tr>
+<tr><td>Identity</td><td><strong>Local</strong> cryptographic key on your device; public key used for invites and discovery</td></tr>
+<tr><td>Coordination server</td><td>Stores <strong>only</strong> presence and connection endpoints</td></tr>
+<tr><td>Ads / analytics</td><td><strong>No</strong> advertising SDKs; <strong>no</strong> third-party analytics in the core app. The public website may use Firebase Analytics for page metrics only</td></tr>
+<tr><td>Sale of data</td><td><strong>We do not sell</strong> your personal information</td></tr>
+</table>
+<h2>Who this applies to</h2>
+<p>This policy applies to anyone who installs or uses Ghal Bol and, where relevant, to data processed by the <strong>default production coordination server</strong> at <code>https://coord.ghalbol.com</code>. Advanced users may point the app at a <strong>different coordination server</strong> (including one they run themselves); that operator’s practices would then apply to coordination data sent to that server.</p>
+<h2>What Ghal Bol is (and is not)</h2>
+<p>Ghal Bol provides <strong>encrypted 1:1 text chat</strong>, <strong>delivery/read receipts</strong>, and <strong>voice/video calls</strong> between people who connect via <strong>QR code or invite link</strong>. It is <strong>not</strong> a traditional cloud messenger: there is <strong>no central chat archive</strong> operated by us. When the recipient is offline, a message waits on the delivery server as end-to-end encrypted ciphertext and is removed once the recipient's device acknowledges it (or when it expires). Each device keeps its own chat history.</p>
+<h2>Information stored on your device</h2>
+<p>The app keeps data <strong>locally</strong> under your control, including:</p>
+<ul>
+<li><strong>Cryptographic identity</strong> — a local key pair (<code>secp256k1</code>, <code>ed25519</code>, or <code>ecdsa-p256</code>). The private key is stored in an encrypted <strong>keystore</strong> (<code>keystore_v1.json</code>, protected with your <strong>app password</strong> using Argon2id and ChaCha20-Poly1305).</li>
+<li><strong>Contacts</strong> — names, public keys, chat previews, unread counts, and trust/block flags (<code>contacts_v1.json</code>).</li>
+<li><strong>Chat transcripts</strong> — message text, timestamps, and delivery state on <strong>your device only</strong> (<code>chat_transcript_v1.json</code>).</li>
+<li><strong>Preferences</strong> — including the coordination server URL you use.</li>
+<li><strong>In-app diagnostic log</strong> (optional, for troubleshooting) — kept in app memory and exportable <strong>only if you choose</strong> to share it.</li>
+</ul>
+<p>Your <strong>app password</strong> is used to unlock the keystore on the device. It is <strong>not</strong> transmitted to Ghal Bol servers.</p>
+<h2>How chat and calls move</h2>
+<p>When you send a <strong>chat message</strong>, your device encrypts the payload; opaque ciphertext goes to the delivery mailbox; the recipient decrypts locally. <strong>Calls</strong> use native connect (LAN when possible, otherwise the coord byte bridge). Media remains end-to-end encrypted. Chat text uses the delivery mailbox, not the bridge.</p>
+<h2>Coordination server (presence only)</h2>
+<p>Default: <code>https://coord.ghalbol.com</code>. Stores public key, reachable endpoints, optional IP hints, and last heartbeat — with short TTL. No message archive.</p>
+<h2>Invite links and QR codes</h2>
+<p>Invites contain your <strong>public key</strong> and optional display alias — never your private key.</p>
+<h2>Permissions</h2>
+<p>Internet / network state; Wi‑Fi multicast (LAN discovery); camera (QR + video); microphone (calls / voice notes); notifications (Android).</p>
+<h2>Children</h2>
+<p>Ghal Bol is <strong>not directed at children under 13</strong>. We do not knowingly collect personal information from children. If you believe a child has provided information through the app, contact us and we will take appropriate steps.</p>
+<h2>Your choices</h2>
+<p>You can change the coordination server, export or delete the local identity, block contacts on this device, and uninstall the app to remove local data. Presence on the coordination server expires on its own. We do not host a cloud copy of your chats to delete.</p>
+<h2>Contact</h2>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:mearaj@gotigin.com">mearaj@gotigin.com</a></li>
+<li><strong>Product site:</strong> <a href="https://ghalbol.com">https://ghalbol.com</a></li>
+<li><strong>Company site:</strong> <a href="https://gotigin.com">https://gotigin.com</a></li>
+</ul>
+<p>This page is the public privacy policy for the Ghal Bol messenger. <a href="/terms">Terms</a> · <a href="/support">Support</a> · <a href="/data-deletion">Data deletion</a> · <a href="/about">About</a></p>
+
+    <a class="btn secondary block" href="/">Back to home</a>
+    <footer class="footer">
+      <p><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/support">Support</a> · <a href="/data-deletion">Data deletion</a> · <a href="/about">About</a></p>
+      <p><a href="https://play.google.com/store/apps/details?id=com.ghalbol">Play</a> · <a href="/download/linux">Linux</a> · <a href="https://gotigin.com">gotigin.com</a></p>
+      <p>GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED · Trademark Gotigin</p>
+    </footer>
+  </main>
+  <script src="/js/firebase-init.js" defer></script>
+</body>
+</html>

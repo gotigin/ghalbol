@@ -36,6 +36,26 @@
     "trailingSlash": false,
     "rewrites": [
       {
+        "source": "/privacy",
+        "destination": "/privacy/index.html"
+      },
+      {
+        "source": "/terms",
+        "destination": "/terms/index.html"
+      },
+      {
+        "source": "/support",
+        "destination": "/support/index.html"
+      },
+      {
+        "source": "/about",
+        "destination": "/about/index.html"
+      },
+      {
+        "source": "/data-deletion",
+        "destination": "/data-deletion/index.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
