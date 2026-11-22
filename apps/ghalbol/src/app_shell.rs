@@ -400,6 +400,15 @@ impl App {
                 ..Default::default()
             },
         );
+        // Sheets (backup, invite QR, language, …) share the same ≤360 form width.
+        self.ui.view(cx, ids!(sheet_column)).set_walk(
+            cx,
+            Walk {
+                width: Size::Fixed(form_w),
+                height: Size::fill(),
+                ..Default::default()
+            },
+        );
 
         self.ui.widget(cx, ids!(nav_rail)).set_visible(cx, show_rail);
         self.ui.widget(cx, ids!(rail_divider)).set_visible(cx, show_rail);

@@ -1127,14 +1127,27 @@ script_mod! {
                         width: Fill
                         height: Fill
                         flow: Down
-                        spacing: 12
+                        spacing: 0
                         padding: Inset{
                             left: 24.
                             right: 24.
                             top: (mod.widgets.SAFE_INSET_PAD_TOP + 20.)
                             bottom: (mod.widgets.SAFE_INSET_PAD_BOTTOM + 16.)
                         }
-                        back_button := Quiet{ text: "Back" }
+                        align: Center
+                        // Clamped to ≤360 in apply_shell_layout (same as identity_column)
+                        // so Save backup / Invite QR / language sheets stay centered on desk.
+                        sheet_column := View{
+                            width: Fill
+                            height: Fill
+                            flow: Down
+                            spacing: 12
+                        View{
+                            width: Fill
+                            height: Fit
+                            flow: Right
+                            back_button := Quiet{ text: "Back" }
+                        }
                         sheet_scroll := VScroll{
                             spacing: 14
                             padding: Inset{left: 0. right: 0. top: 4. bottom: 12.}
@@ -1256,7 +1269,8 @@ script_mod! {
                                 status_clear := Quiet{ text: "Clear" }
                             }
                         }
-                        sheet_action := Go{ text: "Save" }
+                        sheet_action := StackPrimaryBtn{ text: "Save" }
+                        }
                     }
                     // Voice-first call chrome: peer avatar + name + status. Video tiles
                     // stay hidden until a video call is actually active (empty Image
