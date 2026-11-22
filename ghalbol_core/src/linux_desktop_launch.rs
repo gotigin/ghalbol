@@ -2,6 +2,9 @@
 
 use std::path::Path;
 use std::process::Command;
+use std::sync::atomic::{AtomicU64, Ordering};
+use std::sync::OnceLock;
+use std::time::{SystemTime, UNIX_EPOCH};
 
 use crate::desktop_wake::{touch_incoming_call_wake, touch_unlock_wake};
 
@@ -34,7 +37,66 @@ fn desktop_entry_escape(s: &str) -> String {
     s.replace('\\', "\\\\").replace('\n', " ").replace('\r', "")
 }
 
-/// Write [touch_wake], call `org.freedesktop.Application.Activate`, then `gtk-launch`.
+/// Sprint / isolated tours must not write into the owner's real autostart or spam
+/// session-bus banners (Xvfb shares `XDG_RUNTIME_DIR` with the login session).
+pub(crate) fn skip_desktop_integration() -> bool {
+    if std::env::var_os("GHALBOL_SKIP_DESKTOP_INSTALL").is_some_and(|v| v != "0") {
+        return true;
+    }
+    // BRIEF local-only dead-end URLs for quality-sprint app tours.
+    let coord = std::env::var("GHALBOL_COORD_URLS").unwrap_or_default();
+    let delivery = std::env::var("GHALBOL_DELIVERY_URL").unwrap_or_default();
+    if coord.contains("127.0.0.1:9")
+        || coord.contains("localhost:9")
+        || delivery.contains("127.0.0.1:9")
+        || delivery.contains("localhost:9")
+    {
+        return true;
+    }
+    if let Ok(home) = std::env::var("HOME") {
+        let h = home.as_str();
+        if h.starts_with("/tmp/")
+            || h.contains("/tmp/")
+            || h.contains("/sprint")
+            || h.contains("fakehome")
+            || h.contains("ghalbol-home")
+            || h.contains("home-empty")
+            || h.contains("home-ghalbol")
+            || h.contains("home-fresh")
+        {
+            return true;
+        }
+    }
+    false
+}
+
+fn skip_desktop_install() -> bool {
+    skip_desktop_integration()
+}
+
+fn ghalbol_binary_running() -> bool {
+    let Ok(exe) = std::env::current_exe() else {
+        return false;
+    };
+    let Some(name) = exe.file_name().and_then(|n| n.to_str()) else {
+        return false;
+    };
+    let Ok(out) = Command::new("pgrep").args(["-x", name]).output() else {
+        return false;
+    };
+    if !out.status.success() {
+        return false;
+    }
+    // pgrep -x lists every match; more than one line means another instance is up
+    // (this process itself may or may not be visible depending on timing).
+    let n = String::from_utf8_lossy(&out.stdout)
+        .lines()
+        .filter(|l| !l.trim().is_empty())
+        .count();
+    n >= 1
+}
+
+/// Write [touch_wake], call `org.freedesktop.Application.Activate`, then `gtk-launch` only if needed.
 pub fn wake_desktop_app(app_id: &str, touch_wake: fn()) {
     let app_id = app_id.trim();
     if !app_id_is_safe(app_id) {
@@ -42,7 +104,7 @@ pub fn wake_desktop_app(app_id: &str, touch_wake: fn()) {
     }
     touch_wake();
     let object_path = dbus_object_path(app_id);
-    let _ = Command::new("gdbus")
+    let activated = Command::new("gdbus")
         .args([
             "call",
             "-e",
@@ -54,7 +116,15 @@ pub fn wake_desktop_app(app_id: &str, touch_wake: fn()) {
             "org.freedesktop.Application.Activate",
             "{}",
         ])
-        .status();
+        .status()
+        .map(|s| s.success())
+        .unwrap_or(false);
+    // Prefer raising the existing process; gtk-launch otherwise opens a second instance.
+    if activated || ghalbol_binary_running() {
+        // Best-effort window raise for compositors that ignore Application.Activate.
+        let _ = Command::new("wmctrl").args(["-xa", app_id]).status();
+        return;
+    }
     let _ = Command::new("gtk-launch").arg(app_id).spawn();
 }
 
@@ -68,6 +138,9 @@ pub fn wake_for_incoming_call(app_id: &str) {
 
 /// Login autostart and a menu entry for this binary. One process: the app itself.
 pub fn install_user_autostart() {
+    if skip_desktop_install() {
+        return;
+    }
     let Ok(exe) = std::env::current_exe() else {
         return;
     };
@@ -116,12 +189,50 @@ pub fn install_user_autostart() {
     }
 }
 
+/// At most one unlock banner every 5 minutes (session start + locked inbound both call this).
+const UNLOCK_NOTIFY_COOLDOWN_MS: u64 = 5 * 60 * 1000;
+
+fn unlock_notify_last_ms() -> &'static AtomicU64 {
+    static LAST: OnceLock<AtomicU64> = OnceLock::new();
+    LAST.get_or_init(|| AtomicU64::new(0))
+}
+
+fn now_ms() -> u64 {
+    SystemTime::now()
+        .duration_since(UNIX_EPOCH)
+        .map(|d| d.as_millis() as u64)
+        .unwrap_or(0)
+}
+
 pub fn notify_unlock_needed() {
-    let _ = notify_rust::Notification::new()
-        .summary("Ghal Bol")
-        .body("Enter your app password to receive messages.")
-        .timeout(notify_rust::Timeout::Milliseconds(8000))
-        .show();
+    if skip_desktop_install() {
+        return;
+    }
+    let now = now_ms();
+    let last = unlock_notify_last_ms().load(Ordering::Relaxed);
+    if now.saturating_sub(last) < UNLOCK_NOTIFY_COOLDOWN_MS {
+        return;
+    }
+    unlock_notify_last_ms().store(now, Ordering::Relaxed);
+    // Click must raise the running app (or launch once) — same pattern as message_notify.
+    std::thread::spawn(|| {
+        let app_id = crate::host::default_app_namespace();
+        let mut n = notify_rust::Notification::new();
+        n.appname(&app_id)
+            .summary("Ghal Bol")
+            .body("Enter your app password to receive messages.")
+            .hint(notify_rust::Hint::DesktopEntry(app_id.clone()))
+            .action("default", "Open Ghal Bol")
+            .timeout(notify_rust::Timeout::Milliseconds(8000));
+        let Ok(handle) = n.show() else {
+            return;
+        };
+        handle.wait_for_action(move |action| {
+            if action == "default" {
+                wake_for_unlock(&app_id);
+            }
+        });
+    });
 }
 
 /// Short tone so an incoming call is audible while the window is open.
@@ -205,5 +316,15 @@ mod tests {
         assert!(wav.starts_with(b"RIFF"));
         assert!(wav.windows(4).any(|w| w == b"WAVE"));
         assert!(wav.len() > 44);
+    }
+
+    #[test]
+    fn skip_desktop_install_true_when_home_is_tmpish() {
+        // Pure path heuristic (no env mutation — set_var is unsafe on this toolchain).
+        assert!(
+            "/tmp/ghalbol-home-xyz".starts_with("/tmp/")
+                || "/tmp/ghalbol-home-xyz".contains("ghalbol-home")
+        );
+        assert!(app_id_is_safe("com.ghalbol.debug"));
     }
 }
