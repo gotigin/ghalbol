@@ -471,6 +471,8 @@ impl App {
         let scan_file = i18n::text(lang, i18n::Key::QrPicture).to_string();
         let chats = i18n::text(lang, i18n::Key::Chats).to_string();
         let invite_tab = i18n::text(lang, i18n::Key::InviteTab).to_string();
+        // Short ActionBar label (same word as the Invite hub peer) — not "My invitation".
+        let invite_chip = invite_tab.clone();
         let settings = i18n::text(lang, i18n::Key::Settings).to_string();
         let contacts_menu = contacts.clone();
         let voice_call = i18n::text(lang, i18n::Key::VoiceCall).to_string();
@@ -524,9 +526,11 @@ impl App {
         script_eval!(cx, {
             ui.unlock_button.set_text(#(unlock))
             ui.new_chat_button.set_text(#(new_chat))
-            ui.invite_button.set_text(#(invitation))
+            // ActionBar chips stay short so New chat · Invite · Join · Scan fit at 360
+            // without clipping; invite pane primary keeps the full "My invitation" string.
+            ui.invite_button.set_text(#(invite_chip))
             ui.join_button.set_text(#(join))
-            ui.scan_button.set_text(#(scan))
+            ui.scan_button.set_text("Scan")
             ui.scan_file_button.set_text(#(scan_file))
             ui.contacts_button.set_text(#(contacts_menu))
             ui.blocked_button.set_text(#(blocked))
