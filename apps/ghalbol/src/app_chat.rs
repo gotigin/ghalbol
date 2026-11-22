@@ -970,12 +970,14 @@ impl App {
             )
         };
         let show_empty = shown == 0;
+        let title_lbl = empty_title.clone();
+        let body_lbl = empty_body.clone();
         script_eval!(cx, {
             mod.state.roster_empty_title = #(empty_title)
             mod.state.roster_empty_body = #(empty_body)
             mod.state.roster_empty_gen = mod.state.roster_empty_gen + 1
-            ui.roster_empty_title_lbl.set_text(#(empty_title))
-            ui.roster_empty_body_lbl.set_text(#(empty_body))
+            ui.roster_empty_title_lbl.set_text(#(title_lbl))
+            ui.roster_empty_body_lbl.set_text(#(body_lbl))
             ui.roster_empty_block.set_visible(#(show_empty))
         });
     }
