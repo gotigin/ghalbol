@@ -377,11 +377,20 @@
       .topbar { align-items: stretch; flex-direction: column; }
       .topnav { justify-content: flex-start; }
     }
-    /* Phone: the four links share one row and fill it (they sat right-aligned
-       with "Play Store" alone on a second row). */
+    /* Phone: 2×2 nav so "Play Store" is never alone on a full-width second row. */
     @media (max-width: 480px) {
-      .topnav { gap: 6px; }
-      .topnav .ghost { flex: 1 1 auto; text-align: center; min-height: 44px; padding: 12px 8px; font-size: 0.86rem; }
+      .topnav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        justify-content: stretch;
+      }
+      .topnav .ghost {
+        text-align: center;
+        min-height: 44px;
+        padding: 12px 8px;
+        font-size: 0.86rem;
+      }
       /* Hero dual CTAs truncated "Play Store" / "messenger" side-by-side. */
       .cta-row { flex-direction: column; align-items: stretch; }
       .cta-row .btn { width: 100%; box-sizing: border-box; }

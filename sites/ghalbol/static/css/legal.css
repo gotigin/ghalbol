@@ -142,3 +142,22 @@ a:hover { color: var(--primary-hover); }
   color: var(--muted);
 }
 .footer p { margin: 0.35rem 0; }
+@media (max-width: 860px) {
+  .topbar { align-items: stretch; flex-direction: column; }
+  .topnav { justify-content: flex-start; }
+}
+/* Phone: 2×2 nav so "Play Store" is never alone on a full-width second row. */
+@media (max-width: 480px) {
+  .topnav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    justify-content: stretch;
+  }
+  .topnav .ghost {
+    text-align: center;
+    min-height: 44px;
+    padding: 12px 8px;
+    font-size: 0.86rem;
+  }
+}
