@@ -7,12 +7,15 @@ privacy, and App Links.
 ```text
 static/                 ← source tree (edit here)
   index.html            ← brand landing + SPA routes (/connect, /privacy, /terms, /support, /data-deletion, /about, /download/linux)
+                          (WebSite + SoftwareApplication JSON-LD in <head>)
+  robots.txt / sitemap.xml
   media/                ← what the page loads: icon.webp, feature.webp; link-preview.jpg
                           (icon.png, feature.png, app_icon.png are the full-size art, kept for links)
   favicon.png
   .well-known/assetlinks.json
   downloads/            ← Linux tarball before deploy (gitignored .tar.gz)
   js/firebase-init.js   ← built by npm (gitignored); from client/
+firebase.json           ← Hosting rewrites + safe headers (nosniff, referrer, permissions, frame, CSP)
 
 client/firebase-init.js ← Firebase web app config (Analytics)
 public/                 ← staged Hosting root (gitignored)
