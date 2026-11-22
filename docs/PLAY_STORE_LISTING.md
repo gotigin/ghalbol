@@ -29,7 +29,7 @@ Ghal Bol is realtime peer-to-peer messaging built for direct communication betwe
 - People who want private, direct messaging without a central chat cloud
 - Developers and early adopters comfortable with peer-to-peer networking
 
-Ghal Bol is a brand of GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED. Gotigin is the trademark. Feedback: mearaj@gotigin.com or ghalbol.com.
+Ghal Bol is a brand of GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED. Gotigin is the trademark. Feedback: support@gotigin.com or ghalbol.com.
 
 ## Category
 
@@ -61,7 +61,7 @@ Link privacy policy URL: `https://ghalbol.com/privacy`. Also set support `https:
 
 - Developer / publisher: GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED
 - Website: `https://ghalbol.com`
-- Email: mearaj@gotigin.com
+- Email: support@gotigin.com
 
 ## Release notes (v1.1.0 build 10)
 

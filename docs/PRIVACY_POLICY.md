@@ -10,7 +10,7 @@
 | **Product** | Ghal Bol messenger (`com.ghalbol`) |
 | CIN | U62011GJ2026PTC179660 |
 | Registered office | C/O Mearaj AB, Gosiya Manzil, Darbargadh, Dhoraji, Rajkot, Gujarat 360410, India |
-| Contact | [mearaj@gotigin.com](mailto:mearaj@gotigin.com) |
+| Contact | [support@gotigin.com](mailto:support@gotigin.com) |
 
 This Privacy Policy explains how the Ghal Bol mobile and desktop applications (“the app”) and the optional **coordination** and **delivery** services we operate handle information. Ghal Bol keeps **chat history on devices**; the delivery server holds temporary E2E ciphertext only until delivery is acknowledged. **Calls** are designed to travel peer-to-peer (or through an opaque coord bridge) and are not stored as call content on our servers.
 
@@ -197,7 +197,7 @@ We may update this Privacy Policy from time to time. The **“Last updated”** 
 
 Questions or privacy requests:
 
-- **Email:** [mearaj@gotigin.com](mailto:mearaj@gotigin.com)
+- **Email:** [support@gotigin.com](mailto:support@gotigin.com)
 - **Product site:** https://ghalbol.com
 - **Company site:** https://gotigin.com
 

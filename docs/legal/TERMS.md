@@ -60,4 +60,4 @@ We may update these Terms by posting a new version at [ghalbol.com/terms](https:
 
 ## Contact
 
-[mearaj@gotigin.com](mailto:mearaj@gotigin.com)
+[support@gotigin.com](mailto:support@gotigin.com)

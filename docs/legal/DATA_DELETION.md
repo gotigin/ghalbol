@@ -24,10 +24,10 @@ If you pointed the app at a coordination server you run yourself, that operatorâ
 
 ## Email we received
 
-To delete a specific support thread, email [mearaj@gotigin.com](mailto:mearaj@gotigin.com) with the subject `Ghal Bol data deletion`. We will delete or anonymise that mailbox thread within **30 days**, except records we must keep for legal or abuse prevention.
+To delete a specific support thread, email [support@gotigin.com](mailto:support@gotigin.com) with the subject `Ghal Bol data deletion`. We will delete or anonymise that mailbox thread within **30 days**, except records we must keep for legal or abuse prevention.
 
 ## Contact
 
 GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED  
-[mearaj@gotigin.com](mailto:mearaj@gotigin.com)  
+[support@gotigin.com](mailto:support@gotigin.com)  
 Gosiya Manzil, Darbargadh, Dhoraji, Rajkot, Gujarat 360410, India

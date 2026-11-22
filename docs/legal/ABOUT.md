@@ -9,7 +9,7 @@ Order is always **Trademark → Company → Brand → Product**.
 | | |
 | --- | --- |
 | **Gotigin** | Trademark. Pronounced *go-tee-geen*. Slogan: *Where Technology Meets Discovery* |
-| **GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED** | Company · [mearaj@gotigin.com](mailto:mearaj@gotigin.com) |
+| **GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED** | Company · [support@gotigin.com](mailto:support@gotigin.com) |
 | **Ghal Bol** | Brand for communication products · [ghalbol.com](https://ghalbol.com) |
 | **Ghal Bol messenger** | Shipping product. Public app name **Ghal Bol** (`com.ghalbol`) |
 
@@ -27,7 +27,8 @@ Ghal Bol is encrypted 1:1 chat and voice/video calls. Identity and transcripts s
 | CIN | U62011GJ2026PTC179660 |
 | Incorporation | 24 June 2026 |
 | Registered office | Gosiya Manzil, Darbargadh, Dhoraji, Rajkot, Gujarat 360410, India |
-| Email | [mearaj@gotigin.com](mailto:mearaj@gotigin.com) |
+| Support | [support@gotigin.com](mailto:support@gotigin.com) |
+| Director (official) | [mearaj@gmail.com](mailto:mearaj@gmail.com) |
 
 ## Legal links
 

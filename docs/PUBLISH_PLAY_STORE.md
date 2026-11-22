@@ -14,7 +14,7 @@ Play already accepted the earlier Flutter app through **version code 9** (1.0.1)
 | --- | --- |
 | Privacy policy | https://ghalbol.com/privacy |
 | Terms | https://ghalbol.com/terms |
-| Support URL / email | https://ghalbol.com/support · mearaj@gotigin.com |
+| Support URL / email | https://ghalbol.com/support · support@gotigin.com |
 | Account / data deletion | https://ghalbol.com/data-deletion |
 | Website | https://ghalbol.com |
 

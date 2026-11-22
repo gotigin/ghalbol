@@ -10,7 +10,7 @@ Publisher shown in the sideload uninstall entry: **GOTIGIN SOFTWARE & HARDWARE P
 | --- | --- |
 | Privacy policy | https://ghalbol.com/privacy |
 | Website | https://ghalbol.com |
-| Support | https://ghalbol.com/support · mearaj@gotigin.com |
+| Support | https://ghalbol.com/support · support@gotigin.com |
 | Terms | https://ghalbol.com/terms |
 
 ## What this repo packs today
