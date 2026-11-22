@@ -960,6 +960,12 @@ script_mod! {
                             height: Fill
                             flow: Down
                             spacing: 0
+                            align: Center
+                            // ≤520 in apply_shell_layout — full-bleed HubDest rows on a 1920 desk are unreadable.
+                            contacts_column := View{
+                                width: Fill
+                                height: Fill
+                                flow: Down
                             contacts_scroll := VScroll{
                                 spacing: 10
                                 padding: 32
@@ -977,6 +983,7 @@ script_mod! {
                                 add_contact_button := HubDestBtn{ text: "Add contact by public key" }
                                 blocked_button := HubDestBtn{ text: "Blocked contacts — people you blocked on this device" }
                             }
+                            }
                         }
                         invite_pane := Panel{
                             visible: false
@@ -985,6 +992,11 @@ script_mod! {
                             height: Fill
                             flow: Down
                             spacing: 0
+                            align: Center
+                            invite_column := View{
+                                width: Fill
+                                height: Fill
+                                flow: Down
                             invite_scroll := VScroll{
                                 spacing: 10
                                 padding: 32
@@ -1012,6 +1024,7 @@ script_mod! {
                                 scan_nav_button := HubDestBtn{ text: "Scan invitation QR with camera" }
                                 scan_file_button := HubDestBtn{ text: "Join from QR picture — PNG or JPEG" }
                             }
+                            }
                         }
                         settings_pane := Panel{
                             visible: false
@@ -1020,6 +1033,11 @@ script_mod! {
                             height: Fill
                             flow: Down
                             spacing: 0
+                            align: Center
+                            settings_column := View{
+                                width: Fill
+                                height: Fill
+                                flow: Down
                             settings_scroll := VScroll{
                                 spacing: 14
                                 padding: 32
@@ -1078,6 +1096,7 @@ script_mod! {
                                 log_button := HubDestBtn{ text: "App log — session diagnostics" }
                                 about_button := HubDestBtn{ text: "Availability and About" }
                                 logout_button := Stop{ text: "Log out" width: Fit }
+                            }
                             }
                         }
                         }

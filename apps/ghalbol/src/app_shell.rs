@@ -409,6 +409,22 @@ impl App {
                 ..Default::default()
             },
         );
+        // Contacts / Invite / Settings: readable column on desk (not full-bleed HubDest slabs).
+        let hub_form_w = if split {
+            (window_w - rail - 48.0).clamp(280.0, 520.0)
+        } else {
+            (window_w - 16.0).clamp(240.0, 520.0)
+        };
+        for col in [ids!(contacts_column), ids!(invite_column), ids!(settings_column)] {
+            self.ui.view(cx, col).set_walk(
+                cx,
+                Walk {
+                    width: Size::Fixed(hub_form_w),
+                    height: Size::fill(),
+                    ..Default::default()
+                },
+            );
+        }
 
         self.ui.widget(cx, ids!(nav_rail)).set_visible(cx, show_rail);
         self.ui.widget(cx, ids!(rail_divider)).set_visible(cx, show_rail);
