@@ -16,6 +16,7 @@ Play already accepted the earlier Flutter app through **version code 9** (1.0.1)
 | Terms | https://ghalbol.com/terms |
 | Support URL / email | https://ghalbol.com/support · support@gotigin.com |
 | Account / data deletion | https://ghalbol.com/data-deletion |
+| Cancellation | https://ghalbol.com/cancellation |
 | Website | https://ghalbol.com |
 
 Deploy before review: `./sites/ghalbol/scripts/deploy-firebase.sh`.
