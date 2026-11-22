@@ -43,31 +43,36 @@ pub(crate) fn skip_desktop_integration() -> bool {
     if std::env::var_os("GHALBOL_SKIP_DESKTOP_INSTALL").is_some_and(|v| v != "0") {
         return true;
     }
-    // BRIEF local-only dead-end URLs for quality-sprint app tours.
-    let coord = std::env::var("GHALBOL_COORD_URLS").unwrap_or_default();
-    let delivery = std::env::var("GHALBOL_DELIVERY_URL").unwrap_or_default();
-    if coord.contains("127.0.0.1:9")
-        || coord.contains("localhost:9")
-        || delivery.contains("127.0.0.1:9")
-        || delivery.contains("localhost:9")
-    {
+    harness_desktop_env(
+        &std::env::var("GHALBOL_COORD_URLS").unwrap_or_default(),
+        &std::env::var("GHALBOL_DELIVERY_URL").unwrap_or_default(),
+        &std::env::var("HOME").unwrap_or_default(),
+    )
+}
+
+/// Tour-harness fingerprints: coord / delivery on the loopback discard port 9
+/// (dead-end URLs), or a throwaway HOME. Kept narrow on purpose — a real user's
+/// HOME (`/home/sprinter`) or a developer's local coord on port 9000 keeps the
+/// desktop integration.
+fn harness_desktop_env(coord: &str, delivery: &str, home: &str) -> bool {
+    let dead_end = |url: &str| {
+        ["127.0.0.1:9", "localhost:9"].iter().any(|host| {
+            url.match_indices(host)
+                .any(|(i, m)| !url[i + m.len()..].starts_with(|c: char| c.is_ascii_digit()))
+        })
+    };
+    if dead_end(coord) || dead_end(delivery) {
         return true;
     }
-    if let Ok(home) = std::env::var("HOME") {
-        let h = home.as_str();
-        if h.starts_with("/tmp/")
-            || h.contains("/tmp/")
-            || h.contains("/sprint")
-            || h.contains("fakehome")
-            || h.contains("ghalbol-home")
-            || h.contains("home-empty")
-            || h.contains("home-ghalbol")
-            || h.contains("home-fresh")
-        {
-            return true;
-        }
+    if home.contains("/tmp/") || home.contains("/Internal/sprint") {
+        return true;
     }
-    false
+    // Throwaway HOME folders the tour scripts make (a whole path component).
+    home.split('/').any(|part| {
+        ["fakehome", "ghalbol-home", "home-empty", "home-ghalbol", "home-fresh"]
+            .iter()
+            .any(|marker| part.starts_with(marker))
+    })
 }
 
 fn skip_desktop_install() -> bool {
@@ -319,12 +324,29 @@ mod tests {
     }
 
     #[test]
-    fn skip_desktop_install_true_when_home_is_tmpish() {
-        // Pure path heuristic (no env mutation — set_var is unsafe on this toolchain).
-        assert!(
-            "/tmp/ghalbol-home-xyz".starts_with("/tmp/")
-                || "/tmp/ghalbol-home-xyz".contains("ghalbol-home")
-        );
+    fn tour_harness_env_skips_desktop_integration() {
+        // Dead-end coord / delivery on the loopback discard port (tour scripts).
+        assert!(harness_desktop_env(r#"["http://127.0.0.1:9"]"#, "", "/home/a"));
+        assert!(harness_desktop_env("", "ws://127.0.0.1:9", "/home/a"));
+        assert!(harness_desktop_env("", "ws://localhost:9/", "/home/a"));
+        // Throwaway HOMEs.
+        assert!(harness_desktop_env("", "", "/tmp/ghalbol-home-xyz"));
+        assert!(harness_desktop_env("", "", "/srv/x/home-ghalbol2"));
+        assert!(harness_desktop_env("", "", "/home/u/Gotigin/Internal/sprint/L3/h"));
         assert!(app_id_is_safe("com.ghalbol.debug"));
+    }
+
+    #[test]
+    fn real_users_keep_desktop_integration() {
+        let live = (r#"["https://coord.ghalbol.com"]"#, "wss://delivery.ghalbol.com");
+        assert!(!harness_desktop_env(live.0, live.1, "/home/alice"));
+        assert!(!harness_desktop_env(live.0, live.1, "/home/sprinter"));
+        assert!(!harness_desktop_env(live.0, live.1, "/home/homer"));
+        // A developer's local coord on a port that only starts with 9.
+        assert!(!harness_desktop_env(
+            r#"["http://127.0.0.1:9000"]"#,
+            "ws://localhost:9443",
+            "/home/dev"
+        ));
     }
 }
