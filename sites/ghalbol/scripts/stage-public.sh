@@ -72,7 +72,8 @@ for html in "$INDEX" \
   "$OUT/terms/index.html" \
   "$OUT/support/index.html" \
   "$OUT/about/index.html" \
-  "$OUT/data-deletion/index.html"; do
+  "$OUT/data-deletion/index.html" \
+  "$OUT/cancellation/index.html"; do
   if [[ ! -f "$html" ]]; then
     echo "error: missing $html" >&2
     exit 1

@@ -45,7 +45,10 @@ break App Links verification.
 | `/terms` | Terms ([legal/TERMS.md](legal/TERMS.md)) |
 | `/support` | Support URL for Play and Microsoft Store |
 | `/data-deletion` | Data deletion instructions |
+| `/cancellation` | No website subscription; store / local uninstall paths |
 | `/about` | Trademark, company, brand |
+| `/robots.txt` | Crawl rules + sitemap pointer |
+| `/sitemap.xml` | Home, download/linux, legal pages |
 | `/.well-known/assetlinks.json` | Digital Asset Links for verified HTTPS → app |
 
 Optional query on invites: `?alias=Name` only. The public key is 64 or 66 hex

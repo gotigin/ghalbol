@@ -45,7 +45,7 @@
         ]
       },
       {
-        "source": "/{privacy,terms,support,about,data-deletion}/**",
+        "source": "/{privacy,terms,support,about,data-deletion,cancellation}/**",
         "headers": [
           { "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" }
         ]
@@ -85,6 +85,10 @@
       {
         "source": "/data-deletion",
         "destination": "/data-deletion/index.html"
+      },
+      {
+        "source": "/cancellation",
+        "destination": "/cancellation/index.html"
       },
       {
         "source": "**",
