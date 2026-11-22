@@ -20,6 +20,9 @@ Layout follows Kumkaj/Wadhu: everything lives under **`sites/ghalbol/`**
 | Project | `sites/ghalbol/.firebaserc` → **`ghalbol`** |
 | Android App Links | `sites/ghalbol/static/.well-known/assetlinks.json` |
 | Linux bundle | `sites/ghalbol/static/downloads/ghalbol-linux-x64.tar.gz` before deploy |
+| Crawl | `sites/ghalbol/static/robots.txt`, `sitemap.xml` (home, download/linux, legal pages) |
+| JSON-LD | `WebSite` + `SoftwareApplication` in `static/index.html` |
+| Safe headers | `firebase.json`: nosniff, referrer, permissions, frame, CSP (static HTML + Analytics) |
 
 Home page structure mirrors Kumkaj/Wadhu brand sites (topbar + hero + product bands + platforms + footer), as static HTML with the Ghal Bol palette from [MAKEPAD_UI.md](MAKEPAD_UI.md) § Palette — not an empty download stub.
 
