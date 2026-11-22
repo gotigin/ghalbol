@@ -380,6 +380,36 @@ script_mod! {
                                         width: Fill
                                     }
                                 }
+                                // Stable ids — Splash on_render empty branch kept the first
+                                // title when the list stayed empty and only the copy changed
+                                // ("No chats yet" ↔ "No matches"). Rust set_text + set_visible.
+                                roster_empty_block := View{
+                                    width: Fill
+                                    height: Fit
+                                    flow: Down
+                                    spacing: 12
+                                    padding: 28
+                                    align: Center
+                                    visible: false
+                                    roster_empty_title_lbl := Selectable{
+                                        width: Fill
+                                        height: Fit
+                                        label_align: Center
+                                        text: "No chats yet"
+                                        draw_text.color: #0B1220
+                                        draw_text.text_style.font_size: 18
+                                        draw_text.max_lines: 2
+                                    }
+                                    roster_empty_body_lbl := Selectable{
+                                        width: Fill
+                                        height: Fit
+                                        label_align: Center
+                                        text: "Scan a QR or paste an invitation to start a 1:1 chat."
+                                        draw_text.color: #5A6B7D
+                                        draw_text.text_style.font_size: 13
+                                        draw_text.max_lines: 4
+                                    }
+                                }
                                 roster_list := VScroll{
                                     spacing: 6
                                     padding: Inset{left: 8. right: 8. top: 8. bottom: 12.}
@@ -394,40 +424,7 @@ script_mod! {
                                         ui.chat_log.render()
                                     }
                                     on_render: ||{
-                                        // Two statements, not `if … else for …`: as the
-                                        // closure's last statement that form dropped the
-                                        // empty view, so a new identity saw a blank list
-                                        // and a search with no match kept the old rows.
-                                        if state.roster.len() == 0 {
-                                            View{
-                                                width: Fill
-                                                height: Fit
-                                                flow: Down
-                                                spacing: 12
-                                                padding: 28
-                                                align: Center
-                                                Selectable{
-                                                    width: Fill
-                                                    height: Fit
-                                                    label_align: Center
-                                                    text: state.roster_empty_title
-                                                    draw_text.color: #0B1220
-                                                    draw_text.text_style.font_size: 18
-                                                    draw_text.max_lines: 2
-                                                }
-                                                // Wraps: a plain Label ran off the right
-                                                // edge of a phone.
-                                                Selectable{
-                                                    width: Fill
-                                                    height: Fit
-                                                    label_align: Center
-                                                    text: state.roster_empty_body
-                                                    draw_text.color: #5A6B7D
-                                                    draw_text.text_style.font_size: 13
-                                                    draw_text.max_lines: 4
-                                                }
-                                            }
-                                        }
+                                        // Rows only — empty copy lives in roster_empty_block.
                                         for i, row in state.roster {
                                             // Open room = green wash, unread = blue wash with a
                                             // count badge (Flutter roster chrome).

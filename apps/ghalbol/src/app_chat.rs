@@ -891,6 +891,12 @@ impl App {
         let Some(session) = self.session.clone() else {
             return;
         };
+        // Live widget text — IME / xdotool can paint the Field before `changed`
+        // lands in handle_actions; poll must still filter and swap empty copy.
+        let live = self.ui.text_input(cx, ids!(search_input)).text();
+        if live != self.search {
+            self.search = live;
+        }
         let ver = host::contacts_version();
         if ver == self.roster_ver && self.roster_query == self.search {
             return;
@@ -950,6 +956,8 @@ impl App {
             });
         }
         // Flutter empty-search copy — distinguish "no chats" from "no match".
+        // Stable roster_empty_* widgets (not on_render) so title/body swap when the
+        // list stays empty.
         let (empty_title, empty_body) = if shown == 0 && searching {
             (
                 "No matches".to_string(),
@@ -961,9 +969,14 @@ impl App {
                 "Scan a QR or paste an invitation to start a 1:1 chat.".to_string(),
             )
         };
+        let show_empty = shown == 0;
         script_eval!(cx, {
             mod.state.roster_empty_title = #(empty_title)
             mod.state.roster_empty_body = #(empty_body)
+            mod.state.roster_empty_gen = mod.state.roster_empty_gen + 1
+            ui.roster_empty_title_lbl.set_text(#(empty_title))
+            ui.roster_empty_body_lbl.set_text(#(empty_body))
+            ui.roster_empty_block.set_visible(#(show_empty))
         });
     }
 
@@ -1060,6 +1073,18 @@ impl App {
         }
         if self.session.is_none() {
             return;
+        }
+        // Notification tap while Lock hid the hub — show the unlock face again.
+        if wake_unlock && self.ui_locked {
+            script_eval!(cx, {
+                mod.state.screen = "identity"
+                ui.identity_view.set_visible(true)
+                ui.hub_view.set_visible(false)
+                ui.call_view.set_visible(false)
+                ui.sheet_view.set_visible(false)
+                ui.identity_copy.render()
+            });
+            self.set_screen(cx, "identity");
         }
         if wake_call || dirty {
             self.refresh_call_line(cx);

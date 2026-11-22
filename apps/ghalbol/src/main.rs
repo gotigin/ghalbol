@@ -218,6 +218,7 @@ impl AppMain for App {
                     roster: []
                     roster_empty_title: "No chats yet"
                     roster_empty_body: "Scan a QR or paste an invitation to start a 1:1 chat."
+                    roster_empty_gen: 0
                     transcript: ""
                     lines: []
                     selected_pk: ""
