@@ -95,7 +95,15 @@
         "destination": "/cancellation/index.html"
       },
       {
-        "source": "**",
+        "source": "/connect",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/connect/**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/download/**",
         "destination": "/index.html"
       }
     ]

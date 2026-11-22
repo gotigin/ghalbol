@@ -27,8 +27,10 @@ Layout follows Kumkaj/Wadhu: everything lives under **`sites/ghalbol/`**
 Home page structure mirrors Kumkaj/Wadhu brand sites (topbar + hero + product bands + platforms + footer), as static HTML with the Ghal Bol palette from [MAKEPAD_UI.md](MAKEPAD_UI.md) § Palette — not an empty download stub.
 
 Staging copies `static/` → `public/` and injects a cache-busted Analytics
-script. Firebase serves real files first (tarball, `assetlinks.json`); the
-rewrite to `index.html` applies when no static file matches.
+script. Firebase serves real files first (tarball, `assetlinks.json`); only the client
+routes `/connect`, `/connect/…` and `/download/…` rewrite to `index.html`. Any other
+unknown path gets `404.html` with a real 404 status (until 2026-11-22 it answered
+with the home page, a soft 404 that search engines index as a duplicate).
 
 **Do not** add `**/.*` to Hosting `ignore` — that would drop `.well-known/` and
 break App Links verification.

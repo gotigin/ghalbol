@@ -8,6 +8,7 @@ privacy, and App Links.
 static/                 ← source tree (edit here)
   index.html            ← brand landing + SPA routes (/connect, /privacy, /terms, /support, /data-deletion, /about, /download/linux)
                           (WebSite + SoftwareApplication JSON-LD in <head>)
+  404.html              ← not-found page; Hosting serves it with status 404 for paths no file or route matches
   robots.txt / sitemap.xml
   media/                ← what the page loads: icon.webp, feature.webp; link-preview.jpg
                           (icon.png, feature.png, app_icon.png are the full-size art, kept for links)
