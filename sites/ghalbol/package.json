@@ -1,10 +1,11 @@
 {
   "name": "ghalbol-website",
   "private": true,
-  "description": "ghalbol.com — Firebase Analytics client for the static Ghal Bol site",
+  "description": "ghalbol.com \u2014 Firebase Analytics client for the static Ghal Bol site",
   "scripts": {
     "build:firebase": "esbuild client/firebase-init.js --bundle --format=iife --outfile=static/js/firebase-init.js --minify",
-    "build": "npm run build:firebase"
+    "build": "npm run build:firebase && npm run build:account",
+    "build:account": "esbuild client/account-app.js --bundle --format=iife --outfile=static/js/account.js --minify"
   },
   "dependencies": {
     "firebase": "^11.6.0"

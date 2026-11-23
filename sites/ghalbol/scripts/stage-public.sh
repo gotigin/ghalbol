@@ -43,7 +43,7 @@ if [[ ! -f "$OUT/.well-known/assetlinks.json" ]]; then
   exit 1
 fi
 
-# Inject / refresh Analytics script with cache-bust query (Khaynjo/Wadhu pattern).
+# Inject / refresh Analytics + auth chrome with cache-bust query.
 if grep -q 'firebase-init\.js' "$INDEX"; then
   sed -i -E "s#(/js/firebase-init\\.js)\\?v=[^\"]*#\\1?v=${BUILD_ID}#g; s#src=\"(/js/firebase-init\\.js)\"#src=\"\\1?v=${BUILD_ID}\"#" "$INDEX"
 else
@@ -55,6 +55,15 @@ else
     { print }
     END { if (!done) exit 2 }
   ' "$INDEX" >"$INDEX.tmp" && mv "$INDEX.tmp" "$INDEX"
+fi
+# Ensure auth-nav / lang-nav are present with cache-bust (home HTML may already include them).
+for asset in auth-nav.js lang-nav.js; do
+  if grep -q "$asset" "$INDEX"; then
+    sed -i -E "s#(/js/${asset})\\?v=[^\"]*#\\1?v=${BUILD_ID}#g; s#src=\"(/js/${asset})\"#src=\"\\1?v=${BUILD_ID}\"#" "$INDEX"
+  fi
+done
+if grep -q 'auth-nav.css' "$INDEX"; then
+  sed -i -E "s#(/css/auth-nav\\.css)\\?v=[^\"]*#\\1?v=${BUILD_ID}#g; s#href=\"(/css/auth-nav\\.css)\"#href=\"\\1?v=${BUILD_ID}\"#" "$INDEX"
 fi
 
 # The link-preview picture's address carries a short hash of the file:

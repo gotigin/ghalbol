@@ -4,19 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <script>
-  /* Android Chrome Desktop-site: fake innerWidth ~980 — clamp the document. */
+  /* Android Chrome Desktop-site clamp — debounced, skip unchanged width. */
   (function () {
     try {
       var touch = "ontouchstart" in window || (navigator.maxTouchPoints || 0) > 0;
       if (!touch) return;
-      function clamp() {
+      var timer = null, lastW = 0;
+      function clampNow() {
         var ws = [window.innerWidth, window.outerWidth, screen.width].filter(function (x) { return x > 0; });
         if (!ws.length) return;
-        var w = Math.min.apply(null, ws);
+        var w = Math.max(1, Math.round(Math.min.apply(null, ws)));
+        if (w === lastW) return;
+        lastW = w;
+        document.documentElement.style.width = w + "px";
         document.documentElement.style.maxWidth = w + "px";
       }
-      clamp();
-      window.addEventListener("resize", clamp);
+      function clampDebounced() {
+        if (timer !== null) clearTimeout(timer);
+        timer = setTimeout(function () { timer = null; clampNow(); }, 150);
+      }
+      clampNow();
+      window.addEventListener("resize", clampDebounced);
+      window.addEventListener("orientationchange", clampDebounced);
     } catch (_e) {}
   })();
   </script>
@@ -87,9 +96,9 @@
     a:hover { color: var(--primary-hover); }
     .topbar {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+      gap: 12px 16px;
       max-width: var(--max);
       margin: 0 auto;
       padding: 14px 20px;
@@ -370,44 +379,66 @@
       vertical-align: top;
     }
     .privacy-body th { background: var(--hub); }
+    .nav-toggle {
+      display: none;
+      margin-left: auto;
+      min-height: 44px;
+      min-width: 44px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--border);
+      color: var(--ink);
+      font: inherit;
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+    }
+    .topnav { flex-wrap: nowrap; margin-left: auto; }
     @media (max-width: 860px) {
       .hero { grid-template-columns: 1fr; padding-top: 16px; }
       .hero-visual { order: -1; }
       .feature-grid, .platforms { grid-template-columns: 1fr; }
-      .topbar { align-items: stretch; flex-direction: column; }
-      .topnav { justify-content: flex-start; }
-    }
-    /* Phone: 2×2 nav so "Play Store" is never alone on a full-width second row. */
-    @media (max-width: 480px) {
+      .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
       .topnav {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        width: 100%;
+        margin-left: 0;
         gap: 6px;
-        justify-content: stretch;
       }
-      .topnav .ghost {
-        text-align: center;
-        min-height: 44px;
-        padding: 12px 8px;
-        font-size: 0.86rem;
+      .topbar.nav-open .topnav { display: flex; }
+      .topbar.nav-open .nav-toggle {
+        background: var(--primary);
+        color: #fff;
+        border-color: var(--primary);
       }
-      /* Hero dual CTAs truncated "Play Store" / "messenger" side-by-side. */
+      .topnav .ghost { width: 100%; justify-content: flex-start; }
       .cta-row { flex-direction: column; align-items: stretch; }
       .cta-row .btn { width: 100%; box-sizing: border-box; }
     }
   </style>
+  <link rel="stylesheet" href="/css/auth-nav.css" />
+  <script src="/js/firebase-init.js" defer></script>
+  <script src="/js/auth-nav.js" defer></script>
+  <script src="/js/lang-nav.js" defer></script>
 </head>
 <body>
-  <header class="topbar">
+  <header class="topbar" id="topbar">
     <a class="brand" href="/">
       <img src="/media/icon.webp" width="40" height="40" alt="">
       <span>Ghal Bol</span>
     </a>
-    <nav class="topnav" aria-label="Site">
-      <a class="ghost" href="/#product">Messenger</a>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="topnav" aria-expanded="false">Menu</button>
+    <nav class="topnav" id="topnav" aria-label="Site">
+<a class="ghost" href="/#product">Messenger</a>
       <a class="ghost" href="/download/linux">Linux</a>
       <a class="ghost" href="/privacy">Privacy</a>
       <a class="ghost" href="https://play.google.com/store/apps/details?id=com.ghalbol">Play Store</a>
+      <a href="/account" data-nav="login">Login</a>
+      <span id="site-lang-chrome" class="site-lang-chrome"></span>
     </nav>
   </header>
   <main id="app" class="shell"></main>
@@ -457,9 +488,9 @@
       return `
         <section class="hero">
           <div>
-            <p class="eyebrow">Gotigin · Ghal Bol</p>
+            <p class="eyebrow">Ghal Bol</p>
             <h1>Encrypted chat you own.</h1>
-            <p class="lede"><strong>Ghal Bol</strong> is the communication brand of <strong>GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED</strong>. The messenger is 1:1 text and voice/video calls — no phone number, keys and transcripts on your device. <strong>Gotigin</strong> is the trademark.</p>
+            <p class="lede">1:1 text and voice/video calls — no phone number, keys and transcripts on your device.</p>
             <div class="cta-row">
               <a class="btn primary" href="#product">See the messenger</a>
               <a class="btn secondary" href="${PLAY}">Get it on Play</a>
@@ -774,6 +805,6 @@
 
     render();
   </script>
-  <script src="/js/firebase-init.js" defer></script>
+  <script src="/js/nav-menu.js" defer></script>
 </body>
 </html>
