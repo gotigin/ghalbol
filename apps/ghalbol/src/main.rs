@@ -305,24 +305,24 @@ impl AppMain for App {
                 }
             }
             Event::NextFrame(_) => self.apply_chat_pin_frame(cx),
-            Event::MouseUp(mouse) if mouse.button.is_back() => {
+            Event::MouseDown(mouse) if mouse.button.is_back() => {
                 if self.navigate_back(cx, true) {
                     return;
                 }
             }
-            Event::MouseUp(mouse) if mouse.button.is_forward() => {
+            Event::MouseDown(mouse) if mouse.button.is_forward() => {
                 if self.navigate_forward(cx) {
                     return;
                 }
             }
             Event::KeyDown(key)
                 if key.key_code == KeyCode::Escape
+                    || (key.key_code == KeyCode::Back && !cfg!(target_os = "android"))
                     || (key.key_code == KeyCode::ArrowLeft && key.modifiers.alt) =>
             {
-                // Escape / Alt+Left only. Android KEYCODE_BACK is Event::BackPressed
-                // (MatchEvent::handle_back_pressed) — do not also handle KeyCode::Back here
-                // or every gesture would pop two levels.
-                if self.navigate_back(cx, false) {
+                // Android KEYCODE_BACK is Event::BackPressed only — KeyCode::Back
+                // here would double-pop. Desktop XF86Back / Escape / Alt+← share navigate_back.
+                if self.navigate_back(cx, true) {
                     return;
                 }
             }
@@ -334,6 +334,10 @@ impl AppMain for App {
                 }
             }
             _ => {}
+        }
+        // Edge swipe: left → back, right → forward (Android + desktop).
+        if self.edge_swipe_pointer(cx, event) {
+            return;
         }
         #[cfg(target_os = "android")]
         match event {

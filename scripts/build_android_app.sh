@@ -57,6 +57,9 @@ if ! command -v cargo-makepad >/dev/null 2>&1; then
   cargo install --git https://github.com/makepad/makepad --rev "$REV" cargo-makepad --locked
 fi
 
+# Soft Back → moveTaskToBack, cold-start compile cover, mouse-back / MSDF patches.
+"$ROOT/scripts/apply-android-ux-bridge.sh" || true
+
 # Stripped (default) NDK lacks cmake toolchain files; aws-lc-sys needs --full-ndk.
 if [[ ! -f "$NDK_DIR/source.properties" || ! -f "$NDK_DIR/build/cmake/android.toolchain.cmake" ]]; then
   echo "Makepad full Android NDK missing under $SDK_DIR — running install-toolchain --full-ndk (once)." >&2

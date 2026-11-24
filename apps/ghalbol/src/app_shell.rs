@@ -1,11 +1,51 @@
 //! App methods (Makepad shell).
 use makepad_widgets::*;
+use makepad_widgets::makepad_platform::event::TouchState;
 use ghalbol_core::host::{self};
 use crate::App;
 use crate::chat_helpers::*;
 use crate::hub_history::*;
 use crate::env_load::*;
 use crate::i18n;
+use std::sync::OnceLock;
+use std::time::{Duration, Instant};
+
+/// Visit-root double-Back-to-exit window (identity unlock + hub root).
+const EXIT_BACK_SECS: u64 = 10;
+
+fn exit_back_armed_at() -> &'static std::sync::Mutex<Option<Instant>> {
+    static SLOT: OnceLock<std::sync::Mutex<Option<Instant>>> = OnceLock::new();
+    SLOT.get_or_init(|| std::sync::Mutex::new(None))
+}
+
+fn clear_exit_back_arm() {
+    *exit_back_armed_at().lock().unwrap() = None;
+}
+
+/// First Back at visit root → hint; second within [`EXIT_BACK_SECS`] → leave.
+fn note_exit_back_press(cx: &mut Cx) -> Result<bool, ()> {
+    let now = Instant::now();
+    let mut armed = exit_back_armed_at().lock().unwrap();
+    if let Some(prev) = *armed
+        && now.duration_since(prev) < Duration::from_secs(EXIT_BACK_SECS)
+    {
+        *armed = None;
+        drop(armed);
+        #[cfg(target_os = "android")]
+        {
+            let _ = cx;
+            return Ok(false);
+        }
+        #[cfg(not(target_os = "android"))]
+        {
+            cx.quit();
+            return Err(());
+        }
+    }
+    *armed = Some(now);
+    drop(armed);
+    Ok(true)
+}
 
 impl App {
     pub(crate) fn push_identity_copy(&mut self, cx: &mut Cx) {
@@ -260,6 +300,7 @@ impl App {
             match host::call_back_nav() {
                 host::CallBackNav::Block => return true,
                 host::CallBackNav::End => {
+                    clear_exit_back_arm();
                     let _ = host::end_call();
                     self.refresh_call_line(cx);
                     return true;
@@ -272,6 +313,7 @@ impl App {
             return true;
         }
         if self.ui_locked && self.session.is_some() {
+            clear_exit_back_arm();
             self.dismiss_ui_lock(cx);
             return true;
         }
@@ -280,6 +322,7 @@ impl App {
             if let Some(prev) = self.hub_history.go_back() {
                 self.apply_hub_history(cx, prev);
                 if self.hub_snapshot() != before {
+                    clear_exit_back_arm();
                     return true;
                 }
                 // Duplicate / no-op entry — keep walking so Back still moves.
@@ -290,15 +333,35 @@ impl App {
                     };
                     self.apply_hub_history(cx, prev);
                     if self.hub_snapshot() != before {
+                        clear_exit_back_arm();
                         return true;
                     }
                 }
             }
         }
         if allow_quit {
-            let _ = host::end_call();
-            cx.quit();
-            return true;
+            match note_exit_back_press(cx) {
+                Ok(true) => {
+                    let msg = i18n::phrase(&self.lang, "press_back_again_exit");
+                    if self.session.is_some() {
+                        self.show_call_line(cx, msg);
+                    } else {
+                        script_eval!(cx, {
+                            mod.state.status = #(msg)
+                            ui.identity_copy.render()
+                        });
+                    }
+                    return true;
+                }
+                Ok(false) => {
+                    let _ = host::end_call();
+                    return false;
+                }
+                Err(()) => {
+                    let _ = host::end_call();
+                    return true;
+                }
+            }
         }
         false
     }
@@ -316,6 +379,88 @@ impl App {
             return true;
         }
         false
+    }
+
+    /// Left-edge swipe → back, right-edge → forward (64css edge, 56px travel).
+    pub(crate) fn edge_swipe_pointer(&mut self, cx: &mut Cx, event: &Event) -> bool {
+        #[derive(Clone, Copy)]
+        enum Edge {
+            Back,
+            Forward,
+        }
+        static ORIGIN: OnceLock<std::sync::Mutex<Option<(DVec2, Edge)>>> = OnceLock::new();
+        static TOUCH: OnceLock<std::sync::Mutex<Option<(u64, DVec2, Edge)>>> = OnceLock::new();
+        let mouse = ORIGIN.get_or_init(|| std::sync::Mutex::new(None));
+        let touch = TOUCH.get_or_init(|| std::sync::Mutex::new(None));
+        let width = {
+            let size = self.ui.window(cx, ids!(main_window)).get_inner_size(cx);
+            if size.x > 1.0 {
+                size.x
+            } else {
+                1024.0
+            }
+        };
+        let go = |edge: Edge, start: DVec2, end: DVec2, app: &mut App, cx: &mut Cx| -> bool {
+            let dx = end.x - start.x;
+            let dy = (end.y - start.y).abs();
+            match edge {
+                Edge::Back if dx > 56.0 && dx > dy * 1.25 => app.navigate_back(cx, true),
+                Edge::Forward if dx < -56.0 && (-dx) > dy * 1.25 => app.navigate_forward(cx),
+                _ => false,
+            }
+        };
+        match event {
+            Event::MouseDown(e) if e.button.is_primary() => {
+                let mut o = mouse.lock().unwrap();
+                if e.abs.x < 64.0 {
+                    *o = Some((e.abs, Edge::Back));
+                } else if e.abs.x > width - 64.0 {
+                    *o = Some((e.abs, Edge::Forward));
+                } else {
+                    *o = None;
+                }
+                false
+            }
+            Event::MouseUp(e) if e.button.is_primary() => {
+                if let Some((start, edge)) = mouse.lock().unwrap().take() {
+                    go(edge, start, e.abs, self, cx)
+                } else {
+                    false
+                }
+            }
+            Event::TouchUpdate(e) => {
+                let mut o = touch.lock().unwrap();
+                let mut nav = None;
+                let mut se = None;
+                for t in &e.touches {
+                    match t.state {
+                        TouchState::Start => {
+                            if t.abs.x < 64.0 {
+                                *o = Some((t.uid, t.abs, Edge::Back));
+                            } else if t.abs.x > width - 64.0 {
+                                *o = Some((t.uid, t.abs, Edge::Forward));
+                            }
+                        }
+                        TouchState::Stop => {
+                            if let Some((uid, start, edge)) = *o
+                                && uid == t.uid
+                            {
+                                se = Some((start, t.abs));
+                                nav = Some(edge);
+                                *o = None;
+                            }
+                        }
+                        _ => {}
+                    }
+                }
+                drop(o);
+                match (nav, se) {
+                    (Some(edge), Some((start, end))) => go(edge, start, end, self, cx),
+                    _ => false,
+                }
+            }
+            _ => false,
+        }
     }
 
     pub(crate) fn dismiss_ui_lock(&mut self, cx: &mut Cx) {

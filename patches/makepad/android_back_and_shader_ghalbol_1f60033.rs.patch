@@ -1,0 +1,113 @@
+diff --git a/platform/src/os/linux/android/android.rs b/platform/src/os/linux/android/android.rs
+index de95a314..a9390676 100644
+--- a/platform/src/os/linux/android/android.rs
++++ b/platform/src/os/linux/android/android.rs
+@@ -379,6 +379,12 @@ pub fn main_loop(&mut self, from_java_rx: mpsc::Receiver<FromJavaMessage>) {
+                         // becomes (or becomes again) drawable.
+                         if self.os.needs_first_draw {
+                             self.os.needs_first_draw = false;
++                            self.os.hide_surface_cover_after_first_present = true;
++                            if android_gl_program_cache_is_cold(&self.os_type) {
++                                unsafe {
++                                    android_jni::to_java_show_shader_compile_screen();
++                                }
++                            }
+                             self.redraw_all();
+                         }
+                         self.handle_drawing();
+@@ -512,9 +518,21 @@ pub(crate) fn handle_message(&mut self, msg: FromJavaMessage) {
+                 // This should not happen here, as it's handled in the main loop
+             }
+             FromJavaMessage::BackPressed => {
+-                self.call_event_handler(&Event::BackPressed {
++                let event = Event::BackPressed {
+                     handled: Cell::new(false),
+-                });
++                };
++                self.call_event_handler(&event);
++                let handled = matches!(
++                    &event,
++                    Event::BackPressed { handled } if handled.get()
++                );
++                // Empty in-app stack: background like Chrome/Settings — never finish().
++                if !handled {
++                    unsafe {
++                        let env = attach_jni_env();
++                        android_jni::to_java_move_task_to_back(env);
++                    }
++                }
+             }
+             FromJavaMessage::SurfaceCreated { window } => {
+                 #[cfg(use_vulkan)]
+@@ -886,14 +904,13 @@ pub(crate) fn handle_message(&mut self, msg: FromJavaMessage) {
+                             }));
+                         }
+                     } else {
+-                        // Everything else reaches the widget as a KeyDown, including
+-                        // other Ctrl/Alt shortcuts like Ctrl+Enter or Ctrl+A.
+-                        if makepad_keycode == KeyCode::Back && !is_repeat {
+-                            self.call_event_handler(&Event::BackPressed {
+-                                handled: Cell::new(false),
+-                            });
++                        // Soft / hardware Back is owned by FromJavaMessage::BackPressed
++                        // (onBackPressed). Emitting BackPressed here too double-popped.
++                        if makepad_keycode == KeyCode::Back {
++                            // ignore KeyDown path for Back — onBackPressed already fired
++                        } else {
++                            self.call_event_handler(&Event::KeyDown(key_event));
+                         }
+-                        self.call_event_handler(&Event::KeyDown(key_event));
+                     }
+                 }
+             }
+@@ -3740,3 +3757,28 @@ unsafe fn update_surface(&mut self, window: *mut ndk_sys::ANativeWindow) {
+         assert!(res != 0);
+     }
+ }
++
++/// True when the on-disk GL program binary cache has no entries for this device.
++fn android_gl_program_cache_is_cold(os_type: &OsType) -> bool {
++    let OsType::Android(params) = os_type else {
++        return false;
++    };
++    let cache_dir = std::path::Path::new(&params.cache_path);
++    let Ok(entries) = std::fs::read_dir(cache_dir) else {
++        return true;
++    };
++    let needle = format!(
++        "_av{}_bn{}_kv{}",
++        params.android_version, params.build_number, params.kernel_version
++    );
++    for entry in entries.flatten() {
++        let name = entry.file_name();
++        let Some(name) = name.to_str() else {
++            continue;
++        };
++        if name.starts_with("shader_") && name.ends_with(".bin") && name.contains(&needle) {
++            return false;
++        }
++    }
++    true
++}
+diff --git a/platform/src/os/linux/android/android_jni.rs b/platform/src/os/linux/android/android_jni.rs
+index 81bd29e6..1299f787 100644
+--- a/platform/src/os/linux/android/android_jni.rs
++++ b/platform/src/os/linux/android/android_jni.rs
+@@ -1502,6 +1502,17 @@ pub unsafe fn to_java_request_surface_snapshot_refresh() {
+     ndk_utils::call_void_method!(env, get_activity(), "requestSurfaceSnapshotRefresh", "()V");
+ }
+ 
++/// Soft Back with an empty in-app stack: background the task (do not finish()).
++pub unsafe fn to_java_move_task_to_back(env: *mut jni_sys::JNIEnv) {
++    ndk_utils::call_void_method!(env, get_activity(), "moveTaskToBackFromNative", "()V");
++}
++
++/// Cold GL program cache: show Makepad PR #1432 "Compiling shaders" on the cover.
++pub unsafe fn to_java_show_shader_compile_screen() {
++    let env = attach_jni_env();
++    ndk_utils::call_void_method!(env, get_activity(), "showShaderCompileScreen", "()V");
++}
++
+ pub unsafe fn to_java_switch_activity(env: *mut jni_sys::JNIEnv) {
+     ndk_utils::call_void_method!(env, get_activity(), "switchActivity", "()V");
+ }

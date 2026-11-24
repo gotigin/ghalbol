@@ -937,6 +937,7 @@ fn extra(lang: &str, id: &str) -> Option<&'static str> {
             ("must_save", "Save the backup before continuing."),
             ("enter_password", "Enter the app password for this backup first."),
             ("choose_file", "Choose a keystore backup file."),
+            ("press_back_again_exit", "Press back again to exit"),
             ("added", "Contact added"),
             ("saved_prefix", "Saved"),
         ],
