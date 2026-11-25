@@ -1,79 +1,79 @@
 # am. key<TAB>text. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+menu	ምናሌ
+close	ዝጋ
+nav_site	ጣቢያ
+nav_messenger	መልእክተኛ
 nav_linux	Linux
 privacy	ግላዊነት
 nav_play	Play Store
 login	ይግቡ
 play	Play
-home	Home
+home	መነሻ
 account	መለያ
-logout	Logout
+logout	ውጣ
 terms	ውሎች
-support	Support
-data_deletion	Data deletion
+support	ድጋፍ
+data_deletion	የውሂብ ስረዛ
 cancellation	ስረዛ
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+about	ስለ እኛ
+back_home	ወደ መነሻ ተመለስ
+anonymous	ስም የለሽ
+home_title	Ghal Bol — የተመሠጠረ መልእክተኛ
+hero_title	የእርስዎ የተመሠጠረ ውይይት።
+hero_lede	1:1 ጽሑፍ እና የድምፅ/ቪዲዮ ጥሪዎች — የስልክ ቁጥር የለም፣ ቁልፎች እና ግልባጮች በመሣሪያዎ ላይ።
+cta_see	መልእክተኛውን ይመልከቱ
+cta_play	በ Play ላይ ያግኙት
+hero_alt	Ghal Bol፦ በእውነተኛ ጊዜ፣ የግል፣ ከመሣሪያ ወደ መሣሪያ መልእክቶች እና ጥሪዎች
+product_eyebrow	ምርት
+product_title	የ Ghal Bol መልእክተኛ
+product_lead	በ Ghal Bol ብራንድ ሥር የሚወጣው ምርት — ከመሣሪያ ወደ መሣሪያ የተመሠጠረ ጽሑፍ፣ የመድረሻ እና የንባብ ደረሰኞች፣ እና በመስመር ላይ ባሉ እኩዮች መካከል የአካባቢ የድምፅ/ቪዲዮ ጥሪዎች። የሕዝብ መተግበሪያ ስም Ghal Bol (com.ghalbol) ነው።
+feat_e2e_title	ከጫፍ እስከ ጫፍ ውይይት
+feat_e2e_body	መልእክቶች በመሣሪያዎ ላይ ይታተማሉ። የመድረሻ ሳጥኑ ተቀባዩ እስኪያረጋግጥ ድረስ ግልጽ ያልሆነ ምስጢራዊ ጽሑፍ ብቻ ይይዛል።
+feat_call_title	የድምፅ እና የቪዲዮ ጥሪዎች
+feat_call_body	ጥሪዎች በሚቻልበት ጊዜ በ LAN ላይ ከመሣሪያ ወደ መሣሪያ ይገናኛሉ፣ ካልሆነ ደግሞ ሚዲያን ፈጽሞ የማይፈታ ቀላል የማስተባበሪያ ድልድይ በኩል።
+feat_id_title	የመሣሪያው የራሱ ማንነት
+feat_id_body	እያንዳንዱ ጭነት የአካባቢ ምስጠራዊ ማንነት ይፈጥራል። በ QR ወይም በአገናኝ ይጋብዙ — የስልክ ቁጥር ወይም ማህበራዊ መግቢያ የለም።
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	የ Linux ማውረድ
+invite_eyebrow	Ghal Bol · ግብዣዎች
+invite_band_title	አንድ ጊዜ ይቃኙ። በመስመር ላይ ሲሆኑ ይገናኙ።
+invite_lead	እንግዳው የአስተናጋጁን QR ይቃኛል (ወይም የግብዣ አገናኝ ይከፍታል)። እንግዳው የአስተናጋጁን የሕዝብ ቁልፍ ያስቀምጣል እና ይደውላል። የጋራ QR ፈጽሞ አያስፈልግም።
+invite_step1	የእርስዎን https://ghalbol.com/connect/… አገናኝ ወይም QR ከ Ghal Bol ግብዣ ያጋሩ።
+invite_step2	በ Ghal Bol ውስጥ ይከፍቱታል (ወይም መጀመሪያ ከ Play / Linux ይጭናሉ)።
+invite_step3	ሁለቱም ሲደርሱ ውይይት እና ጥሪዎች ይገናኛሉ — ለጥሪዎች LAN እና WAN መንገዶች በትይዩ ይሠራሉ።
+plat_eyebrow	Ghal Bol · መድረኮች
+plat_title	ዛሬ Android እና Linux
+plat_lead	የ Windows ጥቅሎች ከተመሳሳይ የሥራ ቦታ ይገነባሉ። በዚህ ጣቢያ ላይ ያለው የሕዝብ ማውረድ የ Linux ዴስክቶፕ ጥቅል ነው። Android በ Google Play ላይ እንደ com.ghalbol ይወጣል።
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Ghal Bolን ከ Play ይጫኑ። የተረጋገጡ App Links ግብዣዎችን በሚቻልበት ጊዜ ቀጥታ ወደ መተግበሪያው ይከፍታሉ።
+cta_open_play	Play Store ክፈት
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
+plat_linux_body	የልቀት ማህደሩን ያውጡ፣ ከዚያ ./install.sh (ለእያንዳንዱ ተጠቃሚ) ወይም በቦታው ለመሞከር ./run.sh።
+names_eyebrow	ስሞች
+names_title	የንግድ ምልክት፣ ኩባንያ፣ ብራንድ
+names_body	Gotigin የንግድ ምልክት ነው (ቴክኖሎጂ ግኝትን የሚገናኝበት ቦታ)። GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED ኩባንያው ነው። Ghal Bol የመገናኛ ምርቶች ብራንድ ነው። ይህ ጣቢያ ghalbol.com ነው። መልእክተኛው ዛሬ የሚወጣው ነው። የጥቅል ስሞች እና ጎራው ghalbol ሆነው ይቀራሉ — አንድ ቃል። የተለየ camel-case ብራንድ የለም።
+linux_eyebrow	ዴስክቶፕ
+linux_title	ለ Linux Ghal Bol
+linux_lead	የ x86_64 ምርት ጥቅል። ማህደሩን ያውጡ፣ ከዚያ ./install.sh (ለእያንዳንዱ ተጠቃሚ፣ በ ~/.local ውስጥ) ወይም በቦታው ለመሞከር ./run.sh ያሂዱ።
+linux_download	የ Linux ጥቅል ያውርዱ
+invite_kicker	ግብዣ
+invite_h1	በ Ghal Bol ይቀላቀሉ
+invite_embedded_title	በሌላ መተግበሪያ ውስጥ ተከፍቷል (ለምሳሌ WhatsApp)
+invite_embedded_body	ይህ ውስጣዊ አሳሽ Ghal Bolን መክፈት አይችልም። ምናሌውን ይንኩ እና ይህን ገጽ በ Chrome ይክፈቱ፣ ወይም የመተግበሪያ አገናኙን ይቅዱ እና በ Ghal Bol → ይቀላቀሉ ውስጥ ይለጥፉ።
+invite_hint	ከታች በ Ghal Bol ክፈት ይንኩ። ምንም ካልሆነ የመተግበሪያ አገናኙን ይቅዱ እና በ Ghal Bol (ይቀላቀሉ) ውስጥ ይለጥፉ።
+invite_open	በ Ghal Bol ክፈት
+copy_web	የድር አገናኝ ቅዳ
+copy_app	የመተግበሪያ አገናኝ ቅዳ
+invite_install	መተግበሪያውን ጫን
+invite_bad	እንደ https://ghalbol.com/connect/<public_key_hex> ያለ አገናኝ ይጠቀሙ
+copy_done	{label} ተቀድቷል
+copy_prompt	ይህን {label} ቅዳ
+label_web	የድር አገናኝ
+label_app	የመተግበሪያ አገናኝ
+acct_page_title	መለያ — Ghal Bol
+acct_home_aria	የ Ghal Bol መነሻ
+acct_nav_aria	ዋና
+acct_lede	ለ Ghal Bol ይግቡ። ሙሉ አማራጮች — ኢሜይል፣ Google፣ Microsoft፣ GitHub ወይም ስልክ።
 acct_continue_with	በኢሜይል፣ በአቅራቢ ወይም በስልክ ይቀጥሉ።
 email	ኢሜይል
 acct_name_optional	ስም (አማራጭ)
@@ -104,12 +104,12 @@ err_too_many	በጣም ብዙ ሙከራዎች። ቆይተው እንደገና �
 err_invalid_phone	ሙሉ ስልክ ቁጥር ከሀገር ኮድ ጋር ይጠቀሙ (ለምሳሌ +91…)።
 err_bad_code	ያ የSMS ኮድ የተሳሳተ ነው ወይም ጊዜው አልፎበታል።
 err_generic	የሆነ ችግር ተፈጥሯል።
-acct_no_email	(no email)
+acct_no_email	(ኢሜይል የለም)
 acct_email_verified	ኢሜይል ተረጋግጧል
 acct_email_unverified	ኢሜይል ገና አልተረጋገጠም — የገቢ መልእክት ሳጥንዎን ይመልከቱ
 acct_phone_signed_in	በስልክ ገብተዋል
 acct_you_are_in	ገብተዋል።
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_verify_sent	የማረጋገጫ ኢሜይል ተልኳል — የገቢ መልእክት ሳጥንዎን ይመልከቱ
+notfound_title	ገጹ አልተገኘም — Ghal Bol
+notfound_h1	ገጹ አልተገኘም
+notfound_body	በዚህ አድራሻ ምንም የለም። የግብዣ አገናኝ እንደ ghalbol.com/connect/… ይመስላል — ሙሉ በሙሉ መቅዳቱን ያረጋግጡ።

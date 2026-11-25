@@ -1,79 +1,79 @@
 # is. key<TAB>text. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+menu	Valmynd
+close	Loka
+nav_site	Síða
+nav_messenger	Skilaboðaforrit
 nav_linux	Linux
 privacy	Persónuvernd
 nav_play	Play Store
 login	Innskráning
 play	Play
-home	Home
+home	Heim
 account	Aðgangur
-logout	Logout
+logout	Skrá út
 terms	Skilmálar
-support	Support
-data_deletion	Data deletion
+support	Aðstoð
+data_deletion	Eyðing gagna
 cancellation	Afpöntun
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+about	Um okkur
+back_home	Til baka heim
+anonymous	Nafnlaus
+home_title	Ghal Bol — dulritað skilaboðaforrit
+hero_title	Dulritað spjall sem þú átt.
+hero_lede	1:1 texti og tal-/myndsímtöl — ekkert símanúmer, lyklar og afrit á tækinu þínu.
+cta_see	Sjá skilaboðaforritið
+cta_play	Fáðu það á Play
+hero_alt	Ghal Bol: í rauntíma, einkamál, skilaboð og símtöl milli jafningja
+product_eyebrow	Vara
+product_title	Skilaboðaforritið Ghal Bol
+product_lead	Varan sem kemur út undir vörumerkinu Ghal Bol — dulritaður texti milli jafningja, staðfestingar á afhendingu og lestri og innbyggð tal- og myndsímtöl milli þeirra sem eru á netinu. Opinbert nafn forritsins er Ghal Bol (com.ghalbol).
+feat_e2e_title	Spjall enda á milli
+feat_e2e_body	Skilaboð eru innsigluð á tækinu þínu. Afhendingarpósthólfið heldur aðeins ógegnsæjum dulrituðum texta þar til viðtakandi staðfestir.
+feat_call_title	Tal- og myndsímtöl
+feat_call_body	Símtöl tengjast milli jafningja á LAN þegar hægt er, annars um létt samhæfingarbrú sem afkóðar aldrei miðla.
+feat_id_title	Auðkenni sem tækið á
+feat_id_body	Hver uppsetning býr til staðbundið dulritað auðkenni. Bjóddu með QR eða tengli — ekkert símanúmer og engin samfélagsinnskráning.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Linux niðurhal
+invite_eyebrow	Ghal Bol · Boð
+invite_band_title	Skannaðu einu sinni. Tengstu þegar þú ert á netinu.
+invite_lead	Gestur skannar QR gestgjafans (eða opnar boðstengil). Gestur geymir opinberan lykil gestgjafans og hringir. QR báðum megin er aldrei nauðsynlegt.
+invite_step1	Deildu tenglinum https://ghalbol.com/connect/… eða QR úr Boði í Ghal Bol.
+invite_step2	Þau opna hann í Ghal Bol (eða setja fyrst upp úr Play / Linux).
+invite_step3	Þegar bæði eru aðgengileg tengjast spjall og símtöl — fyrir símtöl fara LAN og WAN leiðir samhliða.
+plat_eyebrow	Ghal Bol · Vettvangar
+plat_title	Í dag Android og Linux
+plat_lead	Windows pakkar eru smíðaðir úr sama vinnusvæði. Opinbert niðurhal á þessari síðu er Linux skjáborðspakki; Android kemur út á Google Play sem com.ghalbol.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Settu upp Ghal Bol úr Play. Staðfest App Links opna boð beint í forritinu þegar hægt er.
+cta_open_play	Opna Play Store
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
+plat_linux_body	Afþjappaðu útgáfusafninu, svo ./install.sh (á hvern notanda) eða ./run.sh til að prófa á staðnum.
+names_eyebrow	Nöfn
+names_title	Vörumerki, fyrirtæki, merki
+names_body	Gotigin er vörumerkið (Þar sem tækni mætir uppgötvun). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED er fyrirtækið. Ghal Bol er merkið fyrir samskiptavörur; þessi síða er ghalbol.com. Skilaboðaforritið er það sem kemur út í dag. Pakkanöfn og lénið haldast ghalbol — eitt orð. Það er ekkert sérstakt camel-case merki.
+linux_eyebrow	Skjáborð
+linux_title	Ghal Bol fyrir Linux
+linux_lead	x86_64 framleiðslupakki. Afþjappaðu safninu og keyrðu ./install.sh (á hvern notanda, í ~/.local) eða ./run.sh til að prófa á staðnum.
+linux_download	Sækja Linux pakkann
+invite_kicker	Boð
+invite_h1	Taktu þátt í Ghal Bol
+invite_embedded_title	Opnað inni í öðru forriti (t.d. WhatsApp)
+invite_embedded_body	Þessi innbyggði vafri getur ekki opnað Ghal Bol. Ýttu á valmyndina og opnaðu þessa síðu í Chrome, eða afritaðu forritstengilinn og límdu hann í Ghal Bol → Taka þátt.
+invite_hint	Ýttu á Opna í Ghal Bol hér fyrir neðan. Ef ekkert gerist, afritaðu forritstengilinn og límdu hann í Ghal Bol (Taka þátt).
+invite_open	Opna í Ghal Bol
+copy_web	Afrita vefstengil
+copy_app	Afrita forritstengil
+invite_install	Setja upp forritið
+invite_bad	Notaðu tengil eins og https://ghalbol.com/connect/<public_key_hex>
+copy_done	{label} afritað
+copy_prompt	Afrita þetta {label}
+label_web	Vefstengill
+label_app	Forritstengill
+acct_page_title	Aðgangur — Ghal Bol
+acct_home_aria	Ghal Bol heim
+acct_nav_aria	Aðal
+acct_lede	Skráðu þig inn fyrir Ghal Bol. Allir valkostir — netfang, Google, Microsoft, GitHub eða sími.
 acct_continue_with	Haltu áfram með netfangi, þjónustuaðila eða síma.
 email	Netfang
 acct_name_optional	Nafn (valfrjálst)
@@ -104,12 +104,12 @@ err_too_many	Of margar tilraunir. Reyndu aftur síðar.
 err_invalid_phone	Notaðu fullt símanúmer með landsnúmeri (t.d. +91…).
 err_bad_code	Þessi SMS-kóði er rangur eða útrunninn.
 err_generic	Eitthvað fór úrskeiðis.
-acct_no_email	(no email)
+acct_no_email	(ekkert netfang)
 acct_email_verified	Netfang staðfest
 acct_email_unverified	Netfang ekki staðfest enn — athugaðu pósthólfið
 acct_phone_signed_in	Innskráð með síma
 acct_you_are_in	Innskráning tókst.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_verify_sent	Staðfestingarpóstur sendur — athugaðu innhólfið
+notfound_title	Síða fannst ekki — Ghal Bol
+notfound_h1	Síða fannst ekki
+notfound_body	Ekkert er á þessu vistfangi. Boðstengill lítur út eins og ghalbol.com/connect/… — athugaðu að hann hafi verið afritaður í heild.

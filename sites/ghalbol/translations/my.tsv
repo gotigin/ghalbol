@@ -1,79 +1,79 @@
 # my. key<TAB>text. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+menu	မီနူး
+close	ပိတ်ရန်
+nav_site	ဆိုက်
+nav_messenger	စာ​ပို့​သူ
 nav_linux	Linux
 privacy	ကိုယ်ရေးကိုယ်တာ
 nav_play	Play Store
 login	ဝင်​ရောက်​ရန်
 play	Play
-home	Home
+home	အိမ်
 account	အ​ကော​င့်
-logout	Logout
+logout	ထွက်​ရန်
 terms	စည်းကမ်း​ချက်​များ
-support	Support
-data_deletion	Data deletion
+support	ပံ့ပိုးမှု
+data_deletion	ဒေတာ​ဖျက်​ခြင်း
 cancellation	ပယ်ဖျက်​ခြင်း
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+about	အကြောင်း
+back_home	အိမ်​သို့​ပြန်
+anonymous	အမည်​မ​သိ
+home_title	Ghal Bol — လျှို့​ဝှက်​စာ​ပို့​သူ
+hero_title	သင့်​ပိုင်​လျှို့​ဝှက်​စကား.
+hero_lede	1:1 စာ​နှင့်​အသံ/ဗီဒီယို​ခေါ်​ဆို​မှု — ဖုန်း​နံပါတ်​မ​ရှိ, သော့​နှင့်​မိတ္တူ​သင့်​စက်​ပေါ်.
+cta_see	စာ​ပို့​သူ​ကို​ကြည့်​ပါ
+cta_play	Play တွင်​ယူ​ပါ
+hero_alt	Ghal Bol: အချိန်​နှင့်​တပြေး​ညီ, ကိုယ်​ပိုင်, စက်​မှ​စက်​သို့​စာ​နှင့်​ခေါ်​ဆို​မှု
+product_eyebrow	ထုတ်​ကုန်
+product_title	Ghal Bol စာ​ပို့​သူ
+product_lead	Ghal Bol အမှတ်​တံဆိပ်​အောက်​ထွက်​သော​ထုတ်​ကုန် — စက်​မှ​စက်​သို့​လျှို့​ဝှက်​စာ, ပို့​ခြင်း​နှင့်​ဖတ်​ခြင်း​လက်​မှတ်, နှင့်​အွန်​လိုင်း​လုပ်​ဖော်​ကြား​ဒေ​သ​ဆိုင်​ရာ​အသံ/ဗီဒီယို​ခေါ်​ဆို​မှု. အများ​သုံး​အက်ပ်​အမည်​သည် Ghal Bol (com.ghalbol).
+feat_e2e_title	အစ​မှ​အဆုံး​စကား
+feat_e2e_body	စာ​များ​ကို​သင့်​စက်​ပေါ်​တံ​ဆိပ်​ခတ်. ပို့​သည်​ဘူး​က​လက်​ခံ​သူ​အသိ​အမှတ်​ပြု​သည်​အထိ​မ​ကြည်​လင်​သော​လျှို့​ဝှက်​စာ​ကို​သာ​ထား.
+feat_call_title	အသံ​နှင့်​ဗီဒီယို​ခေါ်​ဆို​မှု
+feat_call_body	ခေါ်​ဆို​မှု​သည်​ဖြစ်​နိုင်​လျှင် LAN ပေါ်​စက်​မှ​စက်​သို့​ချိတ်, မ​ဟုတ်​လျှင်​မီဒီယာ​ကို​ဘယ်​တော့​မှ​မ​ဖွင့်​သော​ပေါ့​ပါး​ညှိ​နှိုင်း​တံ​တား​မှ.
+feat_id_title	စက်​ပိုင်​အထောက်​အထား
+feat_id_body	တပ်​ဆင်​မှု​တိုင်း​က​ဒေ​သ​ဆိုင်​ရာ​လျှို့​ဝှက်​အထောက်​အထား​ဖန်​တီး. QR သို့​မ​ဟုတ်​လင့်​ဖြင့်​ဖိတ် — ဖုန်း​နံပါတ်​သို့​မ​ဟုတ်​လူ​မှု​ဝင်​ရောက်​မှု​မ​ရှိ.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Linux ဒေါင်း​လုဒ်
+invite_eyebrow	Ghal Bol · ဖိတ်​ကြား​ချက်
+invite_band_title	တစ်​ကြိမ်​စကန်. အွန်​လိုင်း​ဖြစ်​လျှင်​ချိတ်.
+invite_lead	ဧည့်​သည်​က​အိမ်​ရှင် QR ကို​စကန် (သို့​မ​ဟုတ်​ဖိတ်​လင့်​ကို​ဖွင့်). ဧည့်​သည်​က​အိမ်​ရှင်​အများ​သော့​ကို​သိမ်း​ပြီး​ခေါ်. နှစ်​ဖက် QR ဘယ်​တော့​မှ​မ​လို.
+invite_step1	Ghal Bol ဖိတ်​ကြား​ချက်​မှ​သင့် https://ghalbol.com/connect/… လင့်​သို့​မ​ဟုတ် QR ကို​မျှ​ဝေ​ပါ.
+invite_step2	သူ​တို့​က Ghal Bol ထဲ​ဖွင့် (သို့​မ​ဟုတ်​အရင် Play / Linux မှ​တပ်​ဆင်).
+invite_step3	နှစ်​ဦး​စလုံး​ရောက်​နိုင်​လျှင်​စကား​နှင့်​ခေါ်​ဆို​မှု​ချိတ် — ခေါ်​ဆို​မှု​အတွက် LAN နှင့် WAN လမ်း​များ​ပြိုင်​တူ​ပြေး.
+plat_eyebrow	Ghal Bol · ပလက်​ဖောင်း
+plat_title	ယနေ့ Android နှင့် Linux
+plat_lead	Windows အထုပ်​များ​ကို​တူ​သော​အလုပ်​ခန်း​မှ​တည်​ဆောက်. ဤ​ဆိုက်​၏​အများ​ဒေါင်း​လုဒ်​သည် Linux စား​ပွဲ​အထုပ်. Android သည် Google Play တွင် com.ghalbol အဖြစ်​ထွက်.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Play မှ Ghal Bol တပ်​ဆင်​ပါ. စစ်​ဆေး​ပြီး App Links က​ဖိတ်​ကြား​ချက်​ကို​ဖြစ်​နိုင်​လျှင်​အက်ပ်​ထဲ​တန်း​ဖွင့်.
+cta_open_play	Play Store ဖွင့်​ပါ
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
+plat_linux_body	ထုတ်​မှတ်​တမ်း​ကို​ဖြည်, ပြီး ./install.sh (အသုံး​ပြု​သူ​တစ်​ဦး) သို့​မ​ဟုတ်​နေ​ရာ​တွင်​စမ်း​ရန် ./run.sh.
+names_eyebrow	အမည်
+names_title	ကုန်​အမှတ်​တံဆိပ်, ကုမ္ပဏီ, အမှတ်​တံဆိပ်
+names_body	Gotigin သည်​ကုန်​အမှတ်​တံဆိပ် (နည်း​ပညာ​ရှာ​ဖွေ​မှု​နှင့်​တွေ့​ဆုံ​ရာ). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED သည်​ကုမ္ပဏီ. Ghal Bol သည်​ဆက်​သွယ်​ရေး​ထုတ်​ကုန်​အမှတ်​တံဆိပ်. ဤ​ဆိုက်​သည် ghalbol.com. စာ​ပို့​သူ​သည်​ယနေ့​ထွက်​သော​အရာ. အထုပ်​အမည်​နှင့်​ဒို​မိန်း​သည် ghalbol — စကား​လုံး​တစ်​လုံး. သီး​ခြား camel-case အမှတ်​တံဆိပ်​မ​ရှိ.
+linux_eyebrow	စား​ပွဲ
+linux_title	Linux အတွက် Ghal Bol
+linux_lead	x86_64 ထုတ်​လုပ်​အထုပ်. မှတ်​တမ်း​ကို​ဖြည်, ပြီး ./install.sh (အသုံး​ပြု​သူ​တစ်​ဦး, ~/.local ထဲ) သို့​မ​ဟုတ်​နေ​ရာ​တွင်​စမ်း​ရန် ./run.sh ကို​မောင်း.
+linux_download	Linux အထုပ်​ဒေါင်း​လုဒ်
+invite_kicker	ဖိတ်​ကြား​ချက်
+invite_h1	Ghal Bol တွင်​ပါ​ဝင်​ပါ
+invite_embedded_title	အခြား​အက်ပ်​ထဲ​ဖွင့်​ခဲ့ (ဥပမာ WhatsApp)
+invite_embedded_body	ဤ​အတွင်း​ဘရောက်ဇာ​က Ghal Bol ကို​မ​ဖွင့်​နိုင်. မီနူး​ကို​နှိပ်​ပြီး​ဤ​စာ​မျက်​နှာ​ကို Chrome တွင်​ဖွင့်, သို့​မ​ဟုတ်​အက်ပ်​လင့်​ကို​ကူး​ပြီး Ghal Bol → ပါ​ဝင်​တွင်​ကပ်.
+invite_hint	အောက်​တွင် Ghal Bol တွင်​ဖွင့်​ကို​နှိပ်. ဘာ​မှ​မ​ဖြစ်​လျှင်​အက်ပ်​လင့်​ကို​ကူး​ပြီး Ghal Bol (ပါ​ဝင်) ထဲ​ကပ်.
+invite_open	Ghal Bol တွင်​ဖွင့်
+copy_web	ဝက်ဘ်​လင့်​ကူး
+copy_app	အက်ပ်​လင့်​ကူး
+invite_install	အက်ပ်​တပ်​ဆင်
+invite_bad	https://ghalbol.com/connect/<public_key_hex> ကဲ့​သို့​လင့်​သုံး​ပါ
+copy_done	{label} ကူး​ပြီး
+copy_prompt	ဤ {label} ကို​ကူး
+label_web	ဝက်ဘ်​လင့်
+label_app	အက်ပ်​လင့်
+acct_page_title	အ​ကော​င့် — Ghal Bol
+acct_home_aria	Ghal Bol အိမ်
+acct_nav_aria	အဓိက
+acct_lede	Ghal Bol အတွက်​ဝင်​ရောက်​ပါ. ရွေး​ချယ်​မှု​အပြည့် — အီး​မေး​လ်, Google, Microsoft, GitHub, သို့​မ​ဟုတ်​ဖုန်း.
 acct_continue_with	အီး​မေး​လ်၊ ဝန်ဆောင်မှု​ပေး​သူ သို့မဟုတ် ဖုန်း​ဖြင့် ဆက်​လုပ်​ပါ။
 email	အီး​မေး​လ်
 acct_name_optional	အမည် (မ​ဖြစ်​မ​နေ မဟုတ်)
@@ -104,12 +104,12 @@ err_too_many	ကြိုးစား​မှု များ​လွန်း
 err_invalid_phone	နိုင်ငံ​ကုဒ်​ပါ​သော ဖုန်း​နံပါတ် အပြည့်အစုံ သုံး​ပါ (ဥပမာ +91…)။
 err_bad_code	ထို SMS ကုဒ် မှား​နေသည် သို့မဟုတ် သက်တမ်း​ကုန်​သွား​ပြီ။
 err_generic	တစ်ခုခု မှားယွင်း​သွား​သည်။
-acct_no_email	(no email)
+acct_no_email	(အီး​မေး​လ်​မ​ရှိ)
 acct_email_verified	အီး​မေး​လ် အတည်ပြု​ပြီး
 acct_email_unverified	အီး​မေး​လ် အတည်​မ​ပြု​ရ​သေးပါ — သင့်​စာ​ဝင်​ပုံး​ကို စစ်​ပါ
 acct_phone_signed_in	ဖုန်း​ဖြင့် ဝင်​ရောက်​ပြီး
 acct_you_are_in	သင် ဝင်​ရောက်​ပြီး​ပါ​ပြီ။
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_verify_sent	အတည်​ပြု​အီး​မေး​လ်​ပို့​ပြီး — စာ​ဝင်​ပုံး​ကြည့်​ပါ
+notfound_title	စာ​မျက်​နှာ​မ​တွေ့ — Ghal Bol
+notfound_h1	စာ​မျက်​နှာ​မ​တွေ့
+notfound_body	ဤ​လိပ်​စာ​တွင်​ဘာ​မှ​မ​ရှိ. ဖိတ်​လင့်​သည် ghalbol.com/connect/… ပုံ​စံ — အပြည့်​ကူး​ခဲ့​ကြောင်း​စစ်​ပါ.

@@ -1,79 +1,79 @@
 # qu. key<TAB>text. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+menu	Akllana
+close	Wichqay
+nav_site	Tiyana
+nav_messenger	Willaq
 nav_linux	Linux
 privacy	Pakasqa kay
 nav_play	Play Store
 login	Yaykuy
 play	Play
-home	Home
+home	Wasi
 account	Cuenta
-logout	Logout
+logout	Lluqsiy
 terms	Kamachikuykuna
-support	Support
-data_deletion	Data deletion
+support	Yanapakuy
+data_deletion	Willayta pichay
 cancellation	Chinkachiy
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+about	Ñuqaykumanta
+back_home	Wasiman kutiy
+anonymous	Mana sutiyuq
+home_title	Ghal Bol — pakasqa willaq
+hero_title	Qampa pakasqa rimanakuyki.
+hero_lede	Qillqa wan kunka/widiyu waqyaykuna 1:1 — mana teléfono yupay, llawikuna wan qillqakuna qampa llamk'anaykipi.
+cta_see	Willaqta qhaway
+cta_play	Playpi hap'iy
+hero_alt	Ghal Bol: chiqap pachapi, pakasqa, willaykuna wan waqyaykuna llamk'anamanta llamk'anaman
+product_eyebrow	Ruru
+product_title	Willaq Ghal Bol
+product_lead	Ghal Bol rikch'a uraypi lluqsiq ruru — pakasqa qillqa llamk'anamanta llamk'anaman, apachiy wan ñawiriy chiqaqchaykuna, intirnitpi kaqkunapura kikin kunka wan widi yu waqyaykuna. Sapsi app sutinqa Ghal Bol (com.ghalbol).
+feat_e2e_title	Rimanakuy manyamanta manyakama
+feat_e2e_body	Willaykuna qampa llamk'anaykipi sellakun. Apachiy qillqa chaskiq chiqaqchaykama mana sut'i pakasqa qillqata waqaychan.
+feat_call_title	Kunka wan widi yu waqyaykuna
+feat_call_body	Waqyaykuna llamk'anamanta llamk'anaman LAN patapi tinkukunku atikuptin, manchayqa llamp'u tinkuchiy chaka rupaypi, chayqa manam media pakayta kichanchu.
+feat_id_title	Llamk'anapaq kikin sut'i
+feat_id_body	Sapa churay kaylla pakasqa sut'ita paqarichin. QR icha t'inkiywan waqyay — mana teléfono yupay, mana ayllu yaykuy.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Linux uraykachiy
+invite_eyebrow	Ghal Bol · Waqyaykuna
+invite_band_title	Huk kuti qhaway. Intirnitpi kaspa tinkukuy.
+invite_lead	Wasiyuqpa QR ninta watukuq qhawan (icha waqyay t'inkiyta kichan). Watukuq wasiyuqpa sapsi llawinta waqaychan chaymanta waqyan. Iskay kinraypi QR manam hayk'aq munanmanchu.
+invite_step1	https://ghalbol.com/connect/… t'inkiykita icha QR ta Waqyaymanta Ghal Bol ukhupi rakinakuy.
+invite_step2	Paykuna Ghal Bol ukhupi kichanku (icha ñawpaqta Play / Linuxmanta churanku).
+invite_step3	Iskaynin chayanakuptin, rimanakuy wan waqyaykuna tinkukunku — waqyaykunapaq LAN wan WAN ñankuna kuskan purinku.
+plat_eyebrow	Ghal Bol · Pata
+plat_title	Kunan Android wan Linux
+plat_lead	Windows q'ipikuna huk llamk'ana wasillamanta ruwasqa. Kay tiyanapi sapsi uraykachiyqa Linux mesa q'ipim; Android Google Playpi com.ghalbol hina lluqsin.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Ghal Bol ta Playmanta churay. Chiqaqchasqa App Links waqyaykunata app ukhupi kichan atikuptin.
+cta_open_play	Play Store kichay
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
+plat_linux_body	Lluqsiy waqaychata kichay, chaymanta ./install.sh (sapa llamk'aqpaq) icha ./run.sh chaypi mallinaykipaq.
+names_eyebrow	Sutikuna
+names_title	Rikch'a, ayllu, rikch'a
+names_body	Gotigin rikch'am (Maypi llamk'ana tariywan tinkun). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED ayllum. Ghal Bol rimay rurukunapaq rikch'am; kay tiyanaqa ghalbol.com. Willaqqa kunan lluqsiqmi. Q'ipi sutikuna wan tiyana ghalbol kakunku — huk simi. Mana huk camel-case rikch'a kanchu.
+linux_eyebrow	Mesa
+linux_title	Linuxpaq Ghal Bol
+linux_lead	x86_64 ruway q'ipi. Waqaychata kichay chaymanta ./install.sh (sapa llamk'aqpaq, ~/.local ukhupi) icha ./run.sh chaypi mallinaykipaq purichiy.
+linux_download	Linux q'ipita uraykachiy
+invite_kicker	Waqyay
+invite_h1	Ghal Bolman yaykuy
+invite_embedded_title	Huk app ukhupi kichasqa (hina WhatsApp)
+invite_embedded_body	Kay ukhu wamp'uqqa manam Ghal Bol ta kichayta atinchu. Akllanata ñit'iy kay raphita Chromepi kichay, icha app t'inkiyta kikinchay Ghal Bol → Yaykuy ukhupi churay.
+invite_hint	Uraypi Ghal Bol ukhupi kichay ñit'iy. Mana imapas ruwakuptinqa, app t'inkiyta kikinchay Ghal Bol (Yaykuy) ukhupi churay.
+invite_open	Ghal Bol ukhupi kichay
+copy_web	Web t'inkiyta kikinchay
+copy_app	App t'inkiyta kikinchay
+invite_install	App ta churay
+invite_bad	https://ghalbol.com/connect/<public_key_hex> hina t'inkiyta llamk'achiy
+copy_done	{label} kikinchasqa
+copy_prompt	Kay {label} ta kikinchay
+label_web	Web t'inkiy
+label_app	App t'inkiy
+acct_page_title	Cuenta — Ghal Bol
+acct_home_aria	Wasi Ghal Bol
+acct_nav_aria	Ñawpaq
+acct_lede	Ghal Bolpaq yaykuy. Hunt'a akllanakuna — correo, Google, Microsoft, GitHub, icha teléfono.
 acct_continue_with	Correowan, yaykuchiqwan, utaq teléfonowan qatiy.
 email	Correo
 acct_name_optional	Suti (akllana)
@@ -104,12 +104,12 @@ err_too_many	Ancha askha kuti malliykuna. Qhipaman yapamanta malliy.
 err_invalid_phone	Suyup unanchanwan hunt’asqa teléfono yupayta llamk’achiy (kayhina +91…).
 err_bad_code	Chay SMS unanchaqa pantasqam utaq tukukapunña.
 err_generic	Imapas mana allinchu karqan.
-acct_no_email	(no email)
+acct_no_email	(mana correo kanchu)
 acct_email_verified	Correo takyachisqa
 acct_email_unverified	Correoqa manaraq takyachisqachu — willakuy waqaychanaykita qhaway
 acct_phone_signed_in	Teléfonowan yaykusqa
 acct_you_are_in	Yaykusqañam kanki.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_verify_sent	Chiqa correo apachisqa — yaykuna qillqata qhaway
+notfound_title	Raphi mana tarisqachu — Ghal Bol
+notfound_h1	Raphi mana tarisqachu
+notfound_body	Kay tiyanapi manam imapas kanchu. Waqyay t'inkiyqa ghalbol.com/connect/… hina rikukun — hunt'a kikinchasqachu qhaway.

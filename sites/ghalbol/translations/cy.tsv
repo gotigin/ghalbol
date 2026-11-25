@@ -1,79 +1,79 @@
 # cy. key<TAB>text. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+menu	Dewislen
+close	Cau
+nav_site	Safle
+nav_messenger	Negesydd
 nav_linux	Linux
 privacy	Preifatrwydd
 nav_play	Play Store
 login	Mewngofnodi
 play	Play
-home	Home
+home	Cartref
 account	Cyfrif
-logout	Logout
+logout	Allgofnodi
 terms	Telerau
-support	Support
-data_deletion	Data deletion
+support	Cefnogaeth
+data_deletion	Dileu data
 cancellation	Canslo
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+about	Amdanom ni
+back_home	Yn ôl i gartref
+anonymous	Dienw
+home_title	Ghal Bol — negesydd wedi'i amgryptio
+hero_title	Sgwrs wedi'i hamgryptio sy'n eiddo i chi.
+hero_lede	Testun a galwadau llais/fideo 1:1 — dim rhif ffôn, allweddi a thrawsgrifiadau ar eich dyfais.
+cta_see	Gweld y negesydd
+cta_play	Ei gael ar Play
+hero_alt	Ghal Bol: amser real, preifat, negeseuon a galwadau o ddyfais i ddyfais
+product_eyebrow	Cynnyrch
+product_title	Negesydd Ghal Bol
+product_lead	Y cynnyrch sy'n dod allan o dan nod masnach Ghal Bol — testun wedi'i amgryptio o ddyfais i ddyfais, cadarnhadau dosbarthu a darllen, a galwadau llais a fideo brodorol rhwng cyfoedion ar-lein. Enw cyhoeddus yr ap yw Ghal Bol (com.ghalbol).
+feat_e2e_title	Sgwrs o ben i ben
+feat_e2e_body	Mae negeseuon yn cael eu selio ar eich dyfais. Mae blwch dosbarthu yn dal testun wedi'i amgryptio afloyw yn unig nes bod y derbynnydd yn cadarnhau.
+feat_call_title	Galwadau llais a fideo
+feat_call_body	Mae galwadau'n cysylltu o ddyfais i ddyfais ar LAN pan fo modd, fel arall drwy bont gydlynu ysgafn nad yw byth yn dadgryptio cyfryngau.
+feat_id_title	Hunaniaeth sy'n perthyn i'r ddyfais
+feat_id_body	Mae pob gosodiad yn creu hunaniaeth cryptograffig leol. Gwahoddwch gyda QR neu ddolen — dim rhif ffôn a dim mewngofnodi cymdeithasol.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Lawrlwythiad Linux
+invite_eyebrow	Ghal Bol · Gwahoddiadau
+invite_band_title	Sganiwch unwaith. Cysylltwch pan fyddwch ar-lein.
+invite_lead	Mae'r gwestai yn sganio QR y gwesteiwr (neu'n agor dolen wahodd). Mae'r gwestai yn storio allwedd gyhoeddus y gwesteiwr ac yn deialu. Nid oes angen QR ar y ddwy ochr byth.
+invite_step1	Rhannwch eich dolen https://ghalbol.com/connect/… neu QR o Wahodd yn Ghal Bol.
+invite_step2	Maen nhw'n ei hagor yn Ghal Bol (neu'n gosod o Play / Linux yn gyntaf).
+invite_step3	Pan fydd y ddau yn gyraeddadwy, mae sgwrs a galwadau'n cysylltu — ar gyfer galwadau mae llwybrau LAN a WAN yn rhedeg ochr yn ochr.
+plat_eyebrow	Ghal Bol · Platfformau
+plat_title	Android a Linux heddiw
+plat_lead	Mae pecynnau Windows yn cael eu hadeiladu o'r un gweithle. Y lawrlwythiad cyhoeddus ar y safle hwn yw pecyn bwrdd gwaith Linux; mae Android yn dod allan ar Google Play fel com.ghalbol.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Gosodwch Ghal Bol o Play. Mae App Links wedi'u dilysu yn agor gwahoddiadau yn syth i'r ap pan fo modd.
+cta_open_play	Agor Play Store
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
+plat_linux_body	Echdynnwch archif y rhyddhad, yna ./install.sh (fesul defnyddiwr) neu ./run.sh i roi cynnig arni yn ei lle.
+names_eyebrow	Enwau
+names_title	Nod masnach, cwmni, brand
+names_body	Gotigin yw'r nod masnach (Lle mae technoleg yn cwrdd â darganfod). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED yw'r cwmni. Ghal Bol yw'r brand ar gyfer cynhyrchion cyfathrebu; y safle hwn yw ghalbol.com. Y negesydd yw'r hyn sy'n dod allan heddiw. Mae enwau pecynnau a'r parth yn aros yn ghalbol — un gair. Nid oes brand camel-case ar wahân.
+linux_eyebrow	Bwrdd gwaith
+linux_title	Ghal Bol ar gyfer Linux
+linux_lead	Pecyn cynhyrchu x86_64. Echdynnwch yr archif ac yna rhedwch ./install.sh (fesul defnyddiwr, i ~/.local) neu ./run.sh i roi cynnig arni yn ei lle.
+linux_download	Lawrlwytho pecyn Linux
+invite_kicker	Gwahoddiad
+invite_h1	Ymunwch â Ghal Bol
+invite_embedded_title	Wedi'i agor y tu mewn i ap arall (e.e. WhatsApp)
+invite_embedded_body	Ni all y porwr adeiledig hwn agor Ghal Bol. Tapiwch y ddewislen ac agorwch y dudalen hon yn Chrome, neu copïwch ddolen yr ap a'i gludo yn Ghal Bol → Ymuno.
+invite_hint	Tapiwch Agor yn Ghal Bol isod. Os na fydd dim yn digwydd, copïwch ddolen yr ap a'i gludo yn Ghal Bol (Ymuno).
+invite_open	Agor yn Ghal Bol
+copy_web	Copïo dolen we
+copy_app	Copïo dolen yr ap
+invite_install	Gosod yr ap
+invite_bad	Defnyddiwch ddolen fel https://ghalbol.com/connect/<public_key_hex>
+copy_done	Copïwyd {label}
+copy_prompt	Copïo'r {label} hwn
+label_web	Dolen we
+label_app	Dolen yr ap
+acct_page_title	Cyfrif — Ghal Bol
+acct_home_aria	Cartref Ghal Bol
+acct_nav_aria	Cynradd
+acct_lede	Mewngofnodwch ar gyfer Ghal Bol. Opsiynau llawn — e-bost, Google, Microsoft, GitHub neu ffôn.
 acct_continue_with	Parhewch ag e-bost, darparwr neu ffôn.
 email	E-bost
 acct_name_optional	Enw (dewisol)
@@ -104,12 +104,12 @@ err_too_many	Gormod o ymdrechion. Rhowch gynnig arall arni nes ymlaen.
 err_invalid_phone	Defnyddiwch rif ffôn llawn gyda chod gwlad (e.e. +91…).
 err_bad_code	Mae’r cod SMS hwnnw’n anghywir neu wedi dod i ben.
 err_generic	Aeth rhywbeth o’i le.
-acct_no_email	(no email)
+acct_no_email	(dim e-bost)
 acct_email_verified	E-bost wedi’i ddilysu
 acct_email_unverified	E-bost heb ei ddilysu eto — gwiriwch eich mewnflwch
 acct_phone_signed_in	Wedi mewngofnodi â ffôn
 acct_you_are_in	Rydych wedi mewngofnodi.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_verify_sent	Anfonwyd yr e-bost dilysu — gwiriwch eich mewnflwch
+notfound_title	Tudalen heb ei chanfod — Ghal Bol
+notfound_h1	Tudalen heb ei chanfod
+notfound_body	Nid oes dim yn y cyfeiriad hwn. Mae dolen wahodd yn edrych fel ghalbol.com/connect/… — gwiriwch ei bod wedi'i chopïo'n llawn.

@@ -1,79 +1,79 @@
 # sd. key<TAB>text. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+menu	مينيو
+close	بند ڪريو
+nav_site	سائيٽ
+nav_messenger	پيغام رسائيندڙ
 nav_linux	Linux
 privacy	رازداري
 nav_play	Play Store
 login	لاگ ان
 play	Play
-home	Home
+home	گهر
 account	کاتو
-logout	Logout
+logout	سائن آئوٽ
 terms	شرطون
-support	Support
-data_deletion	Data deletion
+support	سهائتا
+data_deletion	ڊيٽا ختم ڪرڻ
 cancellation	منسوخي
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+about	بابت
+back_home	گهر ڏانهن واپس
+anonymous	گمنام
+home_title	Ghal Bol — ڳجھو پيغام رسائيندڙ
+hero_title	ڳجهي ڳالهه جيڪا توهان جي آهي.
+hero_lede	1:1 لکڻ ۽ آواز/وڊيو ڪالون — فون نمبر ناهي، چاٻيون ۽ نقل توهان جي ڊوائيس تي.
+cta_see	پيغام رسائيندڙ ڏسو
+cta_play	Play تي وٺو
+hero_alt	Ghal Bol: اصل وقت، خانگي، ڊوائيس کان ڊوائيس پيغام ۽ ڪالون
+product_eyebrow	پراڊڪٽ
+product_title	Ghal Bol پيغام رسائيندڙ
+product_lead	Ghal Bol برانڊ هيٺ نڪرندڙ پراڊڪٽ — ڊوائيس کان ڊوائيس ڳجھو لکڻ، پهچ ۽ پڙهڻ جون رسيدون، ۽ آن لائن ساٿين وچ ۾ اصلي آواز/وڊيو ڪالون. عوامي ايپ جو نالو Ghal Bol (com.ghalbol) آهي.
+feat_e2e_title	آخر کان آخر تائين ڳالهه
+feat_e2e_body	پيغام توهان جي ڊوائيس تي مهر ٿين ٿا. پهچ جو دٻو صرف اڻ ڏٺل ڳجھو لکڻ رکي ٿو جيستائين وصول ڪندڙ تسليم ڪري.
+feat_call_title	آواز ۽ وڊيو ڪالون
+feat_call_body	ڪالون جڏهن ممڪن هجي LAN تي ڊوائيس کان ڊوائيس ڳنڍجن، نه ته هڪ هلڪي هم آهنگي پل ذريعي جيڪا ميڊيا ڪڏهن به ڊيڪرپٽ نٿي ڪري.
+feat_id_title	ڊوائيس جي پنهنجي سڃاڻپ
+feat_id_body	هر انسٽال مقامي ڪرپٽوگرافڪ سڃاڻپ ٺاهي ٿي. QR يا لنڪ سان دعوت — فون نمبر يا سماجي لاگ ان ناهي.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Linux ڊائون لوڊ
+invite_eyebrow	Ghal Bol · دعوتون
+invite_band_title	هڪ ڀيرو اسڪين ڪريو. آن لائن ٿيو ته ڳنڍيو.
+invite_lead	مهمان ميزبان جو QR اسڪين ڪري ٿو (يا دعوت جو لنڪ کولي ٿو). مهمان ميزبان جي عوامي چاٻي رکي ٿو ۽ ڊائل ڪري ٿو. ٻنهي طرفن جو QR ڪڏهن به ضروري ناهي.
+invite_step1	Ghal Bol جي دعوت مان پنهنجو https://ghalbol.com/connect/… لنڪ يا QR شيئر ڪريو.
+invite_step2	اهي ان کي Ghal Bol ۾ کولين ٿا (يا پهرين Play / Linux مان انسٽال ڪن ٿا).
+invite_step3	جڏهن ٻئي پهچي سگهن، ڳالهه ۽ ڪالون ڳنڍجن — ڪالن لاءِ LAN ۽ WAN رستا متوازي هلندا آهن.
+plat_eyebrow	Ghal Bol · پليٽ فارم
+plat_title	اڄ Android ۽ Linux
+plat_lead	Windows پيڪيج ساڳي ڪم جي جاءِ مان ٺهن ٿا. هن سائيٽ جو عوامي ڊائون لوڊ Linux ڊيسڪ ٽاپ بنڊل آهي؛ Android Google Play تي com.ghalbol طور نڪري ٿو.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Play مان Ghal Bol انسٽال ڪريو. تصديق ٿيل App Links دعوتون ممڪن هجي ته سڌو ايپ ۾ کولين ٿا.
+cta_open_play	Play Store کوليو
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
+plat_linux_body	رليز آرڪائيو ڪڍو، پوءِ ./install.sh (هر استعمال ڪندڙ) يا جاءِ تي ڪوشش لاءِ ./run.sh.
+names_eyebrow	نالا
+names_title	واپاري نشان، ڪمپني، برانڊ
+names_body	Gotigin واپاري نشان آهي (جتي ٽيڪنالاجي دريافت سان ملي ٿي). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED ڪمپني آهي. Ghal Bol رابطي جي پراڊڪٽ جو برانڊ آهي؛ هي سائيٽ ghalbol.com آهي. پيغام رسائيندڙ اڄ نڪري ٿو. پيڪيج نالا ۽ ڊومين ghalbol رهندا آهن — هڪ لفظ. الڳ camel-case برانڊ ناهي.
+linux_eyebrow	ڊيسڪ ٽاپ
+linux_title	Linux لاءِ Ghal Bol
+linux_lead	x86_64 پيداوار بنڊل. آرڪائيو ڪڍو، پوءِ ./install.sh (هر استعمال ڪندڙ، ~/.local اندر) يا جاءِ تي ڪوشش لاءِ ./run.sh هلايو.
+linux_download	Linux بنڊل ڊائون لوڊ ڪريو
+invite_kicker	دعوت
+invite_h1	Ghal Bol تي شامل ٿيو
+invite_embedded_title	ٻي ايپ اندر کليو (مثال WhatsApp)
+invite_embedded_body	هي اندروني برائوزر Ghal Bol نٿو کولي سگهي. مينيو دٻايو ۽ هي صفحو Chrome ۾ کوليو، يا ايپ لنڪ ڪاپي ڪري Ghal Bol → شامل ٿيو ۾ پيسٽ ڪريو.
+invite_hint	هيٺ Ghal Bol ۾ کوليو دٻايو. جيڪڏهن ڪجهه نه ٿئي، ايپ لنڪ ڪاپي ڪري Ghal Bol (شامل ٿيو) اندر پيسٽ ڪريو.
+invite_open	Ghal Bol ۾ کوليو
+copy_web	ويب لنڪ ڪاپي ڪريو
+copy_app	ايپ لنڪ ڪاپي ڪريو
+invite_install	ايپ انسٽال ڪريو
+invite_bad	https://ghalbol.com/connect/<public_key_hex> جهڙو لنڪ استعمال ڪريو
+copy_done	{label} ڪاپي ٿيو
+copy_prompt	هي {label} ڪاپي ڪريو
+label_web	ويب لنڪ
+label_app	ايپ لنڪ
+acct_page_title	کاتو — Ghal Bol
+acct_home_aria	Ghal Bol گهر
+acct_nav_aria	مکيه
+acct_lede	Ghal Bol لاءِ لاگ ان ڪريو. مڪمل اختيار — اي ميل، Google، Microsoft، GitHub، يا فون.
 acct_continue_with	اي ميل، فراهم ڪندڙ يا فون سان جاري رکو.
 email	اي ميل
 acct_name_optional	نالو (اختياري)
@@ -104,12 +104,12 @@ err_too_many	تمام گهڻيون ڪوششون. پوءِ ٻيهر ڪوشش ڪر
 err_invalid_phone	ملڪ جي ڪوڊ سان پورو فون نمبر استعمال ڪريو (مثال طور +91…).
 err_bad_code	اهو SMS ڪوڊ غلط آهي يا ان جي مدت ختم ٿي وئي.
 err_generic	ڪجهه غلط ٿي ويو.
-acct_no_email	(no email)
+acct_no_email	(اي ميل ناهي)
 acct_email_verified	اي ميل تصديق ٿيل
 acct_email_unverified	اي ميل اڃا تصديق ٿيل ناهي — پنهنجو ان باڪس ڏسو
 acct_phone_signed_in	فون سان سائن ان ٿيل
 acct_you_are_in	توهان سائن ان آهيو.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_verify_sent	تصديقي اي ميل موڪلي وئي — پنهنجو ان باڪس ڏسو
+notfound_title	صفحو نه مليو — Ghal Bol
+notfound_h1	صفحو نه مليو
+notfound_body	هن پتي تي ڪجهه ناهي. دعوت جو لنڪ ghalbol.com/connect/… جهڙو ڏسجي ٿو — ڏسو ته مڪمل ڪاپي ٿيو هو.

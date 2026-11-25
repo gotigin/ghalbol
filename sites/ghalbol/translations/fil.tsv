@@ -1,79 +1,79 @@
 # fil. key<TAB>text. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+menu	Talaan
+close	Isara
+nav_site	Sayt
+nav_messenger	Mensahero
 nav_linux	Linux
 privacy	Pagkapribado
 nav_play	Play Store
 login	Mag-log in
 play	Play
-home	Home
+home	Tahanan
 account	Akawnt
-logout	Logout
+logout	Mag-sign out
 terms	Mga tuntunin
-support	Support
-data_deletion	Data deletion
+support	Suporta
+data_deletion	Pagbura ng data
 cancellation	Pagkansela
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+about	Tungkol
+back_home	Bumalik sa tahanan
+anonymous	Hindi kilala
+home_title	Ghal Bol — naka-encrypt na mensahero
+hero_title	Naka-encrypt na chat na sa iyo.
+hero_lede	Teksto at tawag na boses/video na 1:1 — walang numero ng telepono, mga susi at transcript sa iyong device.
+cta_see	Tingnan ang mensahero
+cta_play	Kunin ito sa Play
+hero_alt	Ghal Bol: sa tunay na oras, pribado, mga mensahe at tawag mula device patungo sa device
+product_eyebrow	Produkto
+product_title	Mensaherong Ghal Bol
+product_lead	Ang produktong lumalabas sa ilalim ng tatar na Ghal Bol — naka-encrypt na teksto mula device patungo sa device, mga resibo ng paghahatid at pagbasa, at katutubong tawag na boses at video sa pagitan ng mga kasamang online. Ang pampublikong pangalan ng app ay Ghal Bol (com.ghalbol).
+feat_e2e_title	Chat mula dulo hanggang dulo
+feat_e2e_body	Sinaselyuhan ang mga mensahe sa iyong device. Tanging tekstong sikreto at malabo ang hawak ng mailbox ng paghahatid hanggang kumpirmahin ng tatanggap.
+feat_call_title	Mga tawag na boses at video
+feat_call_body	Kumokonekta ang mga tawag mula device patungo sa device sa LAN kung maaari, kung hindi ay sa magaan na tulay ng koordinasyon na hindi kailanman nagde-decrypt ng media.
+feat_id_title	Pagkakakilanlang pag-aari ng device
+feat_id_body	Bawat install ay lumilikha ng lokal na pagkakakilanlang kriptograpiko. Mag-imbita gamit ang QR o link — walang numero ng telepono at walang social na pag-login.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Download ng Linux
+invite_eyebrow	Ghal Bol · Mga imbitasyon
+invite_band_title	I-scan nang isang beses. Kumonekta kapag online.
+invite_lead	Ini-scan ng bisita ang QR ng host (o binubuksan ang link ng imbitasyon). Iniimbak ng bisita ang pampublikong susi ng host at tumatawag. Hindi kailanman kailangan ang QR sa magkabilang panig.
+invite_step1	Ibahagi ang link na https://ghalbol.com/connect/… o ang QR mula sa Imbitasyon sa Ghal Bol.
+invite_step2	Binubuksan nila ito sa Ghal Bol (o ini-install muna mula sa Play / Linux).
+invite_step3	Kapag parehong abot, kumokonekta ang chat at ang mga tawag — para sa mga tawag magkasabay ang mga daan ng LAN at WAN.
+plat_eyebrow	Ghal Bol · Mga plataporma
+plat_title	Android at Linux ngayon
+plat_lead	Ang mga package ng Windows ay binubuo mula sa iisang workspace. Ang pampublikong download sa site na ito ay ang bundle ng desktop na Linux; lumalabas ang Android sa Google Play bilang com.ghalbol.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	I-install ang Ghal Bol mula sa Play. Binubuksan ng napatunayang App Links ang mga imbitasyon diretso sa app kung maaari.
+cta_open_play	Buksan ang Play Store
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
+plat_linux_body	I-extract ang archive ng release, saka ./install.sh (bawat user) o ./run.sh para subukan sa lugar.
+names_eyebrow	Mga pangalan
+names_title	Tatar, kumpanya, tatak
+names_body	Ang Gotigin ang tatar (Kung saan nagtatagpo ang teknolohiya at ang pagtuklas). Ang GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED ang kumpanya. Ang Ghal Bol ang tatak para sa mga produkto ng komunikasyon; ang site na ito ay ghalbol.com. Ang mensahero ang lumalabas ngayon. Ang mga pangalan ng package at ang domain ay nananatiling ghalbol — isang salita. Walang hiwalay na tatak na camel-case.
+linux_eyebrow	Mesa
+linux_title	Ghal Bol para sa Linux
+linux_lead	Bundle ng produksyon na x86_64. I-extract ang archive, saka patakbuhin ang ./install.sh (bawat user, sa ~/.local) o ./run.sh para subukan sa lugar.
+linux_download	I-download ang bundle ng Linux
+invite_kicker	Imbitasyon
+invite_h1	Sumali sa Ghal Bol
+invite_embedded_title	Binuksan sa loob ng ibang app (hal. WhatsApp)
+invite_embedded_body	Hindi mabuksan ng built-in na browser na ito ang Ghal Bol. I-tap ang menu at buksan ang pahinang ito sa Chrome, o kopyahin ang link ng app at i-paste sa Ghal Bol → Sumali.
+invite_hint	I-tap ang Buksan sa Ghal Bol sa ibaba. Kung walang mangyari, kopyahin ang link ng app at i-paste sa Ghal Bol (Sumali).
+invite_open	Buksan sa Ghal Bol
+copy_web	Kopyahin ang link sa web
+copy_app	Kopyahin ang link ng app
+invite_install	I-install ang app
+invite_bad	Gumamit ng link na gaya ng https://ghalbol.com/connect/<public_key_hex>
+copy_done	Nakopya ang {label}
+copy_prompt	Kopyahin ang {label} na ito
+label_web	Link sa web
+label_app	Link ng app
+acct_page_title	Akawnt — Ghal Bol
+acct_home_aria	Tahanan ng Ghal Bol
+acct_nav_aria	Pangunahin
+acct_lede	Mag-sign in para sa Ghal Bol. Buong mga opsyon — e-mail, Google, Microsoft, GitHub, o telepono.
 acct_continue_with	Magpatuloy gamit ang e-mail, isang provider, o telepono.
 email	E-mail
 acct_name_optional	Pangalan (opsyonal)
@@ -104,12 +104,12 @@ err_too_many	Masyadong maraming pagsubok. Subukang muli mamaya.
 err_invalid_phone	Gumamit ng buong numero ng telepono na may code ng bansa (hal. +91…).
 err_bad_code	Mali o expired na ang SMS code na iyon.
 err_generic	May nangyaring mali.
-acct_no_email	(no email)
+acct_no_email	(walang e-mail)
 acct_email_verified	Na-verify ang e-mail
 acct_email_unverified	Hindi pa na-verify ang e-mail — tingnan ang inbox mo
 acct_phone_signed_in	Naka-sign in gamit ang telepono
 acct_you_are_in	Naka-sign in ka na.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_verify_sent	Naipadala ang e-mail sa pag-verify — tingnan ang inbox mo
+notfound_title	Hindi natagpuan ang pahina — Ghal Bol
+notfound_h1	Hindi natagpuan ang pahina
+notfound_body	Walang anuman sa adres na ito. Ang link ng imbitasyon ay mukhang ghalbol.com/connect/… — tiyaking nakopya nang buo.

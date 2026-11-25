@@ -1,79 +1,79 @@
 # lus. key<TAB>text. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+menu	Thil zawng
+close	Khar rawh
+nav_site	Hmun
+nav_messenger	Thuchah
 nav_linux	Linux
 privacy	Mimal thuruk
 nav_play	Play Store
 login	Lut rawh
 play	Play
-home	Home
+home	In
 account	Akaunt
-logout	Logout
+logout	Chhuak rawh
 terms	Dan te
-support	Support
-data_deletion	Data deletion
+support	Inkawp
+data_deletion	Data paihbo
 cancellation	Tihbo dan
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+about	Kan chungchang
+back_home	In ah kir rawh
+anonymous	Hming nei lo
+home_title	Ghal Bol — thuchah thup
+hero_title	I ta chat thup.
+hero_lede	Thuziak leh aw/video call 1:1 — phone number awm lo, key leh transcript te i device-ah.
+cta_see	Thuchah en rawh
+cta_play	Play ah la rawh
+hero_alt	Ghal Bol: hun tak tak ah, thup, device atanga device thuchah leh call
+product_eyebrow	Thil siam
+product_title	Ghal Bol thuchah
+product_lead	Ghal Bol thil neih hnuai ah a chhuak thil siam — device atanga device thuziak thup, thawn leh chhiar finfiahna, leh online te inkara aw leh video call. App hming puipui chu Ghal Bol (com.ghalbol) a ni.
+feat_e2e_title	Chat a tawp atanga a tawp
+feat_e2e_body	Thuchah te i device-ah a seal a. Thawn bawm chuan a dawn tu a finfiah hma a thuziak thup a vawng.
+feat_call_title	Aw leh video call
+feat_call_body	Call te a theih hunah LAN-ah device atanga device an inhawng, a ni loh chuan media a decrypt ngai lo coordination bridge tlem zawk hmangin.
+feat_id_title	Device ta identity
+feat_id_body	Install tin a local cryptographic identity a siam. QR emaw link hmangin sawm rawh — phone number awm lo, social login awm lo.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Linux la rawh
+invite_eyebrow	Ghal Bol · Sawmna te
+invite_band_title	Vawi khat scan rawh. Online i nih hunah inhawng rawh.
+invite_lead	Guest chuan host QR a scan (emaw invite link a hawng). Guest chuan host public key a vawng a, a call. QR vei vei a ngai ngai lo.
+invite_step1	https://ghalbol.com/connect/… link emaw QR chu Ghal Bol Invite atangin sem rawh.
+invite_step2	An Ghal Bol-ah an hawng (emaw Play / Linux atangin an install hmasa).
+invite_step3	An pahnih an thlen theih hunah chat leh call an inhawng — call tan LAN leh WAN kawng te an inpui.
+plat_eyebrow	Ghal Bol · Platform te
+plat_title	Vawiin Android leh Linux
+plat_lead	Windows package te workspace pakhat atangin an siam. He site download puipui hi Linux desktop bundle a ni; Android chu Google Play-ah com.ghalbol angin a chhuak.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Ghal Bol chu Play atangin install rawh. App Links finfiah te chuan invite te a theih hunah app-ah an hawng nghal.
+cta_open_play	Play Store hawng rawh
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
+plat_linux_body	Release archive chu chhuah rawh, chuan ./install.sh (user tin tan) emaw ./run.sh hmunah hman turin.
+names_eyebrow	Hming te
+names_title	Thil neih, company, mar
+names_body	Gotigin chu thil neih a ni (Technology leh hmuhchhuah inhmuhna). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED chu company a ni. Ghal Bol chu thuchah thil siam mar a ni; he site hi ghalbol.com a ni. Thuchah chu vawiin a chhuak a ni. Package hming leh domain te ghalbol an la ni — thu pakhat. camel-case mar dang a awm lo.
+linux_eyebrow	Computer bung
+linux_title	Linux tan Ghal Bol
+linux_lead	x86_64 production bundle. Archive chu chhuah la, ./install.sh (user tin tan, ~/.local-ah) emaw ./run.sh hmunah hman turin.
+linux_download	Linux bundle download rawh
+invite_kicker	Sawmna
+invite_h1	Ghal Bol-ah tel rawh
+invite_embedded_title	App dang chhungah a hawng (entirnan WhatsApp)
+invite_embedded_body	He browser ina siam hian Ghal Bol a hawng thei lo. Menu kha hmet la, he phek hi Chrome-ah hawng rawh, emaw app link chu copy la, Ghal Bol → Tel-ah paste rawh.
+invite_hint	A hnuai ah Ghal Bol-ah hawng kha hmet rawh. Engmah a awm loh chuan app link chu copy la, Ghal Bol (Tel)-ah paste rawh.
+invite_open	Ghal Bol-ah hawng rawh
+copy_web	Web link copy rawh
+copy_app	App link copy rawh
+invite_install	App install rawh
+invite_bad	https://ghalbol.com/connect/<public_key_hex> ang link hmang rawh
+copy_done	{label} a copy a
+copy_prompt	He {label} hi copy rawh
+label_web	Web zawmna
+label_app	App zawmna
+acct_page_title	Akaunt — Ghal Bol
+acct_home_aria	Ghal Bol in
+acct_nav_aria	Pawimawh
+acct_lede	Ghal Bol tan lut rawh. Thil duh zawng zawng — e-mail, Google, Microsoft, GitHub, emaw fon.
 acct_continue_with	E-mail, provider emaw fon hmangin chhunzawm rawh.
 email	E-mail
 acct_name_optional	Hming (i duh chuan)
@@ -104,12 +104,12 @@ err_too_many	Tum tam lutuk. A hnuah tum leh rawh.
 err_invalid_phone	Ram code nen fon number pum hmang rawh (entirnan +91…).
 err_bad_code	SMS code chu a dik lo emaw a hun a tawp tawh.
 err_generic	Engemaw a dik lo.
-acct_no_email	(no email)
+acct_no_email	(e-mail a awm lo)
 acct_email_verified	E-mail finfiah a ni
 acct_email_unverified	E-mail a la finfiah lo — i inbox en rawh
 acct_phone_signed_in	Fon hmangin i lut
 acct_you_are_in	I lut tawh.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_verify_sent	Thutlukna e-mail a thawn a — inbox en rawh
+notfound_title	Phek a awm lo — Ghal Bol
+notfound_h1	Phek a awm lo
+notfound_body	He address-ah engmah a awm lo. Invite link chu ghalbol.com/connect/… ang a ni — a kim takin copy a ni em en rawh.

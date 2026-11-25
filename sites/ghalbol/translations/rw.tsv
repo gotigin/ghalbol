@@ -1,79 +1,79 @@
 # rw. key<TAB>text. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+menu	Urutonde
+close	Funga
+nav_site	Urubuga
+nav_messenger	Umbutumwa
 nav_linux	Linux
 privacy	Ibanga
 nav_play	Play Store
 login	Injira
 play	Play
-home	Home
+home	Ahabanza
 account	Konti
-logout	Logout
+logout	Sohoka
 terms	Amabwiriza
-support	Support
-data_deletion	Data deletion
+support	Inkunga
+data_deletion	Gusiba amakuru
 cancellation	Guhagarika
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+about	Ibyerekeye
+back_home	Subira ahabanza
+anonymous	Utazwi
+home_title	Ghal Bol — umbutumwa w'ibanga
+hero_title	Ikiganiro cy'ibanga ari icyawe.
+hero_lede	Inyandiko n'amamaza y'ijwi/video 1:1 — nta nimero ya telefone, imfunguzo n'inyandiko kuri mudasobwa yawe.
+cta_see	Reba umbutumwa
+cta_play	Ububone kuri Play
+hero_alt	Ghal Bol: mu gihe nyacyo, mu bwihisho, ubutumwa n'amamaza kuva kuri mudasobwa ujya kundi
+product_eyebrow	Igicuruzwa
+product_title	Umbutumwa Ghal Bol
+product_lead	Igicuruzwa gisohoka munsi y'ikirango cya Ghal Bol — inyandiko y'ibanga kuva kuri mudasobwa ujya kundi, inyemezabwishyu zo gutanga no gusoma, n'amamaza y'ijwi na video y'ahantu hagati y'abari kuri murandasi. Izina risanzwe ry'aporogaramu ni Ghal Bol (com.ghalbol).
+feat_e2e_title	Ikiganiro kuva ku mpera kugeza ku yindi
+feat_e2e_body	Ubutumwa burashyirwa ikimenyetso kuri mudasobwa yawe. Agasanduku ko gutanga gafata gusa inyandiko y'ibanga idasobanutse kugeza uwakira ayemeza.
+feat_call_title	Amamaza y'ijwi na video
+feat_call_body	Amamaza ahurira kuva kuri mudasobwa ujya kundi kuri LAN iyo bishoboka, bitabaye ibyo binyura ku kiraro cyoroshye cyo guhuza kitigeza gikura ibanga kuri media.
+feat_id_title	Indangamuntu ya mudasobwa
+feat_id_body	Buri gushyiraho gukora indangamuntu y'ibanga y'ahantu. Tumira ukoresheje QR cyangwa umurongo — nta nimero ya telefone no kwinjira muri mbuga nkoranyambaga.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Gukurura Linux
+invite_eyebrow	Ghal Bol · Ubutumire
+invite_band_title	Sikanisha rimwe. Huza iyo uri kuri murandasi.
+invite_lead	Umushyitsi asikanisha QR y'umukiriya (cyangwa afungura umurongo w'ubutumire). Umushyitsi abika urufunguzo rusange rw'umukiriya akohereza. QR ku mpande zombi ntibikenewe na rimwe.
+invite_step1	Sangiza umurongo wawe https://ghalbol.com/connect/… cyangwa QR biva mu Butumire muri Ghal Bol.
+invite_step2	Babifungura muri Ghal Bol (cyangwa babanza gushyiraho bava kuri Play / Linux).
+invite_step3	Iyo bombi bashobora kugerwaho, ikiganiro n'amamaza bihurira — ku mamaza inzira za LAN na WAN zigenda hamwe.
+plat_eyebrow	Ghal Bol · Imbuga
+plat_title	Uyu munsi Android na Linux
+plat_lead	Pake za Windows zikubakwa mu mwanya w'akazi umwe. Igicuruzwa gisohoka ku rubuga ni pake ya desktop ya Linux; Android isohoka kuri Google Play nka com.ghalbol.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Shiraho Ghal Bol biva kuri Play. App Links zemejwe zifungura ubutumire mu porogaramu iyo bishoboka.
+cta_open_play	Fungura Play Store
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
+plat_linux_body	Fungura ububiko bw'isosiyo, hanyuma ./install.sh (ku mukoresha) cyangwa ./run.sh kugira ngo ugerageze aho uri.
+names_eyebrow	Amazina
+names_title	Ikirango, ikigo, ikirango
+names_body	Gotigin ni ikirango (Aho ikoranabuhanga rihurira n'ubuvumbuzi). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED ni ikigo. Ghal Bol ni ikirango cy'ibicuruzwa by'itumanaho; uru rubuga ni ghalbol.com. Umbutumwa ni icyo gisohoka uyu munsi. Amazina ya pake n'urubuga biguma ghalbol — ijambo rimwe. Nta kirango ka camel-case katandukanye.
+linux_eyebrow	Ibiro
+linux_title	Ghal Bol ya Linux
+linux_lead	Pake y'umusaruro x86_64. Fungura ububiko hanyuma ukore ./install.sh (ku mukoresha, muri ~/.local) cyangwa ./run.sh kugira ngo ugerageze aho uri.
+linux_download	Kurura pake ya Linux
+invite_kicker	Ubutumire
+invite_h1	Jya muri Ghal Bol
+invite_embedded_title	Byafunguwe imbere ya porogaramu ikindi (urugero WhatsApp)
+invite_embedded_body	Iyi mushakisha yubatswe ntishobora gufungura Ghal Bol. Kanda urutonde hanyuma ufungure iyi paji muri Chrome, cyangwa wandukure umurongo wa porogaramu ukawashyira muri Ghal Bol → Jya.
+invite_hint	Hasi kanda Fungura muri Ghal Bol. Niba ntacyo kibaye, wandukure umurongo wa porogaramu ukawashyira muri Ghal Bol (Jya).
+invite_open	Fungura muri Ghal Bol
+copy_web	Wandukure umurongo wa rubuga
+copy_app	Wandukure umurongo wa porogaramu
+invite_install	Shiraho porogaramu
+invite_bad	Koresha umurongo nka https://ghalbol.com/connect/<public_key_hex>
+copy_done	{label} yandukuwe
+copy_prompt	Wandukure iyi {label}
+label_web	Umurongo wa rubuga
+label_app	Umurongo wa porogaramu
+acct_page_title	Konti — Ghal Bol
+acct_home_aria	Ahabanza ka Ghal Bol
+acct_nav_aria	Ibanze
+acct_lede	Injira muri Ghal Bol. Amahitamo yose — imeri, Google, Microsoft, GitHub, cyangwa telefone.
 acct_continue_with	Komeza ukoresheje imeri, utanga serivisi, cyangwa telefone.
 email	Imeri
 acct_name_optional	Izina (ku bushake)
@@ -104,12 +104,12 @@ err_too_many	Wagerageje inshuro nyinshi cyane. Ongera ugerageze nyuma.
 err_invalid_phone	Koresha nimero ya telefone yuzuye ifite kode y’igihugu (urugero +91…).
 err_bad_code	Iyo kode ya SMS si yo cyangwa yararengeje igihe.
 err_generic	Hari ikitagenze neza.
-acct_no_email	(no email)
+acct_no_email	(nta meri)
 acct_email_verified	Imeri yemejwe
 acct_email_unverified	Imeri ntiraremezwa — reba agasanduku k’ubutumwa bwawe
 acct_phone_signed_in	Winjiye ukoresheje telefone
 acct_you_are_in	Winjiye.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_verify_sent	Imeri yo kwemeza yoherejwe — reba agasanduku k'ubutumwa bwawe
+notfound_title	Paji ntiyabonetse — Ghal Bol
+notfound_h1	Paji ntiyabonetse
+notfound_body	Nta kintu kiri kuri iyi aderesi. Umurongo w'ubutumire usa na ghalbol.com/connect/… — reba ko wandukuwe wose.

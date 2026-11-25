@@ -1,79 +1,79 @@
 # ig. key<TAB>text. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+menu	Ndepụta
+close	Mechie
+nav_site	Saịtị
+nav_messenger	Onye ozi
 nav_linux	Linux
 privacy	Nzuzo
 nav_play	Play Store
 login	Banye
 play	Play
-home	Home
+home	Ụlọ
 account	Akaụntụ
-logout	Logout
+logout	Pụọ
 terms	Usoro
-support	Support
-data_deletion	Data deletion
+support	Nkwado
+data_deletion	Ihichapụ data
 cancellation	Nkagbu
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+about	Gbasara anyị
+back_home	Laghachi n'ụlọ
+anonymous	A na-amaghị
+home_title	Ghal Bol — onye ozi ezoro ezo
+hero_title	Mkparịta ụka ezoro ezo nke gị.
+hero_lede	Ederede na oku olu/vidiyo 1:1 — enweghị nọmba ekwentị, igodo na ederede dị na ngwaọrụ gị.
+cta_see	Hụ onye ozi
+cta_play	Nweta ya na Play
+hero_alt	Ghal Bol: n'oge n'ezie, nzuzo, ozi na oku site na ngwaọrụ gaa na ngwaọrụ
+product_eyebrow	Ngwaahịa
+product_title	Onye ozi Ghal Bol
+product_lead	Ngwaahịa na-apụta n'okpuru akara Ghal Bol — ederede ezoro ezo site na ngwaọrụ gaa na ngwaọrụ, nkwenye nnyefe na ọgụgụ, na oku olu na vidiyo e kere eke n'etiti ndị nọ n'ịntanetị. Aha ọha ngwa bụ Ghal Bol (com.ghalbol).
+feat_e2e_title	Mkparịta ụka site n'ọnụ ruo n'ọnụ
+feat_e2e_body	A na-emechi ozi na ngwaọrụ gị. Igbe nnyefe na-ejide naanị ederede ezoro ezo na-adịghị doo anya ruo mgbe onye nnata kwadoro.
+feat_call_title	Oku olu na vidiyo
+feat_call_body	Oku na-ejikọ site na ngwaọrụ gaa na ngwaọrụ na LAN mgbe o kwere omume, ma ọ bụghị ya site na àkwà mmiri nhazi dị mfe nke na-adịghị edozi mgbasa ozi.
+feat_id_title	Njirimara nke ngwaọrụ
+feat_id_body	Ntinye ọ bụla na-emepụta njirimara nzuzo mpaghara. Kpọọ site na QR ma ọ bụ njikọ — enweghị nọmba ekwentị na enweghị nbanye mmekọrịta.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Nbudata Linux
+invite_eyebrow	Ghal Bol · Ịkpọ
+invite_band_title	Nyochaa otu ugboro. Jikọọ mgbe ị nọ n'ịntanetị.
+invite_lead	Onye ọbịa na-enyocha QR onye ọbịa (ma ọ bụ na-emepe njikọ ịkpọ). Onye ọbịa na-echekwa igodo ọha onye ọbịa ma na-akpọ. QR n'akụkụ abụọ adịghị mkpa.
+invite_step1	Kekọrịta njikọ gị https://ghalbol.com/connect/… ma ọ bụ QR site na Ịkpọ na Ghal Bol.
+invite_step2	Ha na-emepe ya na Ghal Bol (ma ọ bụ ha buru ụzọ tinye site na Play / Linux).
+invite_step3	Mgbe ha abụọ nwere ike iru, mkparịta ụka na oku na-ejikọ — maka oku ụzọ LAN na WAN na-aga n'otu oge.
+plat_eyebrow	Ghal Bol · Ikpo okwu
+plat_title	Taa Android na Linux
+plat_lead	Ngwugwu Windows na-ewu site n'otu ebe ọrụ. Nbudata ọha na saịtị a bụ ngwugwu desktọpụ Linux; Android na-apụta na Google Play dị ka com.ghalbol.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Tinye Ghal Bol site na Play. App Links e kwadoro na-emepe ịkpọ ozugbo na ngwa mgbe o kwere omume.
+cta_open_play	Mepee Play Store
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
+plat_linux_body	Wepụta ebe nchekwa mwepụta, wee ./install.sh (maka onye ọrụ) ma ọ bụ ./run.sh iji nwaa n'ebe ahụ.
+names_eyebrow	Aha
+names_title	Akara ahịa, ụlọ ọrụ, akara
+names_body	Gotigin bụ akara ahịa (Ebe teknụzụ na nchọpụta na-ezute). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED bụ ụlọ ọrụ. Ghal Bol bụ akara maka ngwaahịa nkwukọrịta; saịtị a bụ ghalbol.com. Onye ozi bụ ihe na-apụta taa. Aha ngwugwu na ngalaba na-anọgide ghalbol — otu okwu. Enweghị akara camel-case dị iche.
+linux_eyebrow	Desktọpụ
+linux_title	Ghal Bol maka Linux
+linux_lead	Ngwugwu mmepụta x86_64. Wepụta ebe nchekwa wee mee ./install.sh (maka onye ọrụ, n'ime ~/.local) ma ọ bụ ./run.sh iji nwaa n'ebe ahụ.
+linux_download	Budata ngwugwu Linux
+invite_kicker	Ịkpọ
+invite_h1	Sonye na Ghal Bol
+invite_embedded_title	Emepere n'ime ngwa ọzọ (dịka WhatsApp)
+invite_embedded_body	Ihe nchọgharị a arụnyere enweghị ike imepe Ghal Bol. Kpatụ ndepụta ma mepee ibe a na Chrome, ma ọ bụ detuo njikọ ngwa tinye ya na Ghal Bol → Sonye.
+invite_hint	N'okpuru kpatụ Mepee na Ghal Bol. Ọ bụrụ na ọ nweghị ihe mere, detuo njikọ ngwa tinye ya na Ghal Bol (Sonye).
+invite_open	Mepee na Ghal Bol
+copy_web	Detuo njikọ webụ
+copy_app	Detuo njikọ ngwa
+invite_install	Tinye ngwa
+invite_bad	Jiri njikọ dị ka https://ghalbol.com/connect/<public_key_hex>
+copy_done	E deturu {label}
+copy_prompt	Detuo {label} a
+label_web	Njikọ webụ
+label_app	Njikọ ngwa
+acct_page_title	Akaụntụ — Ghal Bol
+acct_home_aria	Ụlọ Ghal Bol
+acct_nav_aria	Isi
+acct_lede	Banye maka Ghal Bol. Nhọrọ zuru ezu — ozi-e, Google, Microsoft, GitHub, ma ọ bụ ekwentị.
 acct_continue_with	Gaa n’ihu site n’ozi-e, onye na-enye ọrụ ịbanye, ma ọ bụ ekwentị.
 email	Ozi-e
 acct_name_optional	Aha (nhọrọ)
@@ -104,12 +104,12 @@ err_too_many	Ị nwaala ọtụtụ ugboro. Nwaa ọzọ emechaa.
 err_invalid_phone	Jiri nọmba ekwentị zuru oke ya na koodu mba (dịka +91…).
 err_bad_code	Koodu SMS ahụ ezighị ezi ma ọ bụ agwụla.
 err_generic	Ihe ezighị ezi mere.
-acct_no_email	(no email)
+acct_no_email	(enweghị ozi-e)
 acct_email_verified	E kwadoro ozi-e
 acct_email_unverified	A kwadobeghị ozi-e — lee igbe ozi gị
 acct_phone_signed_in	Ị banyere site n’ekwentị
 acct_you_are_in	Ị banyela.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_verify_sent	E zigara ozi-e nkwenye — lelee igbe ozi gị
+notfound_title	Ahụghị ibe — Ghal Bol
+notfound_h1	Ahụghị ibe
+notfound_body	Ọ nweghị ihe n'adreesị a. Njikọ ịkpọ dị ka ghalbol.com/connect/… — lelee na e deturu ya n'uju.

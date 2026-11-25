@@ -1,79 +1,79 @@
 # yo. key<TAB>text. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+menu	Àkójọ
+close	Padé
+nav_site	Ojú òpó
+nav_messenger	Oníṣẹ́ ìránṣẹ́
 nav_linux	Linux
 privacy	Àṣírí
 nav_play	Play Store
 login	Wọlé
 play	Play
-home	Home
+home	Ilé
 account	Àkáǹtì
-logout	Logout
+logout	Jáde
 terms	Àwọn òfin
-support	Support
-data_deletion	Data deletion
+support	Àtìlẹ́yìn
+data_deletion	Píparẹ́ dátà
 cancellation	Ìfagilé
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+about	Nípa wa
+back_home	Padà sí ilé
+anonymous	Aláìlórúkọ
+home_title	Ghal Bol — oníṣẹ́ ìránṣẹ́ tí a pa mọ́
+hero_title	Ìjíròrò tí a pa mọ́ tí ó jẹ́ tìrẹ.
+hero_lede	Ọ̀rọ̀ àti ìpè ohùn/fídíò 1:1 — láìsí nọ́mbà fóònù, àwọn kọ́kọ́rọ́ àti àkọsílẹ̀ wà lórí ẹ̀rọ rẹ.
+cta_see	Wo oníṣẹ́ ìránṣẹ́
+cta_play	Gbà á lórí Play
+hero_alt	Ghal Bol: ní àkókò gidi, ní ìkọ̀kọ̀, àwọn ìránṣẹ́ àti ìpè láti ẹ̀rọ dé ẹ̀rọ
+product_eyebrow	Ọja
+product_title	Oníṣẹ́ ìránṣẹ́ Ghal Bol
+product_lead	Ọjà tó ń jáde lábẹ́ àmì Ghal Bol — ọ̀rọ̀ tí a pa mọ́ láti ẹ̀rọ dé ẹ̀rọ, àwọn ìwé ìfisí àti kíkà, àti ìpè ohùn àti fídíò abínibí láàárín àwọn tó wà lórí ayélujára. Orúkọ gbogboògbò áàpù ni Ghal Bol (com.ghalbol).
+feat_e2e_title	Ìjíròrò láti òpin dé òpin
+feat_e2e_body	A ń di àwọn ìránṣẹ́ lórí ẹ̀rọ rẹ. Àpótí ìfisí ń pa ọ̀rọ̀ tí a pa mọ́ tí kò ṣe é rí mọ́ títí olùgbà yóò fi jẹ́rìí.
+feat_call_title	Ìpè ohùn àti fídíò
+feat_call_body	Àwọn ìpè ń sopọ̀ láti ẹ̀rọ dé ẹ̀rọ lórí LAN nígbà tí ó bá ṣeé ṣe, bí kò ṣe bẹ́ẹ̀ nípasẹ̀ afárá ìṣètò fẹ́ẹ́rẹ́ tí kì í tú ìmọ̀ lórí mídíà.
+feat_id_title	Ìdánimọ̀ tí ẹ̀rọ ní
+feat_id_body	Gbogbo ìfisí ń dá ìdánimọ̀ ìkọ̀kọ̀ agbègbè. Pe pẹ̀lú QR tàbí ìtọ́kasí — láìsí nọ́mbà fóònù àti láìsí wíwọlé àwùjọ.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Ìgbàsílẹ̀ Linux
+invite_eyebrow	Ghal Bol · Àwọn ìpè
+invite_band_title	Ṣàwárí lẹ́ẹ̀kan. Sopọ̀ nígbà tí o bá wà lórí ayélujára.
+invite_lead	Àlejò ń ṣàwárí QR olùgbàlejò (tàbí ó ń ṣí ìtọ́kasí ìpè). Àlejò ń pa kọ́kọ́rọ́ gbogboògbò olùgbàlejò mọ́ ó sì ń pe. QR ní ẹ̀gbẹ́ méjèèjì kì í ṣe dandan.
+invite_step1	Pín ìtọ́kasí rẹ https://ghalbol.com/connect/… tàbí QR láti inú Ìpè nínú Ghal Bol.
+invite_step2	Wọ́n ń ṣí i nínú Ghal Bol (tàbí wọ́n kọ́kọ́ fi sórí ẹ̀rọ láti Play / Linux).
+invite_step3	Nígbà tí àwọn méjèèjì bá ṣe é dé, ìjíròrò àti ìpè ń sopọ̀ — fún ìpè àwọn ọ̀nà LAN àti WAN ń lọ lẹ́gbẹ̀ẹ́ ara wọn.
+plat_eyebrow	Ghal Bol · Àwọn pẹpẹ
+plat_title	Lónìí Android àti Linux
+plat_lead	Àwọn pákéèjì Windows ni a ń kọ́ láti ibi iṣẹ́ kan náà. Ìgbàsílẹ̀ gbogboògbò lórí ojú òpó yìí ni pákéèjì tábìlì Linux; Android ń jáde lórí Google Play gẹ́gẹ́ bí com.ghalbol.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Fi Ghal Bol sórí ẹ̀rọ láti Play. Àwọn App Links tí a jẹ́rìí ń ṣí àwọn ìpè tààrà nínú áàpù nígbà tí ó bá ṣeé ṣe.
+cta_open_play	Ṣí Play Store
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
+plat_linux_body	Yọ àkójọpọ̀ ìtẹ̀jáde, lẹ́yìn náà ./install.sh (fún olùlò kọ̀ọ̀kan) tàbí ./run.sh láti gbìyànjú ní ibẹ̀.
+names_eyebrow	Àwọn orúkọ
+names_title	Àmì ìṣòwò, ilé iṣẹ́, àmì
+names_body	Gotigin ni àmì ìṣòwò (Ibí ìmọ̀ ẹ̀rọ tí pàdé ìwárí). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED ni ilé iṣẹ́. Ghal Bol ni àmì fún àwọn ọjà ìbánisọ̀rọ̀; ojú òpó yìí ni ghalbol.com. Oníṣẹ́ ìránṣẹ́ ni ohun tó ń jáde lónìí. Àwọn orúkọ pákéèjì àti ibùgbé ń wà gẹ́gẹ́ bí ghalbol — ọ̀rọ̀ kan. Kò sí àmì camel-case ọtọ̀.
+linux_eyebrow	Tábìlì iṣẹ́
+linux_title	Ghal Bol fún Linux
+linux_lead	Pákéèjì iṣelọ́pọ̀ x86_64. Yọ àkójọpọ̀ kí o sì ṣe ./install.sh (fún olùlò kọ̀ọ̀kan, sínú ~/.local) tàbí ./run.sh láti gbìyànjú ní ibẹ̀.
+linux_download	Gbà pákéèjì Linux sílẹ̀
+invite_kicker	Ìpè
+invite_h1	Darapọ̀ mọ́ Ghal Bol
+invite_embedded_title	A ṣí i nínú áàpù mìíràn (àpẹẹrẹ WhatsApp)
+invite_embedded_body	Aṣàwárí tí a kọ́ sínú yìí kò lè ṣí Ghal Bol. Tẹ àkójọ kí o sì ṣí ojú ewé yìí nínú Chrome, tàbí ṣe àwòkọ ìtọ́kasí áàpù kí o sì lẹ̀ ẹ́ sínú Ghal Bol → Darapọ̀.
+invite_hint	Tẹ Ṣí nínú Ghal Bol ní ìsàlẹ̀. Bí kò bá ṣẹlẹ̀, ṣe àwòkọ ìtọ́kasí áàpù kí o sì lẹ̀ ẹ́ sínú Ghal Bol (Darapọ̀).
+invite_open	Ṣí nínú Ghal Bol
+copy_web	Ṣe àwòkọ ìtọ́kasí wẹ́ẹ̀bù
+copy_app	Ṣe àwòkọ ìtọ́kasí áàpù
+invite_install	Fi áàpù sórí ẹ̀rọ
+invite_bad	Lo ìtọ́kasí bíi https://ghalbol.com/connect/<public_key_hex>
+copy_done	A ti ṣe àwòkọ {label}
+copy_prompt	Ṣe àwòkọ {label} yìí
+label_web	Ìtọ́kasí wẹ́ẹ̀bù
+label_app	Ìtọ́kasí áàpù
+acct_page_title	Àkáǹtì — Ghal Bol
+acct_home_aria	Ilé Ghal Bol
+acct_nav_aria	Pàtàkì
+acct_lede	Wọlé fún Ghal Bol. Àwọn àṣàyàn ní kíkún — ímeèlì, Google, Microsoft, GitHub, tàbí fóònù.
 acct_continue_with	Ẹ tẹ̀síwájú pẹ̀lú ímeèlì, olùpèsè ìwọlé, tàbí fóònù.
 email	Ímeèlì
 acct_name_optional	Orúkọ (àṣàyàn)
@@ -104,12 +104,12 @@ err_too_many	Ìgbìyànjú ti pọ̀ jù. Gbìyànjú lẹ́ẹ̀kan sí i nígb
 err_invalid_phone	Lo nọ́ńbà fóònù kíkún pẹ̀lú kóòdù orílẹ̀-èdè (fún àpẹẹrẹ +91…).
 err_bad_code	Kóòdù SMS yẹn kò tọ́ tàbí ó ti parí.
 err_generic	Nǹkan kan ṣàṣìṣe.
-acct_no_email	(no email)
+acct_no_email	(kò sí ímeèlì)
 acct_email_verified	A ti jẹ́rìí ímeèlì
 acct_email_unverified	A kò tí ì jẹ́rìí ímeèlì — ẹ wo àpótí ímeèlì yín
 acct_phone_signed_in	Ẹ wọlé pẹ̀lú fóònù
 acct_you_are_in	Ẹ ti wọlé.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_verify_sent	A ti fi ímeèlì ìjẹ́rìísí ránṣẹ́ — wo àpótí rẹ
+notfound_title	A kò rí ojú ewé — Ghal Bol
+notfound_h1	A kò rí ojú ewé
+notfound_body	Kò sí nǹkan ní àdírẹ́sì yìí. Ìtọ́kasí ìpè dàbí ghalbol.com/connect/… — ṣàyẹ̀wò pé a ṣe àwòkọ rẹ̀ ní kíkún.

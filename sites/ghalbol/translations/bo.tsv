@@ -1,79 +1,79 @@
 # bo. key<TAB>text. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+menu	ཐོ་གཞུང་།
+close	ཁ་རྒྱག
+nav_site	དྲ་ཚིགས།
+nav_messenger	འཕྲིན་སྐྱེལ།
 nav_linux	Linux
 privacy	སྒེར་གསང་།
 nav_play	Play Store
 login	ནང་འཛུལ།
 play	Play
-home	Home
+home	ཁྱིམ།
 account	ཐོ་ཁོངས།
-logout	Logout
+logout	ཕྱིར་ཐོན།
 terms	ཆ་རྐྱེན།
-support	Support
-data_deletion	Data deletion
+support	རྒྱབ་སྐྱོར།
+data_deletion	གཞི་གྲངས་སུབ་པ།
 cancellation	ཆ་མེད་གཏོང་བ།
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+about	ང་ཚོའི་སྐོར།
+back_home	ཁྱིམ་ལ་ཕྱིར་ལོག
+anonymous	མིང་མེད།
+home_title	Ghal Bol — གསང་བའི་འཕྲིན་སྐྱེལ།
+hero_title	ཁྱེད་རང་གི་གསང་བའི་གླེང་མོལ།
+hero_lede	1:1 ཡི་གེ་དང་སྐད་/བརྙན་འབོད་ — ཁ་པར་ཨང་གྲངས་མེད། ལྡེ་མིག་དང་ཟིན་ཐོ་ཁྱེད་ཀྱི་སྒྲིག་ཆས་སྟེང་།
+cta_see	འཕྲིན་སྐྱེལ་ལ་ལྟ།
+cta_play	Play སྟེང་ནས་ལོངས།
+hero_alt	Ghal Bol: དུས་ཐོག སྒེར་གྱི། སྒྲིག་ཆས་ནས་སྒྲིག་ཆས་སུ་འཕྲིན་དང་འབོད།
+product_eyebrow	ཐོན་རྫས།
+product_title	Ghal Bol འཕྲིན་སྐྱེལ།
+product_lead	Ghal Bol རྟགས་ཀྱི་འོག་ཏུ་ཐོན་པའི་ཐོན་རྫས་ — སྒྲིག་ཆས་ནས་སྒྲིག་ཆས་སུ་གསང་བའི་ཡི་གེ། སླེབས་པ་དང་ཀློག་པའི་ལག་ཁྱེར། དྲ་ཐོག་གྲོགས་པོའི་བར་གྱི་ས་གནས་སྐད་/བརྙན་འབོད། སྤྱི་པའི་ཉེར་སྤྱོད་མིང་ནི་ Ghal Bol (com.ghalbol) ཡིན།
+feat_e2e_title	མགོ་ནས་མཇུག་གི་གླེང་མོལ།
+feat_e2e_body	འཕྲིན་ཁྱེད་ཀྱི་སྒྲིག་ཆས་སྟེང་དམ་འབྱར་བྱེད། སླེབས་སྒམ་གྱིས་ལེན་མཁན་གྱིས་ཁས་ལེན་བར་དུ་མི་གསལ་བའི་གསང་ཡིག་ཁོ་ན་འཛིན།
+feat_call_title	སྐད་དང་བརྙན་འབོད།
+feat_call_body	འབོད་ཐུབ་སྐབས་ LAN སྟེང་སྒྲིག་ཆས་ནས་སྒྲིག་ཆས་སུ་འབྲེལ། མིན་ན་བརྙན་སྐད་ནམ་ཡང་གསང་འགྲོལ་མི་བྱེད་པའི་ཡང་བའི་མཉམ་སྒྲིག་ཟམ་པ་བརྒྱུད།
+feat_id_title	སྒྲིག་ཆས་རང་གི་ངོ་བོ།
+feat_id_body	སྒྲིག་འཇུག་རེ་རེས་ས་གནས་ཀྱི་གསང་རྟགས་ངོ་བོ་བཟོ། QR ཡང་ན་སྦྲེལ་ཐག་གིས་མགྲོན་འབོད་ — ཁ་པར་ཨང་གྲངས་སམ་སྤྱི་ཚོགས་ནང་འཛུལ་མེད།
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Linux ཕབ་ལེན།
+invite_eyebrow	Ghal Bol · མགྲོན་འབོད།
+invite_band_title	ཐེངས་གཅིག་བཤར། དྲ་ཐོག་ཏུ་ཡོད་སྐབས་འབྲེལ།
+invite_lead	མགྲོན་པོས་གཉེར་མཁན་གྱི་ QR བཤར (ཡང་ན་མགྲོན་འབོད་སྦྲེལ་ཐག་ཁ་ཕྱེ)། མགྲོན་པོས་གཉེར་མཁན་གྱི་སྤྱི་ལྡེ་འཛིན་ཞིང་འབོད། ཕན་ཚུན་ QR ནམ་ཡང་མི་དགོས།
+invite_step1	Ghal Bol གི་མགྲོན་འབོད་ནས་ཁྱེད་ཀྱི་ https://ghalbol.com/connect/… སྦྲེལ་ཐག་ཡང་ན་ QR མཉམ་སྤྱོད།
+invite_step2	ཁོང་ཚོས་ Ghal Bol ནང་ཁ་ཕྱེ (ཡང་ན་སྔོན་ལ་ Play / Linux ནས་སྒྲིག་འཇུག)།
+invite_step3	གཉིས་ཀ་འབྱོར་ཐུབ་སྐབས་གླེང་མོལ་དང་འབོད་འབྲེལ་ — འབོད་ལ་ LAN དང་ WAN ལམ་མཉམ་དུ་འགྲོ།
+plat_eyebrow	Ghal Bol · སྟེགས་བུ།
+plat_title	དེ་རིང་ Android དང་ Linux
+plat_lead	Windows ཐུམ་སྒྲིལ་ལས་ཁུངས་གཅིག་ནས་བཟོ། དྲ་ཚིགས་འདིའི་སྤྱི་པའི་ཕབ་ལེན་ནི་ Linux ཅོག་ངོས་ཐུམ་སྒྲིལ་ཡིན། Android ནི་ Google Play སྟེང་ com.ghalbol ལྟར་ཐོན།
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Play ནས་ Ghal Bol སྒྲིག་འཇུག App Links བདེན་པ་ཡིན་ན་མགྲོན་འབོད་ཐུབ་སྐབས་ཉེར་སྤྱོད་ནང་ཐད་ཀར་ཁ་ཕྱེ།
+cta_open_play	Play Store ཁ་ཕྱེ།
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
+plat_linux_body	ཐོན་སྐབས་ཡིག་ཚགས་ཕྱིར་འདོན། དེ་ནས་ ./install.sh (སྤྱོད་མཁན་རེར) ཡང་ན་ས་གནས་སུ་ཚོད་ལྟར་ ./run.sh.
+names_eyebrow	མིང་།
+names_title	ཚོང་རྟགས། ཀུང་སི། རྟགས།
+names_body	Gotigin ནི་ཚོང་རྟགས་ཡིན (ལག་རྩལ་དང་རྙེད་པ་འཕྲད་ས)། GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED ནི་ཀུང་སི་ཡིན། Ghal Bol ནི་འབྲེལ་འདྲིས་ཐོན་རྫས་ཀྱི་རྟགས་ཡིན། དྲ་ཚིགས་འདི་ ghalbol.com ཡིན། འཕྲིན་སྐྱེལ་ནི་དེ་རིང་ཐོན་པ་ཡིན། ཐུམ་སྒྲིལ་མིང་དང་ཁྱབ་ཁོངས་ ghalbol ལ་གནས་ — ཚིག་གཅིག ཁ་བྲལ་བའི་ camel-case རྟགས་མེད།
+linux_eyebrow	ཅོག་ངོས།
+linux_title	Linux ལ་ Ghal Bol
+linux_lead	x86_64 ཐོན་སྐྱེད་ཐུམ་སྒྲིལ། ཡིག་ཚགས་ཕྱིར་འདོན། དེ་ནས་ ./install.sh (སྤྱོད་མཁན་རེར། ~/.local ནང་) ཡང་ན་ས་གནས་སུ་ཚོད་ལྟར་ ./run.sh འཁོར།
+linux_download	Linux ཐུམ་སྒྲིལ་ཕབ་ལེན།
+invite_kicker	མགྲོན་འབོད།
+invite_h1	Ghal Bol ལ་ཞུགས།
+invite_embedded_title	ཉེར་སྤྱོད་གཞན་ནང་ཁ་ཕྱེ (དཔེར་ན་ WhatsApp)
+invite_embedded_body	ནང་གི་ལྟ་ཆས་ཀྱིས་ Ghal Bol ཁ་ཕྱེ་མི་ཐུབ། ཐོ་གཞུང་མནན་ནས་ཤོག་ངོས་འདི་ Chrome ནང་ཁ་ཕྱེ། ཡང་ན་ཉེར་སྤྱོད་སྦྲེལ་ཐག་འདྲ་བཤུས་ནས་ Ghal Bol → ཞུགས་ནང་སྦྱར།
+invite_hint	འོག་ཏུ་ Ghal Bol ནང་ཁ་ཕྱེ་མནན། གང་ཡང་མ་བྱུང་ན་ཉེར་སྤྱོད་སྦྲེལ་ཐག་འདྲ་བཤུས་ནས་ Ghal Bol (ཞུགས) ནང་སྦྱར།
+invite_open	Ghal Bol ནང་ཁ་ཕྱེ།
+copy_web	དྲ་བའི་སྦྲེལ་ཐག་འདྲ་བཤུས།
+copy_app	ཉེར་སྤྱོད་སྦྲེལ་ཐག་འདྲ་བཤུས།
+invite_install	ཉེར་སྤྱོད་སྒྲིག་འཇུག
+invite_bad	https://ghalbol.com/connect/<public_key_hex> ལྟ་བུའི་སྦྲེལ་ཐག་བཀོལ།
+copy_done	{label} འདྲ་བཤུས་ཟིན།
+copy_prompt	{label} འདི་འདྲ་བཤུས།
+label_web	དྲ་བའི་སྦྲེལ་ཐག
+label_app	ཉེར་སྤྱོད་སྦྲེལ་ཐག
+acct_page_title	ཐོ་ཁོངས། — Ghal Bol
+acct_home_aria	Ghal Bol ཁྱིམ།
+acct_nav_aria	གཙོ་བོ།
+acct_lede	Ghal Bol ལ་ནང་འཛུལ། འདེམས་ཚན་ཚང་མ་ — གློག་འཕྲིན། Google. Microsoft. GitHub. ཡང་ན་ཁ་པར།
 acct_continue_with	གློག་འཕྲིན། ཞབས་ཞུ་མཁོ་སྤྲོད་པ། ཡང་ན་ཁ་པར་གྱིས་མུ་མཐུད།
 email	གློག་འཕྲིན།
 acct_name_optional	མིང་། (འདོད་བློ་ལྟར།)
@@ -104,12 +104,12 @@ err_too_many	ཚོད་ལྟ་མང་དྲགས་སོང་། རྗ
 err_invalid_phone	རྒྱལ་ཁབ་ཀྱི་ཨང་རྟགས་དང་བཅས་པའི་ཁ་པར་ཨང་གྲངས་ཆ་ཚང་བེད་སྤྱོད་རོགས། (དཔེར་ན། +91…)
 err_bad_code	SMS ཨང་རྟགས་དེ་ནོར་བའམ་དུས་ཡོལ་སོང་།
 err_generic	ནོར་འཁྲུལ་ཞིག་བྱུང་སོང་།
-acct_no_email	(no email)
+acct_no_email	(གློག་འཕྲིན་མེད།)
 acct_email_verified	གློག་འཕྲིན་ར་སྤྲོད་ཟིན།
 acct_email_unverified	གློག་འཕྲིན་ད་དུང་ར་སྤྲོད་མེད། — ཁྱེད་ཀྱི་འབྱོར་སྒམ་ལ་ལྟ་རོགས།
 acct_phone_signed_in	ཁ་པར་གྱིས་ནང་འཛུལ་ཟིན།
 acct_you_are_in	ཁྱེད་ནང་འཛུལ་ཟིན།
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_verify_sent	ར་སྤྲོད་གློག་འཕྲིན་བཏང་ཟིན་ — འབྱོར་སྒམ་ལ་ལྟ་རོགས།
+notfound_title	ཤོག་ངོས་མ་རྙེད་ — Ghal Bol
+notfound_h1	ཤོག་ངོས་མ་རྙེད།
+notfound_body	ཁ་བྱང་འདིར་གང་ཡང་མེད། མགྲོན་འབོད་སྦྲེལ་ཐག་ ghalbol.com/connect/… ལྟར་སྣང་ — ཆ་ཚང་འདྲ་བཤུས་ཡིན་མིན་ལྟ་རོགས།

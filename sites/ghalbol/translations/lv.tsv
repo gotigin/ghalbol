@@ -1,79 +1,79 @@
 # lv. key<TAB>text. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+menu	Izvēlne
+close	Aizvērt
+nav_site	Vietne
+nav_messenger	Ziņotājs
 nav_linux	Linux
 privacy	Privātums
 nav_play	Play Store
 login	Pieteikties
 play	Play
-home	Home
+home	Sākums
 account	Konts
-logout	Logout
+logout	Izrakstīties
 terms	Noteikumi
-support	Support
-data_deletion	Data deletion
+support	Atbalsts
+data_deletion	Datu dzēšana
 cancellation	Atcelšana
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+about	Par mums
+back_home	Atpakaļ uz sākumu
+anonymous	Anonīms
+home_title	Ghal Bol — šifrēts ziņotājs
+hero_title	Šifrēta saruna, kas pieder jums.
+hero_lede	1:1 teksts un balss/video zvani — bez tālruņa numura, atslēgas un transkripti jūsu ierīcē.
+cta_see	Skatīt ziņotāju
+cta_play	Iegūstiet Play veikalā
+hero_alt	Ghal Bol: reāllaikā, privāti, ziņas un zvani no ierīces uz ierīci
+product_eyebrow	Produkts
+product_title	Ghal Bol ziņotājs
+product_lead	Produkts, kas iznāk ar zīmolu Ghal Bol — šifrēts teksts no ierīces uz ierīci, piegādes un izlasīšanas apliecinājumi un vietējie balss un video zvani starp tiem, kas ir tiešsaistē. Lietotnes publiskais nosaukums ir Ghal Bol (com.ghalbol).
+feat_e2e_title	Saruna no gala līdz galam
+feat_e2e_body	Ziņas tiek aizzīmogotas jūsu ierīcē. Piegādes pastkaste glabā tikai necaurspīdīgu šifru, līdz saņēmējs apstiprina.
+feat_call_title	Balss un video zvani
+feat_call_body	Zvani savienojas no ierīces uz ierīci LAN, kad iespējams, citādi caur vieglu koordinācijas tiltu, kas mediju nekad neatšifrē.
+feat_id_title	Identitāte, kas pieder ierīcei
+feat_id_body	Katra instalācija izveido vietējo kriptogrāfisko identitāti. Uzaiciniet ar QR vai saiti — bez tālruņa numura un bez sociālās pieteikšanās.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Linux lejupielāde
+invite_eyebrow	Ghal Bol · Uzaicinājumi
+invite_band_title	Skenējiet vienreiz. Savienojieties, kad esat tiešsaistē.
+invite_lead	Viesis skenē saimnieka QR (vai atver uzaicinājuma saiti). Viesis saglabā saimnieka publisko atslēgu un zvana. QR no abām pusēm nekad nav vajadzīgs.
+invite_step1	Dalieties ar saiti https://ghalbol.com/connect/… vai QR no Uzaicinājuma lietotnē Ghal Bol.
+invite_step2	Viņi to atver Ghal Bol (vai vispirms instalē no Play / Linux).
+invite_step3	Kad abi ir sasniedzami, saruna un zvani savienojas — zvaniem LAN un WAN ceļi iet paralēli.
+plat_eyebrow	Ghal Bol · Platformas
+plat_title	Šodien Android un Linux
+plat_lead	Windows pakotnes tiek būvētas no tās pašas darbvietas. Publiskā lejupielāde šajā vietnē ir Linux darbvirsmas pakotne; Android iznāk Google Play kā com.ghalbol.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Instalējiet Ghal Bol no Play. Pārbaudītās App Links atver uzaicinājumus tieši lietotnē, kad iespējams.
+cta_open_play	Atvērt Play Store
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
+plat_linux_body	Atpakojiet laidiena arhīvu, tad ./install.sh (katram lietotājam) vai ./run.sh, lai izmēģinātu uz vietas.
+names_eyebrow	Nosaukumi
+names_title	Preču zīme, uzņēmums, zīmols
+names_body	Gotigin ir preču zīme (Kur tehnoloģija satiek atklājumu). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED ir uzņēmums. Ghal Bol ir zīmols saziņas produktiem; šī vietne ir ghalbol.com. Ziņotājs ir tas, kas iznāk šodien. Pakotņu nosaukumi un domēns paliek ghalbol — viens vārds. Atsevišķa camel-case zīmola nav.
+linux_eyebrow	Darbvirsma
+linux_title	Ghal Bol Linux ierīcēm
+linux_lead	x86_64 ražošanas pakotne. Atpakojiet arhīvu un palaidiet ./install.sh (katram lietotājam, mapē ~/.local) vai ./run.sh, lai izmēģinātu uz vietas.
+linux_download	Lejupielādēt Linux pakotni
+invite_kicker	Uzaicinājums
+invite_h1	Pievienojieties Ghal Bol
+invite_embedded_title	Atvērts citā lietotnē (piem. WhatsApp)
+invite_embedded_body	Šis iebūvētais pārlūks nevar atvērt Ghal Bol. Pieskarieties izvēlnei un atveriet šo lapu Chrome, vai kopējiet lietotnes saiti un ielīmējiet to Ghal Bol → Pievienoties.
+invite_hint	Zemāk pieskarieties Atvērt Ghal Bol. Ja nekas nenotiek, kopējiet lietotnes saiti un ielīmējiet to Ghal Bol (Pievienoties).
+invite_open	Atvērt Ghal Bol
+copy_web	Kopēt tīmekļa saiti
+copy_app	Kopēt lietotnes saiti
+invite_install	Instalēt lietotni
+invite_bad	Izmantojiet saiti, piemēram, https://ghalbol.com/connect/<public_key_hex>
+copy_done	{label} ir nokopēts
+copy_prompt	Kopēt šo {label}
+label_web	Tīmekļa saite
+label_app	Lietotnes saite
+acct_page_title	Konts — Ghal Bol
+acct_home_aria	Ghal Bol sākums
+acct_nav_aria	Primārais
+acct_lede	Piesakieties Ghal Bol. Pilnas iespējas — e-pasts, Google, Microsoft, GitHub vai tālrunis.
 acct_continue_with	Turpiniet ar e-pastu, pakalpojuma sniedzēju vai tālruni.
 email	E-pasts
 acct_name_optional	Vārds (nav obligāts)
@@ -104,12 +104,12 @@ err_too_many	Pārāk daudz mēģinājumu. Mēģiniet vēlāk vēlreiz.
 err_invalid_phone	Izmantojiet pilnu tālruņa numuru ar valsts kodu (piem., +91…).
 err_bad_code	Šis SMS kods ir nepareizs, vai tā derīgums ir beidzies.
 err_generic	Kaut kas nogāja greizi.
-acct_no_email	(no email)
+acct_no_email	(nav e-pasta)
 acct_email_verified	E-pasts apstiprināts
 acct_email_unverified	E-pasts vēl nav apstiprināts — pārbaudiet iesūtni
 acct_phone_signed_in	Pieteicies ar tālruni
 acct_you_are_in	Jūs esat pieteicies.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_verify_sent	Apstiprinājuma e-pasts nosūtīts — pārbaudiet iesūtni
+notfound_title	Lapa nav atrasta — Ghal Bol
+notfound_h1	Lapa nav atrasta
+notfound_body	Šajā adresē nekā nav. Uzaicinājuma saite izskatās kā ghalbol.com/connect/… — pārbaudiet, vai tā nokopēta pilnībā.

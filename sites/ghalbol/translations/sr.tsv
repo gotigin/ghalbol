@@ -1,79 +1,79 @@
 # sr. key<TAB>text. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+menu	Мени
+close	Затвори
+nav_site	Сајт
+nav_messenger	Месинџер
 nav_linux	Linux
 privacy	Приватност
 nav_play	Play Store
 login	Пријава
 play	Play
-home	Home
+home	Почетна
 account	Мој налог
-logout	Logout
+logout	Одјава
 terms	Услови
-support	Support
-data_deletion	Data deletion
+support	Подршка
+data_deletion	Брисање података
 cancellation	Отказивање
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+about	О нама
+back_home	Назад на почетну
+anonymous	Анонимно
+home_title	Ghal Bol — шифровани месинџер
+hero_title	Шифровани разговор који је ваш.
+hero_lede	1:1 текст и гласовни/видео позиви — без броја телефона, кључеви и транскрипти на вашем уређају.
+cta_see	Погледајте месинџер
+cta_play	Преузмите на Play
+hero_alt	Ghal Bol: у стварном времену, приватно, поруке и позиви од уређаја до уређаја
+product_eyebrow	Производ
+product_title	Месинџер Ghal Bol
+product_lead	Производ који излази под брендом Ghal Bol — шифровани текст од уређаја до уређаја, потврде испоруке и читања, и изворни гласовни и видео позиви међу онима који су на мрежи. Јавно име апликације је Ghal Bol (com.ghalbol).
+feat_e2e_title	Разговор од краја до краја
+feat_e2e_body	Поруке се запечате на вашем уређају. Сандуче испоруке држи само непрозиран шифрат док прималац не потврди.
+feat_call_title	Гласовни и видео позиви
+feat_call_body	Позиви се повезују од уређаја до уређаја на LAN кад је могуће, иначе преко лаганог координационог моста који никад не дешифрује медиј.
+feat_id_title	Идентитет на уређају
+feat_id_body	Свака инсталација прави локални криптографски идентитет. Позовите помоћу QR или везе — без броја телефона и без друштвене пријаве.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Преузимање за Linux
+invite_eyebrow	Ghal Bol · Позивнице
+invite_band_title	Скенирајте једном. Повежите се кад сте на мрежи.
+invite_lead	Гост скенира QR домаћина (или отвара везу позивнице). Гост чува јавни кључ домаћина и зове. QR с обе стране никад није потребан.
+invite_step1	Поделите везу https://ghalbol.com/connect/… или QR из Позивнице у Ghal Bol.
+invite_step2	Они је отварају у Ghal Bol (или је прво инсталирају с Play / Linux).
+invite_step3	Кад су обоје доступни, разговор и позиви се повезују — за позиве путање LAN и WAN иду паралелно.
+plat_eyebrow	Ghal Bol · Платформе
+plat_title	Данас Android и Linux
+plat_lead	Windows пакети се граде из истог радног простора. Јавно преузимање на овом сајту је Linux пакет за радну површину; Android излази на Google Play као com.ghalbol.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Инсталирајте Ghal Bol с Play. Проверене App Links отварају позивнице право у апликацији кад је могуће.
+cta_open_play	Отвори Play Store
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
+plat_linux_body	Распакујте архиву издања, затим ./install.sh (по кориснику) или ./run.sh да пробате на лицу места.
+names_eyebrow	Имена
+names_title	Жиг, компанија, бренд
+names_body	Gotigin је жиг (Где се технологија среће с открићем). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED је компанија. Ghal Bol је бренд за производе комуникације; овај сајт је ghalbol.com. Месинџер је оно што данас излази. Имена пакета и домен остају ghalbol — једна реч. Нема засебног camel-case бренда.
+linux_eyebrow	Радна површина
+linux_title	Ghal Bol за Linux
+linux_lead	Производни пакет x86_64. Распакујте архиву, затим покрените ./install.sh (по кориснику, у ~/.local) или ./run.sh да пробате на лицу места.
+linux_download	Преузмите Linux пакет
+invite_kicker	Позивница
+invite_h1	Придружите се на Ghal Bol
+invite_embedded_title	Отворено унутар друге апликације (нпр. WhatsApp)
+invite_embedded_body	Овај уграђени прегледач не може да отвори Ghal Bol. Додирните мени и отворите ову страницу у Chrome, или копирајте везу апликације и налепите је у Ghal Bol → Придружи се.
+invite_hint	Додирните Отвори у Ghal Bol испод. Ако се ништа не деси, копирајте везу апликације и налепите је у Ghal Bol (Придружи се).
+invite_open	Отвори у Ghal Bol
+copy_web	Копирај веб везу
+copy_app	Копирај везу апликације
+invite_install	Инсталирај апликацију
+invite_bad	Користите везу попут https://ghalbol.com/connect/<public_key_hex>
+copy_done	{label} је копиран
+copy_prompt	Копирај овај {label}
+label_web	Веб веза
+label_app	Веза апликације
+acct_page_title	Налог — Ghal Bol
+acct_home_aria	Почетна страница Ghal Bol
+acct_nav_aria	Примарно
+acct_lede	Пријавите се за Ghal Bol. Пуне опције — е-пошта, Google, Microsoft, GitHub или телефон.
 acct_continue_with	Наставите е-поштом, преко пружаоца или телефоном.
 email	Е-пошта
 acct_name_optional	Име (необавезно)
@@ -104,12 +104,12 @@ err_too_many	Превише покушаја. Покушајте касније.
 err_invalid_phone	Употребите цео број телефона са позивним бројем земље (нпр. +91…).
 err_bad_code	Тај SMS код је погрешан или је истекао.
 err_generic	Нешто је пошло наопако.
-acct_no_email	(no email)
+acct_no_email	(нема е-поште)
 acct_email_verified	Е-пошта потврђена
 acct_email_unverified	Е-пошта још није потврђена — проверите пријемно сандуче
 acct_phone_signed_in	Пријављени телефоном
 acct_you_are_in	Пријављени сте.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_verify_sent	Е-пошта за потврду је послата — проверите пријемно сандуче
+notfound_title	Страница није пронађена — Ghal Bol
+notfound_h1	Страница није пронађена
+notfound_body	На овој адреси нема ничега. Веза позивнице изгледа као ghalbol.com/connect/… — проверите је ли копирана цела.

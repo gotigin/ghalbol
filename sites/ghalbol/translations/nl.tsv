@@ -1,8 +1,8 @@
 # nl. key<TAB>text. Keep {placeholders}. \n = line break.
 menu	Menu
 close	Sluiten
-nav_site	Site
-nav_messenger	Messenger
+nav_site	Website
+nav_messenger	Boodschapper
 nav_linux	Linux
 privacy	Privacybeleid
 nav_play	Play Store
@@ -52,7 +52,7 @@ plat_linux_body	Pak het release-archief uit, daarna ./install.sh (per gebruiker)
 names_eyebrow	Namen
 names_title	Handelsmerk, bedrijf, merk
 names_body	Gotigin is het handelsmerk (Waar technologie ontdekking ontmoet). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is het bedrijf. Ghal Bol is het merk voor communicatieproducten; deze site is ghalbol.com. De messenger is wat er vandaag uitkomt. Pakketnamen en het domein blijven ghalbol — één woord. Er is geen apart merk in camel case.
-linux_eyebrow	Desktop
+linux_eyebrow	Bureaublad
 linux_title	Ghal Bol voor Linux
 linux_lead	Productiepakket voor x86_64. Pak het archief uit en voer daarna ./install.sh uit (per gebruiker, in ~/.local) of ./run.sh om het ter plaatse te proberen.
 linux_download	Linux-pakket downloaden

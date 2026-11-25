@@ -1,79 +1,79 @@
 # ky. key<TAB>text. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+menu	Меню
+close	Жабуу
+nav_site	Сайт
+nav_messenger	Кабарчы
 nav_linux	Linux
 privacy	Купуялык
 nav_play	Play Store
 login	Кирүү
 play	Play
-home	Home
+home	Башкы бет
 account	Аккаунт
-logout	Logout
+logout	Чыгуу
 terms	Шарттар
-support	Support
-data_deletion	Data deletion
+support	Колдоо
+data_deletion	Дайындарды өчүрүү
 cancellation	Жокко чыгаруу
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+about	Биз жөнүндө
+back_home	Башкы бетке кайтуу
+anonymous	Анонимдүү
+home_title	Ghal Bol — шифрленген кабарчы
+hero_title	Сизге таандык шифрленген маек.
+hero_lede	1:1 текст жана үн/видео чалуулар — телефон номерисиз, ачкычтар жана транскрипттер сиздин түзмөгүңүздө.
+cta_see	Кабарчыны көрүү
+cta_play	Play аркылуу алуу
+hero_alt	Ghal Bol: чыныгы убакытта, жеке, түзмөктөн түзмөккө билдирүү жана чалуу
+product_eyebrow	Өнүм
+product_title	Ghal Bol кабарчысы
+product_lead	Ghal Bol брендинин алдында чыккан өнүм — түзмөктөн түзмөккө шифрленген текст, жеткирүү жана окуу ырастоолору жана тармактагы тараптардын ортосундагы жергиликтүү үн менен видео чалуулар. Колдонмонун ачык аталышы — Ghal Bol (com.ghalbol).
+feat_e2e_title	Четинен четине маек
+feat_e2e_body	Билдирүүлөр сиздин түзмөгүңүздө мөөрлөнөт. Жеткирүү кутусу алуучу ырастаганча тунук эмес шифртекстти гана сактайт.
+feat_call_title	Үн жана видео чалуулар
+feat_call_body	Чалуулар мүмкүн болгондо LAN аркылуу түзмөктөн түзмөккө кошулат, болбосо медианы эч качан чечмелебеген жеңил координация көпүрөсү аркылуу.
+feat_id_title	Түзмөккө таандык инсан
+feat_id_body	Ар бир орнотуу жергиликтүү криптографиялык инсан жаратат. QR же шилтеме менен чакырыңыз — телефон номерисиз жана социалдык кирүүсүз.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Linux жүктөөсү
+invite_eyebrow	Ghal Bol · Чакыруулар
+invite_band_title	Бир жолу скандаңыз. Тармакта болгондо кошулуңуз.
+invite_lead	Конок хосттун QR кодун скандайт (же чакыруу шилтемесин ачат). Конок хосттун ачык ачкычын сактайт жана чалат. Эки тараптан QR эч качан керек эмес.
+invite_step1	Ghal Bol ичиндеги Чакыруудан https://ghalbol.com/connect/… шилтемесин же QR кодун бөлүшүңүз.
+invite_step2	Алар аны Ghal Bol ичинде ачат (же адегенде Play / Linux аркылуу орнотушат).
+invite_step3	Экөө тең жеткиликтүү болгондо, маек менен чалуулар кошулат — чалуулар үчүн LAN жана WAN жолдору катар жүрөт.
+plat_eyebrow	Ghal Bol · Платформалар
+plat_title	Бүгүн Android жана Linux
+plat_lead	Windows топтомдору ошол эле жумуш мейкиндигинен курулат. Бул сайттагы ачык жүктөө — Linux иш тактасынын топтому; Android Google Play аркылуу com.ghalbol катары чыгат.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Ghal Bol колдонмосун Play аркылуу орнотуңуз. Текшерилген App Links чакырууларды мүмкүн болгондо түз колдонмодо ачат.
+cta_open_play	Play Store ачуу
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
+plat_linux_body	Чыгарылыш архивин ачыңыз, андан кийин ./install.sh (колдонуучуга) же ордунда сыноо үчүн ./run.sh.
+names_eyebrow	Аталыштар
+names_title	Соода белгиси, компания, бренд
+names_body	Gotigin — соода белгиси (Технология ачылыш менен жолуккан жер). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED — компания. Ghal Bol — байланыш өнүмдөрүнүн бренди; бул сайт ghalbol.com. Кабарчы — бүгүн чыкканы. Топтом аталыштары менен домен ghalbol бойдон калат — бир сөз. Өзүнчө camel-case бренди жок.
+linux_eyebrow	Иш тактасы
+linux_title	Linux үчүн Ghal Bol
+linux_lead	x86_64 өндүрүш топтому. Архивди ачып, ./install.sh (колдонуучуга, ~/.local ичине) же ордунда сыноо үчүн ./run.sh иштетиңиз.
+linux_download	Linux топтомун жүктөө
+invite_kicker	Чакыруу
+invite_h1	Ghal Bolго кошулуу
+invite_embedded_title	Башка колдонмонун ичинде ачылган (мисалы WhatsApp)
+invite_embedded_body	Бул орнотулган браузер Ghal Bol колдонмосун ача албайт. Менюну басып, бул бетти Chrome'до ачыңыз, же колдонмо шилтемесин көчүрүп, Ghal Bol → Кошулуу ичине чаптаңыз.
+invite_hint	Төмөндө Ghal Bol ичинде ачуу баскычын басыңыз. Эч нерсе болбосо, колдонмо шилтемесин көчүрүп, Ghal Bol (Кошулуу) ичине чаптаңыз.
+invite_open	Ghal Bol ичинде ачуу
+copy_web	Веб шилтемесин көчүрүү
+copy_app	Колдонмо шилтемесин көчүрүү
+invite_install	Колдонмону орнотуу
+invite_bad	https://ghalbol.com/connect/<public_key_hex> сыяктуу шилтемени колдонуңуз
+copy_done	{label} көчүрүлдү
+copy_prompt	Бул {label} көчүрүү
+label_web	Веб шилтемеси
+label_app	Колдонмо шилтемеси
+acct_page_title	Аккаунт — Ghal Bol
+acct_home_aria	Ghal Bol башкы бети
+acct_nav_aria	Негизги
+acct_lede	Ghal Bol үчүн кириңиз. Толук варианттар — электрондук почта, Google, Microsoft, GitHub же телефон.
 acct_continue_with	Электрондук почта, провайдер же телефон менен улантыңыз.
 email	Электрондук почта
 acct_name_optional	Аты (милдеттүү эмес)
@@ -104,12 +104,12 @@ err_too_many	Аракеттер өтө көп. Кийинчерээк кайта
 err_invalid_phone	Өлкө коду менен толук телефон номерин колдонуңуз (мис. +91…).
 err_bad_code	Бул SMS коду туура эмес же мөөнөтү өткөн.
 err_generic	Бир нерсе туура эмес болду.
-acct_no_email	(no email)
+acct_no_email	(электрондук почта жок)
 acct_email_verified	Почта ырасталды
 acct_email_unverified	Почта азырынча ырасталган эмес — кирүүчү кутуну текшериңиз
 acct_phone_signed_in	Телефон менен кирди
 acct_you_are_in	Сиз кирдиңиз.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_verify_sent	Ырастоо каты жөнөтүлдү — кирүүчү кутуну текшериңиз
+notfound_title	Бет табылган жок — Ghal Bol
+notfound_h1	Бет табылган жок
+notfound_body	Бул даректе эч нерсе жок. Чакыруу шилтемеси ghalbol.com/connect/… сыяктуу көрүнөт — толук көчүрүлгөнүн текшериңиз.

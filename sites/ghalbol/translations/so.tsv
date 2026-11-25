@@ -1,79 +1,79 @@
 # so. key<TAB>text. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+menu	Liiska
+close	Xir
+nav_site	Goob
+nav_messenger	Wariye
 nav_linux	Linux
 privacy	Asturnaanta
 nav_play	Play Store
 login	Soo gal
 play	Play
-home	Home
+home	Guriga
 account	Akoon
-logout	Logout
+logout	Ka bax
 terms	Shuruudaha
-support	Support
-data_deletion	Data deletion
+support	Taageero
+data_deletion	Tirtiridda xogta
 cancellation	Joojinta
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+about	Nagu saabsan
+back_home	Ku noqo guriga
+anonymous	Aan la aqoon
+home_title	Ghal Bol — wariye qarsoon
+hero_title	Sheeko qarsoon oo adiga kuu ah.
+hero_lede	Qoraal iyo wicitaanno cod/muuqaal 1:1 — lambarka taleefan la'aan, furayaasha iyo qoraalada qalabkaaga.
+cta_see	Eeg wariyaha
+cta_play	Ka hel Play
+hero_alt	Ghal Bol: waqti dhab ah, gaar ah, farriimo iyo wicitaanno qalab ilaa qalab
+product_eyebrow	Alaab
+product_title	Wariyaha Ghal Bol
+product_lead	Alaabta ka soo baxda summadda Ghal Bol — qoraal qarsoon qalab ilaa qalab, xaqiijinta gudbinta iyo akhriska, iyo wicitaanno cod iyo muuqaal oo asal ah oo u dhexeeya kuwa khadka ku jira. Magaca dadweynaha ee app-ka waa Ghal Bol (com.ghalbol).
+feat_e2e_title	Sheeko dhammaad ilaa dhammaad
+feat_e2e_body	Farriimaha waxaa lagu shaabadeeyaa qalabkaaga. Sanduuqa gudbinta wuxuu hayaa oo keliya qoraal qarsoon oo aan la arki karin ilaa qaataha uu xaqiijiyo.
+feat_call_title	Wicitaanno cod iyo muuqaal
+feat_call_body	Wicitaannadu waxay isku xiraan qalab ilaa qalab LAN marka ay suurtagal tahay, haddii kale buundo isku-duwid fudud oo aan waligeed furin warbaahinta.
+feat_id_title	Aqoonsiga qalabka
+feat_id_body	Rakibid kasta waxay abuurtaa aqoonsi qarsoodi ah oo maxalli ah. Ku casuun QR ama xiriir — lambarka taleefan la'aan iyo gelitaan bulsho la'aan.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Soo dejinta Linux
+invite_eyebrow	Ghal Bol · Casuumado
+invite_band_title	Hal mar iskaanka. Ku xir markaad khadka ku jirto.
+invite_lead	Martidu waxay iskaanka QR martigeliyaha (ama waxay furtaa xiriir casuumaad). Martidu waxay kaydisaa furaha dadweynaha ee martigeliyaha oo way wacdaa. QR labada dhinac waligeed looma baahna.
+invite_step1	La wadaag xiriirkaaga https://ghalbol.com/connect/… ama QR Casuumaadda Ghal Bol.
+invite_step2	Waxay ku furayaan Ghal Bol (ama marka hore waxay ka rakibaan Play / Linux).
+invite_step3	Marka labaduba la gaari karo, sheekada iyo wicitaannadu way isku xiraan — wicitaannada waddooyinka LAN iyo WAN way wada socdaan.
+plat_eyebrow	Ghal Bol · Madallo
+plat_title	Maanta Android iyo Linux
+plat_lead	Xirmooyinka Windows waxaa laga dhisaa goobta shaqada isla. Soo dejinta dadweynaha ee goobtan waa xirmada miiska Linux; Android waxay ka soo baxdaa Google Play sida com.ghalbol.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Ka rakib Ghal Bol Play. App Links la xaqiijiyay waxay casuumadaha si toos ah ugu furtaa app-ka marka ay suurtagal tahay.
+cta_open_play	Fur Play Store
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
+plat_linux_body	Ka fur kaydka sii-deynta, ka dib ./install.sh (isticmaale kasta) ama ./run.sh si aad meesha ugu tijaabiso.
+names_eyebrow	Magacyo
+names_title	Summad ganacsi, shirkad, summad
+names_body	Gotigin waa summadda ganacsiga (Meesha tignoolajiyadu ay la kulanto daahfurka). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED waa shirkadda. Ghal Bol waa summadda alaabada isgaarsiinta; goobtani waa ghalbol.com. Wariyaha ayaa maanta soo baxaya. Magacyada xirmada iyo bogga way sii ahaanayaan ghalbol — hal eray. Ma jiro summad camel-case oo gooni ah.
+linux_eyebrow	Miiska
+linux_title	Ghal Bol ee Linux
+linux_lead	Xirmo wax-soo-saar x86_64. Ka fur kaydka ka dibna socodsii ./install.sh (isticmaale kasta, gudaha ~/.local) ama ./run.sh si aad meesha ugu tijaabiso.
+linux_download	Soo deji xirmada Linux
+invite_kicker	Casuumaad
+invite_h1	Ku biir Ghal Bol
+invite_embedded_title	Lagu furay gudaha app kale (tusaale WhatsApp)
+invite_embedded_body	Browser-kan ku dhex jira ma furi karo Ghal Bol. Taabo liiska oo boggan ku fur Chrome, ama koobi xiriirka app-ka oo ku dheji Ghal Bol → Ku biir.
+invite_hint	Hoos taabo Ku fur Ghal Bol. Haddii waxba dhicin, koobi xiriirka app-ka oo ku dheji Ghal Bol (Ku biir).
+invite_open	Ku fur Ghal Bol
+copy_web	Koobi xiriirka webka
+copy_app	Koobi xiriirka app-ka
+invite_install	Rakib app-ka
+invite_bad	Isticmaal xiriir sida https://ghalbol.com/connect/<public_key_hex>
+copy_done	{label} waa la koobiyey
+copy_prompt	Koobi {label} kan
+label_web	Xiriirka webka
+label_app	Xiriirka app-ka
+acct_page_title	Akoon — Ghal Bol
+acct_home_aria	Guriga Ghal Bol
+acct_nav_aria	Aasaasi
+acct_lede	Soo gal Ghal Bol. Doorashooyin buuxa — iimayl, Google, Microsoft, GitHub, ama taleefan.
 acct_continue_with	Ku sii wad iimayl, bixiye ama taleefan.
 email	Iimayl
 acct_name_optional	Magac (ikhtiyaari)
@@ -104,12 +104,12 @@ err_too_many	Isku dayo aad u badan. Mar kale isku day hadhow.
 err_invalid_phone	Isticmaal lambarka taleefanka oo dhammaystiran oo leh koodhka waddanka (tusaale +91…).
 err_bad_code	Koodhkaas SMS waa khalad ama wuu dhacay.
 err_generic	Wax baa khaldamay.
-acct_no_email	(no email)
+acct_no_email	(iimayl ma jiro)
 acct_email_verified	Iimaylka waa la xaqiijiyay
 acct_email_unverified	Iimaylka weli lama xaqiijin — eeg sanduuqa fariimahaaga
 acct_phone_signed_in	Waxaad ku gashay taleefan
 acct_you_are_in	Waad soo gashay.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_verify_sent	Iimaylka xaqiijinta waa la diray — eeg sanduuqa fariimahaaga
+notfound_title	Bogga lama helin — Ghal Bol
+notfound_h1	Bogga lama helin
+notfound_body	Cinwaankan waxba kuma jiraan. Xiriirka casuumaadda wuxuu u eg yahay ghalbol.com/connect/… — hubi in si buuxda loo koobiyey.
