@@ -1,115 +1,115 @@
-# hu. key<TAB>text in i18n/en.tsv order. Hindi and Urdu are translated; other packs may still be the English source. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+# hu. key<TAB>text. Keep {placeholders}. \n = line break.
+menu	Menü
+close	Bezárás
+nav_site	Webhely
+nav_messenger	Üzenetküldő
 nav_linux	Linux
-privacy	Privacy
+privacy	Adatvédelem
 nav_play	Play Store
-login	Login
+login	Bejelentkezés
 play	Play
-home	Home
-account	Account
-logout	Logout
-terms	Terms
-support	Support
-data_deletion	Data deletion
-cancellation	Cancellation
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+home	Kezdőlap
+account	Fiók
+logout	Kijelentkezés
+terms	Feltételek
+support	Támogatás
+data_deletion	Adattörlés
+cancellation	Lemondás
+about	Rólunk
+back_home	Vissza a kezdőlapra
+anonymous	Névtelen
+home_title	Ghal Bol — titkosított üzenetküldő
+hero_title	Titkosított csevegés, amely az Öné.
+hero_lede	1:1 szöveg és hang-/videóhívások — telefonszám nélkül; a kulcsok és a leiratok az Ön eszközén.
+cta_see	Az üzenetküldő megtekintése
+cta_play	Letöltés a Playről
+hero_alt	Ghal Bol: azonnal, magánjellegű, üzenetek és hívások közvetlenül az eszközök között
+product_eyebrow	Termék
+product_title	Ghal Bol üzenetküldő
+product_lead	A Ghal Bol márka alatt megjelenő termék — közvetlenül az eszközök közötti titkosított szöveg, kézbesítési és olvasási visszaigazolások, valamint saját hang- és videóhívások az online felek között. A nyilvános alkalmazásnév Ghal Bol (com.ghalbol).
+feat_e2e_title	Végpontok közötti csevegés
+feat_e2e_body	Az üzenetek az Ön eszközén pecsételődnek le. A kézbesítő láda csak átlátszatlan titkosított szöveget tart, amíg a címzett nem igazolja.
+feat_call_title	Hang- és videóhívások
+feat_call_body	A hívások közvetlenül a LAN-on kapcsolódnak, ha lehet, különben egy könnyű egyeztetőhídon, amely a médiát soha nem fejti vissza.
+feat_id_title	Az eszköz saját személyazonossága
+feat_id_body	Minden telepítés helyi kriptográfiai személyazonosságot hoz létre. Meghívás QR-rel vagy hivatkozással — telefonszám és közösségi belépés nélkül.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Linux-letöltés
+invite_eyebrow	Ghal Bol · Meghívók
+invite_band_title	Egy beolvasás. Kapcsolódás, amikor online van.
+invite_lead	A vendég beolvassa a házigazda QR-jét (vagy megnyit egy meghívóhivatkozást). A vendég eltárolja a házigazda nyilvános kulcsát, és hív. Kétoldalú QR soha nem kell.
+invite_step1	Ossza meg a https://ghalbol.com/connect/… hivatkozását vagy a QR-t a Meghívásból a Ghal Bolban.
+invite_step2	A másik fél a Ghal Bolban nyitja meg (vagy előbb telepíti a Playről vagy a Linuxról).
+invite_step3	Amikor mindketten elérhetők, a csevegés és a hívások összekapcsolódnak — a hívásoknál a LAN- és WAN-utak egymás mellett futnak.
+plat_eyebrow	Ghal Bol · Platformok
+plat_title	Ma Android és Linux
+plat_lead	A Windows-csomagok ugyanabból a munkaterületből készülnek. A nyilvános letöltés ezen az oldalon a Linux asztali csomag; az Android a Google Playen com.ghalbol néven jelenik meg.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Telepítse a Ghal Bolt a Playről. Az ellenőrzött App Links a meghívókat egyenesen az alkalmazásba nyitja, ha lehet.
+cta_open_play	A Play Store megnyitása
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
-acct_continue_with	Continue with email, a provider, or phone.
-email	Email
-acct_name_optional	Name (optional)
-acct_password	Password
-acct_continue	Continue
-acct_or_continue	or continue with
-acct_federated	Federated sign-in
-acct_phone	Phone
-acct_mobile	Mobile number
+plat_linux_body	Csomagolja ki a kiadás archívumát, majd ./install.sh (felhasználónként) vagy ./run.sh a helybeni próbához.
+names_eyebrow	Nevek
+names_title	Védjegy, társaság, márka
+names_body	A Gotigin a védjegy (Ahol a technológia találkozik a felfedezéssel). A GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED a társaság. A Ghal Bol a kommunikációs termékek márkája; ez az oldal a ghalbol.com. Az üzenetküldő az, ami ma megjelenik. A csomagnevek és a tartomány ghalbol marad — egy szó. Nincs külön camel case márka.
+linux_eyebrow	Asztal
+linux_title	Ghal Bol Linuxra
+linux_lead	x86_64 gyártási csomag. Csomagolja ki az archívumot, majd futtassa a ./install.sh fájlt (felhasználónként, a ~/.local könyvtárba) vagy a ./run.sh fájlt a helybeni próbához.
+linux_download	A Linux-csomag letöltése
+invite_kicker	Meghívó
+invite_h1	Csatlakozás a Ghal Bolon
+invite_embedded_title	Egy másik alkalmazáson belül nyílt meg (pl. WhatsApp)
+invite_embedded_body	Ez a beépített böngésző nem tudja megnyitni a Ghal Bolt. Érintse meg a menüt, és nyissa meg ezt az oldalt a Chrome-ban, vagy másolja az alkalmazáshivatkozást, és illessze be ide: Ghal Bol → Csatlakozás.
+invite_hint	Érintse meg lent a Megnyitás a Ghal Bolban gombot. Ha semmi nem történik, másolja az alkalmazáshivatkozást, és illessze be a Ghal Bolba (Csatlakozás).
+invite_open	Megnyitás a Ghal Bolban
+copy_web	Weblink másolása
+copy_app	Alkalmazáshivatkozás másolása
+invite_install	Az alkalmazás telepítése
+invite_bad	Használjon ilyen hivatkozást: https://ghalbol.com/connect/<public_key_hex>
+copy_done	{label} másolva
+copy_prompt	Másolja ezt: {label}
+label_web	Weblink
+label_app	Alkalmazáshivatkozás
+acct_page_title	Fiók — Ghal Bol
+acct_home_aria	A Ghal Bol kezdőlapja
+acct_nav_aria	Elsődleges
+acct_lede	Jelentkezzen be a Ghal Bolhoz. Minden lehetőség — e-mail, Google, Microsoft, GitHub vagy telefon.
+acct_continue_with	Folytassa e-maillel, szolgáltatóval vagy telefonnal.
+email	E-mail
+acct_name_optional	Név (nem kötelező)
+acct_password	Jelszó
+acct_continue	Folytatás
+acct_or_continue	vagy folytassa ezzel:
+acct_federated	Összevont bejelentkezés
+acct_phone	Telefon
+acct_mobile	Mobilszám
 acct_phone_placeholder	+91…
-acct_send_sms	Send SMS code
-acct_sms_code	SMS code
-acct_confirm_code	Confirm code
-acct_signed_in	Signed in
-acct_signed_in_as	Signed in as
-acct_status_label	Status
-acct_resend_verify	Resend verification email
-acct_sign_out	Sign out
-err_invalid_email	Enter a valid email address.
-err_weak_password	Use a password with at least 6 characters.
-err_wrong_password	Wrong password.
-err_invalid_credential	Email or password is wrong.
-err_popup_closed	Sign-in window was closed.
-err_cancelled	Sign-in was cancelled.
-err_unauthorized_domain	This domain is not authorized for Firebase Auth.
-err_not_allowed	That sign-in method is not enabled yet.
-err_too_many	Too many attempts. Try again later.
-err_invalid_phone	Use a full phone number with country code (e.g. +91…).
-err_bad_code	That SMS code is wrong or expired.
-err_generic	Something went wrong.
-acct_no_email	(no email)
-acct_email_verified	Email verified
-acct_email_unverified	Email not verified yet — check your inbox
-acct_phone_signed_in	Signed in with phone
-acct_you_are_in	You’re signed in.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_send_sms	SMS-kód küldése
+acct_sms_code	SMS-kód
+acct_confirm_code	Kód megerősítése
+acct_signed_in	Bejelentkezve
+acct_signed_in_as	Bejelentkezve mint
+acct_status_label	Állapot
+acct_resend_verify	Megerősítő e-mail újraküldése
+acct_sign_out	Kijelentkezés
+err_invalid_email	Adjon meg érvényes e-mail-címet.
+err_weak_password	Legalább 6 karakteres jelszót használjon.
+err_wrong_password	Hibás jelszó.
+err_invalid_credential	Hibás e-mail-cím vagy jelszó.
+err_popup_closed	A bejelentkezési ablak bezárult.
+err_cancelled	A bejelentkezés megszakadt.
+err_unauthorized_domain	Ez a domain nincs engedélyezve a Firebase Auth számára.
+err_not_allowed	Ez a bejelentkezési mód még nincs bekapcsolva.
+err_too_many	Túl sok próbálkozás. Próbálja újra később.
+err_invalid_phone	Teljes telefonszámot adjon meg országkóddal (pl. +91…).
+err_bad_code	Ez az SMS-kód hibás vagy lejárt.
+err_generic	Valami hiba történt.
+acct_no_email	(nincs e-mail)
+acct_email_verified	E-mail-cím megerősítve
+acct_email_unverified	Az e-mail-cím még nincs megerősítve — nézze meg a postafiókját
+acct_phone_signed_in	Bejelentkezve telefonnal
+acct_you_are_in	Bejelentkezett.
+acct_verify_sent	Megerősítő e-mail elküldve — nézze meg a postafiókját
+notfound_title	Az oldal nem található — Ghal Bol
+notfound_h1	Az oldal nem található
+notfound_body	Ezen a címen nincs semmi. A meghívóhivatkozás így néz ki: ghalbol.com/connect/… — ellenőrizze, hogy teljes egészében másolódott-e.

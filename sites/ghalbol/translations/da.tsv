@@ -1,115 +1,115 @@
-# da. key<TAB>text in i18n/en.tsv order. Hindi and Urdu are translated; other packs may still be the English source. Keep {placeholders}. \n = line break.
+# da. key<TAB>text. Keep {placeholders}. \n = line break.
 menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+close	Luk
+nav_site	Websted
+nav_messenger	Beskeder
 nav_linux	Linux
-privacy	Privacy
+privacy	Privatliv
 nav_play	Play Store
-login	Login
+login	Log ind
 play	Play
-home	Home
-account	Account
-logout	Logout
-terms	Terms
+home	Hjem
+account	Konto
+logout	Log ud
+terms	Vilkår
 support	Support
-data_deletion	Data deletion
-cancellation	Cancellation
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+data_deletion	Sletning af data
+cancellation	Opsigelse
+about	Om os
+back_home	Tilbage til hjem
+anonymous	Anonym
+home_title	Ghal Bol — krypteret beskedtjeneste
+hero_title	Krypteret chat, der er din.
+hero_lede	Tekst 1:1 og tale-/videoopkald — intet telefonnummer; nøgler og udskrifter på din enhed.
+cta_see	Se beskedtjenesten
+cta_play	Hent den på Play
+hero_alt	Ghal Bol: i realtid, privat, beskeder og opkald direkte mellem enheder
+product_eyebrow	Produkt
+product_title	Ghal Bols beskedtjeneste
+product_lead	Produktet, der udgives under mærket Ghal Bol — krypteret tekst direkte mellem enheder, kvitteringer for levering og læsning og indbyggede tale- og videoopkald mellem dem, der er online. Det offentlige appnavn er Ghal Bol (com.ghalbol).
+feat_e2e_title	Chat fra ende til ende
+feat_e2e_body	Beskeder forsegles på din enhed. Leveringspostkassen holder kun uigennemsigtig chiffertekst, indtil modtageren bekræfter.
+feat_call_title	Tale- og videoopkald
+feat_call_body	Opkald forbindes direkte på LAN, når det kan lade sig gøre, ellers via en let koordinationsbro, der aldrig dekrypterer medier.
+feat_id_title	Identitet, enheden ejer
+feat_id_body	Hver installation skaber en lokal kryptografisk identitet. Inviter med QR eller link — intet telefonnummer og intet login via sociale netværk.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Linux-hentning
+invite_eyebrow	Ghal Bol · Invitationer
+invite_band_title	Skan én gang. Forbind, når du er online.
+invite_lead	Gæsten scanner værtens QR (eller åbner et invitationslink). Gæsten gemmer værtens offentlige nøgle og ringer op. QR fra begge sider kræves aldrig.
+invite_step1	Del dit link https://ghalbol.com/connect/… eller QR fra Inviter i Ghal Bol.
+invite_step2	Den anden åbner det i Ghal Bol (eller installerer først fra Play eller Linux).
+invite_step3	Når begge kan nås, forbindes chat og opkald — for opkald løber veje via LAN og WAN sideløbende.
+plat_eyebrow	Ghal Bol · Platforme
+plat_title	I dag Android og Linux
+plat_lead	Windows-pakker bygges fra det samme arbejdsrum. Den offentlige hentning på dette websted er Linux-skrivebordspakken; Android udgives på Google Play som com.ghalbol.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Installer Ghal Bol fra Play. Bekræftede App Links åbner invitationer direkte i appen, når det kan lade sig gøre.
+cta_open_play	Åbn Play Store
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
+plat_linux_body	Pak udgivelsesarkivet ud, derefter ./install.sh (pr. bruger) eller ./run.sh for at prøve på stedet.
+names_eyebrow	Navne
+names_title	Varemærke, virksomhed, mærke
+names_body	Gotigin er varemærket (Der hvor teknologien møder opdagelsen). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED er virksomheden. Ghal Bol er mærket for kommunikationsprodukter; dette websted er ghalbol.com. Beskedtjenesten er det, der udgives i dag. Pakkenavne og domæne forbliver ghalbol — ét ord. Der er ikke et separat mærke i camel case.
+linux_eyebrow	Skrivebord
+linux_title	Ghal Bol til Linux
+linux_lead	Produktionspakke til x86_64. Pak arkivet ud, og kør derefter ./install.sh (pr. bruger, til ~/.local) eller ./run.sh for at prøve på stedet.
+linux_download	Hent Linux-pakken
 invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
-acct_continue_with	Continue with email, a provider, or phone.
-email	Email
-acct_name_optional	Name (optional)
-acct_password	Password
-acct_continue	Continue
-acct_or_continue	or continue with
-acct_federated	Federated sign-in
-acct_phone	Phone
-acct_mobile	Mobile number
+invite_h1	Deltag på Ghal Bol
+invite_embedded_title	Åbnet inde i en anden app (f.eks. WhatsApp)
+invite_embedded_body	Denne indbyggede browser kan ikke åbne Ghal Bol. Tryk på menuen, og åbn siden i Chrome, eller kopiér applinket og indsæt det i Ghal Bol → Deltag.
+invite_hint	Tryk på Åbn i Ghal Bol nedenfor. Sker der ingenting, kopiér applinket og indsæt det i Ghal Bol (Deltag).
+invite_open	Åbn i Ghal Bol
+copy_web	Kopiér weblink
+copy_app	Kopiér applink
+invite_install	Installer appen
+invite_bad	Brug et link som https://ghalbol.com/connect/<public_key_hex>
+copy_done	{label} kopieret
+copy_prompt	Kopiér denne {label}
+label_web	Weblink
+label_app	Applink
+acct_page_title	Konto — Ghal Bol
+acct_home_aria	Ghal Bols startside
+acct_nav_aria	Primær
+acct_lede	Log ind til Ghal Bol. Alle valg — e-mail, Google, Microsoft, GitHub eller telefon.
+acct_continue_with	Fortsæt med e-mail, en udbyder eller telefon.
+email	E-mail
+acct_name_optional	Navn (valgfrit)
+acct_password	Adgangskode
+acct_continue	Fortsæt
+acct_or_continue	eller fortsæt med
+acct_federated	Fødereret login
+acct_phone	Telefon
+acct_mobile	Mobilnummer
 acct_phone_placeholder	+91…
-acct_send_sms	Send SMS code
-acct_sms_code	SMS code
-acct_confirm_code	Confirm code
-acct_signed_in	Signed in
-acct_signed_in_as	Signed in as
-acct_status_label	Status
-acct_resend_verify	Resend verification email
-acct_sign_out	Sign out
-err_invalid_email	Enter a valid email address.
-err_weak_password	Use a password with at least 6 characters.
-err_wrong_password	Wrong password.
-err_invalid_credential	Email or password is wrong.
-err_popup_closed	Sign-in window was closed.
-err_cancelled	Sign-in was cancelled.
-err_unauthorized_domain	This domain is not authorized for Firebase Auth.
-err_not_allowed	That sign-in method is not enabled yet.
-err_too_many	Too many attempts. Try again later.
-err_invalid_phone	Use a full phone number with country code (e.g. +91…).
-err_bad_code	That SMS code is wrong or expired.
-err_generic	Something went wrong.
-acct_no_email	(no email)
-acct_email_verified	Email verified
-acct_email_unverified	Email not verified yet — check your inbox
-acct_phone_signed_in	Signed in with phone
-acct_you_are_in	You’re signed in.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_send_sms	Send SMS-kode
+acct_sms_code	SMS-kode
+acct_confirm_code	Bekræft kode
+acct_signed_in	Logget ind
+acct_signed_in_as	Logget ind som
+acct_status_label	Kontostatus
+acct_resend_verify	Send bekræftelsesmail igen
+acct_sign_out	Log ud
+err_invalid_email	Indtast en gyldig e-mailadresse.
+err_weak_password	Brug en adgangskode på mindst 6 tegn.
+err_wrong_password	Forkert adgangskode.
+err_invalid_credential	E-mail eller adgangskode er forkert.
+err_popup_closed	Login-vinduet blev lukket.
+err_cancelled	Login blev annulleret.
+err_unauthorized_domain	Dette domæne er ikke godkendt til Firebase Auth.
+err_not_allowed	Den login-metode er ikke slået til endnu.
+err_too_many	For mange forsøg. Prøv igen senere.
+err_invalid_phone	Brug et fuldt telefonnummer med landekode (f.eks. +91…).
+err_bad_code	Den SMS-kode er forkert eller udløbet.
+err_generic	Noget gik galt.
+acct_no_email	(ingen e-mail)
+acct_email_verified	E-mail bekræftet
+acct_email_unverified	E-mail ikke bekræftet endnu — tjek din indbakke
+acct_phone_signed_in	Logget ind med telefon
+acct_you_are_in	Du er logget ind.
+acct_verify_sent	Bekræftelsesmail sendt — tjek din indbakke
+notfound_title	Siden blev ikke fundet — Ghal Bol
+notfound_h1	Siden blev ikke fundet
+notfound_body	Der er intet på denne adresse. Et invitationslink ser sådan ud: ghalbol.com/connect/… — tjek, at det blev kopieret helt.

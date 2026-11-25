@@ -1,115 +1,115 @@
-# sk. key<TAB>text in i18n/en.tsv order. Hindi and Urdu are translated; other packs may still be the English source. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+# sk. key<TAB>text. Keep {placeholders}. \n = line break.
+menu	Ponuka
+close	Zavrieť
+nav_site	Web
+nav_messenger	Komunikátor
 nav_linux	Linux
-privacy	Privacy
+privacy	Súkromie
 nav_play	Play Store
-login	Login
+login	Prihlásenie
 play	Play
-home	Home
-account	Account
-logout	Logout
-terms	Terms
-support	Support
-data_deletion	Data deletion
-cancellation	Cancellation
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+home	Domov
+account	Môj účet
+logout	Odhlásiť sa
+terms	Podmienky
+support	Podpora
+data_deletion	Výmaz údajov
+cancellation	Zrušenie
+about	O nás
+back_home	Späť domov
+anonymous	Anonymný
+home_title	Ghal Bol — šifrovaný komunikátor
+hero_title	Šifrovaný chat, ktorý je váš.
+hero_lede	Text 1:1 a hlasové a video hovory — bez telefónneho čísla; kľúče a prepisy na vašom zariadení.
+cta_see	Zobraziť komunikátor
+cta_play	Získať na Play
+hero_alt	Ghal Bol: naživo, súkromne, správy a hovory priamo medzi zariadeniami
+product_eyebrow	Produkt
+product_title	Komunikátor Ghal Bol
+product_lead	Produkt, ktorý vychádza pod značkou Ghal Bol — šifrovaný text priamo medzi zariadeniami, potvrdenia doručenia a prečítania a vlastné hlasové a video hovory medzi tými, ktorí sú online. Verejný názov aplikácie je Ghal Bol (com.ghalbol).
+feat_e2e_title	Chat od konca ku koncu
+feat_e2e_body	Správy sa pečatia na vašom zariadení. Schránka doručenia drží len nepriehľadný šifrovaný text, kým príjemca nepotvrdí.
+feat_call_title	Hlasové a video hovory
+feat_call_body	Hovory sa spoja priamo v sieti LAN, keď sa dá, inak cez ľahký koordinačný most, ktorý médiá nikdy nedešifruje.
+feat_id_title	Totožnosť zariadenia
+feat_id_body	Každá inštalácia vytvorí miestnu kryptografickú totožnosť. Pozvánka cez QR alebo odkaz — bez telefónneho čísla a bez prihlásenia cez sociálnu sieť.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Stiahnutie pre Linux
+invite_eyebrow	Ghal Bol · Pozvánky
+invite_band_title	Jedno skenovanie. Spojenie, keď budete online.
+invite_lead	Hosť naskenuje QR hostiteľa (alebo otvorí odkaz pozvánky). Hosť uloží verejný kľúč hostiteľa a zavolá. QR z oboch strán netreba nikdy.
+invite_step1	Zdieľajte odkaz https://ghalbol.com/connect/… alebo QR z Pozvať v Ghal Bol.
+invite_step2	Druhá strana ho otvorí v Ghal Bol (alebo najprv nainštaluje z Play či Linux).
+invite_step3	Keď sú obaja dostupní, chat a hovory sa spoja — pri hovoroch idú cesty LAN a WAN súbežne.
+plat_eyebrow	Ghal Bol · Platformy
+plat_title	Dnes Android a Linux
+plat_lead	Balíky Windows sa skladajú z toho istého pracovného priestoru. Verejné stiahnutie na tomto webe je balík plochy Linux; Android vychádza na Google Play ako com.ghalbol.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Nainštalujte Ghal Bol z Play. Overené App Links otvárajú pozvánky rovno v aplikácii, keď sa dá.
+cta_open_play	Otvoriť Play Store
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
-acct_continue_with	Continue with email, a provider, or phone.
-email	Email
-acct_name_optional	Name (optional)
-acct_password	Password
-acct_continue	Continue
-acct_or_continue	or continue with
-acct_federated	Federated sign-in
-acct_phone	Phone
-acct_mobile	Mobile number
+plat_linux_body	Rozbaľte archív vydania, potom ./install.sh (pre používateľa) alebo ./run.sh, aby ste to vyskúšali na mieste.
+names_eyebrow	Názvy
+names_title	Ochranná známka, spoločnosť, značka
+names_body	Gotigin je ochranná známka (Tam, kde sa technológia stretáva s objavom). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED je spoločnosť. Ghal Bol je značka produktov na komunikáciu; tento web je ghalbol.com. Komunikátor je to, čo vychádza dnes. Názvy balíkov a doména ostávajú ghalbol — jedno slovo. Samostatná značka v štýle camel case nie je.
+linux_eyebrow	Plocha
+linux_title	Ghal Bol pre Linux
+linux_lead	Produkčný balík x86_64. Rozbaľte archív a spustite ./install.sh (pre používateľa do ~/.local) alebo ./run.sh, aby ste to vyskúšali na mieste.
+linux_download	Stiahnuť balík Linux
+invite_kicker	Pozvánka
+invite_h1	Pripojte sa na Ghal Bol
+invite_embedded_title	Otvorené v inej aplikácii (napr. WhatsApp)
+invite_embedded_body	Tento vstavaný prehliadač nevie otvoriť Ghal Bol. Klepnite na ponuku a otvorte túto stránku v Chrome, alebo skopírujte odkaz aplikácie a vložte ho do Ghal Bol → Pripojiť.
+invite_hint	Klepnite nižšie na Otvoriť v Ghal Bol. Keď sa nič nestane, skopírujte odkaz aplikácie a vložte ho do Ghal Bol (Pripojiť).
+invite_open	Otvoriť v Ghal Bol
+copy_web	Kopírovať webový odkaz
+copy_app	Kopírovať odkaz aplikácie
+invite_install	Nainštalovať aplikáciu
+invite_bad	Použite odkaz ako https://ghalbol.com/connect/<public_key_hex>
+copy_done	{label} skopírované
+copy_prompt	Skopírujte tento {label}
+label_web	Webový odkaz
+label_app	Odkaz aplikácie
+acct_page_title	Môj účet — Ghal Bol
+acct_home_aria	Domov Ghal Bol
+acct_nav_aria	Hlavné
+acct_lede	Prihláste sa do Ghal Bol. Všetky voľby — e-mail, Google, Microsoft, GitHub alebo telefón.
+acct_continue_with	Pokračujte e-mailom, cez poskytovateľa alebo telefónom.
+email	E-mail
+acct_name_optional	Meno (nepovinné)
+acct_password	Heslo
+acct_continue	Pokračovať
+acct_or_continue	alebo pokračovať cez
+acct_federated	Federované prihlásenie
+acct_phone	Telefón
+acct_mobile	Číslo mobilu
 acct_phone_placeholder	+91…
-acct_send_sms	Send SMS code
-acct_sms_code	SMS code
-acct_confirm_code	Confirm code
-acct_signed_in	Signed in
-acct_signed_in_as	Signed in as
-acct_status_label	Status
-acct_resend_verify	Resend verification email
-acct_sign_out	Sign out
-err_invalid_email	Enter a valid email address.
-err_weak_password	Use a password with at least 6 characters.
-err_wrong_password	Wrong password.
-err_invalid_credential	Email or password is wrong.
-err_popup_closed	Sign-in window was closed.
-err_cancelled	Sign-in was cancelled.
-err_unauthorized_domain	This domain is not authorized for Firebase Auth.
-err_not_allowed	That sign-in method is not enabled yet.
-err_too_many	Too many attempts. Try again later.
-err_invalid_phone	Use a full phone number with country code (e.g. +91…).
-err_bad_code	That SMS code is wrong or expired.
-err_generic	Something went wrong.
-acct_no_email	(no email)
-acct_email_verified	Email verified
-acct_email_unverified	Email not verified yet — check your inbox
-acct_phone_signed_in	Signed in with phone
-acct_you_are_in	You’re signed in.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_send_sms	Poslať kód SMS
+acct_sms_code	Kód z SMS
+acct_confirm_code	Potvrdiť kód
+acct_signed_in	Prihlásené
+acct_signed_in_as	Prihlásený účet
+acct_status_label	Stav
+acct_resend_verify	Znova poslať overovací e-mail
+acct_sign_out	Odhlásiť sa
+err_invalid_email	Zadajte platnú e-mailovú adresu.
+err_weak_password	Použite heslo s aspoň 6 znakmi.
+err_wrong_password	Nesprávne heslo.
+err_invalid_credential	Nesprávny e-mail alebo heslo.
+err_popup_closed	Okno prihlásenia bolo zatvorené.
+err_cancelled	Prihlásenie bolo zrušené.
+err_unauthorized_domain	Táto doména nie je pre Firebase Auth autorizovaná.
+err_not_allowed	Tento spôsob prihlásenia zatiaľ nie je zapnutý.
+err_too_many	Príliš veľa pokusov. Skúste to neskôr.
+err_invalid_phone	Použite celé telefónne číslo s predvoľbou krajiny (napr. +91…).
+err_bad_code	Tento kód z SMS je nesprávny alebo vypršal.
+err_generic	Niečo sa pokazilo.
+acct_no_email	(žiadny e-mail)
+acct_email_verified	E-mail overený
+acct_email_unverified	E-mail zatiaľ nie je overený — skontrolujte doručenú poštu
+acct_phone_signed_in	Prihlásené telefónom
+acct_you_are_in	Ste prihlásení.
+acct_verify_sent	Overovací e-mail odoslaný — skontrolujte doručenú poštu
+notfound_title	Stránka sa nenašla — Ghal Bol
+notfound_h1	Stránka sa nenašla
+notfound_body	Na tejto adrese nič nie je. Odkaz pozvánky vyzerá takto: ghalbol.com/connect/… — skontrolujte, že sa skopíroval celý.

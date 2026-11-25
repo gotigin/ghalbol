@@ -1,20 +1,20 @@
-# mag. key<TAB>text in i18n/en.tsv order. Hindi and Urdu are translated; other packs may still be the English source. Keep {placeholders}. \n = line break.
+# mag. key<TAB>text. Keep {placeholders}. \n = line break.
 menu	Menu
 close	Close
 nav_site	Site
 nav_messenger	Messenger
 nav_linux	Linux
-privacy	Privacy
+privacy	गोपनीयता
 nav_play	Play Store
-login	Login
+login	लॉगिन
 play	Play
 home	Home
-account	Account
+account	खाता
 logout	Logout
-terms	Terms
+terms	शर्त
 support	Support
 data_deletion	Data deletion
-cancellation	Cancellation
+cancellation	रद्द करे के नियम
 about	About
 back_home	Back to home
 anonymous	Anonymous
@@ -74,41 +74,41 @@ acct_page_title	Account — Ghal Bol
 acct_home_aria	Ghal Bol home
 acct_nav_aria	Primary
 acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
-acct_continue_with	Continue with email, a provider, or phone.
-email	Email
-acct_name_optional	Name (optional)
-acct_password	Password
-acct_continue	Continue
-acct_or_continue	or continue with
-acct_federated	Federated sign-in
-acct_phone	Phone
-acct_mobile	Mobile number
+acct_continue_with	ईमेल, प्रोवाइडर या फ़ोन से आगे बढ़ऽ।
+email	ईमेल
+acct_name_optional	नाम (मरजी के)
+acct_password	पासवर्ड
+acct_continue	आगे बढ़ऽ
+acct_or_continue	या एकरा से आगे बढ़ऽ
+acct_federated	फेडरेटेड साइन-इन
+acct_phone	फ़ोन
+acct_mobile	मोबाइल नंबर
 acct_phone_placeholder	+91…
-acct_send_sms	Send SMS code
-acct_sms_code	SMS code
-acct_confirm_code	Confirm code
-acct_signed_in	Signed in
-acct_signed_in_as	Signed in as
-acct_status_label	Status
-acct_resend_verify	Resend verification email
-acct_sign_out	Sign out
-err_invalid_email	Enter a valid email address.
-err_weak_password	Use a password with at least 6 characters.
-err_wrong_password	Wrong password.
-err_invalid_credential	Email or password is wrong.
-err_popup_closed	Sign-in window was closed.
-err_cancelled	Sign-in was cancelled.
-err_unauthorized_domain	This domain is not authorized for Firebase Auth.
-err_not_allowed	That sign-in method is not enabled yet.
-err_too_many	Too many attempts. Try again later.
-err_invalid_phone	Use a full phone number with country code (e.g. +91…).
-err_bad_code	That SMS code is wrong or expired.
-err_generic	Something went wrong.
+acct_send_sms	SMS कोड भेजऽ
+acct_sms_code	SMS कोड
+acct_confirm_code	कोड पक्का करऽ
+acct_signed_in	साइन इन हो गेल
+acct_signed_in_as	ई रूप में साइन इन
+acct_status_label	स्थिति
+acct_resend_verify	पुष्टि ईमेल फिन से भेजऽ
+acct_sign_out	साइन आउट
+err_invalid_email	सही ईमेल पता लिखऽ।
+err_weak_password	कम से कम 6 अक्षर के पासवर्ड रखऽ।
+err_wrong_password	गलत पासवर्ड।
+err_invalid_credential	ईमेल या पासवर्ड गलत हे।
+err_popup_closed	साइन-इन विंडो बंद हो गेल।
+err_cancelled	साइन-इन रद्द हो गेल।
+err_unauthorized_domain	ई डोमेन Firebase Auth खातिर मंजूर नञ् हे।
+err_not_allowed	ई साइन-इन तरीका अभी चालू नञ् हे।
+err_too_many	बहुते कोसिस हो गेल। बाद में फिन कोसिस करऽ।
+err_invalid_phone	देस के कोड के साथे पूरा फ़ोन नंबर लिखऽ (जइसे +91…)।
+err_bad_code	ई SMS कोड गलत हे या एकर समय खतम हो गेल।
+err_generic	कुछ गड़बड़ हो गेल।
 acct_no_email	(no email)
-acct_email_verified	Email verified
-acct_email_unverified	Email not verified yet — check your inbox
-acct_phone_signed_in	Signed in with phone
-acct_you_are_in	You’re signed in.
+acct_email_verified	ईमेल पक्का हो गेल
+acct_email_unverified	ईमेल अभी पक्का नञ् — अपन इनबॉक्स देखऽ
+acct_phone_signed_in	फ़ोन से साइन इन भेल
+acct_you_are_in	तूँ साइन इन ह।
 acct_verify_sent	Verification email sent — check your inbox
 notfound_title	Page not found — Ghal Bol
 notfound_h1	Page not found

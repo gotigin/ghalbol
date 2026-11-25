@@ -1,115 +1,115 @@
-# uk. key<TAB>text in i18n/en.tsv order. Hindi and Urdu are translated; other packs may still be the English source. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+# uk. key<TAB>text. Keep {placeholders}. \n = line break.
+menu	Меню
+close	Закрити
+nav_site	Сайт
+nav_messenger	Месенджер
 nav_linux	Linux
-privacy	Privacy
+privacy	Конфіденційність
 nav_play	Play Store
-login	Login
+login	Вхід
 play	Play
-home	Home
-account	Account
-logout	Logout
-terms	Terms
-support	Support
-data_deletion	Data deletion
-cancellation	Cancellation
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+home	Головна
+account	Обліковий запис
+logout	Вийти
+terms	Умови
+support	Підтримка
+data_deletion	Видалення даних
+cancellation	Скасування
+about	Про нас
+back_home	На головну
+anonymous	Анонімно
+home_title	Ghal Bol — зашифрований месенджер
+hero_title	Зашифрований чат, який належить вам.
+hero_lede	Текст 1:1 і голосові та відеодзвінки — без номера телефону; ключі й записи на вашому пристрої.
+cta_see	Дивитися месенджер
+cta_play	Завантажити в Play
+hero_alt	Ghal Bol: наживо, приватно, повідомлення й дзвінки напряму між пристроями
+product_eyebrow	Продукт
+product_title	Месенджер Ghal Bol
+product_lead	Продукт, що виходить під брендом Ghal Bol — зашифрований текст напряму між пристроями, сповіщення про доставку й прочитання та власні голосові й відеодзвінки між тими, хто в мережі. Публічна назва застосунку — Ghal Bol (com.ghalbol).
+feat_e2e_title	Чат від краю до краю
+feat_e2e_body	Повідомлення запечатуються на вашому пристрої. Скринька доставки тримає лише непрозорий шифротекст, доки одержувач його не підтвердить.
+feat_call_title	Голосові та відеодзвінки
+feat_call_body	Дзвінки з’єднуються напряму через LAN, коли це можливо, інакше через легкий координаційний міст, який ніколи не розшифровує медіа.
+feat_id_title	Особа на пристрої
+feat_id_body	Кожне встановлення створює локальну криптографічну особу. Запрошення через QR або посилання — без номера телефону і без входу через соцмережу.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Завантаження для Linux
+invite_eyebrow	Ghal Bol · Запрошення
+invite_band_title	Одне сканування. Зв’язок, коли ви в мережі.
+invite_lead	Гість сканує QR господаря (або відкриває посилання-запрошення). Гість зберігає відкритий ключ господаря і дзвонить. QR з обох боків ніколи не потрібен.
+invite_step1	Поділіться посиланням https://ghalbol.com/connect/… або QR із «Запросити» в Ghal Bol.
+invite_step2	Інша людина відкриває його в Ghal Bol (або спершу ставить застосунок із Play чи Linux).
+invite_step3	Коли обидва доступні, чат і дзвінки з’єднуються — для дзвінків шляхи LAN і WAN ідуть паралельно.
+plat_eyebrow	Ghal Bol · Платформи
+plat_title	Сьогодні Android і Linux
+plat_lead	Пакети Windows збираються з того самого робочого простору. Відкрите завантаження на цьому сайті — настільний пакет Linux; Android виходить у Google Play як com.ghalbol.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Установіть Ghal Bol із Play. Перевірені App Links відкривають запрошення одразу в застосунку, коли це можливо.
+cta_open_play	Відкрити Play Store
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
-acct_continue_with	Continue with email, a provider, or phone.
-email	Email
-acct_name_optional	Name (optional)
-acct_password	Password
-acct_continue	Continue
-acct_or_continue	or continue with
-acct_federated	Federated sign-in
-acct_phone	Phone
-acct_mobile	Mobile number
+plat_linux_body	Розпакуйте архів випуску, потім ./install.sh (для користувача) або ./run.sh, щоб спробувати на місці.
+names_eyebrow	Імена
+names_title	Торговельна марка, компанія, бренд
+names_body	Gotigin — торговельна марка (Там, де технологія зустрічається з відкриттям). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED — компанія. Ghal Bol — бренд продуктів для зв’язку; цей сайт — ghalbol.com. Месенджер — те, що виходить сьогодні. Імена пакетів і домен лишаються ghalbol — одне слово. Окремого бренду в camel case немає.
+linux_eyebrow	Стільниця
+linux_title	Ghal Bol для Linux
+linux_lead	Виробничий пакет x86_64. Розпакуйте архів, потім запустіть ./install.sh (для користувача, у ~/.local) або ./run.sh, щоб спробувати на місці.
+linux_download	Завантажити пакет Linux
+invite_kicker	Запрошення
+invite_h1	Приєднатися в Ghal Bol
+invite_embedded_title	Відкрито всередині іншого застосунку (наприклад, WhatsApp)
+invite_embedded_body	Цей вбудований браузер не може відкрити Ghal Bol. Торкніться меню й відкрийте сторінку в Chrome або скопіюйте посилання застосунку і вставте його в Ghal Bol → Увійти.
+invite_hint	Торкніться нижче «Відкрити в Ghal Bol». Якщо нічого не станеться, скопіюйте посилання застосунку і вставте його в Ghal Bol (Увійти).
+invite_open	Відкрити в Ghal Bol
+copy_web	Копіювати вебпосилання
+copy_app	Копіювати посилання застосунку
+invite_install	Установити застосунок
+invite_bad	Використайте посилання на зразок https://ghalbol.com/connect/<public_key_hex>
+copy_done	{label} скопійовано
+copy_prompt	Скопіюйте цей {label}
+label_web	Вебпосилання
+label_app	Посилання застосунку
+acct_page_title	Обліковий запис — Ghal Bol
+acct_home_aria	Головна Ghal Bol
+acct_nav_aria	Основне
+acct_lede	Увійдіть у Ghal Bol. Усі варіанти — пошта, Google, Microsoft, GitHub або телефон.
+acct_continue_with	Продовжте через пошту, провайдера або телефон.
+email	Ел. пошта
+acct_name_optional	Ім’я (необов’язково)
+acct_password	Пароль
+acct_continue	Далі
+acct_or_continue	або продовжити через
+acct_federated	Федеративний вхід
+acct_phone	Телефон
+acct_mobile	Номер мобільного
 acct_phone_placeholder	+91…
-acct_send_sms	Send SMS code
-acct_sms_code	SMS code
-acct_confirm_code	Confirm code
-acct_signed_in	Signed in
-acct_signed_in_as	Signed in as
-acct_status_label	Status
-acct_resend_verify	Resend verification email
-acct_sign_out	Sign out
-err_invalid_email	Enter a valid email address.
-err_weak_password	Use a password with at least 6 characters.
-err_wrong_password	Wrong password.
-err_invalid_credential	Email or password is wrong.
-err_popup_closed	Sign-in window was closed.
-err_cancelled	Sign-in was cancelled.
-err_unauthorized_domain	This domain is not authorized for Firebase Auth.
-err_not_allowed	That sign-in method is not enabled yet.
-err_too_many	Too many attempts. Try again later.
-err_invalid_phone	Use a full phone number with country code (e.g. +91…).
-err_bad_code	That SMS code is wrong or expired.
-err_generic	Something went wrong.
-acct_no_email	(no email)
-acct_email_verified	Email verified
-acct_email_unverified	Email not verified yet — check your inbox
-acct_phone_signed_in	Signed in with phone
-acct_you_are_in	You’re signed in.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_send_sms	Надіслати SMS-код
+acct_sms_code	SMS-код
+acct_confirm_code	Підтвердити код
+acct_signed_in	Вхід виконано
+acct_signed_in_as	Ви ввійшли як
+acct_status_label	Статус
+acct_resend_verify	Надіслати лист підтвердження ще раз
+acct_sign_out	Вийти
+err_invalid_email	Введіть коректну адресу ел. пошти.
+err_weak_password	Використайте пароль щонайменше з 6 символів.
+err_wrong_password	Неправильний пароль.
+err_invalid_credential	Неправильна пошта або пароль.
+err_popup_closed	Вікно входу закрито.
+err_cancelled	Вхід скасовано.
+err_unauthorized_domain	Цей домен не авторизовано для Firebase Auth.
+err_not_allowed	Цей спосіб входу ще не ввімкнено.
+err_too_many	Забагато спроб. Повторіть пізніше.
+err_invalid_phone	Вкажіть повний номер телефону з кодом країни (наприклад, +91…).
+err_bad_code	Цей SMS-код неправильний або прострочений.
+err_generic	Щось пішло не так.
+acct_no_email	(немає пошти)
+acct_email_verified	Пошту підтверджено
+acct_email_unverified	Пошту ще не підтверджено — перевірте вхідні
+acct_phone_signed_in	Вхід за телефоном
+acct_you_are_in	Ви ввійшли.
+acct_verify_sent	Лист підтвердження надіслано — перевірте вхідні
+notfound_title	Сторінку не знайдено — Ghal Bol
+notfound_h1	Сторінку не знайдено
+notfound_body	За цією адресою нічого немає. Посилання-запрошення має такий вигляд: ghalbol.com/connect/… — перевірте, що його скопійовано цілком.

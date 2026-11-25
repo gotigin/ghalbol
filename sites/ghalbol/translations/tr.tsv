@@ -1,115 +1,115 @@
-# tr. key<TAB>text in i18n/en.tsv order. Hindi and Urdu are translated; other packs may still be the English source. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
+# tr. key<TAB>text. Keep {placeholders}. \n = line break.
+menu	Menü
+close	Kapat
 nav_site	Site
-nav_messenger	Messenger
+nav_messenger	İleti
 nav_linux	Linux
-privacy	Privacy
+privacy	Gizlilik
 nav_play	Play Store
-login	Login
+login	Giriş
 play	Play
-home	Home
-account	Account
-logout	Logout
-terms	Terms
-support	Support
-data_deletion	Data deletion
-cancellation	Cancellation
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+home	Ana sayfa
+account	Hesap
+logout	Çıkış yap
+terms	Koşullar
+support	Destek
+data_deletion	Veri silme
+cancellation	İptal
+about	Hakkında
+back_home	Ana sayfaya dön
+anonymous	Anonim
+home_title	Ghal Bol — şifreli ileti uygulaması
+hero_title	Size ait şifreli sohbet.
+hero_lede	1:1 yazı ve ses/görüntü aramaları — telefon numarası yok; anahtarlar ve kayıtlar sizin aygıtınızda.
+cta_see	İleti uygulamasını görün
+cta_play	Play’den alın
+hero_alt	Ghal Bol: anlık, özel, aygıtlar arasında doğrudan iletiler ve aramalar
+product_eyebrow	Ürün
+product_title	Ghal Bol ileti uygulaması
+product_lead	Ghal Bol markası altında çıkan ürün — aygıtlar arasında doğrudan şifreli yazı, teslim ve okundu bildirimleri, çevrimiçi eşler arasında yerel ses/görüntü aramaları. Herkese açık uygulama adı Ghal Bol (com.ghalbol).
+feat_e2e_title	Uçtan uca sohbet
+feat_e2e_body	İletiler aygıtınızda mühürlenir. Teslim kutusu, alıcı onaylayana dek yalnızca opak şifreli metin tutar.
+feat_call_title	Ses ve görüntü aramaları
+feat_call_body	Aramalar mümkünse LAN üzerinde doğrudan bağlanır, yoksa medyayı asla çözmeyen hafif bir eşgüdüm köprüsünden.
+feat_id_title	Aygıtın kendi kimliği
+feat_id_body	Her kurulum yerel bir şifreleme kimliği oluşturur. QR veya bağlantıyla davet — telefon numarası ya da sosyal oturum yok.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Linux indirmesi
+invite_eyebrow	Ghal Bol · Davetler
+invite_band_title	Bir kez tarayın. Çevrimiçi olunca bağlanın.
+invite_lead	Konuk, ev sahibinin QR kodunu tarar (ya da davet bağlantısını açar). Konuk, ev sahibinin açık anahtarını saklar ve arar. İki tarafın QR’ı hiç gerekmez.
+invite_step1	Ghal Bol içindeki Davet’ten https://ghalbol.com/connect/… bağlantınızı veya QR kodunu paylaşın.
+invite_step2	Karşı taraf onu Ghal Bol’da açar (ya da önce Play veya Linux’tan kurar).
+invite_step3	İkisi de erişilebilir olunca sohbet ve aramalar bağlanır — aramalarda LAN ve WAN yolları yan yana gider.
+plat_eyebrow	Ghal Bol · Platformlar
+plat_title	Bugün Android ve Linux
+plat_lead	Windows paketleri aynı çalışma alanından kurulur. Bu sitedeki herkese açık indirme Linux masaüstü paketidir; Android, Google Play’de com.ghalbol olarak çıkar.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Ghal Bol’u Play’den kurun. Doğrulanmış App Links, mümkün olduğunda davetleri doğrudan uygulamada açar.
+cta_open_play	Play Store’u aç
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
-acct_continue_with	Continue with email, a provider, or phone.
-email	Email
-acct_name_optional	Name (optional)
-acct_password	Password
-acct_continue	Continue
-acct_or_continue	or continue with
-acct_federated	Federated sign-in
-acct_phone	Phone
-acct_mobile	Mobile number
+plat_linux_body	Yayın arşivini açın, sonra ./install.sh (kullanıcı başına) veya yerinde denemek için ./run.sh.
+names_eyebrow	Adlar
+names_title	Ticari marka, şirket, marka
+names_body	Gotigin ticari markadır (Teknolojinin keşifle buluştuğu yer). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED şirkettir. Ghal Bol iletişim ürünlerinin markasıdır; bu site ghalbol.com’dur. İleti uygulaması bugün çıkan şeydir. Paket adları ve alan adı ghalbol kalır — tek sözcük. Ayrı bir camel case marka yoktur.
+linux_eyebrow	Masaüstü
+linux_title	Linux için Ghal Bol
+linux_lead	x86_64 üretim paketi. Arşivi açın, sonra ./install.sh çalıştırın (kullanıcı başına, ~/.local içine) veya yerinde denemek için ./run.sh.
+linux_download	Linux paketini indir
+invite_kicker	Davet
+invite_h1	Ghal Bol’da katılın
+invite_embedded_title	Başka bir uygulamanın içinde açıldı (ör. WhatsApp)
+invite_embedded_body	Bu yerleşik tarayıcı Ghal Bol’u açamaz. Menüye dokunup bu sayfayı Chrome’da açın veya uygulama bağlantısını kopyalayıp Ghal Bol → Katıl içine yapıştırın.
+invite_hint	Aşağıda Ghal Bol’da aç’a dokunun. Bir şey olmazsa uygulama bağlantısını kopyalayıp Ghal Bol (Katıl) içine yapıştırın.
+invite_open	Ghal Bol’da aç
+copy_web	Web bağlantısını kopyala
+copy_app	Uygulama bağlantısını kopyala
+invite_install	Uygulamayı kur
+invite_bad	Şuna benzer bir bağlantı kullanın: https://ghalbol.com/connect/<public_key_hex>
+copy_done	{label} kopyalandı
+copy_prompt	Bu {label} öğesini kopyala
+label_web	Web bağlantısı
+label_app	Uygulama bağlantısı
+acct_page_title	Hesap — Ghal Bol
+acct_home_aria	Ghal Bol ana sayfası
+acct_nav_aria	Birincil
+acct_lede	Ghal Bol için oturum açın. Tüm seçenekler — e-posta, Google, Microsoft, GitHub veya telefon.
+acct_continue_with	E-posta, bir sağlayıcı ya da telefonla devam edin.
+email	E-posta
+acct_name_optional	Ad (isteğe bağlı)
+acct_password	Parola
+acct_continue	Devam
+acct_or_continue	ya da şununla devam edin
+acct_federated	Birleşik giriş
+acct_phone	Telefon
+acct_mobile	Cep telefonu numarası
 acct_phone_placeholder	+91…
-acct_send_sms	Send SMS code
-acct_sms_code	SMS code
-acct_confirm_code	Confirm code
-acct_signed_in	Signed in
-acct_signed_in_as	Signed in as
-acct_status_label	Status
-acct_resend_verify	Resend verification email
-acct_sign_out	Sign out
-err_invalid_email	Enter a valid email address.
-err_weak_password	Use a password with at least 6 characters.
-err_wrong_password	Wrong password.
-err_invalid_credential	Email or password is wrong.
-err_popup_closed	Sign-in window was closed.
-err_cancelled	Sign-in was cancelled.
-err_unauthorized_domain	This domain is not authorized for Firebase Auth.
-err_not_allowed	That sign-in method is not enabled yet.
-err_too_many	Too many attempts. Try again later.
-err_invalid_phone	Use a full phone number with country code (e.g. +91…).
-err_bad_code	That SMS code is wrong or expired.
-err_generic	Something went wrong.
-acct_no_email	(no email)
-acct_email_verified	Email verified
-acct_email_unverified	Email not verified yet — check your inbox
-acct_phone_signed_in	Signed in with phone
-acct_you_are_in	You’re signed in.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_send_sms	SMS kodu gönder
+acct_sms_code	SMS kodu
+acct_confirm_code	Kodu onayla
+acct_signed_in	Giriş yapıldı
+acct_signed_in_as	Giriş yapan
+acct_status_label	Durum
+acct_resend_verify	Doğrulama e-postasını yeniden gönder
+acct_sign_out	Çıkış yap
+err_invalid_email	Geçerli bir e-posta adresi girin.
+err_weak_password	En az 6 karakterli bir parola kullanın.
+err_wrong_password	Parola yanlış.
+err_invalid_credential	E-posta ya da parola yanlış.
+err_popup_closed	Giriş penceresi kapatıldı.
+err_cancelled	Giriş iptal edildi.
+err_unauthorized_domain	Bu alan adı Firebase Auth için yetkili değil.
+err_not_allowed	Bu giriş yöntemi henüz etkin değil.
+err_too_many	Çok fazla deneme. Daha sonra yeniden deneyin.
+err_invalid_phone	Ülke koduyla birlikte tam telefon numarası kullanın (ör. +91…).
+err_bad_code	Bu SMS kodu yanlış ya da süresi dolmuş.
+err_generic	Bir şeyler ters gitti.
+acct_no_email	(e-posta yok)
+acct_email_verified	E-posta doğrulandı
+acct_email_unverified	E-posta henüz doğrulanmadı — gelen kutunuza bakın
+acct_phone_signed_in	Telefonla giriş yapıldı
+acct_you_are_in	Giriş yaptınız.
+acct_verify_sent	Doğrulama e-postası gönderildi — gelen kutunuza bakın
+notfound_title	Sayfa bulunamadı — Ghal Bol
+notfound_h1	Sayfa bulunamadı
+notfound_body	Bu adreste bir şey yok. Davet bağlantısı şöyle görünür: ghalbol.com/connect/… — tümünün kopyalandığını kontrol edin.

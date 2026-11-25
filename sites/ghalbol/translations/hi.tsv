@@ -1,4 +1,4 @@
-# hi. key<TAB>text in i18n/en.tsv order. Hindi and Urdu are translated; other packs may still be the English source. Keep {placeholders}. \n = line break.
+# hi. key<TAB>text. Keep {placeholders}. \n = line break.
 menu	मेनू
 close	बंद करें
 nav_site	साइट

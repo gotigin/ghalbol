@@ -1,115 +1,115 @@
-# th. key<TAB>text in i18n/en.tsv order. Hindi and Urdu are translated; other packs may still be the English source. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+# th. key<TAB>text. Keep {placeholders}. \n = line break.
+menu	เมนู
+close	ปิด
+nav_site	ไซต์
+nav_messenger	ผู้​ส่ง​สาร
 nav_linux	Linux
-privacy	Privacy
+privacy	ความ​เป็น​ส่วน​ตัว
 nav_play	Play Store
-login	Login
+login	เข้า​สู่​ระบบ
 play	Play
-home	Home
-account	Account
-logout	Logout
-terms	Terms
-support	Support
-data_deletion	Data deletion
-cancellation	Cancellation
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+home	หน้า​แรก
+account	บัญชี
+logout	ออก​จาก​ระบบ
+terms	ข้อ​กำหนด
+support	ฝ่าย​สนับสนุน
+data_deletion	การ​ลบ​ข้อมูล
+cancellation	การ​ยกเลิก
+about	เกี่ยวกับ
+back_home	กลับ​หน้า​แรก
+anonymous	ไม่​ระบุ​ชื่อ
+home_title	Ghal Bol — ผู้​ส่ง​สาร​ที่​เข้ารหัส
+hero_title	แชต​ที่​เข้ารหัส​ซึ่ง​เป็น​ของ​คุณ.
+hero_lede	ข้อความ 1:1 และ​โทร​เสียง/วิดีโอ — ไม่​มี​เบอร์​โทร; กุญแจ​และ​บันทึก​อยู่​บน​อุปกรณ์​ของ​คุณ.
+cta_see	ดู​ผู้​ส่ง​สาร
+cta_play	รับ​บน Play
+hero_alt	Ghal Bol: ทัน​ที, ส่วน​ตัว, ข้อความ​และ​สาย​ตรง​ระหว่าง​อุปกรณ์
+product_eyebrow	ผลิตภัณฑ์
+product_title	ผู้​ส่ง​สาร Ghal Bol
+product_lead	ผลิตภัณฑ์​ที่​ออก​ภาย​ใต้​แบรนด์ Ghal Bol — ข้อความ​เข้ารหัส​ตรง​ระหว่าง​อุปกรณ์, ใบ​ตอบ​รับ​การ​ส่ง​และ​การ​อ่าน, และ​โทร​เสียง/วิดีโอ​ใน​ตัว​ระหว่าง​เพื่อน​ที่​ออนไลน์. ชื่อ​แอป​สาธารณะ​คือ Ghal Bol (com.ghalbol).
+feat_e2e_title	แชต​จาก​ปลาย​ถึง​ปลาย
+feat_e2e_body	ข้อความ​ถูก​ผนึก​บน​อุปกรณ์​ของ​คุณ. กล่อง​ส่ง​เก็บ​เฉพาะ​ไซเฟอร์เท็กซ์​ทึบ​จน​กว่า​ผู้​รับ​จะ​ยืน​ยัน.
+feat_call_title	โทร​เสียง​และ​วิดีโอ
+feat_call_body	สาย​เชื่อม​ตรง​บน LAN เมื่อ​ทำ​ได้​มิ​ฉะนั้น​ผ่าน​สะพาน​ประสาน​เบา​ที่​ไม่​เคย​ถอด​รหัส​สื่อ.
+feat_id_title	ตัว​ตน​ที่​อุปกรณ์​เป็น​เจ้าของ
+feat_id_body	ทุก​การ​ติดตั้ง​สร้าง​ตัว​ตน​เข้ารหัส​ใน​เครื่อง. เชิญ​ด้วย QR หรือ​ลิงก์ — ไม่​มี​เบอร์​โทร​หรือ​การ​เข้า​สู่​ระบบ​สังคม.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	ดาวน์โหลด Linux
+invite_eyebrow	Ghal Bol · คำ​เชิญ
+invite_band_title	สแกน​ครั้ง​เดียว. เชื่อม​เมื่อ​ออนไลน์.
+invite_lead	แขก​สแกน QR ของ​เจ้าภาพ (หรือ​เปิด​ลิงก์​เชิญ). แขก​เก็บ​กุญแจ​สาธารณะ​ของ​เจ้าภาพ​แล้ว​โทร. ไม่​ต้อง​มี QR ทั้ง​สอง​ฝ่าย.
+invite_step1	แชร์​ลิงก์ https://ghalbol.com/connect/… หรือ QR จาก​คำ​เชิญ​ใน Ghal Bol.
+invite_step2	อีก​ฝ่าย​เปิด​ใน Ghal Bol (หรือ​ติดตั้ง​จาก Play หรือ Linux ก่อน).
+invite_step3	เมื่อ​ทั้ง​คู่​ติด​ต่อ​ได้​แชต​และ​สาย​จะ​เชื่อม — สำหรับ​สาย​ทาง LAN และ WAN วิ่ง​คู่​กัน.
+plat_eyebrow	Ghal Bol · แพลตฟอร์ม
+plat_title	วัน​นี้​มี Android และ Linux
+plat_lead	แพ็กเกจ Windows สร้าง​จาก​พื้น​ที่​งาน​เดียว​กัน. ดาวน์โหลด​สาธารณะ​บน​ไซต์​นี้​คือ​ชุด​เดสก์ท็อป Linux; Android ออก​บน Google Play ใน​ชื่อ com.ghalbol.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	ติดตั้ง Ghal Bol จาก Play. App Links ที่​ตรวจ​แล้ว​เปิด​คำ​เชิญ​เข้า​แอป​โดย​ตรง​เมื่อ​ทำ​ได้.
+cta_open_play	เปิด Play Store
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
-acct_continue_with	Continue with email, a provider, or phone.
-email	Email
-acct_name_optional	Name (optional)
-acct_password	Password
-acct_continue	Continue
-acct_or_continue	or continue with
-acct_federated	Federated sign-in
-acct_phone	Phone
-acct_mobile	Mobile number
+plat_linux_body	แตก​ไฟล์​เก็บ​รุ่น​แล้ว ./install.sh (ต่อ​ผู้​ใช้) หรือ ./run.sh เพื่อ​ลอง​ที่​ที่.
+names_eyebrow	ชื่อ
+names_title	เครื่องหมาย​การค้า, บริษัท, แบรนด์
+names_body	Gotigin คือ​เครื่องหมาย​การค้า (ที่​ซึ่ง​เทคโนโลยี​พบ​การ​ค้น​พบ). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED คือ​บริษัท. Ghal Bol คือ​แบรนด์​ของ​ผลิตภัณฑ์​สื่อ​สาร; ไซต์​นี้​คือ ghalbol.com. ผู้​ส่ง​สาร​คือ​สิ่ง​ที่​ออก​วัน​นี้. ชื่อ​แพ็กเกจ​และ​โดเมน​ยัง​เป็น ghalbol — คำ​เดียว. ไม่​มี​แบรนด์ camel case แยก.
+linux_eyebrow	เดสก์ท็อป
+linux_title	Ghal Bol สำหรับ Linux
+linux_lead	ชุด​ผลิต x86_64. แตก​ไฟล์​เก็บ​แล้ว​เรียก ./install.sh (ต่อ​ผู้​ใช้​ไป​ที่ ~/.local) หรือ ./run.sh เพื่อ​ลอง​ที่​ที่.
+linux_download	ดาวน์โหลด​ชุด Linux
+invite_kicker	คำ​เชิญ
+invite_h1	ร่วม​ใน Ghal Bol
+invite_embedded_title	เปิด​ภาย​ใน​แอป​อื่น (เช่น WhatsApp)
+invite_embedded_body	เบราว์เซอร์​ใน​ตัว​นี้​เปิด Ghal Bol ไม่​ได้. แตะ​เมนู​แล้ว​เปิด​หน้า​นี้​ใน Chrome หรือ​คัดลอก​ลิงก์​แอป​แล้ว​วาง​ใน Ghal Bol → ร่วม.
+invite_hint	แตะ​เปิด​ใน Ghal Bol ด้าน​ล่าง. ถ้า​ไม่​มี​อะไร​เกิด​ขึ้น​ให้​คัดลอก​ลิงก์​แอป​แล้ว​วาง​ใน Ghal Bol (ร่วม).
+invite_open	เปิด​ใน Ghal Bol
+copy_web	คัดลอก​ลิงก์​เว็บ
+copy_app	คัดลอก​ลิงก์​แอป
+invite_install	ติดตั้ง​แอป
+invite_bad	ใช้​ลิงก์​แบบ https://ghalbol.com/connect/<public_key_hex>
+copy_done	คัดลอก {label} แล้ว
+copy_prompt	คัดลอก {label} นี้
+label_web	ลิงก์​เว็บ
+label_app	ลิงก์​แอป
+acct_page_title	บัญชี — Ghal Bol
+acct_home_aria	หน้า​แรก Ghal Bol
+acct_nav_aria	หลัก
+acct_lede	ลง​ชื่อ​เข้า​ใช้​สำหรับ Ghal Bol. ทุก​ทาง — อีเมล, Google, Microsoft, GitHub, หรือ​โทรศัพท์.
+acct_continue_with	ดำเนิน​การ​ต่อ​ด้วย​อีเมล ผู้​ให้​บริการ หรือ​โทรศัพท์
+email	อีเมล
+acct_name_optional	ชื่อ (ไม่​บังคับ)
+acct_password	รหัส​ผ่าน
+acct_continue	ดำเนิน​การ​ต่อ
+acct_or_continue	หรือ​ดำเนิน​การ​ต่อ​ด้วย
+acct_federated	การ​เข้า​สู่​ระบบ​แบบ​รวม​ศูนย์
+acct_phone	โทรศัพท์
+acct_mobile	เบอร์​มือ​ถือ
 acct_phone_placeholder	+91…
-acct_send_sms	Send SMS code
-acct_sms_code	SMS code
-acct_confirm_code	Confirm code
-acct_signed_in	Signed in
-acct_signed_in_as	Signed in as
-acct_status_label	Status
-acct_resend_verify	Resend verification email
-acct_sign_out	Sign out
-err_invalid_email	Enter a valid email address.
-err_weak_password	Use a password with at least 6 characters.
-err_wrong_password	Wrong password.
-err_invalid_credential	Email or password is wrong.
-err_popup_closed	Sign-in window was closed.
-err_cancelled	Sign-in was cancelled.
-err_unauthorized_domain	This domain is not authorized for Firebase Auth.
-err_not_allowed	That sign-in method is not enabled yet.
-err_too_many	Too many attempts. Try again later.
-err_invalid_phone	Use a full phone number with country code (e.g. +91…).
-err_bad_code	That SMS code is wrong or expired.
-err_generic	Something went wrong.
-acct_no_email	(no email)
-acct_email_verified	Email verified
-acct_email_unverified	Email not verified yet — check your inbox
-acct_phone_signed_in	Signed in with phone
-acct_you_are_in	You’re signed in.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_send_sms	ส่ง​รหัส SMS
+acct_sms_code	รหัส SMS
+acct_confirm_code	ยืนยัน​รหัส
+acct_signed_in	เข้า​สู่​ระบบ​แล้ว
+acct_signed_in_as	เข้า​สู่​ระบบ​ใน​ชื่อ
+acct_status_label	สถานะ
+acct_resend_verify	ส่ง​อีเมล​ยืนยัน​อีก​ครั้ง
+acct_sign_out	ออก​จาก​ระบบ
+err_invalid_email	กรอก​อีเมล​ที่​ถูก​ต้อง
+err_weak_password	ใช้​รหัส​ผ่าน​อย่าง​น้อย 6 ตัว​อักษร
+err_wrong_password	รหัส​ผ่าน​ไม่​ถูก​ต้อง
+err_invalid_credential	อีเมล​หรือ​รหัส​ผ่าน​ไม่​ถูก​ต้อง
+err_popup_closed	หน้าต่าง​เข้า​สู่​ระบบ​ถูก​ปิด
+err_cancelled	การ​เข้า​สู่​ระบบ​ถูก​ยกเลิก
+err_unauthorized_domain	โดเมน​นี้​ไม่​ได้​รับ​อนุญาต​สำหรับ Firebase Auth
+err_not_allowed	วิธี​เข้า​สู่​ระบบ​นั้น​ยัง​ไม่​เปิด​ใช้
+err_too_many	ลอง​หลาย​ครั้ง​เกิน​ไป โปรด​ลอง​ใหม่​ภาย​หลัง
+err_invalid_phone	ใช้​เบอร์​โทรศัพท์​เต็ม​พร้อม​รหัส​ประเทศ (เช่น +91…)
+err_bad_code	รหัส SMS ไม่​ถูก​ต้อง​หรือ​หมด​อายุ​แล้ว
+err_generic	เกิด​ข้อ​ผิด​พลาด
+acct_no_email	(ไม่มี​อีเมล)
+acct_email_verified	ยืนยัน​อีเมล​แล้ว
+acct_email_unverified	ยัง​ไม่​ได้​ยืนยัน​อีเมล — ตรวจ​สอบ​กล่อง​จดหมาย
+acct_phone_signed_in	เข้า​สู่​ระบบ​ด้วย​โทรศัพท์​แล้ว
+acct_you_are_in	คุณ​เข้า​สู่​ระบบ​แล้ว
+acct_verify_sent	ส่ง​อีเมล​ยืนยัน​แล้ว — ตรวจ​สอบ​กล่อง​จดหมาย
+notfound_title	ไม่​พบ​หน้า — Ghal Bol
+notfound_h1	ไม่​พบ​หน้า
+notfound_body	ไม่มี​อะไร​ที่​ที่​อยู่​นี้. ลิงก์​เชิญ​มี​รูป​แบบ ghalbol.com/connect/… — ตรวจ​ว่า​คัดลอก​มา​ครบ.

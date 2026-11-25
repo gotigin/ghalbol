@@ -1,115 +1,115 @@
-# ms. key<TAB>text in i18n/en.tsv order. Hindi and Urdu are translated; other packs may still be the English source. Keep {placeholders}. \n = line break.
+# ms. key<TAB>text. Keep {placeholders}. \n = line break.
 menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+close	Tutup
+nav_site	Tapak
+nav_messenger	Utusan
 nav_linux	Linux
-privacy	Privacy
+privacy	Privasi
 nav_play	Play Store
-login	Login
+login	Log masuk
 play	Play
-home	Home
-account	Account
-logout	Logout
-terms	Terms
-support	Support
-data_deletion	Data deletion
-cancellation	Cancellation
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+home	Laman
+account	Akaun
+logout	Log keluar
+terms	Terma
+support	Sokongan
+data_deletion	Pemadaman data
+cancellation	Pembatalan
+about	Perihal
+back_home	Kembali ke laman
+anonymous	Tanpa nama
+home_title	Ghal Bol — utusan disulitkan
+hero_title	Sembang disulitkan milik anda.
+hero_lede	Teks 1:1 serta panggilan suara/video — tanpa nombor telefon; kunci dan transkrip pada peranti anda.
+cta_see	Lihat utusan
+cta_play	Dapatkan di Play
+hero_alt	Ghal Bol: serta-merta, peribadi, mesej dan panggilan terus antara peranti
+product_eyebrow	Produk
+product_title	Utusan Ghal Bol
+product_lead	Produk yang keluar di bawah jenama Ghal Bol — teks disulitkan terus antara peranti, resit penghantaran dan bacaan, serta panggilan suara/video asli antara rakan yang dalam talian. Nama aplikasi awam ialah Ghal Bol (com.ghalbol).
+feat_e2e_title	Sembang hujung ke hujung
+feat_e2e_body	Mesej dimeterai pada peranti anda. Peti penghantaran hanya menyimpan teks sifer legap sehingga penerima mengakuinya.
+feat_call_title	Panggilan suara dan video
+feat_call_body	Panggilan bersambung terus di LAN apabila boleh, jika tidak melalui jambatan penyelarasan ringan yang tidak pernah menyahsulit media.
+feat_id_title	Identiti milik peranti
+feat_id_body	Setiap pemasangan mencipta identiti kriptografi tempatan. Jemput dengan QR atau pautan — tanpa nombor telefon atau log masuk sosial.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Muat turun Linux
+invite_eyebrow	Ghal Bol · Jemputan
+invite_band_title	Imbas sekali. Sambung apabila dalam talian.
+invite_lead	Tetamu mengimbas QR hos (atau membuka pautan jemputan). Tetamu menyimpan kunci awam hos dan mendail. QR kedua-dua belah tidak pernah diperlukan.
+invite_step1	Kongsi pautan https://ghalbol.com/connect/… atau QR daripada Jemput dalam Ghal Bol.
+invite_step2	Mereka membukanya dalam Ghal Bol (atau memasang dahulu daripada Play atau Linux).
+invite_step3	Apabila kedua-duanya boleh dihubungi, sembang dan panggilan bersambung — untuk panggilan, laluan LAN dan WAN berjalan serentak.
+plat_eyebrow	Ghal Bol · Platform
+plat_title	Hari ini Android dan Linux
+plat_lead	Pakej Windows dibina daripada ruang kerja yang sama. Muat turun awam di tapak ini ialah berkas desktop Linux; Android keluar di Google Play sebagai com.ghalbol.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Pasang Ghal Bol daripada Play. App Links yang disahkan membuka jemputan terus ke dalam aplikasi apabila boleh.
+cta_open_play	Buka Play Store
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
+plat_linux_body	Ekstrak arkib keluaran, kemudian ./install.sh (setiap pengguna) atau ./run.sh untuk mencuba di tempat.
+names_eyebrow	Nama
+names_title	Cap dagangan, syarikat, jenama
+names_body	Gotigin ialah cap dagangan (Tempat teknologi bertemu penemuan). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED ialah syarikat. Ghal Bol ialah jenama produk komunikasi; tapak ini ghalbol.com. Utusan ialah apa yang keluar hari ini. Nama pakej dan domain kekal ghalbol — satu perkataan. Tiada jenama camel case yang berasingan.
 linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
-acct_continue_with	Continue with email, a provider, or phone.
-email	Email
-acct_name_optional	Name (optional)
-acct_password	Password
-acct_continue	Continue
-acct_or_continue	or continue with
-acct_federated	Federated sign-in
-acct_phone	Phone
-acct_mobile	Mobile number
+linux_title	Ghal Bol untuk Linux
+linux_lead	Berkas pengeluaran x86_64. Ekstrak arkib, kemudian jalankan ./install.sh (setiap pengguna, ke ~/.local) atau ./run.sh untuk mencuba di tempat.
+linux_download	Muat turun berkas Linux
+invite_kicker	Jemputan
+invite_h1	Sertai di Ghal Bol
+invite_embedded_title	Dibuka di dalam aplikasi lain (cth. WhatsApp)
+invite_embedded_body	Pelayar terbina ini tidak dapat membuka Ghal Bol. Ketik menu dan buka halaman ini dalam Chrome, atau salin pautan aplikasi dan tampal di Ghal Bol → Sertai.
+invite_hint	Ketik Buka dalam Ghal Bol di bawah. Jika tiada apa-apa berlaku, salin pautan aplikasi dan tampal di Ghal Bol (Sertai).
+invite_open	Buka dalam Ghal Bol
+copy_web	Salin pautan web
+copy_app	Salin pautan aplikasi
+invite_install	Pasang aplikasi
+invite_bad	Guna pautan seperti https://ghalbol.com/connect/<public_key_hex>
+copy_done	{label} disalin
+copy_prompt	Salin {label} ini
+label_web	Pautan web
+label_app	Pautan aplikasi
+acct_page_title	Akaun — Ghal Bol
+acct_home_aria	Laman Ghal Bol
+acct_nav_aria	Utama
+acct_lede	Log masuk untuk Ghal Bol. Semua pilihan — e-mel, Google, Microsoft, GitHub, atau telefon.
+acct_continue_with	Teruskan dengan e-mel, penyedia atau telefon.
+email	E-mel
+acct_name_optional	Nama (pilihan)
+acct_password	Kata laluan
+acct_continue	Teruskan
+acct_or_continue	atau teruskan dengan
+acct_federated	Log masuk bersekutu
+acct_phone	Telefon
+acct_mobile	Nombor telefon bimbit
 acct_phone_placeholder	+91…
-acct_send_sms	Send SMS code
-acct_sms_code	SMS code
-acct_confirm_code	Confirm code
-acct_signed_in	Signed in
-acct_signed_in_as	Signed in as
-acct_status_label	Status
-acct_resend_verify	Resend verification email
-acct_sign_out	Sign out
-err_invalid_email	Enter a valid email address.
-err_weak_password	Use a password with at least 6 characters.
-err_wrong_password	Wrong password.
-err_invalid_credential	Email or password is wrong.
-err_popup_closed	Sign-in window was closed.
-err_cancelled	Sign-in was cancelled.
-err_unauthorized_domain	This domain is not authorized for Firebase Auth.
-err_not_allowed	That sign-in method is not enabled yet.
-err_too_many	Too many attempts. Try again later.
-err_invalid_phone	Use a full phone number with country code (e.g. +91…).
-err_bad_code	That SMS code is wrong or expired.
-err_generic	Something went wrong.
-acct_no_email	(no email)
-acct_email_verified	Email verified
-acct_email_unverified	Email not verified yet — check your inbox
-acct_phone_signed_in	Signed in with phone
-acct_you_are_in	You’re signed in.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_send_sms	Hantar kod SMS
+acct_sms_code	Kod SMS
+acct_confirm_code	Sahkan kod
+acct_signed_in	Telah log masuk
+acct_signed_in_as	Log masuk sebagai
+acct_status_label	Status akaun
+acct_resend_verify	Hantar semula e-mel pengesahan
+acct_sign_out	Log keluar
+err_invalid_email	Masukkan alamat e-mel yang sah.
+err_weak_password	Gunakan kata laluan sekurang-kurangnya 6 aksara.
+err_wrong_password	Kata laluan salah.
+err_invalid_credential	E-mel atau kata laluan salah.
+err_popup_closed	Tetingkap log masuk telah ditutup.
+err_cancelled	Log masuk telah dibatalkan.
+err_unauthorized_domain	Domain ini tidak dibenarkan untuk Firebase Auth.
+err_not_allowed	Cara log masuk itu belum didayakan.
+err_too_many	Terlalu banyak percubaan. Cuba lagi kemudian.
+err_invalid_phone	Gunakan nombor telefon penuh dengan kod negara (cth. +91…).
+err_bad_code	Kod SMS itu salah atau telah tamat tempoh.
+err_generic	Sesuatu tidak kena.
+acct_no_email	(tiada e-mel)
+acct_email_verified	E-mel disahkan
+acct_email_unverified	E-mel belum disahkan — semak peti masuk anda
+acct_phone_signed_in	Log masuk dengan telefon
+acct_you_are_in	Anda telah log masuk.
+acct_verify_sent	E-mel pengesahan dihantar — semak peti masuk anda
+notfound_title	Halaman tidak dijumpai — Ghal Bol
+notfound_h1	Halaman tidak dijumpai
+notfound_body	Tiada apa-apa di alamat ini. Pautan jemputan kelihatan seperti ghalbol.com/connect/… — semak ia disalin penuh.

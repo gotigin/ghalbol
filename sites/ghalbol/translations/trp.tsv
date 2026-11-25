@@ -1,20 +1,20 @@
-# trp. key<TAB>text in i18n/en.tsv order. Hindi and Urdu are translated; other packs may still be the English source. Keep {placeholders}. \n = line break.
+# trp. key<TAB>text. Keep {placeholders}. \n = line break.
 menu	Menu
 close	Close
 nav_site	Site
 nav_messenger	Messenger
 nav_linux	Linux
-privacy	Privacy
+privacy	গোপনীয়তা
 nav_play	Play Store
-login	Login
+login	লগইন
 play	Play
 home	Home
-account	Account
+account	খাতা
 logout	Logout
-terms	Terms
+terms	শর্ত রোক
 support	Support
 data_deletion	Data deletion
-cancellation	Cancellation
+cancellation	বাতিল নি নিয়ম
 about	About
 back_home	Back to home
 anonymous	Anonymous
@@ -74,41 +74,41 @@ acct_page_title	Account — Ghal Bol
 acct_home_aria	Ghal Bol home
 acct_nav_aria	Primary
 acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
-acct_continue_with	Continue with email, a provider, or phone.
-email	Email
-acct_name_optional	Name (optional)
-acct_password	Password
-acct_continue	Continue
-acct_or_continue	or continue with
-acct_federated	Federated sign-in
-acct_phone	Phone
-acct_mobile	Mobile number
+acct_continue_with	ইমেইল, প্রোভাইডার বা ফোন বাই তুলাংদি।
+email	ইমেইল
+acct_name_optional	মুং (মন খে)
+acct_password	পাসওয়ার্ড
+acct_continue	তুলাংদি
+acct_or_continue	বা বো বাই তুলাংদি
+acct_federated	ফেডারেটেড সাইন-ইন
+acct_phone	ফোন
+acct_mobile	মোবাইল নম্বর
 acct_phone_placeholder	+91…
-acct_send_sms	Send SMS code
-acct_sms_code	SMS code
-acct_confirm_code	Confirm code
-acct_signed_in	Signed in
-acct_signed_in_as	Signed in as
-acct_status_label	Status
-acct_resend_verify	Resend verification email
-acct_sign_out	Sign out
-err_invalid_email	Enter a valid email address.
-err_weak_password	Use a password with at least 6 characters.
-err_wrong_password	Wrong password.
-err_invalid_credential	Email or password is wrong.
-err_popup_closed	Sign-in window was closed.
-err_cancelled	Sign-in was cancelled.
-err_unauthorized_domain	This domain is not authorized for Firebase Auth.
-err_not_allowed	That sign-in method is not enabled yet.
-err_too_many	Too many attempts. Try again later.
-err_invalid_phone	Use a full phone number with country code (e.g. +91…).
-err_bad_code	That SMS code is wrong or expired.
-err_generic	Something went wrong.
+acct_send_sms	SMS কোড রোহোরদি
+acct_sms_code	SMS কোড
+acct_confirm_code	কোড পাকা খাইদি
+acct_signed_in	সাইন ইন অংখা
+acct_signed_in_as	অ বাহাই সাইন ইন
+acct_status_label	অবস্থা
+acct_resend_verify	যাচাই ইমেইল ফিন রোহোরদি
+acct_sign_out	সাইন আউট
+err_invalid_email	ঠিক ইমেইল ঠিকানা সুইদি।
+err_weak_password	6 আখর বা বেশি নি পাসওয়ার্ড মানদি।
+err_wrong_password	ভুল পাসওয়ার্ড।
+err_invalid_credential	ইমেইল বা পাসওয়ার্ড ভুল।
+err_popup_closed	সাইন-ইন উইন্ডো বন্ধ অংখা।
+err_cancelled	সাইন-ইন বাতিল অংখা।
+err_unauthorized_domain	অ ডোমেইন Firebase Auth নি বাগৱি অনুমতি কৗরৗই।
+err_not_allowed	অ সাইন-ইন খাবাং তাবুক সিম চালু অংয়াখা।
+err_too_many	বেশি নাইথক খাইখা। উলো ফিন নাইথক খাইদি।
+err_invalid_phone	দেশ নি কোড বাই জত ফোন নম্বর মানদি (নমুনা +91…)।
+err_bad_code	অ SMS কোড ভুল বা বিনি সময় থাংখা।
+err_generic	তামাবো ভুল অংখা।
 acct_no_email	(no email)
-acct_email_verified	Email verified
-acct_email_unverified	Email not verified yet — check your inbox
-acct_phone_signed_in	Signed in with phone
-acct_you_are_in	You’re signed in.
+acct_email_verified	ইমেইল যাচাই অংখা
+acct_email_unverified	ইমেইল তাবুক সিম যাচাই অংয়াখা — নৗনি ইনবক্স নাইদি
+acct_phone_signed_in	ফোন বাই সাইন ইন অংখা
+acct_you_are_in	নৗং সাইন ইন অংজাক।
 acct_verify_sent	Verification email sent — check your inbox
 notfound_title	Page not found — Ghal Bol
 notfound_h1	Page not found

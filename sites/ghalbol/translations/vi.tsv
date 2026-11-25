@@ -1,115 +1,115 @@
-# vi. key<TAB>text in i18n/en.tsv order. Hindi and Urdu are translated; other packs may still be the English source. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+# vi. key<TAB>text. Keep {placeholders}. \n = line break.
+menu	Trình đơn
+close	Đóng
+nav_site	Trang
+nav_messenger	Trình nhắn tin
 nav_linux	Linux
-privacy	Privacy
+privacy	Quyền riêng tư
 nav_play	Play Store
-login	Login
+login	Đăng nhập
 play	Play
-home	Home
-account	Account
-logout	Logout
-terms	Terms
-support	Support
-data_deletion	Data deletion
-cancellation	Cancellation
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+home	Trang chủ
+account	Tài khoản
+logout	Đăng xuất
+terms	Điều khoản
+support	Hỗ trợ
+data_deletion	Xóa dữ liệu
+cancellation	Hủy
+about	Giới thiệu
+back_home	Về trang chủ
+anonymous	Ẩn danh
+home_title	Ghal Bol — trình nhắn tin mã hóa
+hero_title	Trò chuyện mã hóa thuộc về bạn.
+hero_lede	Chữ 1:1 và cuộc gọi thoại/video — không số điện thoại; khóa và bản ghi trên thiết bị của bạn.
+cta_see	Xem trình nhắn tin
+cta_play	Lấy trên Play
+hero_alt	Ghal Bol: tức thì, riêng tư, tin nhắn và cuộc gọi trực tiếp giữa các thiết bị
+product_eyebrow	Sản phẩm
+product_title	Trình nhắn tin Ghal Bol
+product_lead	Sản phẩm phát hành dưới thương hiệu Ghal Bol — chữ mã hóa trực tiếp giữa các thiết bị, biên nhận đã gửi và đã đọc, cùng cuộc gọi thoại/video gốc giữa những người đang trực tuyến. Tên ứng dụng công khai là Ghal Bol (com.ghalbol).
+feat_e2e_title	Trò chuyện đầu cuối
+feat_e2e_body	Tin nhắn được niêm trên thiết bị của bạn. Hộp chuyển chỉ giữ mật mã mờ cho đến khi người nhận xác nhận.
+feat_call_title	Cuộc gọi thoại và video
+feat_call_body	Cuộc gọi nối trực tiếp trên LAN khi có thể, nếu không thì qua một cầu phối hợp nhẹ, không bao giờ giải mã phương tiện.
+feat_id_title	Danh tính của chính thiết bị
+feat_id_body	Mỗi lần cài tạo một danh tính mật mã tại chỗ. Mời bằng QR hoặc liên kết — không số điện thoại, không đăng nhập mạng xã hội.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Tải Linux
+invite_eyebrow	Ghal Bol · Lời mời
+invite_band_title	Quét một lần. Nối khi đang trực tuyến.
+invite_lead	Khách quét QR của chủ (hoặc mở liên kết mời). Khách giữ khóa công khai của chủ và gọi. Không bao giờ cần QR cả hai phía.
+invite_step1	Chia sẻ liên kết https://ghalbol.com/connect/… hoặc QR từ Lời mời trong Ghal Bol.
+invite_step2	Người kia mở trong Ghal Bol (hoặc cài trước từ Play hoặc Linux).
+invite_step3	Khi cả hai tới được, trò chuyện và cuộc gọi nối — với cuộc gọi, đường LAN và WAN chạy song song.
+plat_eyebrow	Ghal Bol · Nền tảng
+plat_title	Hôm nay là Android và Linux
+plat_lead	Gói Windows được dựng từ cùng không gian làm việc. Bản tải công khai trên trang này là gói máy bàn Linux; Android ra mắt trên Google Play với tên com.ghalbol.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Cài Ghal Bol từ Play. App Links đã xác minh mở lời mời thẳng vào ứng dụng khi có thể.
+cta_open_play	Mở Play Store
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
-acct_continue_with	Continue with email, a provider, or phone.
-email	Email
-acct_name_optional	Name (optional)
-acct_password	Password
-acct_continue	Continue
-acct_or_continue	or continue with
-acct_federated	Federated sign-in
-acct_phone	Phone
-acct_mobile	Mobile number
+plat_linux_body	Giải nén kho phát hành, rồi ./install.sh (theo người dùng) hoặc ./run.sh để thử tại chỗ.
+names_eyebrow	Tên
+names_title	Nhãn hiệu, công ty, thương hiệu
+names_body	Gotigin là nhãn hiệu (Nơi công nghệ gặp sự khám phá). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED là công ty. Ghal Bol là thương hiệu sản phẩm truyền thông; trang này là ghalbol.com. Trình nhắn tin là thứ phát hành hôm nay. Tên gói và tên miền vẫn là ghalbol — một từ. Không có thương hiệu camel case riêng.
+linux_eyebrow	Máy bàn
+linux_title	Ghal Bol cho Linux
+linux_lead	Gói sản xuất x86_64. Giải nén kho, rồi chạy ./install.sh (theo người dùng, vào ~/.local) hoặc ./run.sh để thử tại chỗ.
+linux_download	Tải gói Linux
+invite_kicker	Lời mời
+invite_h1	Tham gia trên Ghal Bol
+invite_embedded_title	Mở bên trong ứng dụng khác (ví dụ WhatsApp)
+invite_embedded_body	Trình duyệt gắn sẵn này không mở được Ghal Bol. Chạm trình đơn và mở trang này trong Chrome, hoặc sao chép liên kết ứng dụng rồi dán vào Ghal Bol → Tham gia.
+invite_hint	Chạm Mở trong Ghal Bol bên dưới. Nếu không có gì xảy ra, sao chép liên kết ứng dụng và dán vào Ghal Bol (Tham gia).
+invite_open	Mở trong Ghal Bol
+copy_web	Sao chép liên kết web
+copy_app	Sao chép liên kết ứng dụng
+invite_install	Cài ứng dụng
+invite_bad	Dùng liên kết dạng https://ghalbol.com/connect/<public_key_hex>
+copy_done	Đã sao chép {label}
+copy_prompt	Sao chép {label} này
+label_web	Liên kết web
+label_app	Liên kết ứng dụng
+acct_page_title	Tài khoản — Ghal Bol
+acct_home_aria	Trang chủ Ghal Bol
+acct_nav_aria	Chính
+acct_lede	Đăng nhập Ghal Bol. Đủ cách — email, Google, Microsoft, GitHub hoặc điện thoại.
+acct_continue_with	Tiếp tục bằng email, nhà cung cấp đăng nhập hoặc điện thoại.
+email	Địa chỉ email
+acct_name_optional	Tên (không bắt buộc)
+acct_password	Mật khẩu
+acct_continue	Tiếp tục
+acct_or_continue	hoặc tiếp tục với
+acct_federated	Đăng nhập liên kết
+acct_phone	Điện thoại
+acct_mobile	Số di động
 acct_phone_placeholder	+91…
-acct_send_sms	Send SMS code
-acct_sms_code	SMS code
-acct_confirm_code	Confirm code
-acct_signed_in	Signed in
-acct_signed_in_as	Signed in as
-acct_status_label	Status
-acct_resend_verify	Resend verification email
-acct_sign_out	Sign out
-err_invalid_email	Enter a valid email address.
-err_weak_password	Use a password with at least 6 characters.
-err_wrong_password	Wrong password.
-err_invalid_credential	Email or password is wrong.
-err_popup_closed	Sign-in window was closed.
-err_cancelled	Sign-in was cancelled.
-err_unauthorized_domain	This domain is not authorized for Firebase Auth.
-err_not_allowed	That sign-in method is not enabled yet.
-err_too_many	Too many attempts. Try again later.
-err_invalid_phone	Use a full phone number with country code (e.g. +91…).
-err_bad_code	That SMS code is wrong or expired.
-err_generic	Something went wrong.
-acct_no_email	(no email)
-acct_email_verified	Email verified
-acct_email_unverified	Email not verified yet — check your inbox
-acct_phone_signed_in	Signed in with phone
-acct_you_are_in	You’re signed in.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_send_sms	Gửi mã SMS
+acct_sms_code	Mã SMS
+acct_confirm_code	Xác nhận mã
+acct_signed_in	Đã đăng nhập
+acct_signed_in_as	Đăng nhập với tên
+acct_status_label	Trạng thái
+acct_resend_verify	Gửi lại email xác minh
+acct_sign_out	Đăng xuất
+err_invalid_email	Nhập địa chỉ email hợp lệ.
+err_weak_password	Dùng mật khẩu có ít nhất 6 ký tự.
+err_wrong_password	Sai mật khẩu.
+err_invalid_credential	Email hoặc mật khẩu không đúng.
+err_popup_closed	Cửa sổ đăng nhập đã bị đóng.
+err_cancelled	Đã hủy đăng nhập.
+err_unauthorized_domain	Tên miền này chưa được cấp quyền cho Firebase Auth.
+err_not_allowed	Cách đăng nhập đó chưa được bật.
+err_too_many	Thử quá nhiều lần. Vui lòng thử lại sau.
+err_invalid_phone	Dùng số điện thoại đầy đủ kèm mã quốc gia (ví dụ +91…).
+err_bad_code	Mã SMS sai hoặc đã hết hạn.
+err_generic	Đã xảy ra lỗi.
+acct_no_email	(không có email)
+acct_email_verified	Email đã xác minh
+acct_email_unverified	Email chưa được xác minh — hãy kiểm tra hộp thư
+acct_phone_signed_in	Đã đăng nhập bằng điện thoại
+acct_you_are_in	Bạn đã đăng nhập.
+acct_verify_sent	Email xác minh đã gửi — hãy kiểm tra hộp thư
+notfound_title	Không thấy trang — Ghal Bol
+notfound_h1	Không thấy trang
+notfound_body	Địa chỉ này không có gì. Liên kết mời trông như thế này: ghalbol.com/connect/… — kiểm tra đã sao chép đủ.

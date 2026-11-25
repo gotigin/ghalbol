@@ -1,115 +1,115 @@
-# ja. key<TAB>text in i18n/en.tsv order. Hindi and Urdu are translated; other packs may still be the English source. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+# ja. key<TAB>text. Keep {placeholders}. \n = line break.
+menu	メニュー
+close	閉じる
+nav_site	サイト
+nav_messenger	メッセンジャー
 nav_linux	Linux
-privacy	Privacy
-nav_play	Play Store
-login	Login
+privacy	プライバシー
+nav_play	Play ストア
+login	ログイン
 play	Play
-home	Home
-account	Account
-logout	Logout
-terms	Terms
-support	Support
-data_deletion	Data deletion
-cancellation	Cancellation
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+home	ホーム
+account	アカウント
+logout	ログアウト
+terms	利用規約
+support	サポート
+data_deletion	データの削除
+cancellation	キャンセル
+about	概要
+back_home	ホームに戻る
+anonymous	匿名
+home_title	Ghal Bol — 暗号化メッセンジャー
+hero_title	自分のものである暗号化チャット。
+hero_lede	1:1 のテキストと音声・ビデオ通話 — 電話番号は不要。鍵と記録は自分の機器にあります。
+cta_see	メッセンジャーを見る
+cta_play	Play で入手
+hero_alt	Ghal Bol: リアルタイム、非公開、機器どうしが直接やりとりするメッセージと通話
+product_eyebrow	製品
+product_title	Ghal Bol メッセンジャー
+product_lead	Ghal Bol ブランドで出している製品 — 機器どうしを直接つなぐ暗号化テキスト、配信と既読の通知、オンラインの相手どうしのネイティブな音声・ビデオ通話。公開アプリ名は Ghal Bol（com.ghalbol）です。
+feat_e2e_title	エンドツーエンドのチャット
+feat_e2e_body	メッセージは自分の機器で封をされます。配送メールボックスには、受信者が確認するまで不透明な暗号文だけが入ります。
+feat_call_title	音声とビデオの通話
+feat_call_body	通話は可能なとき LAN 上で直接つながり、そうでなければメディアを決して復号しない軽い調整橋を通ります。
+feat_id_title	機器が持つ身元
+feat_id_body	インストールごとにローカルな暗号の身元が作られます。QR またはリンクで招待 — 電話番号もソーシャルログインも不要です。
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Linux のダウンロード
+invite_eyebrow	Ghal Bol · 招待
+invite_band_title	一度スキャン。オンラインになったらつながる。
+invite_lead	客はホストの QR を読み取る（または招待リンクを開く）。客はホストの公開鍵を保存して呼び出します。双方の QR は不要です。
+invite_step1	Ghal Bol の招待から、https://ghalbol.com/connect/… のリンクまたは QR を共有します。
+invite_step2	相手はそれを Ghal Bol で開きます（または先に Play か Linux からインストールします）。
+invite_step3	双方が届く状態になると、チャットと通話がつながります — 通話では LAN と WAN の経路が並行します。
+plat_eyebrow	Ghal Bol · プラットフォーム
+plat_title	いまは Android と Linux
+plat_lead	Windows のパッケージは同じワークスペースから作られます。このサイトの公開ダウンロードは Linux のデスクトップ一式です。Android は Google Play で com.ghalbol として出ます。
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Play から Ghal Bol をインストールします。確認済みの App Links は、可能なとき招待をアプリへ直接開きます。
+cta_open_play	Play ストアを開く
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
-acct_continue_with	Continue with email, a provider, or phone.
-email	Email
-acct_name_optional	Name (optional)
-acct_password	Password
-acct_continue	Continue
-acct_or_continue	or continue with
-acct_federated	Federated sign-in
-acct_phone	Phone
-acct_mobile	Mobile number
+plat_linux_body	リリースの書庫を展開し、./install.sh（ユーザーごと）または ./run.sh でその場で試します。
+names_eyebrow	名称
+names_title	商標、会社、ブランド
+names_body	Gotigin は商標です（技術が発見と出会う場所）。GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED が会社です。Ghal Bol はコミュニケーション製品のブランドで、このサイトは ghalbol.com です。メッセンジャーが、いま出しているものです。パッケージ名とドメインは ghalbol のまま — 一語です。別のキャメルケースのブランドはありません。
+linux_eyebrow	デスクトップ
+linux_title	Linux 向け Ghal Bol
+linux_lead	x86_64 の製品版一式。書庫を展開し、./install.sh（ユーザーごと、~/.local へ）または ./run.sh でその場で試します。
+linux_download	Linux 一式をダウンロード
+invite_kicker	招待
+invite_h1	Ghal Bol に参加
+invite_embedded_title	別のアプリの中で開かれた（例: WhatsApp）
+invite_embedded_body	この内蔵ブラウザは Ghal Bol を開けません。メニューからこのページを Chrome で開くか、アプリのリンクをコピーして Ghal Bol → 参加 に貼り付けてください。
+invite_hint	下の「Ghal Bol で開く」を押します。何も起きなければ、アプリのリンクをコピーして Ghal Bol（参加）に貼り付けてください。
+invite_open	Ghal Bol で開く
+copy_web	ウェブリンクをコピー
+copy_app	アプリのリンクをコピー
+invite_install	アプリをインストール
+invite_bad	次のようなリンクを使います: https://ghalbol.com/connect/<public_key_hex>
+copy_done	{label} をコピーしました
+copy_prompt	この {label} をコピー
+label_web	ウェブリンク
+label_app	アプリのリンク
+acct_page_title	アカウント — Ghal Bol
+acct_home_aria	Ghal Bol のホーム
+acct_nav_aria	メイン
+acct_lede	Ghal Bol にサインインします。すべての方法 — メール、Google、Microsoft、GitHub、または電話。
+acct_continue_with	メール、外部サービス、または電話番号で続行します。
+email	メール
+acct_name_optional	名前（任意）
+acct_password	パスワード
+acct_continue	続ける
+acct_or_continue	または次の方法で続行
+acct_federated	フェデレーションログイン
+acct_phone	電話
+acct_mobile	携帯電話番号
 acct_phone_placeholder	+91…
-acct_send_sms	Send SMS code
-acct_sms_code	SMS code
-acct_confirm_code	Confirm code
-acct_signed_in	Signed in
-acct_signed_in_as	Signed in as
-acct_status_label	Status
-acct_resend_verify	Resend verification email
-acct_sign_out	Sign out
-err_invalid_email	Enter a valid email address.
-err_weak_password	Use a password with at least 6 characters.
-err_wrong_password	Wrong password.
-err_invalid_credential	Email or password is wrong.
-err_popup_closed	Sign-in window was closed.
-err_cancelled	Sign-in was cancelled.
-err_unauthorized_domain	This domain is not authorized for Firebase Auth.
-err_not_allowed	That sign-in method is not enabled yet.
-err_too_many	Too many attempts. Try again later.
-err_invalid_phone	Use a full phone number with country code (e.g. +91…).
-err_bad_code	That SMS code is wrong or expired.
-err_generic	Something went wrong.
-acct_no_email	(no email)
-acct_email_verified	Email verified
-acct_email_unverified	Email not verified yet — check your inbox
-acct_phone_signed_in	Signed in with phone
-acct_you_are_in	You’re signed in.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_send_sms	SMS コードを送信
+acct_sms_code	SMS コード
+acct_confirm_code	コードを確認
+acct_signed_in	ログイン済み
+acct_signed_in_as	ログイン中のアカウント
+acct_status_label	状態
+acct_resend_verify	確認メールを再送信
+acct_sign_out	ログアウト
+err_invalid_email	有効なメールアドレスを入力してください。
+err_weak_password	6 文字以上のパスワードを使ってください。
+err_wrong_password	パスワードが違います。
+err_invalid_credential	メールまたはパスワードが違います。
+err_popup_closed	ログイン画面が閉じられました。
+err_cancelled	ログインはキャンセルされました。
+err_unauthorized_domain	このドメインは Firebase Auth で許可されていません。
+err_not_allowed	そのログイン方法はまだ有効になっていません。
+err_too_many	試行回数が多すぎます。しばらくしてからもう一度お試しください。
+err_invalid_phone	国番号付きの電話番号を入力してください（例：+91…）。
+err_bad_code	その SMS コードは間違っているか、有効期限が切れています。
+err_generic	問題が発生しました。
+acct_no_email	（メールなし）
+acct_email_verified	メール確認済み
+acct_email_unverified	メールが未確認です——受信トレイをご確認ください
+acct_phone_signed_in	電話番号でログイン中
+acct_you_are_in	ログインしました。
+acct_verify_sent	確認メールを送信しました——受信トレイをご確認ください
+notfound_title	ページが見つかりません — Ghal Bol
+notfound_h1	ページが見つかりません
+notfound_body	このアドレスには何もありません。招待リンクは ghalbol.com/connect/… のような形です — すべてコピーされたか確認してください。

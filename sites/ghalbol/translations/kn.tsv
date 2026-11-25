@@ -1,115 +1,115 @@
-# kn. key<TAB>text in i18n/en.tsv order. Hindi and Urdu are translated; other packs may still be the English source. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+# kn. key<TAB>text. Keep {placeholders}. \n = line break.
+menu	ಮೆನು
+close	ಮುಚ್ಚಿ
+nav_site	ಸೈಟ್
+nav_messenger	ಸಂದೇಶವಾಹಕ
 nav_linux	Linux
-privacy	Privacy
-nav_play	Play Store
-login	Login
+privacy	ಗೌಪ್ಯತೆ
+nav_play	Play ಅಂಗಡಿ
+login	ಲಾಗಿನ್
 play	Play
-home	Home
-account	Account
-logout	Logout
-terms	Terms
-support	Support
-data_deletion	Data deletion
-cancellation	Cancellation
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+home	ಮುಖಪುಟ
+account	ಖಾತೆ
+logout	ಸೈನ್ ಔಟ್
+terms	ನಿಯಮಗಳು
+support	ಬೆಂಬಲ
+data_deletion	ದತ್ತಾಂಶ ಅಳಿಸುವಿಕೆ
+cancellation	ರದ್ದತಿ ನೀತಿ
+about	ನಮ್ಮ ಬಗ್ಗೆ
+back_home	ಮುಖಪುಟಕ್ಕೆ ಹಿಂದಿರುಗಿ
+anonymous	ಅನಾಮಧೇಯ
+home_title	Ghal Bol — ಗುಪ್ತ ಸಂದೇಶವಾಹಕ
+hero_title	ಗುಪ್ತ ಚಾಟ್, ನಿಮ್ಮದು.
+hero_lede	1:1 ಬರಹ ಮತ್ತು ಧ್ವನಿ/ವೀಡಿಯೊ ಕರೆಗಳು — ಫೋನ್ ಸಂಖ್ಯೆ ಇಲ್ಲದೆ; ಕೀಲಿಗಳು ಮತ್ತು ದಾಖಲೆಗಳು ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ.
+cta_see	ಸಂದೇಶವಾಹಕವನ್ನು ನೋಡಿ
+cta_play	Play ನಲ್ಲಿ ಪಡೆಯಿರಿ
+hero_alt	Ghal Bol: ತಕ್ಷಣ, ಖಾಸಗಿ, ಸಾಧನಗಳ ನಡುವೆ ನೇರ ಸಂದೇಶಗಳು ಮತ್ತು ಕರೆಗಳು
+product_eyebrow	ಉತ್ಪನ್ನ
+product_title	Ghal Bol ಸಂದೇಶವಾಹಕ
+product_lead	Ghal Bol ಬ್ರಾಂಡ್ ಅಡಿಯಲ್ಲಿ ಬರುವ ಉತ್ಪನ್ನ — ಸಾಧನಗಳ ನಡುವೆ ನೇರ ಗುಪ್ತ ಬರಹ, ತಲುಪಿದ ಮತ್ತು ಓದಿದ ರಸೀದಿಗಳು, ಆನ್‌ಲೈನ್ ಸಹಚರರ ನಡುವೆ ಸ್ವಂತ ಧ್ವನಿ/ವೀಡಿಯೊ ಕರೆಗಳು. ಸಾರ್ವಜನಿಕ ಅಪ್ಲಿಕೇಶನ್ ಹೆಸರು Ghal Bol (com.ghalbol).
+feat_e2e_title	ತುದಿಯಿಂದ ತುದಿಗೆ ಚಾಟ್
+feat_e2e_body	ಸಂದೇಶಗಳು ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಮುದ್ರೆಯಾಗುತ್ತವೆ. ಸ್ವೀಕರಿಸುವವರು ಒಪ್ಪುವವರೆಗೆ ವಿತರಣಾ ಪೆಟ್ಟಿಗೆಯಲ್ಲಿ ಅಪಾರದರ್ಶಕ ಸೈಫರ್‌ಪಠ್ಯ ಮಾತ್ರ ಇರುತ್ತದೆ.
+feat_call_title	ಧ್ವನಿ ಮತ್ತು ವೀಡಿಯೊ ಕರೆಗಳು
+feat_call_body	ಸಾಧ್ಯವಾದಾಗ ಕರೆಗಳು LAN ಮೇಲೆ ನೇರವಾಗಿ ಸೇರುತ್ತವೆ, ಇಲ್ಲದಿದ್ದರೆ ಮಾಧ್ಯಮವನ್ನು ಎಂದಿಗೂ ಡೀಕ್ರಿಪ್ಟ್ ಮಾಡದ ಹಗುರ ಸಮನ್ವಯ ಸೇತುವೆಯ ಮೂಲಕ.
+feat_id_title	ಸಾಧನದ ಸ್ವಂತ ಗುರುತು
+feat_id_body	ಪ್ರತಿ ಅನುಸ್ಥಾಪನೆ ಸ್ಥಳೀಯ ಗೂಢ ಗುರುತನ್ನು ಸೃಷ್ಟಿಸುತ್ತದೆ. QR ಅಥವಾ ಕೊಂಡಿಯಿಂದ ಆಹ್ವಾನ — ಫೋನ್ ಸಂಖ್ಯೆ ಅಥವಾ ಸಾಮಾಜಿಕ ಲಾಗಿನ್ ಇಲ್ಲದೆ.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Linux ಡೌನ್‌ಲೋಡ್
+invite_eyebrow	Ghal Bol · ಆಹ್ವಾನಗಳು
+invite_band_title	ಒಮ್ಮೆ ಸ್ಕ್ಯಾನ್. ಆನ್‌ಲೈನ್‌ನಲ್ಲಿರುವಾಗ ಸೇರಿ.
+invite_lead	ಅತಿಥಿ ಆತಿಥೇಯರ QR ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡುತ್ತಾರೆ (ಅಥವಾ ಆಹ್ವಾನ ಕೊಂಡಿಯನ್ನು ತೆರೆಯುತ್ತಾರೆ). ಅತಿಥಿ ಆತಿಥೇಯರ ಸಾರ್ವಜನಿಕ ಕೀಲಿಯನ್ನು ಇಟ್ಟುಕೊಂಡು ಡಯಲ್ ಮಾಡುತ್ತಾರೆ. ಎರಡೂ ಬದಿಯ QR ಬೇಕಿಲ್ಲ.
+invite_step1	Ghal Bol ನ ಆಹ್ವಾನದಿಂದ ನಿಮ್ಮ https://ghalbol.com/connect/… ಕೊಂಡಿ ಅಥವಾ QR ಅನ್ನು ಹಂಚಿಕೊಳ್ಳಿ.
+invite_step2	ಅವರು ಅದನ್ನು Ghal Bol ನಲ್ಲಿ ತೆರೆಯುತ್ತಾರೆ (ಅಥವಾ ಮೊದಲು Play / Linux ನಿಂದ ಅನುಸ್ಥಾಪಿಸುತ್ತಾರೆ).
+invite_step3	ಇಬ್ಬರೂ ತಲುಪಬಹುದಾದಾಗ ಚಾಟ್ ಮತ್ತು ಕರೆಗಳು ಸೇರುತ್ತವೆ — ಕರೆಗಳಿಗೆ LAN ಮತ್ತು WAN ಮಾರ್ಗಗಳು ಜೊತೆಗೆ ನಡೆಯುತ್ತವೆ.
+plat_eyebrow	Ghal Bol · ವೇದಿಕೆಗಳು
+plat_title	ಇಂದು Android ಮತ್ತು Linux
+plat_lead	Windows ಪ್ಯಾಕೇಜ್‌ಗಳು ಅದೇ ಕಾರ್ಯಸ್ಥಳದಿಂದ ನಿರ್ಮಾಣವಾಗುತ್ತವೆ. ಈ ಸೈಟ್‌ನ ಸಾರ್ವಜನಿಕ ಡೌನ್‌ಲೋಡ್ Linux ಡೆಸ್ಕ್‌ಟಾಪ್ ಕಟ್ಟು; Android, Google Play ನಲ್ಲಿ com.ghalbol ಆಗಿ ಬರುತ್ತದೆ.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Play ನಿಂದ Ghal Bol ಅನುಸ್ಥಾಪಿಸಿ. ಪರಿಶೀಲಿತ App Links ಸಾಧ್ಯವಾದಾಗ ಆಹ್ವಾನಗಳನ್ನು ನೇರವಾಗಿ ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ತೆರೆಯುತ್ತವೆ.
+cta_open_play	Play ಅಂಗಡಿ ತೆರೆಯಿರಿ
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
-acct_continue_with	Continue with email, a provider, or phone.
-email	Email
-acct_name_optional	Name (optional)
-acct_password	Password
-acct_continue	Continue
-acct_or_continue	or continue with
-acct_federated	Federated sign-in
-acct_phone	Phone
-acct_mobile	Mobile number
+plat_linux_body	ಬಿಡುಗಡೆ ಆರ್ಕೈವ್ ಅನ್ನು ಬಿಚ್ಚಿ, ನಂತರ ./install.sh (ಪ್ರತಿ ಬಳಕೆದಾರ) ಅಥವಾ ಅಲ್ಲೇ ಪ್ರಯತ್ನಿಸಲು ./run.sh.
+names_eyebrow	ಹೆಸರುಗಳು
+names_title	ಟ್ರೇಡ್‌ಮಾರ್ಕ್, ಕಂಪನಿ, ಬ್ರಾಂಡ್
+names_body	Gotigin ಟ್ರೇಡ್‌ಮಾರ್ಕ್ (ತಂತ್ರಜ್ಞಾನವು ಅನ್ವೇಷಣೆಯನ್ನು ಸಂಧಿಸುವೆಡೆ). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED ಕಂಪನಿ. Ghal Bol ಸಂವಹನ ಉತ್ಪನ್ನಗಳ ಬ್ರಾಂಡ್; ಈ ಸೈಟ್ ghalbol.com. ಸಂದೇಶವಾಹಕವೇ ಇಂದು ಬರುವುದು. ಪ್ಯಾಕೇಜ್ ಹೆಸರುಗಳು ಮತ್ತು ಡೊಮೇನ್ ghalbol ಆಗಿ ಉಳಿಯುತ್ತವೆ — ಒಂದು ಪದ. ಬೇರೆ ಒಂಟೆ ಅಕ್ಷರ ಬ್ರಾಂಡ್ ಇಲ್ಲ.
+linux_eyebrow	ಡೆಸ್ಕ್‌ಟಾಪ್
+linux_title	Linux ಗಾಗಿ Ghal Bol
+linux_lead	x86_64 ಉತ್ಪಾದನಾ ಕಟ್ಟು. ಆರ್ಕೈವ್ ಅನ್ನು ಬಿಚ್ಚಿ, ನಂತರ ./install.sh ಚಲಾಯಿಸಿ (ಪ್ರತಿ ಬಳಕೆದಾರ, ~/.local ಗೆ) ಅಥವಾ ಅಲ್ಲೇ ಪ್ರಯತ್ನಿಸಲು ./run.sh.
+linux_download	Linux ಕಟ್ಟು ಡೌನ್‌ಲೋಡ್
+invite_kicker	ಆಹ್ವಾನ
+invite_h1	Ghal Bol ನಲ್ಲಿ ಸೇರಿ
+invite_embedded_title	ಬೇರೆ ಅಪ್ಲಿಕೇಶನ್ ಒಳಗೆ ತೆರೆಯಲಾಗಿದೆ (ಉದಾ. WhatsApp)
+invite_embedded_body	ಈ ಒಳ ಬ್ರೌಸರ್ Ghal Bol ಅನ್ನು ತೆರೆಯಲಾರದು. ಮೆನು ಒತ್ತಿ ಈ ಪುಟವನ್ನು Chrome ನಲ್ಲಿ ತೆರೆಯಿರಿ, ಅಥವಾ ಅಪ್ಲಿಕೇಶನ್ ಕೊಂಡಿಯನ್ನು ನಕಲಿಸಿ Ghal Bol → ಸೇರಿ ಯಲ್ಲಿ ಅಂಟಿಸಿ.
+invite_hint	ಕೆಳಗೆ Ghal Bol ನಲ್ಲಿ ತೆರೆಯಿರಿ ಒತ್ತಿ. ಏನೂ ಆಗದಿದ್ದರೆ ಅಪ್ಲಿಕೇಶನ್ ಕೊಂಡಿಯನ್ನು ನಕಲಿಸಿ Ghal Bol (ಸೇರಿ) ಯಲ್ಲಿ ಅಂಟಿಸಿ.
+invite_open	Ghal Bol ನಲ್ಲಿ ತೆರೆಯಿರಿ
+copy_web	ವೆಬ್ ಕೊಂಡಿ ನಕಲಿಸಿ
+copy_app	ಅಪ್ಲಿಕೇಶನ್ ಕೊಂಡಿ ನಕಲಿಸಿ
+invite_install	ಅಪ್ಲಿಕೇಶನ್ ಅನುಸ್ಥಾಪಿಸಿ
+invite_bad	ಹೀಗಿನ ಕೊಂಡಿಯನ್ನು ಬಳಸಿ: https://ghalbol.com/connect/<public_key_hex>
+copy_done	{label} ನಕಲಿಸಲಾಗಿದೆ
+copy_prompt	ಈ {label} ಅನ್ನು ನಕಲಿಸಿ
+label_web	ವೆಬ್ ಕೊಂಡಿ
+label_app	ಅಪ್ಲಿಕೇಶನ್ ಕೊಂಡಿ
+acct_page_title	ಖಾತೆ — Ghal Bol
+acct_home_aria	Ghal Bol ಮುಖಪುಟ
+acct_nav_aria	ಪ್ರಮುಖ
+acct_lede	Ghal Bol ಗೆ ಸೈನ್ ಇನ್ ಮಾಡಿ. ಎಲ್ಲಾ ಆಯ್ಕೆಗಳು — ಇಮೇಲ್, Google, Microsoft, GitHub, ಅಥವಾ ಫೋನ್.
+acct_continue_with	ಇಮೇಲ್, ಪೂರೈಕೆದಾರ ಅಥವಾ ಫೋನ್ ಮೂಲಕ ಮುಂದುವರಿಸಿ.
+email	ಇಮೇಲ್
+acct_name_optional	ಹೆಸರು (ಐಚ್ಛಿಕ)
+acct_password	ಪಾಸ್‌ವರ್ಡ್
+acct_continue	ಮುಂದುವರಿಸಿ
+acct_or_continue	ಅಥವಾ ಇದರ ಮೂಲಕ ಮುಂದುವರಿಸಿ
+acct_federated	ಫೆಡರೇಟೆಡ್ ಸೈನ್-ಇನ್
+acct_phone	ಫೋನ್
+acct_mobile	ಮೊಬೈಲ್ ಸಂಖ್ಯೆ
 acct_phone_placeholder	+91…
-acct_send_sms	Send SMS code
-acct_sms_code	SMS code
-acct_confirm_code	Confirm code
-acct_signed_in	Signed in
-acct_signed_in_as	Signed in as
-acct_status_label	Status
-acct_resend_verify	Resend verification email
-acct_sign_out	Sign out
-err_invalid_email	Enter a valid email address.
-err_weak_password	Use a password with at least 6 characters.
-err_wrong_password	Wrong password.
-err_invalid_credential	Email or password is wrong.
-err_popup_closed	Sign-in window was closed.
-err_cancelled	Sign-in was cancelled.
-err_unauthorized_domain	This domain is not authorized for Firebase Auth.
-err_not_allowed	That sign-in method is not enabled yet.
-err_too_many	Too many attempts. Try again later.
-err_invalid_phone	Use a full phone number with country code (e.g. +91…).
-err_bad_code	That SMS code is wrong or expired.
-err_generic	Something went wrong.
-acct_no_email	(no email)
-acct_email_verified	Email verified
-acct_email_unverified	Email not verified yet — check your inbox
-acct_phone_signed_in	Signed in with phone
-acct_you_are_in	You’re signed in.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_send_sms	SMS ಕೋಡ್ ಕಳುಹಿಸಿ
+acct_sms_code	SMS ಕೋಡ್
+acct_confirm_code	ಕೋಡ್ ದೃಢೀಕರಿಸಿ
+acct_signed_in	ಸೈನ್ ಇನ್ ಆಗಿದೆ
+acct_signed_in_as	ಸೈನ್ ಇನ್ ಆದ ಖಾತೆ
+acct_status_label	ಸ್ಥಿತಿ
+acct_resend_verify	ಪರಿಶೀಲನಾ ಇಮೇಲ್ ಮತ್ತೆ ಕಳುಹಿಸಿ
+acct_sign_out	ಸೈನ್ ಔಟ್
+err_invalid_email	ಸರಿಯಾದ ಇಮೇಲ್ ವಿಳಾಸ ನಮೂದಿಸಿ.
+err_weak_password	ಕನಿಷ್ಠ 6 ಅಕ್ಷರಗಳ ಪಾಸ್‌ವರ್ಡ್ ಬಳಸಿ.
+err_wrong_password	ತಪ್ಪು ಪಾಸ್‌ವರ್ಡ್.
+err_invalid_credential	ಇಮೇಲ್ ಅಥವಾ ಪಾಸ್‌ವರ್ಡ್ ತಪ್ಪಾಗಿದೆ.
+err_popup_closed	ಸೈನ್-ಇನ್ ವಿಂಡೋ ಮುಚ್ಚಲಾಯಿತು.
+err_cancelled	ಸೈನ್-ಇನ್ ರದ್ದಾಯಿತು.
+err_unauthorized_domain	ಈ ಡೊಮೇನ್‌ಗೆ Firebase Auth ಅಧಿಕಾರವಿಲ್ಲ.
+err_not_allowed	ಆ ಸೈನ್-ಇನ್ ವಿಧಾನ ಇನ್ನೂ ಸಕ್ರಿಯವಾಗಿಲ್ಲ.
+err_too_many	ತುಂಬಾ ಪ್ರಯತ್ನಗಳು. ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.
+err_invalid_phone	ದೇಶದ ಕೋಡ್‌ನೊಂದಿಗೆ ಪೂರ್ಣ ಫೋನ್ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ (ಉದಾ. +91…).
+err_bad_code	ಆ SMS ಕೋಡ್ ತಪ್ಪಾಗಿದೆ ಅಥವಾ ಅವಧಿ ಮುಗಿದಿದೆ.
+err_generic	ಏನೋ ತಪ್ಪಾಯಿತು.
+acct_no_email	(ಇಮೇಲ್ ಇಲ್ಲ)
+acct_email_verified	ಇಮೇಲ್ ಪರಿಶೀಲಿಸಲಾಗಿದೆ
+acct_email_unverified	ಇಮೇಲ್ ಇನ್ನೂ ಪರಿಶೀಲಿಸಿಲ್ಲ — ನಿಮ್ಮ ಇನ್‌ಬಾಕ್ಸ್ ನೋಡಿ
+acct_phone_signed_in	ಫೋನ್ ಮೂಲಕ ಸೈನ್ ಇನ್ ಆಗಿದೆ
+acct_you_are_in	ನೀವು ಸೈನ್ ಇನ್ ಆಗಿದ್ದೀರಿ.
+acct_verify_sent	ಪರಿಶೀಲನಾ ಇಮೇಲ್ ಕಳುಹಿಸಲಾಗಿದೆ — ನಿಮ್ಮ ಇನ್‌ಬಾಕ್ಸ್ ನೋಡಿ
+notfound_title	ಪುಟ ಸಿಗಲಿಲ್ಲ — Ghal Bol
+notfound_h1	ಪುಟ ಸಿಗಲಿಲ್ಲ
+notfound_body	ಈ ವಿಳಾಸದಲ್ಲಿ ಏನೂ ಇಲ್ಲ. ಆಹ್ವಾನ ಕೊಂಡಿ ಹೀಗೆ ಕಾಣುತ್ತದೆ: ghalbol.com/connect/… — ಅದು ಪೂರ್ಣ ನಕಲಾಗಿದೆಯೇ ನೋಡಿ.

@@ -1,115 +1,115 @@
-# sw. key<TAB>text in i18n/en.tsv order. Hindi and Urdu are translated; other packs may still be the English source. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+# sw. key<TAB>text. Keep {placeholders}. \n = line break.
+menu	Menyu
+close	Funga
+nav_site	Tovuti
+nav_messenger	Mjumbe
 nav_linux	Linux
-privacy	Privacy
+privacy	Faragha
 nav_play	Play Store
-login	Login
+login	Ingia
 play	Play
-home	Home
-account	Account
-logout	Logout
-terms	Terms
-support	Support
-data_deletion	Data deletion
-cancellation	Cancellation
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+home	Mwanzo
+account	Akaunti
+logout	Toka
+terms	Masharti
+support	Msaada
+data_deletion	Kufuta data
+cancellation	Ughairi
+about	Kuhusu
+back_home	Rudi mwanzo
+anonymous	Bila jina
+home_title	Ghal Bol — mjumbe aliyewekwa siri
+hero_title	Soga iliyowekwa siri, yako.
+hero_lede	Maandishi 1:1 na simu za sauti/video — bila namba ya simu; funguo na nakala kwenye kifaa chako.
+cta_see	Tazama mjumbe
+cta_play	Ipate kwenye Play
+hero_alt	Ghal Bol: papo hapo, binafsi, ujumbe na simu moja kwa moja kati ya vifaa
+product_eyebrow	Bidhaa
+product_title	Mjumbe wa Ghal Bol
+product_lead	Bidhaa inayotoka chini ya chapa ya Ghal Bol — maandishi yaliyowekwa siri moja kwa moja kati ya vifaa, risiti za kufika na kusomwa, na simu asilia za sauti/video kati ya wenzao walio mtandaoni. Jina la programu la umma ni Ghal Bol (com.ghalbol).
+feat_e2e_title	Soga kutoka mwisho hadi mwisho
+feat_e2e_body	Ujumbe hutiwa muhuri kwenye kifaa chako. Sanduku la uwasilishaji hushika maandishi fiche yasiyo wazi tu mpaka mpokeaji athibitishe.
+feat_call_title	Simu za sauti na video
+feat_call_body	Simu huungana moja kwa moja kwenye LAN inapowezekana, vinginevyo kupitia daraja jepesi la uratibu ambalo halifungui media kamwe.
+feat_id_title	Utambulisho wa kifaa chenyewe
+feat_id_body	Kila usakinishaji huunda utambulisho wa siri wa karibu. Alika kwa QR au kiungo — bila namba ya simu wala kuingia kwa mtandao wa kijamii.
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Upakuaji wa Linux
+invite_eyebrow	Ghal Bol · Mialiko
+invite_band_title	Changanua mara moja. Ungana ukiwa mtandaoni.
+invite_lead	Mgeni huchanganua QR ya mwenyeji (au kufungua kiungo cha mwaliko). Mgeni huhifadhi ufunguo wa umma wa mwenyeji na kupiga. QR ya pande zote mbili haihitajiki kamwe.
+invite_step1	Shiriki kiungo chako https://ghalbol.com/connect/… au QR kutoka Alika ndani ya Ghal Bol.
+invite_step2	Wao hukifungua ndani ya Ghal Bol (au kusakinisha kwanza kutoka Play au Linux).
+invite_step3	Wote wawili wanapofikika, soga na simu huungana — kwa simu, njia za LAN na WAN huenda pamoja.
+plat_eyebrow	Ghal Bol · Majukwaa
+plat_title	Leo Android na Linux
+plat_lead	Vifurushi vya Windows hujengwa kutoka eneo moja la kazi. Upakuaji wa umma kwenye tovuti hii ni fungu la kompyuta ya mezani la Linux; Android hutoka kwenye Google Play kama com.ghalbol.
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	Sakinisha Ghal Bol kutoka Play. App Links zilizothibitishwa hufungua mialiko moja kwa moja kwenye programu inapowezekana.
+cta_open_play	Fungua Play Store
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
-acct_continue_with	Continue with email, a provider, or phone.
-email	Email
-acct_name_optional	Name (optional)
-acct_password	Password
-acct_continue	Continue
-acct_or_continue	or continue with
-acct_federated	Federated sign-in
-acct_phone	Phone
-acct_mobile	Mobile number
+plat_linux_body	Fungua kumbukumbu ya toleo, kisha ./install.sh (kwa kila mtumiaji) au ./run.sh ili kujaribu papo hapo.
+names_eyebrow	Majina
+names_title	Alama ya biashara, kampuni, chapa
+names_body	Gotigin ni alama ya biashara (Pale teknolojia inapokutana na ugunduzi). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED ni kampuni. Ghal Bol ni chapa ya bidhaa za mawasiliano; tovuti hii ni ghalbol.com. Mjumbe ndiye anayetoka leo. Majina ya vifurushi na kikoa hubaki ghalbol — neno moja. Hakuna chapa tofauti ya camel case.
+linux_eyebrow	Kompyuta ya mezani
+linux_title	Ghal Bol kwa Linux
+linux_lead	Fungu la uzalishaji la x86_64. Fungua kumbukumbu, kisha endesha ./install.sh (kwa kila mtumiaji, kwenye ~/.local) au ./run.sh ili kujaribu papo hapo.
+linux_download	Pakua fungu la Linux
+invite_kicker	Mwaliko
+invite_h1	Jiunge kwenye Ghal Bol
+invite_embedded_title	Imefunguliwa ndani ya programu nyingine (k.m. WhatsApp)
+invite_embedded_body	Kivinjari hiki cha ndani hakiwezi kufungua Ghal Bol. Gusa menyu na ufungue ukurasa huu kwenye Chrome, au nakili kiungo cha programu na ukibandike kwenye Ghal Bol → Jiunge.
+invite_hint	Gusa Fungua kwenye Ghal Bol hapa chini. Ikiwa hakuna kinachotokea, nakili kiungo cha programu na ukibandike kwenye Ghal Bol (Jiunge).
+invite_open	Fungua kwenye Ghal Bol
+copy_web	Nakili kiungo cha wavuti
+copy_app	Nakili kiungo cha programu
+invite_install	Sakinisha programu
+invite_bad	Tumia kiungo kama https://ghalbol.com/connect/<public_key_hex>
+copy_done	{label} imenakiliwa
+copy_prompt	Nakili {label} hii
+label_web	Kiungo cha wavuti
+label_app	Kiungo cha programu
+acct_page_title	Akaunti — Ghal Bol
+acct_home_aria	Mwanzo wa Ghal Bol
+acct_nav_aria	Kuu
+acct_lede	Ingia kwa Ghal Bol. Chaguo zote — barua pepe, Google, Microsoft, GitHub, au simu.
+acct_continue_with	Endelea kwa barua pepe, mtoa huduma au simu.
+email	Barua pepe
+acct_name_optional	Jina (hiari)
+acct_password	Nenosiri
+acct_continue	Endelea
+acct_or_continue	au endelea na
+acct_federated	Kuingia kwa shirikisho
+acct_phone	Simu
+acct_mobile	Nambari ya simu ya mkononi
 acct_phone_placeholder	+91…
-acct_send_sms	Send SMS code
-acct_sms_code	SMS code
-acct_confirm_code	Confirm code
-acct_signed_in	Signed in
-acct_signed_in_as	Signed in as
-acct_status_label	Status
-acct_resend_verify	Resend verification email
-acct_sign_out	Sign out
-err_invalid_email	Enter a valid email address.
-err_weak_password	Use a password with at least 6 characters.
-err_wrong_password	Wrong password.
-err_invalid_credential	Email or password is wrong.
-err_popup_closed	Sign-in window was closed.
-err_cancelled	Sign-in was cancelled.
-err_unauthorized_domain	This domain is not authorized for Firebase Auth.
-err_not_allowed	That sign-in method is not enabled yet.
-err_too_many	Too many attempts. Try again later.
-err_invalid_phone	Use a full phone number with country code (e.g. +91…).
-err_bad_code	That SMS code is wrong or expired.
-err_generic	Something went wrong.
-acct_no_email	(no email)
-acct_email_verified	Email verified
-acct_email_unverified	Email not verified yet — check your inbox
-acct_phone_signed_in	Signed in with phone
-acct_you_are_in	You’re signed in.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_send_sms	Tuma msimbo wa SMS
+acct_sms_code	Msimbo wa SMS
+acct_confirm_code	Thibitisha msimbo
+acct_signed_in	Umeingia
+acct_signed_in_as	Umeingia kama
+acct_status_label	Hali
+acct_resend_verify	Tuma tena barua pepe ya uthibitisho
+acct_sign_out	Toka
+err_invalid_email	Weka anwani sahihi ya barua pepe.
+err_weak_password	Tumia nenosiri lenye herufi angalau 6.
+err_wrong_password	Nenosiri si sahihi.
+err_invalid_credential	Barua pepe au nenosiri si sahihi.
+err_popup_closed	Dirisha la kuingia lilifungwa.
+err_cancelled	Kuingia kulighairiwa.
+err_unauthorized_domain	Kikoa hiki hakijaidhinishwa kwa Firebase Auth.
+err_not_allowed	Njia hiyo ya kuingia bado haijawashwa.
+err_too_many	Majaribio mengi mno. Jaribu tena baadaye.
+err_invalid_phone	Tumia nambari kamili ya simu yenye msimbo wa nchi (mf. +91…).
+err_bad_code	Msimbo huo wa SMS si sahihi au umeisha muda.
+err_generic	Hitilafu imetokea.
+acct_no_email	(hakuna barua pepe)
+acct_email_verified	Barua pepe imethibitishwa
+acct_email_unverified	Barua pepe bado haijathibitishwa — angalia kikasha chako
+acct_phone_signed_in	Umeingia kwa simu
+acct_you_are_in	Umeingia.
+acct_verify_sent	Barua pepe ya uthibitisho imetumwa — angalia kikasha chako
+notfound_title	Ukurasa haujapatikana — Ghal Bol
+notfound_h1	Ukurasa haujapatikana
+notfound_body	Hakuna kitu kwenye anwani hii. Kiungo cha mwaliko kinaonekana hivi: ghalbol.com/connect/… — angalia kimenakiliwa kizima.

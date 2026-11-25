@@ -1,20 +1,20 @@
-# my. key<TAB>text in i18n/en.tsv order. Hindi and Urdu are translated; other packs may still be the English source. Keep {placeholders}. \n = line break.
+# my. key<TAB>text. Keep {placeholders}. \n = line break.
 menu	Menu
 close	Close
 nav_site	Site
 nav_messenger	Messenger
 nav_linux	Linux
-privacy	Privacy
+privacy	ကိုယ်ရေးကိုယ်တာ
 nav_play	Play Store
-login	Login
+login	ဝင်​ရောက်​ရန်
 play	Play
 home	Home
-account	Account
+account	အ​ကော​င့်
 logout	Logout
-terms	Terms
+terms	စည်းကမ်း​ချက်​များ
 support	Support
 data_deletion	Data deletion
-cancellation	Cancellation
+cancellation	ပယ်ဖျက်​ခြင်း
 about	About
 back_home	Back to home
 anonymous	Anonymous
@@ -74,41 +74,41 @@ acct_page_title	Account — Ghal Bol
 acct_home_aria	Ghal Bol home
 acct_nav_aria	Primary
 acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
-acct_continue_with	Continue with email, a provider, or phone.
-email	Email
-acct_name_optional	Name (optional)
-acct_password	Password
-acct_continue	Continue
-acct_or_continue	or continue with
-acct_federated	Federated sign-in
-acct_phone	Phone
-acct_mobile	Mobile number
+acct_continue_with	အီး​မေး​လ်၊ ဝန်ဆောင်မှု​ပေး​သူ သို့မဟုတ် ဖုန်း​ဖြင့် ဆက်​လုပ်​ပါ။
+email	အီး​မေး​လ်
+acct_name_optional	အမည် (မ​ဖြစ်​မ​နေ မဟုတ်)
+acct_password	စကားဝှက်
+acct_continue	ဆက်​လုပ်
+acct_or_continue	သို့မဟုတ် ဤ​နည်း​ဖြင့် ဆက်​လုပ်​ပါ
+acct_federated	ပူးပေါင်း ဝင်​ရောက်​မှု
+acct_phone	ဖုန်း
+acct_mobile	မိုဘိုင်းဖုန်း​နံပါတ်
 acct_phone_placeholder	+91…
-acct_send_sms	Send SMS code
-acct_sms_code	SMS code
-acct_confirm_code	Confirm code
-acct_signed_in	Signed in
-acct_signed_in_as	Signed in as
-acct_status_label	Status
-acct_resend_verify	Resend verification email
-acct_sign_out	Sign out
-err_invalid_email	Enter a valid email address.
-err_weak_password	Use a password with at least 6 characters.
-err_wrong_password	Wrong password.
-err_invalid_credential	Email or password is wrong.
-err_popup_closed	Sign-in window was closed.
-err_cancelled	Sign-in was cancelled.
-err_unauthorized_domain	This domain is not authorized for Firebase Auth.
-err_not_allowed	That sign-in method is not enabled yet.
-err_too_many	Too many attempts. Try again later.
-err_invalid_phone	Use a full phone number with country code (e.g. +91…).
-err_bad_code	That SMS code is wrong or expired.
-err_generic	Something went wrong.
+acct_send_sms	SMS ကုဒ် ပို့​ပါ
+acct_sms_code	SMS ကုဒ်
+acct_confirm_code	ကုဒ်​ကို အတည်ပြု​ပါ
+acct_signed_in	ဝင်​ရောက်​ပြီး
+acct_signed_in_as	ဝင်​ရောက်​ထား​သည့် အ​ကော​င့်
+acct_status_label	အခြေအနေ
+acct_resend_verify	အတည်ပြု အီး​မေး​လ် ပြန်​ပို့​ပါ
+acct_sign_out	ထွက်​ရန်
+err_invalid_email	မှန်ကန်​သော အီး​မေး​လ်​လိပ်စာ ထည့်​ပါ။
+err_weak_password	အနည်းဆုံး စာလုံး 6 လုံး​ပါ​သော စကားဝှက် သုံး​ပါ။
+err_wrong_password	စကားဝှက် မှား​နေသည်။
+err_invalid_credential	အီး​မေး​လ် သို့မဟုတ် စကားဝှက် မှား​နေသည်။
+err_popup_closed	ဝင်​ရောက်​ရန် ဝင်း​ဒိုး ပိတ်​သွား​သည်။
+err_cancelled	ဝင်​ရောက်​မှု​ကို ပယ်ဖျက်​လိုက်​သည်။
+err_unauthorized_domain	ဤ​ဒို​မိန်း​ကို Firebase Auth အတွက် ခွင့်​မ​ပြု​ထား​ပါ။
+err_not_allowed	ထို​ဝင်​ရောက်​နည်း​ကို မ​ဖွင့်​ရ​သေးပါ။
+err_too_many	ကြိုးစား​မှု များ​လွန်း​သည်။ နောက်မှ ထပ်​ကြိုးစား​ပါ။
+err_invalid_phone	နိုင်ငံ​ကုဒ်​ပါ​သော ဖုန်း​နံပါတ် အပြည့်အစုံ သုံး​ပါ (ဥပမာ +91…)။
+err_bad_code	ထို SMS ကုဒ် မှား​နေသည် သို့မဟုတ် သက်တမ်း​ကုန်​သွား​ပြီ။
+err_generic	တစ်ခုခု မှားယွင်း​သွား​သည်။
 acct_no_email	(no email)
-acct_email_verified	Email verified
-acct_email_unverified	Email not verified yet — check your inbox
-acct_phone_signed_in	Signed in with phone
-acct_you_are_in	You’re signed in.
+acct_email_verified	အီး​မေး​လ် အတည်ပြု​ပြီး
+acct_email_unverified	အီး​မေး​လ် အတည်​မ​ပြု​ရ​သေးပါ — သင့်​စာ​ဝင်​ပုံး​ကို စစ်​ပါ
+acct_phone_signed_in	ဖုန်း​ဖြင့် ဝင်​ရောက်​ပြီး
+acct_you_are_in	သင် ဝင်​ရောက်​ပြီး​ပါ​ပြီ။
 acct_verify_sent	Verification email sent — check your inbox
 notfound_title	Page not found — Ghal Bol
 notfound_h1	Page not found

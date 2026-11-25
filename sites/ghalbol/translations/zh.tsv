@@ -1,115 +1,115 @@
-# zh. key<TAB>text in i18n/en.tsv order. Hindi and Urdu are translated; other packs may still be the English source. Keep {placeholders}. \n = line break.
-menu	Menu
-close	Close
-nav_site	Site
-nav_messenger	Messenger
+# zh. key<TAB>text. Keep {placeholders}. \n = line break.
+menu	菜单
+close	关闭
+nav_site	网站
+nav_messenger	通讯
 nav_linux	Linux
-privacy	Privacy
-nav_play	Play Store
-login	Login
+privacy	隐私
+nav_play	Play 商店
+login	登录
 play	Play
-home	Home
-account	Account
-logout	Logout
-terms	Terms
-support	Support
-data_deletion	Data deletion
-cancellation	Cancellation
-about	About
-back_home	Back to home
-anonymous	Anonymous
-home_title	Ghal Bol — encrypted messenger
-hero_title	Encrypted chat you own.
-hero_lede	1:1 text and voice/video calls — no phone number, keys and transcripts on your device.
-cta_see	See the messenger
-cta_play	Get it on Play
-hero_alt	Ghal Bol: realtime, private, peer-to-peer messaging and calls
-product_eyebrow	Product
-product_title	Ghal Bol messenger
-product_lead	The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).
-feat_e2e_title	End-to-end chat
-feat_e2e_body	Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.
-feat_call_title	Voice & video calls
-feat_call_body	Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.
-feat_id_title	Device-owned identity
-feat_id_body	Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.
+home	首页
+account	账户
+logout	退出登录
+terms	条款
+support	支持
+data_deletion	数据删除
+cancellation	取消政策
+about	关于
+back_home	返回首页
+anonymous	匿名
+home_title	Ghal Bol — 加密通讯
+hero_title	属于你的加密聊天。
+hero_lede	1:1 文字以及语音和视频通话——无需手机号；密钥和记录留在你的设备上。
+cta_see	查看通讯软件
+cta_play	在 Play 获取
+hero_alt	Ghal Bol：实时、私密、设备之间直接传送的消息和通话
+product_eyebrow	产品
+product_title	Ghal Bol 通讯
+product_lead	以 Ghal Bol 品牌发布的产品——设备之间直接加密的文字、送达和已读回执，以及在线对端之间的原生语音和视频通话。公开的应用名称是 Ghal Bol（com.ghalbol）。
+feat_e2e_title	端到端聊天
+feat_e2e_body	消息在你的设备上封存。投递信箱只保存不透明的密文，直到接收方确认。
+feat_call_title	语音和视频通话
+feat_call_body	通话尽可能在 LAN 上直接相连，否则经过一座从不解密媒体的轻量协调桥。
+feat_id_title	设备自有身份
+feat_id_body	每次安装都会建立本地加密身份。用 QR 或链接邀请——无需手机号，也无需社交账号登录。
 cta_google_play	Google Play
-cta_linux_dl	Linux download
-invite_eyebrow	Ghal Bol · Invites
-invite_band_title	Scan once. Connect when online.
-invite_lead	Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.
-invite_step1	Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.
-invite_step2	They open it in Ghal Bol (or install from Play / Linux first).
-invite_step3	When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.
-plat_eyebrow	Ghal Bol · Platforms
-plat_title	Android and Linux today
-plat_lead	Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.
+cta_linux_dl	Linux 下载
+invite_eyebrow	Ghal Bol · 邀请
+invite_band_title	扫一次。上线后再连接。
+invite_lead	客人扫描主人的 QR（或打开邀请链接）。客人保存主人的公钥并拨出。从不要求双方都出示 QR。
+invite_step1	从 Ghal Bol 的邀请里分享你的 https://ghalbol.com/connect/… 链接或 QR。
+invite_step2	对方在 Ghal Bol 中打开（或先从 Play 或 Linux 安装）。
+invite_step3	双方都可达时，聊天和通话就会连上——通话时 LAN 与 WAN 路径并行。
+plat_eyebrow	Ghal Bol · 平台
+plat_title	目前有 Android 和 Linux
+plat_lead	Windows 安装包从同一工作区构建。本站的公开下载是 Linux 桌面套件；Android 以 com.ghalbol 在 Google Play 上发布。
 plat_android	Android
-plat_android_body	Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.
-cta_open_play	Open Play Store
+plat_android_body	从 Play 安装 Ghal Bol。经核验的 App Links 会在可以时把邀请直接打开到应用里。
+cta_open_play	打开 Play 商店
 plat_linux	Linux x86_64
-plat_linux_body	Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.
-names_eyebrow	Names
-names_title	Trademark, company, brand
-names_body	Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.
-linux_eyebrow	Desktop
-linux_title	Ghal Bol for Linux
-linux_lead	x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.
-linux_download	Download Linux bundle
-invite_kicker	Invitation
-invite_h1	Join on Ghal Bol
-invite_embedded_title	Opened inside another app (e.g. WhatsApp)
-invite_embedded_body	This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.
-invite_hint	Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).
-invite_open	Open in Ghal Bol
-copy_web	Copy web link
-copy_app	Copy app link
-invite_install	Install the app
-invite_bad	Use a link like https://ghalbol.com/connect/<public_key_hex>
-copy_done	{label} copied
-copy_prompt	Copy this {label}
-label_web	Web link
-label_app	App link
-acct_page_title	Account — Ghal Bol
-acct_home_aria	Ghal Bol home
-acct_nav_aria	Primary
-acct_lede	Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.
-acct_continue_with	Continue with email, a provider, or phone.
-email	Email
-acct_name_optional	Name (optional)
-acct_password	Password
-acct_continue	Continue
-acct_or_continue	or continue with
-acct_federated	Federated sign-in
-acct_phone	Phone
-acct_mobile	Mobile number
+plat_linux_body	解压发布归档，然后用 ./install.sh（按用户）或 ./run.sh 就地试用。
+names_eyebrow	名称
+names_title	商标、公司、品牌
+names_body	Gotigin 是商标（技术与发现相遇之处）。GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED 是公司。Ghal Bol 是通信产品的品牌；本站是 ghalbol.com。通讯软件是今天交付的产品。包名和域名保持 ghalbol——一个词。没有另起的驼峰式品牌。
+linux_eyebrow	桌面
+linux_title	适用于 Linux 的 Ghal Bol
+linux_lead	x86_64 生产套件。解压归档，然后运行 ./install.sh（按用户装到 ~/.local）或 ./run.sh 就地试用。
+linux_download	下载 Linux 套件
+invite_kicker	邀请
+invite_h1	在 Ghal Bol 上加入
+invite_embedded_title	在另一个应用里打开（例如 WhatsApp）
+invite_embedded_body	这个内置浏览器打不开 Ghal Bol。点菜单，用 Chrome 打开本页，或复制应用链接，粘贴到 Ghal Bol → 加入。
+invite_hint	点下面的「在 Ghal Bol 中打开」。如果没有反应，复制应用链接，粘贴到 Ghal Bol（加入）。
+invite_open	在 Ghal Bol 中打开
+copy_web	复制网页链接
+copy_app	复制应用链接
+invite_install	安装应用
+invite_bad	请使用这样的链接：https://ghalbol.com/connect/<public_key_hex>
+copy_done	已复制{label}
+copy_prompt	复制此{label}
+label_web	网页链接
+label_app	应用链接
+acct_page_title	账户 — Ghal Bol
+acct_home_aria	Ghal Bol 首页
+acct_nav_aria	主导航
+acct_lede	登录 Ghal Bol。全部方式——邮箱、Google、Microsoft、GitHub 或手机。
+acct_continue_with	通过邮箱、第三方账户或手机继续。
+email	电子邮箱
+acct_name_optional	姓名（可选）
+acct_password	密码
+acct_continue	继续
+acct_or_continue	或通过以下方式继续
+acct_federated	联合登录
+acct_phone	电话
+acct_mobile	手机号码
 acct_phone_placeholder	+91…
-acct_send_sms	Send SMS code
-acct_sms_code	SMS code
-acct_confirm_code	Confirm code
-acct_signed_in	Signed in
-acct_signed_in_as	Signed in as
-acct_status_label	Status
-acct_resend_verify	Resend verification email
-acct_sign_out	Sign out
-err_invalid_email	Enter a valid email address.
-err_weak_password	Use a password with at least 6 characters.
-err_wrong_password	Wrong password.
-err_invalid_credential	Email or password is wrong.
-err_popup_closed	Sign-in window was closed.
-err_cancelled	Sign-in was cancelled.
-err_unauthorized_domain	This domain is not authorized for Firebase Auth.
-err_not_allowed	That sign-in method is not enabled yet.
-err_too_many	Too many attempts. Try again later.
-err_invalid_phone	Use a full phone number with country code (e.g. +91…).
-err_bad_code	That SMS code is wrong or expired.
-err_generic	Something went wrong.
-acct_no_email	(no email)
-acct_email_verified	Email verified
-acct_email_unverified	Email not verified yet — check your inbox
-acct_phone_signed_in	Signed in with phone
-acct_you_are_in	You’re signed in.
-acct_verify_sent	Verification email sent — check your inbox
-notfound_title	Page not found — Ghal Bol
-notfound_h1	Page not found
-notfound_body	There is nothing at this address. An invite link looks like ghalbol.com/connect/… — check that it was copied in full.
+acct_send_sms	发送短信验证码
+acct_sms_code	短信验证码
+acct_confirm_code	确认验证码
+acct_signed_in	已登录
+acct_signed_in_as	当前登录账户
+acct_status_label	状态
+acct_resend_verify	重新发送验证邮件
+acct_sign_out	退出登录
+err_invalid_email	请输入有效的邮箱地址。
+err_weak_password	密码至少需要 6 个字符。
+err_wrong_password	密码错误。
+err_invalid_credential	邮箱或密码错误。
+err_popup_closed	登录窗口已关闭。
+err_cancelled	登录已取消。
+err_unauthorized_domain	此域名未获 Firebase Auth 授权。
+err_not_allowed	该登录方式尚未启用。
+err_too_many	尝试次数过多，请稍后再试。
+err_invalid_phone	请输入带国家代码的完整电话号码（例如 +91…）。
+err_bad_code	该短信验证码错误或已过期。
+err_generic	出了点问题。
+acct_no_email	（无邮箱）
+acct_email_verified	邮箱已验证
+acct_email_unverified	邮箱尚未验证——请查看收件箱
+acct_phone_signed_in	已通过手机登录
+acct_you_are_in	您已登录。
+acct_verify_sent	验证邮件已发送——请查看收件箱
+notfound_title	找不到页面 — Ghal Bol
+notfound_h1	找不到页面
+notfound_body	这个地址上什么也没有。邀请链接形如 ghalbol.com/connect/…——请确认已完整复制。
