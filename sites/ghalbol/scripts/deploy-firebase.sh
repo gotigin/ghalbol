@@ -35,6 +35,15 @@ fi
 
 "$SITE/scripts/stage-public.sh"
 
+# Packs are staged by stage-public.sh; copy again so a Hosting upload
+# always has /i18n/<code>.tsv even if staging is adjusted later.
+mkdir -p "$SITE/public/i18n"
+cp "$SITE"/translations/*.tsv "$SITE/public/i18n/"
+if [[ ! -f "$SITE/public/i18n/hi.tsv" || ! -f "$SITE/public/i18n/ur.tsv" ]]; then
+  echo "error: public/i18n missing hi.tsv or ur.tsv" >&2
+  exit 1
+fi
+
 if [[ ! -f "$SITE/public/index.html" || ! -f "$SITE/public/js/firebase-init.js" ]]; then
   echo "error: staging incomplete under $SITE/public" >&2
   exit 1

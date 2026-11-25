@@ -420,10 +420,12 @@
       .cta-row .btn { width: 100%; box-sizing: border-box; }
     }
   </style>
+  <link rel="stylesheet" href="/css/site-fonts.css" />
   <link rel="stylesheet" href="/css/auth-nav.css" />
   <script src="/js/firebase-init.js" defer></script>
   <script src="/js/auth-nav.js" defer></script>
   <script src="/js/lang-nav.js" defer></script>
+  <script src="/js/site-i18n.js" defer></script>
 </head>
 <body>
   <header class="topbar" id="topbar">
@@ -431,13 +433,13 @@
       <img src="/media/icon.webp" width="40" height="40" alt="">
       <span>Ghal Bol</span>
     </a>
-    <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="topnav" aria-expanded="false">Menu</button>
-    <nav class="topnav" id="topnav" aria-label="Site">
-<a class="ghost" href="/#product">Messenger</a>
-      <a class="ghost" href="/download/linux">Linux</a>
-      <a class="ghost" href="/privacy">Privacy</a>
-      <a class="ghost" href="https://play.google.com/store/apps/details?id=com.ghalbol">Play Store</a>
-      <a href="/account" data-nav="login">Login</a>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="topnav" aria-expanded="false" data-i18n="menu">Menu</button>
+    <nav class="topnav" id="topnav" aria-label="Site" data-i18n-aria-label="nav_site">
+<a class="ghost" href="/#product" data-i18n="nav_messenger">Messenger</a>
+      <a class="ghost" href="/download/linux" data-i18n="nav_linux">Linux</a>
+      <a class="ghost" href="/privacy" data-i18n="privacy">Privacy</a>
+      <a class="ghost" href="https://play.google.com/store/apps/details?id=com.ghalbol" data-i18n="nav_play">Play Store</a>
+      <a href="/account" data-nav="login" data-i18n="login">Login</a>
       <span id="site-lang-chrome" class="site-lang-chrome"></span>
     </nav>
   </header>
@@ -464,144 +466,175 @@
       return /WhatsApp|Instagram|FBAN|FBAV|Line\/|Telegram/i.test(ua);
     }
 
-    async function copyText(text, label) {
+    function siteT(key, english) {
+      return window.siteT ? window.siteT(key, english) : english;
+    }
+
+    function fill(template, label) {
+      return String(template).split("{label}").join(label);
+    }
+
+    async function copyText(text, labelKey, labelEn) {
+      const label = siteT(labelKey, labelEn);
       try {
         await navigator.clipboard.writeText(text);
-        alert(label + " copied");
+        alert(fill(siteT("copy_done", "{label} copied"), label));
       } catch (e) {
-        prompt("Copy this " + label, text);
+        prompt(fill(siteT("copy_prompt", "Copy this {label}"), label), text);
       }
+    }
+
+    function applyTitle() {
+      const parts = pathParts();
+      const head = parts[0] || "";
+      if (head === "privacy" || head === "terms" || head === "support" || head === "data-deletion" || head === "about") {
+        return;
+      }
+      if (head === "download" && parts[1] === "linux") {
+        document.title = siteT("linux_title", "Ghal Bol for Linux");
+        return;
+      }
+      if (head === "connect") {
+        document.title = siteT("invite_h1", "Join on Ghal Bol");
+        return;
+      }
+      document.title = siteT("home_title", "Ghal Bol — encrypted messenger");
+    }
+
+    function paintAlt() {
+      document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+        if (!el.hasAttribute("data-i18n-alt-en")) {
+          el.setAttribute("data-i18n-alt-en", el.getAttribute("alt") || "");
+        }
+        el.setAttribute("alt", siteT(el.getAttribute("data-i18n-alt"), el.getAttribute("data-i18n-alt-en")));
+      });
     }
 
     function legalFoot() {
       return `
         <footer class="footer">
-          <p><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/support">Support</a> · <a href="/data-deletion">Data deletion</a> · <a href="/cancellation">Cancellation</a> · <a href="/about">About</a></p>
-          <p><a href="${PLAY}">Play</a> · <a href="/download/linux">Linux</a> · <a href="https://gotigin.com">gotigin.com</a></p>
+          <p><a href="/privacy" data-i18n="privacy">Privacy</a> · <a href="/terms" data-i18n="terms">Terms</a> · <a href="/support" data-i18n="support">Support</a> · <a href="/data-deletion" data-i18n="data_deletion">Data deletion</a> · <a href="/cancellation" data-i18n="cancellation">Cancellation</a> · <a href="/about" data-i18n="about">About</a></p>
+          <p><a href="${PLAY}" data-i18n="play">Play</a> · <a href="/download/linux" data-i18n="nav_linux">Linux</a> · <a href="https://gotigin.com">gotigin.com</a></p>
           <p>Gotigin · GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED · Ghal Bol</p>
           <p>© 2026 GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED</p>
         </footer>`;
     }
 
     function home() {
-      document.title = "Ghal Bol — encrypted messenger";
       return `
         <section class="hero">
           <div>
             <p class="eyebrow">Ghal Bol</p>
-            <h1>Encrypted chat you own.</h1>
-            <p class="lede">1:1 text and voice/video calls — no phone number, keys and transcripts on your device.</p>
+            <h1 data-i18n="hero_title">Encrypted chat you own.</h1>
+            <p class="lede" data-i18n="hero_lede">1:1 text and voice/video calls — no phone number, keys and transcripts on your device.</p>
             <div class="cta-row">
-              <a class="btn primary" href="#product">See the messenger</a>
-              <a class="btn secondary" href="${PLAY}">Get it on Play</a>
+              <a class="btn primary" href="#product" data-i18n="cta_see">See the messenger</a>
+              <a class="btn secondary" href="${PLAY}" data-i18n="cta_play">Get it on Play</a>
             </div>
           </div>
           <div class="hero-visual">
-            <img class="feature" src="/media/feature.webp" width="1072" height="715" alt="Ghal Bol: realtime, private, peer-to-peer messaging and calls">
+            <img class="feature" src="/media/feature.webp" width="1072" height="715" alt="Ghal Bol: realtime, private, peer-to-peer messaging and calls" data-i18n-alt="hero_alt">
             <img class="mark" src="/media/icon.webp" width="88" height="88" alt="">
           </div>
         </section>
 
         <section class="band" id="product">
-          <p class="eyebrow">Product</p>
-          <h2>Ghal Bol messenger</h2>
-          <p>The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (<code>com.ghalbol</code>).</p>
+          <p class="eyebrow" data-i18n="product_eyebrow">Product</p>
+          <h2 data-i18n="product_title">Ghal Bol messenger</h2>
+          <p data-i18n="product_lead">The shipping product under the Ghal Bol brand — peer-to-peer encrypted text, delivery and read receipts, and native voice/video calls between online peers. The public app name is Ghal Bol (com.ghalbol).</p>
           <div class="feature-grid">
             <article class="feature-item">
-              <h3>End-to-end chat</h3>
-              <p>Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.</p>
+              <h3 data-i18n="feat_e2e_title">End-to-end chat</h3>
+              <p data-i18n="feat_e2e_body">Messages are sealed on your device. The delivery mailbox holds only opaque ciphertext until the recipient acknowledges it.</p>
             </article>
             <article class="feature-item">
-              <h3>Voice &amp; video calls</h3>
-              <p>Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.</p>
+              <h3 data-i18n="feat_call_title">Voice &amp; video calls</h3>
+              <p data-i18n="feat_call_body">Calls connect peer-to-peer on LAN when possible, otherwise through a lightweight coord bridge that never decrypts media.</p>
             </article>
             <article class="feature-item">
-              <h3>Device-owned identity</h3>
-              <p>Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.</p>
+              <h3 data-i18n="feat_id_title">Device-owned identity</h3>
+              <p data-i18n="feat_id_body">Each install creates a local cryptographic identity. Invite with QR or link — no phone number or social login.</p>
             </article>
           </div>
           <div class="cta-row" style="margin-top:20px">
-            <a class="btn primary" href="${PLAY}">Google Play</a>
-            <a class="btn secondary" href="/download/linux">Linux download</a>
+            <a class="btn primary" href="${PLAY}" data-i18n="cta_google_play">Google Play</a>
+            <a class="btn secondary" href="/download/linux" data-i18n="cta_linux_dl">Linux download</a>
           </div>
         </section>
 
         <section class="band alt" id="invite">
-          <p class="eyebrow">Ghal Bol · Invites</p>
-          <h2>Scan once. Connect when online.</h2>
-          <p>Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.</p>
+          <p class="eyebrow" data-i18n="invite_eyebrow">Ghal Bol · Invites</p>
+          <h2 data-i18n="invite_band_title">Scan once. Connect when online.</h2>
+          <p data-i18n="invite_lead">Guest scans the host QR (or opens an invite link). The guest stores the host public key and dials. Mutual QR is never required.</p>
           <ol class="steps">
-            <li><span class="n">1</span><span>Share your <code>https://ghalbol.com/connect/…</code> link or QR from Invite in Ghal Bol.</span></li>
-            <li><span class="n">2</span><span>They open it in Ghal Bol (or install from Play / Linux first).</span></li>
-            <li><span class="n">3</span><span>When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.</span></li>
+            <li><span class="n">1</span><span data-i18n="invite_step1">Share your https://ghalbol.com/connect/… link or QR from Invite in Ghal Bol.</span></li>
+            <li><span class="n">2</span><span data-i18n="invite_step2">They open it in Ghal Bol (or install from Play / Linux first).</span></li>
+            <li><span class="n">3</span><span data-i18n="invite_step3">When both are reachable, chat and calls connect — LAN and WAN paths run in parallel for calls.</span></li>
           </ol>
         </section>
 
         <section class="band" id="platforms">
-          <p class="eyebrow">Ghal Bol · Platforms</p>
-          <h2>Android and Linux today</h2>
-          <p>Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as <code>com.ghalbol</code>.</p>
+          <p class="eyebrow" data-i18n="plat_eyebrow">Ghal Bol · Platforms</p>
+          <h2 data-i18n="plat_title">Android and Linux today</h2>
+          <p data-i18n="plat_lead">Windows packages are built from the same workspace. The public download on this site is the Linux desktop bundle; Android ships on Google Play as com.ghalbol.</p>
           <div class="platforms">
             <div class="feature-item">
-              <h3>Android</h3>
-              <p>Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.</p>
-              <a class="btn primary block" href="${PLAY}">Open Play Store</a>
+              <h3 data-i18n="plat_android">Android</h3>
+              <p data-i18n="plat_android_body">Install Ghal Bol from Play. Verified App Links open invites straight into the app when possible.</p>
+              <a class="btn primary block" href="${PLAY}" data-i18n="cta_open_play">Open Play Store</a>
             </div>
             <div class="feature-item">
-              <h3>Linux x86_64</h3>
-              <p>Extract the release archive, then <code>./install.sh</code> (per-user) or <code>./run.sh</code> to try in place.</p>
-              <a class="btn secondary block" href="/download/linux">Linux download</a>
+              <h3 data-i18n="plat_linux">Linux x86_64</h3>
+              <p data-i18n="plat_linux_body">Extract the release archive, then ./install.sh (per-user) or ./run.sh to try in place.</p>
+              <a class="btn secondary block" href="/download/linux" data-i18n="cta_linux_dl">Linux download</a>
             </div>
           </div>
         </section>
 
         <section class="band">
-          <p class="eyebrow">Names</p>
-          <h2>Trademark, company, brand</h2>
-          <p><strong>Gotigin</strong> is the trademark (<em>Where Technology Meets Discovery</em>). <strong>GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED</strong> is the company. <strong>Ghal Bol</strong> is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay <code>ghalbol</code> — one word. There is no separate camel-case brand.</p>
+          <p class="eyebrow" data-i18n="names_eyebrow">Names</p>
+          <h2 data-i18n="names_title">Trademark, company, brand</h2>
+          <p data-i18n="names_body">Gotigin is the trademark (Where Technology Meets Discovery). GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED is the company. Ghal Bol is the brand for communication products; this site is ghalbol.com. The messenger is what ships today. Package names and the domain stay ghalbol — one word. There is no separate camel-case brand.</p>
         </section>
         ${legalFoot()}
       `;
     }
 
     function linux() {
-      document.title = "Ghal Bol for Linux";
       return `
         <div class="page-narrow">
-          <p class="eyebrow center">Desktop</p>
-          <h1>Ghal Bol for Linux</h1>
-          <p class="center">x86_64 production bundle. Extract the archive, then run <code>./install.sh</code> (per-user into <code>~/.local</code>) or <code>./run.sh</code> to try it in place.</p>
-          <a class="btn primary block" id="linux-dl" href="${LINUX_FILE}">Download Linux bundle</a>
-          <a class="btn secondary block" href="/">Back to home</a>
+          <p class="eyebrow center" data-i18n="linux_eyebrow">Desktop</p>
+          <h1 data-i18n="linux_title">Ghal Bol for Linux</h1>
+          <p class="center" data-i18n="linux_lead">x86_64 production bundle. Extract the archive, then run ./install.sh (per-user into ~/.local) or ./run.sh to try it in place.</p>
+          <a class="btn primary block" id="linux-dl" href="${LINUX_FILE}" data-i18n="linux_download">Download Linux bundle</a>
+          <a class="btn secondary block" href="/" data-i18n="back_home">Back to home</a>
           ${legalFoot()}
         </div>
       `;
     }
 
     function invite(key) {
-      document.title = "Join on Ghal Bol";
       const alias = aliasFromQuery();
-      const https = location.origin + "/connect/" + key + (alias ? "?alias=" + encodeURIComponent(alias) : "");
       const app = "ghalbol://connect/" + key;
       const display = alias ? alias : key.slice(0, 8) + "…" + key.slice(-4);
       const embedded = embeddedBrowser();
       const warn = embedded
-        ? `<div class="warn"><strong>Opened inside another app (e.g. WhatsApp)</strong><p>This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.</p></div>`
-        : `<p>Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).</p>`;
-      const open = embedded ? "" : `<a class="btn primary block" href="${app}">Open in Ghal Bol</a>`;
+        ? `<div class="warn"><strong data-i18n="invite_embedded_title">Opened inside another app (e.g. WhatsApp)</strong><p data-i18n="invite_embedded_body">This built-in browser cannot open Ghal Bol. Tap the menu and open this page in Chrome, or copy the app link and paste it in Ghal Bol → Join.</p></div>`
+        : `<p data-i18n="invite_hint">Tap Open in Ghal Bol below. If nothing happens, copy the app link and paste it inside Ghal Bol (Join).</p>`;
+      const open = embedded ? "" : `<a class="btn primary block" href="${app}" data-i18n="invite_open">Open in Ghal Bol</a>`;
       return `
         <div class="page-narrow">
-          <p class="eyebrow center">Invitation</p>
-          <h1>Join on Ghal Bol</h1>
+          <p class="eyebrow center" data-i18n="invite_kicker">Invitation</p>
+          <h1 data-i18n="invite_h1">Join on Ghal Bol</h1>
           <p class="center"><strong>${display}</strong></p>
           ${warn}
           ${open}
-          <button class="btn primary block" id="copy-web" type="button">Copy web link</button>
-          <button class="btn primary block" id="copy-app" type="button">Copy app link</button>
-          <h2>Install the app</h2>
-          <a class="btn primary block" href="${PLAY}">Google Play</a>
-          <a class="btn secondary block" href="/download/linux">Linux download</a>
-          <a class="btn secondary block" href="/">Home</a>
+          <button class="btn primary block" id="copy-web" type="button" data-i18n="copy_web">Copy web link</button>
+          <button class="btn primary block" id="copy-app" type="button" data-i18n="copy_app">Copy app link</button>
+          <h2 data-i18n="invite_install">Install the app</h2>
+          <a class="btn primary block" href="${PLAY}" data-i18n="cta_google_play">Google Play</a>
+          <a class="btn secondary block" href="/download/linux" data-i18n="cta_linux_dl">Linux download</a>
+          <a class="btn secondary block" href="/" data-i18n="home">Home</a>
           ${legalFoot()}
         </div>
       `;
@@ -667,7 +700,7 @@
 <li><strong>Company site:</strong> <a href="https://gotigin.com">https://gotigin.com</a></li>
 </ul>
 <p>This page is the public privacy policy for the Ghal Bol messenger. <a href="/terms">Terms</a> · <a href="/support">Support</a> · <a href="/data-deletion">Data deletion</a> · <a href="/about">About</a></p>
-          <a class="btn secondary block" href="/">Back to home</a>
+          <a class="btn secondary block" href="/" data-i18n="back_home">Back to home</a>
           ${legalFoot()}
         </div>
       `;
@@ -679,7 +712,7 @@
         <div class="page-narrow privacy-body">
           <p class="eyebrow center">Ghal Bol</p>
           ${body}
-          <a class="btn secondary block" href="/">Back to home</a>
+          <a class="btn secondary block" href="/" data-i18n="back_home">Back to home</a>
           ${legalFoot()}
         </div>`;
     }
@@ -744,12 +777,11 @@
     }
 
     function badInvite() {
-      document.title = "Join on Ghal Bol";
       return `
         <div class="page-narrow">
-          <h1>Join on Ghal Bol</h1>
-          <p>Use a link like <code>https://ghalbol.com/connect/&lt;public_key_hex&gt;</code></p>
-          <a class="btn secondary block" href="/">Back to home</a>
+          <h1 data-i18n="invite_h1">Join on Ghal Bol</h1>
+          <p data-i18n="invite_bad">Use a link like https://ghalbol.com/connect/&lt;public_key_hex&gt;</p>
+          <a class="btn secondary block" href="/" data-i18n="back_home">Back to home</a>
           ${legalFoot()}
         </div>
       `;
@@ -758,50 +790,44 @@
     function render() {
       const parts = pathParts();
       const root = document.getElementById("app");
+      const head = parts[0] || "";
       if (parts.length === 0) {
         root.innerHTML = home();
-        return;
-      }
-      if (parts[0] === "privacy") {
+      } else if (head === "privacy") {
         root.innerHTML = privacy();
-        return;
-      }
-      if (parts[0] === "terms") {
+      } else if (head === "terms") {
         root.innerHTML = terms();
-        return;
-      }
-      if (parts[0] === "support") {
+      } else if (head === "support") {
         root.innerHTML = support();
-        return;
-      }
-      if (parts[0] === "data-deletion") {
+      } else if (head === "data-deletion") {
         root.innerHTML = deletion();
-        return;
-      }
-      if (parts[0] === "about") {
+      } else if (head === "about") {
         root.innerHTML = about();
-        return;
-      }
-      if (parts[0] === "download" && parts[1] === "linux") {
+      } else if (head === "download" && parts[1] === "linux") {
         root.innerHTML = linux();
-        return;
-      }
-      if (parts[0] === "connect") {
+      } else if (head === "connect") {
         const key = parts[1] || "";
         if (!isHexKey(key)) {
           root.innerHTML = badInvite();
-          return;
+        } else {
+          const alias = aliasFromQuery();
+          const https = location.origin + "/connect/" + key + (alias ? "?alias=" + encodeURIComponent(alias) : "");
+          const app = "ghalbol://connect/" + key;
+          root.innerHTML = invite(key);
+          document.getElementById("copy-web").onclick = () => copyText(https, "label_web", "Web link");
+          document.getElementById("copy-app").onclick = () => copyText(app, "label_app", "App link");
         }
-        const alias = aliasFromQuery();
-        const https = location.origin + "/connect/" + key + (alias ? "?alias=" + encodeURIComponent(alias) : "");
-        const app = "ghalbol://connect/" + key;
-        root.innerHTML = invite(key);
-        document.getElementById("copy-web").onclick = () => copyText(https, "Web link");
-        document.getElementById("copy-app").onclick = () => copyText(app, "App link");
-        return;
+      } else {
+        root.innerHTML = home();
       }
-      root.innerHTML = home();
+      applyTitle();
+      paintAlt();
     }
+
+    window.addEventListener("site:i18n", function () {
+      applyTitle();
+      paintAlt();
+    });
 
     render();
   </script>

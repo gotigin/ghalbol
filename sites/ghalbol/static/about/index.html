@@ -30,10 +30,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/legal.css">
+  <link rel="stylesheet" href="/css/site-fonts.css">
   <link rel="stylesheet" href="/css/auth-nav.css" />
   <script src="/js/firebase-init.js" defer></script>
   <script src="/js/auth-nav.js" defer></script>
   <script src="/js/lang-nav.js" defer></script>
+  <script src="/js/site-i18n.js" defer></script>
 </head>
 <body>
   <header class="topbar" id="topbar">
@@ -41,13 +43,13 @@
       <img src="/media/icon.webp" width="40" height="40" alt="">
       <span>Ghal Bol</span>
     </a>
-    <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="topnav" aria-expanded="false">Menu</button>
-    <nav class="topnav" id="topnav" aria-label="Site">
-<a class="ghost" href="/#product">Messenger</a>
-      <a class="ghost" href="/download/linux">Linux</a>
-      <a class="ghost" href="/privacy">Privacy</a>
-      <a class="ghost" href="https://play.google.com/store/apps/details?id=com.ghalbol">Play Store</a>
-      <a href="/account" data-nav="login">Login</a>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="topnav" aria-expanded="false" data-i18n="menu">Menu</button>
+    <nav class="topnav" id="topnav" aria-label="Site" data-i18n-aria-label="nav_site">
+<a class="ghost" href="/#product" data-i18n="nav_messenger">Messenger</a>
+      <a class="ghost" href="/download/linux" data-i18n="nav_linux">Linux</a>
+      <a class="ghost" href="/privacy" data-i18n="privacy">Privacy</a>
+      <a class="ghost" href="https://play.google.com/store/apps/details?id=com.ghalbol" data-i18n="nav_play">Play Store</a>
+      <a href="/account" data-nav="login" data-i18n="login">Login</a>
       <span id="site-lang-chrome" class="site-lang-chrome"></span>
     </nav>
   </header>
@@ -65,10 +67,10 @@
     </table>
     <p>Encrypted 1:1 chat and voice/video calls. Identity and transcripts stay on the device. People connect with a QR or an invite link. No phone number. The brand is not spelled GhalBol.</p>
 
-    <a class="btn secondary block" href="/">Back to home</a>
+    <a class="btn secondary block" href="/" data-i18n="back_home">Back to home</a>
     <footer class="footer">
-      <p><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/support">Support</a> · <a href="/data-deletion">Data deletion</a> · <a href="/cancellation">Cancellation</a> · <a href="/about">About</a></p>
-      <p><a href="https://play.google.com/store/apps/details?id=com.ghalbol">Play</a> · <a href="/download/linux">Linux</a> · <a href="https://gotigin.com">gotigin.com</a></p>
+      <p><a href="/privacy" data-i18n="privacy">Privacy</a> · <a href="/terms" data-i18n="terms">Terms</a> · <a href="/support" data-i18n="support">Support</a> · <a href="/data-deletion" data-i18n="data_deletion">Data deletion</a> · <a href="/cancellation" data-i18n="cancellation">Cancellation</a> · <a href="/about" data-i18n="about">About</a></p>
+      <p><a href="https://play.google.com/store/apps/details?id=com.ghalbol" data-i18n="play">Play</a> · <a href="/download/linux" data-i18n="nav_linux">Linux</a> · <a href="https://gotigin.com">gotigin.com</a></p>
       <p>GOTIGIN SOFTWARE &amp; HARDWARE PRIVATE LIMITED · Trademark Gotigin</p>
     </footer>
   </main>

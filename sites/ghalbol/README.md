@@ -52,6 +52,16 @@ Chat runs in **`ghalbol_app`** / Android — not in the browser.
 Config comes from the Firebase console Web app. Do **not** put API secrets in
 the Makepad app — Hosting-only + client Analytics is intentional.
 
+## Languages
+
+Static HTML, not a wasm home. `i18n/en.tsv` is the English source.
+`translations/<code>.tsv` (110 packs; `hi` and `ur` are real) is copied to
+`public/i18n/` by `stage-public.sh` and `deploy-firebase.sh`. Pages mark copy
+with `data-i18n`. `lang-nav.js` writes `#l=<code>`; `site-i18n.js` fetches the
+pack. Legal bodies stay English. Devanagari and Arabic fonts are in
+`static/fonts/`. Check: `./sites/ghalbol/scripts/check-translations.sh`.
+Verify steps: [`docs/WEB_SITE.md`](../../docs/WEB_SITE.md).
+
 ## Local preview (before deploy)
 
 ```bash

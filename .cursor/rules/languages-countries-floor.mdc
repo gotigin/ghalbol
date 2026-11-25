@@ -1,0 +1,22 @@
+---
+description: 115+ languages and 199 countries — product floor for Ghal Bol apps and ghalbol.com
+alwaysApply: true
+---
+
+# Languages + countries floor (Ghal Bol)
+
+Every Ghal Bol **app and website** supports the full language catalogue
+(**115+ languages**) and **199 countries**.
+
+## Do
+
+- Full catalogue picker; packs under `/i18n/<code>.tsv` for the site.
+- `lang-nav.js` + `site-i18n.js` + `data-i18n` on marketing home and account
+  (static site — no wasm walker).
+- Script fonts so non-Latin packs actually paint.
+- Local language proof before Hosting deploy.
+
+## Do not
+
+- Cosmetic lang-nav with no `site-i18n` / packs.
+- Subset pickers or English-only marketing while showing a language chip.

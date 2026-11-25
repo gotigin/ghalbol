@@ -1,0 +1,32 @@
+/* Script fonts for catalogue packs. Latin stays on Outfit / Source Sans 3
+   (Google fonts). unicode-range picks Devanagari (hi) and Arabic (ur). */
+@font-face {
+  font-family: "Noto Sans Devanagari";
+  src: url("/fonts/NotoSansDevanagari-Regular.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0900-097F, U+1CD0-1CFF, U+A8E0-A8FF;
+}
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("/fonts/NotoSansArabic-Regular.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200D;
+}
+
+:root {
+  --display: "Outfit", "Noto Sans Devanagari", "Noto Sans Arabic", system-ui, sans-serif;
+  --text: "Source Sans 3", "Noto Sans Devanagari", "Noto Sans Arabic", system-ui, sans-serif;
+}
+
+html[dir="rtl"] .site-lang-pop {
+  right: auto;
+  left: 0;
+}
+html[dir="rtl"] .hero-visual .mark {
+  left: auto;
+  right: 18px;
+}

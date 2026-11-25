@@ -5,6 +5,44 @@ Hosting). Marketing home, **Linux desktop download**, **privacy**, and **invite
 handoff** for `/connect/…` links. Chat runs in the desktop app (`ghalbol_app`)
 or the Android app — not in the browser.
 
+## Languages + countries (hard rule)
+
+Same Gotigin product floor: every Ghal Bol **app and website** supports the
+full language catalogue (**115+ languages**) and **199 countries**.
+ghalbol.com is static HTML (no Makepad wasm home). Marketing home, Linux
+download, invite handoff, account, 404, and the shared nav/footer translate
+via `lang-nav.js` (`#l=`) then `site-i18n.js`. Privacy, terms, support,
+data deletion, cancellation, and about **bodies** stay English. See
+`.cursor/rules/languages-countries-floor.mdc`.
+
+| Piece | Where |
+| --- | --- |
+| English source | `sites/ghalbol/i18n/en.tsv` (`key<TAB>english`) |
+| Packs | `sites/ghalbol/translations/<code>.tsv` — 110 files; Hindi and Urdu are real |
+| Served | `/i18n/<code>.tsv` after `stage-public.sh` (English has no pack) |
+| Scripts | `sites/_shared/chrome/` kept identical to `static/js/lang-nav.js` and `site-i18n.js` |
+| Fonts | `static/fonts/NotoSansDevanagari-Regular.ttf`, `NotoSansArabic-Regular.ttf` (`static/css/site-fonts.css`) |
+
+Alias codes have no pack of their own: `pt-BR` reads `pt`, `es-MX` reads `es`, `yue` reads `zh-Hant`, `gom` reads `kok`. Other packs start as the English source until someone translates them. New keys: edit `i18n/en.tsv`, translate `hi.tsv` and `ur.tsv`, then:
+
+```bash
+./sites/ghalbol/scripts/scaffold-translations.sh
+./sites/ghalbol/scripts/check-translations.sh
+```
+
+### Verify locally (no Hosting upload)
+
+```bash
+./sites/ghalbol/scripts/stage-public.sh
+python3 -m http.server 8765 --directory sites/ghalbol/public
+curl -s -o /dev/null -w '%{http_code}\n' http://127.0.0.1:8765/i18n/hi.tsv   # 200
+curl -s -o /dev/null -w '%{http_code}\n' http://127.0.0.1:8765/i18n/ur.tsv   # 200
+```
+
+Open `http://127.0.0.1:8765/#l=hi` and `http://127.0.0.1:8765/account#l=ur`.
+Hindi must paint in Devanagari and Urdu in Arabic script. `#l=` wins over the
+stored choice. Legal pages (`/privacy`) keep English bodies; the nav can change.
+
 Layout follows Kumkaj/Wadhu: everything lives under **`sites/ghalbol/`**
 (package `ghalbol-website`). See [`sites/README.md`](../sites/README.md) and
 [`sites/ghalbol/README.md`](../sites/ghalbol/README.md).

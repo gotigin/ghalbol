@@ -9,7 +9,7 @@ SITE="$(cd "$(dirname "$0")/.." && pwd)"
 ROOT="$(cd "$SITE/../.." && pwd)"
 OUT="$SITE/public"
 
-echo "1/2 Bundle Firebase Analytics → static/js/firebase-init.js"
+echo "1/3 Bundle Firebase Analytics → static/js/firebase-init.js"
 (
   cd "$SITE"
   if [[ ! -d node_modules/firebase ]]; then
@@ -22,7 +22,7 @@ if [[ ! -f "$SITE/static/js/firebase-init.js" ]]; then
   exit 1
 fi
 
-echo "2/2 Stage $OUT from static/"
+echo "2/3 Stage $OUT from static/"
 rm -rf "$OUT"
 mkdir -p "$OUT"
 # Keep .well-known (Firebase ignore must not use **/.* — see firebase.json).
@@ -57,7 +57,7 @@ else
   ' "$INDEX" >"$INDEX.tmp" && mv "$INDEX.tmp" "$INDEX"
 fi
 # Ensure auth-nav / lang-nav are present with cache-bust (home HTML may already include them).
-for asset in auth-nav.js lang-nav.js; do
+for asset in auth-nav.js lang-nav.js site-i18n.js; do
   if grep -q "$asset" "$INDEX"; then
     sed -i -E "s#(/js/${asset})\\?v=[^\"]*#\\1?v=${BUILD_ID}#g; s#src=\"(/js/${asset})\"#src=\"\\1?v=${BUILD_ID}\"#" "$INDEX"
   fi
@@ -93,6 +93,26 @@ for html in "$INDEX" \
     exit 1
   fi
 done
+
+echo "3/3 Stage language packs → $OUT/i18n"
+"$SITE/scripts/check-translations.sh"
+mkdir -p "$OUT/i18n"
+cp "$SITE"/translations/*.tsv "$OUT/i18n/"
+pack_n="$(find "$OUT/i18n" -name '*.tsv' | wc -l | tr -d ' ')"
+if [[ "$pack_n" -ne 110 ]]; then
+  echo "error: expected 110 packs in $OUT/i18n, found $pack_n" >&2
+  exit 1
+fi
+for font in NotoSansDevanagari-Regular.ttf NotoSansArabic-Regular.ttf; do
+  if [[ ! -f "$OUT/fonts/$font" ]]; then
+    echo "error: missing $OUT/fonts/$font" >&2
+    exit 1
+  fi
+done
+if [[ ! -f "$OUT/js/site-i18n.js" || ! -f "$OUT/js/lang-nav.js" ]]; then
+  echo "error: missing lang-nav.js or site-i18n.js in $OUT/js" >&2
+  exit 1
+fi
 
 printf '%s\n' "$BUILD_ID" >"$OUT/build-id.txt"
 echo "Staged public/ (build-id=$BUILD_ID)"

@@ -3,80 +3,85 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Account — Ghal Bol</title>
+  <title data-i18n="acct_page_title">Account — Ghal Bol</title>
   <meta name="description" content="Create a Ghal Bol account or sign in." />
   <link rel="canonical" href="https://ghalbol.com/account" />
   <meta name="theme-color" content="#0d0b3a" />
   <link rel="icon" href="/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/legal.css" />
   <link rel="stylesheet" href="/css/account.css" />
+  <link rel="stylesheet" href="/css/site-fonts.css" />
   <link rel="stylesheet" href="/css/auth-nav.css" />
   <script src="/js/firebase-init.js" defer></script>
   <script src="/js/auth-nav.js" defer></script>
   <script src="/js/lang-nav.js" defer></script>
+  <script src="/js/site-i18n.js" defer></script>
   <script src="/js/account.js" defer></script>
 </head>
 <body>
   <header class="topbar" id="topbar">
-    <a class="brand" href="/" aria-label="Ghal Bol home">
+    <a class="brand" href="/" aria-label="Ghal Bol home" data-i18n-aria-label="acct_home_aria">
       <img src="/media/icon.webp" width="40" height="40" alt="" />
       <span class="brand-lockup">
         <span class="brand-text">Ghal Bol</span>
       </span>
     </a>
-    <nav class="topnav" id="topnav" aria-label="Primary">
-<a href="/">Home</a>
-      <a href="/privacy">Privacy</a>
-      <a href="/account">Account</a>
+    <nav class="topnav" id="topnav" aria-label="Primary" data-i18n-aria-label="acct_nav_aria">
+<a href="/" data-i18n="home">Home</a>
+      <a href="/privacy" data-i18n="privacy">Privacy</a>
+      <a href="/account" data-i18n="account">Account</a>
 <span id="site-lang-chrome" class="site-lang-chrome"></span>
     </nav>
   </header>
   <main class="account-main">
-    <h1>Account</h1>
-    <p class="account-lede">Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.</p>
-    <p class="account-status" id="auth-status">Continue with email, a provider, or phone.</p>
+    <h1 data-i18n="account">Account</h1>
+    <p class="account-lede" data-i18n="acct_lede">Sign in for Ghal Bol. Full options — email, Google, Microsoft, GitHub, or phone.</p>
+    <p class="account-status" id="auth-status" data-i18n="acct_continue_with">Continue with email, a provider, or phone.</p>
     <p class="auth-error" id="auth-error" hidden></p>
 
     <div id="auth-gate">
       <section class="auth-card" aria-labelledby="email-heading">
-        <h2 id="email-heading">Email</h2>
+        <h2 id="email-heading" data-i18n="email">Email</h2>
         <form id="form-email">
-          <label for="auth-display-name">Name (optional)</label>
+          <label for="auth-display-name" data-i18n="acct_name_optional">Name (optional)</label>
           <input id="auth-display-name" name="name" type="text" autocomplete="name" />
-          <label for="auth-email">Email</label>
+          <label for="auth-email" data-i18n="email">Email</label>
           <input id="auth-email" name="email" type="email" autocomplete="email" required />
-          <label for="auth-password">Password</label>
+          <label for="auth-password" data-i18n="acct_password">Password</label>
           <input id="auth-password" name="password" type="password" autocomplete="current-password" required minlength="6" />
           <div class="auth-actions">
-            <button type="submit" class="btn btn-primary" id="btn-continue">Continue</button>
+            <button type="submit" class="btn btn-primary" id="btn-continue" data-i18n="acct_continue">Continue</button>
           </div>
         </form>
       </section>
 
-      <p class="auth-or">or continue with</p>
-      <section class="auth-card auth-providers" aria-label="Federated sign-in">
+      <p class="auth-or" data-i18n="acct_or_continue">or continue with</p>
+      <section class="auth-card auth-providers" aria-label="Federated sign-in" data-i18n-aria-label="acct_federated">
         <button type="button" class="btn btn-provider" id="btn-google">Google</button>
         <button type="button" class="btn btn-provider" id="btn-microsoft">Microsoft</button>
         <button type="button" class="btn btn-provider" id="btn-github">GitHub</button>
       </section>
 
       <section class="auth-card" aria-labelledby="phone-heading">
-        <h2 id="phone-heading">Phone</h2>
+        <h2 id="phone-heading" data-i18n="acct_phone">Phone</h2>
         <div id="auth-phone-step">
           <form id="form-phone">
-            <label for="auth-phone">Mobile number</label>
-            <input id="auth-phone" name="phone" type="tel" autocomplete="tel" placeholder="+91…" />
+            <label for="auth-phone" data-i18n="acct_mobile">Mobile number</label>
+            <input id="auth-phone" name="phone" type="tel" autocomplete="tel" placeholder="+91…" data-i18n-placeholder="acct_phone_placeholder" />
             <div class="auth-actions">
-              <button type="submit" class="btn btn-primary">Send SMS code</button>
+              <button type="submit" class="btn btn-primary" data-i18n="acct_send_sms">Send SMS code</button>
             </div>
           </form>
         </div>
         <div id="auth-sms-step" hidden>
           <form id="form-sms">
-            <label for="auth-sms-code">SMS code</label>
+            <label for="auth-sms-code" data-i18n="acct_sms_code">SMS code</label>
             <input id="auth-sms-code" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" />
             <div class="auth-actions">
-              <button type="submit" class="btn btn-primary">Confirm code</button>
+              <button type="submit" class="btn btn-primary" data-i18n="acct_confirm_code">Confirm code</button>
             </div>
           </form>
         </div>
@@ -86,16 +91,16 @@
 
     <div id="auth-session" hidden>
       <section class="auth-card">
-        <h2>Signed in</h2>
+        <h2 data-i18n="acct_signed_in">Signed in</h2>
         <div class="session-meta">
-          <strong>Signed in as</strong>
+          <strong data-i18n="acct_signed_in_as">Signed in as</strong>
           <span id="session-email"></span>
-          <strong>Status</strong>
+          <strong data-i18n="acct_status_label">Status</strong>
           <span id="session-verified"></span>
         </div>
         <div class="auth-actions">
-          <button type="button" class="btn btn-ghost" id="btn-resend-verify">Resend verification email</button>
-          <button type="button" class="btn btn-primary" id="btn-signout">Sign out</button>
+          <button type="button" class="btn btn-ghost" id="btn-resend-verify" data-i18n="acct_resend_verify">Resend verification email</button>
+          <button type="button" class="btn btn-primary" id="btn-signout" data-i18n="acct_sign_out">Sign out</button>
         </div>
       </section>
     </div>

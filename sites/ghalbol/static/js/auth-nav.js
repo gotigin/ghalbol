@@ -48,6 +48,14 @@
     if (dead && dead.parentNode) dead.parentNode.removeChild(dead);
   }
 
+  function siteT(key, english) {
+    return window.siteT ? window.siteT(key, english) : english;
+  }
+
+  var lastUser = null;
+  var lastAuth = null;
+  var painted = false;
+
   function initialsFromName(name) {
     var parts = String(name || "").trim().split(/\s+/).filter(Boolean);
     if (parts.length >= 2) return (parts[0].charAt(0) + parts[1].charAt(0)).toUpperCase();
@@ -66,7 +74,7 @@
     if (email.length >= 1) return { kind: "text", text: email.slice(0, 2).toUpperCase(), label: email };
     var phone = (user.phoneNumber || "").replace(/\D/g, "");
     if (phone.length >= 2) return { kind: "text", text: phone.slice(-2), label: user.phoneNumber };
-    return { kind: "text", text: "Anonymous", label: "Anonymous" };
+    return { kind: "text", text: "Anonymous", label: "Anonymous", anon: true };
   }
 
   function ensureHost() {
@@ -84,6 +92,9 @@
   }
 
   function paint(user, auth) {
+    lastUser = user;
+    lastAuth = auth;
+    painted = true;
     deadOverlay();
     var n = nav();
     if (!n) return;
@@ -102,6 +113,8 @@
     host.className = "site-auth-chrome site-auth-chrome--menu";
 
     var id = identity(user);
+    var avatarText = id.anon ? siteT("anonymous", "Anonymous") : id.text;
+    var avatarLabel = id.anon ? siteT("anonymous", "Anonymous") : id.label;
     var who;
     if (id.kind === "photo") {
       who = el("button", {
@@ -119,9 +132,9 @@
         type: "button",
         className:
           "site-auth-avatar site-auth-avatar--text" +
-          (id.text === "Anonymous" ? " site-auth-avatar--anon" : ""),
-        title: id.label,
-        text: id.text,
+          (id.anon ? " site-auth-avatar--anon" : ""),
+        title: avatarLabel,
+        text: avatarText,
         "aria-haspopup": "menu",
         "aria-expanded": "false",
       });
@@ -137,7 +150,7 @@
         className: "site-auth-menu-item",
         href: ACCOUNT,
         role: "menuitem",
-        text: "Account",
+        text: siteT("account", "Account"),
       })
     );
     menu.appendChild(
@@ -145,7 +158,7 @@
         type: "button",
         className: "site-auth-menu-item site-auth-logout",
         role: "menuitem",
-        text: "Logout",
+        text: siteT("logout", "Logout"),
         onClick: function () {
           menu.hidden = true;
           who.setAttribute("aria-expanded", "false");
@@ -192,6 +205,11 @@
       }
     }, 50);
   }
+
+  window.addEventListener("site:i18n", function () {
+    if (!painted) return;
+    paint(lastUser, lastAuth);
+  });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
   else start();
