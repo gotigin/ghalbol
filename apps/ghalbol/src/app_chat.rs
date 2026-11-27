@@ -35,11 +35,8 @@ impl App {
         let ns = session.app_namespace.clone();
         self.session = Some(session);
         self.page.clear();
-        let status = match host::start_network(&ns) {
-            Ok(_) => "Backup imported".into(),
-            Err(e) => format!("Network: {e}"),
-        };
-        self.show_hub(cx, &pk, &status);
+        self.show_hub(cx, &pk, "Backup imported");
+        let _ = crate::bg_jobs::start_network_bg(ns);
     }
 
     pub(crate) fn close_sheet(&mut self, cx: &mut Cx) {
@@ -112,16 +109,23 @@ impl App {
         let page = self.page.clone();
         let ns = self.namespace.clone();
         let result = match page.as_str() {
-            "join" => match host::accept_invite(&ns, self.paste.trim()) {
-                Ok(pk) => {
-                    let msg = join_accept_status_line(&pk);
-                    self.close_sheet(cx);
-                    self.open_joined_peer_chat(cx, &pk);
-                    self.show_call_line(cx, msg);
+            "join" => {
+                let invite = self.paste.trim();
+                if invite.is_empty() {
+                    Err("Paste an invitation link.".into())
+                } else if crate::bg_jobs::invite_busy() {
+                    Err("Join already in progress.".into())
+                } else if crate::bg_jobs::start_accept_invite(ns.clone(), invite.to_string()) {
+                    script_eval!(cx, {
+                        mod.state.sheet_body = "Joining…"
+                        ui.sheet_copy.render()
+                    });
+                    self.sync_sheet_body_text(cx, "Joining…");
                     return;
+                } else {
+                    Err("Could not start join.".into())
                 }
-                Err(e) => Err(e),
-            },
+            }
             "add" => host::add_contact(
                 &ns,
                 self.add_pk.trim(),
@@ -166,7 +170,14 @@ impl App {
                     self.open_page(cx, "delivery");
                     return;
                 }
-                host::extend_mailbox_ttl(mid).map(|()| "TTL extended".into())
+                if crate::bg_jobs::start_extend_ttl(mid.to_string()) {
+                    script_eval!(cx, {
+                        mod.state.sheet_body = "Extending TTL…"
+                        ui.sheet_copy.render()
+                    });
+                    self.sync_sheet_body_text(cx, "Extending TTL…");
+                }
+                return;
             }
             "log" => Ok(String::new()),
             "invite" => {
@@ -205,9 +216,20 @@ impl App {
                     Err("New password and confirmation do not match.".into())
                 } else if new_password == current {
                     Err("Choose a different password.".into())
+                } else if crate::bg_jobs::password_busy() {
+                    Err("Still changing password…".into())
                 } else {
-                    host::change_password(&ns, current, new_password)
-                        .map(|()| "Password changed. Export a new backup. Older backups still use the old password.".into())
+                    let _ = crate::bg_jobs::start_password_change(
+                        ns.clone(),
+                        current.to_string(),
+                        new_password.to_string(),
+                    );
+                    script_eval!(cx, {
+                        mod.state.sheet_body = "Changing password…"
+                        ui.sheet_copy.render()
+                    });
+                    self.sync_sheet_body_text(cx, "Changing password…");
+                    return;
                 }
             }
             _ => {
@@ -392,7 +414,13 @@ impl App {
         let msg: Result<String, String> = if action == "voice" {
             host::play_voice_file(&path)
         } else if action == "fetch" {
-            host::fetch_attachment(&peer, &path)
+            if crate::bg_jobs::attachment_fetch_busy() {
+                Ok("Downloading".into())
+            } else if crate::bg_jobs::start_attachment_fetch(peer, path) {
+                Ok("Downloading".into())
+            } else {
+                Ok("Downloading".into())
+            }
         } else if action == "save" {
             host::save_attachment(&path)
         } else if action == "resend" {
@@ -1053,10 +1081,102 @@ impl App {
     }
 
     pub(crate) fn drain_events(&mut self, cx: &mut Cx) {
+        // Background jobs (Argon2 unlock, delivery RPC, password) finish here.
+        self.apply_unlock_outcome(cx);
+        if let Some(net) = crate::bg_jobs::take_start_network() {
+            if let Err(e) = net {
+                self.show_call_line(cx, format!("Network: {e}"));
+            }
+        }
+        if let Some(job) = crate::bg_jobs::take_accept_invite() {
+            self.apply_invite_join_result(cx, job.result, Some(&job.raw));
+        }
+        if let Some(joined) = crate::bg_jobs::take_qr_picture_join() {
+            match joined {
+                Ok(pk) => {
+                    let msg = join_accept_status_line(&pk);
+                    if self.page == "scan" {
+                        self.end_qr_scan_ui();
+                        self.close_sheet(cx);
+                    }
+                    self.open_joined_peer_chat(cx, &pk);
+                    self.show_call_line(cx, msg);
+                }
+                Err(e) => {
+                    if self.page == "scan" {
+                        script_eval!(cx, {
+                            mod.state.sheet_body = #(e.clone())
+                            ui.sheet_copy.render()
+                        });
+                        self.sync_sheet_body_text(cx, &e);
+                    } else {
+                        self.show_chat_error(cx, e);
+                    }
+                }
+            }
+        }
+        if let Some(job) = crate::bg_jobs::take_attachment_fetch() {
+            let note = match &job.result {
+                Ok(text) => text.clone(),
+                Err(e) => e.clone(),
+            };
+            if !note.is_empty() {
+                if job.result.is_err() {
+                    self.show_chat_error(cx, note);
+                } else {
+                    self.show_call_line(cx, note);
+                    self.chat_rev = 0;
+                    self.refresh_transcript(cx);
+                }
+            }
+        }
+        if let Some(body) = crate::bg_jobs::take_delivery_summary() {
+            if self.page == "delivery" {
+                script_eval!(cx, {
+                    mod.state.sheet_body = #(body.clone())
+                    ui.sheet_copy.render()
+                });
+                self.sync_sheet_body_text(cx, &body);
+            }
+        }
+        if let Some(result) = crate::bg_jobs::take_password_change() {
+            let msg = match result {
+                Ok(m) => m,
+                Err(e) => crate::chat_helpers::clamp_ui_display_line(&e),
+            };
+            if self.page == "password" {
+                script_eval!(cx, {
+                    mod.state.sheet_body = #(msg.clone())
+                    ui.sheet_copy.render()
+                });
+                self.sync_sheet_body_text(cx, &msg);
+            }
+        }
+        if let Some(result) = crate::bg_jobs::take_extend_ttl() {
+            match result {
+                Ok(_) => self.open_page(cx, "delivery"),
+                Err(e) => {
+                    let e = crate::chat_helpers::clamp_ui_display_line(&e);
+                    if self.page == "delivery" {
+                        script_eval!(cx, {
+                            mod.state.sheet_body = #(e.clone())
+                            ui.sheet_copy.render()
+                        });
+                        self.sync_sheet_body_text(cx, &e);
+                    }
+                }
+            }
+        }
         let mut dirty = false;
         let mut wake_call = false;
         let mut wake_unlock = false;
-        while let Some(ev) = host::poll_event() {
+        const MAX_HOST_POLL_PER_DRAIN: usize = 128;
+        let mut polls = 0usize;
+        while polls < MAX_HOST_POLL_PER_DRAIN {
+            polls = polls.saturating_add(1);
+            let Some(ev) = host::poll_event() else {
+                break;
+            };
             match ev.get("kind").and_then(|v| v.as_str()) {
                 Some("incoming_call_wake") => wake_call = true,
                 Some("unlock_wake") => wake_unlock = true,
@@ -1245,14 +1365,22 @@ impl App {
             return;
         };
         let ns = self.namespace.clone();
-        match result.and_then(|text| host::accept_invite(&ns, &text)) {
-            Ok(pk) => {
-                host::set_qr_scan_ui_active(false);
-                let line = join_accept_status_line(&pk);
-                // Leave the scan sheet and open the new chat on the Chats tab.
-                self.close_sheet(cx);
-                self.open_joined_peer_chat(cx, &pk);
-                self.show_call_line(cx, line);
+        match result {
+            Ok(text) => {
+                if crate::bg_jobs::invite_busy() {
+                    return;
+                }
+                if crate::bg_jobs::start_accept_invite(ns, text) {
+                    if self.page == "scan" {
+                        script_eval!(cx, {
+                            mod.state.sheet_body = "Joining…"
+                            ui.sheet_copy.render()
+                        });
+                        self.sync_sheet_body_text(cx, "Joining…");
+                    }
+                } else {
+                    self.show_chat_error(cx, "Could not start join.".into());
+                }
             }
             Err(e) if e == "Scan stopped" => {
                 // Back / leaving the sheet — not an error for the user.

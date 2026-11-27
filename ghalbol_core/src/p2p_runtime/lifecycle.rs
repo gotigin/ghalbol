@@ -99,7 +99,9 @@ fn reconcile_stale_p2p_holder(g: &mut Option<P2pHolder>) -> bool {
     if !h.join.is_finished() {
         return true;
     }
-    let finished = g.take().expect("holder");
+    let Some(finished) = g.take() else {
+        return false;
+    };
     drain_holder_events_into_pending(&finished);
     false
 }

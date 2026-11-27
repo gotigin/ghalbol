@@ -167,20 +167,28 @@ mod tests {
         )
         .expect("pk");
         let pk = hex::encode(pk_bytes);
+        let norm = crate::public_key_util::normalize_contact_identity_wire(&pk)
+            .expect("normalize");
         sync_coord_lookup_peer_not_found(&pk, 2_000, 1_000_000);
-        assert!(
-            lookup_backoff_map()
-                .lock()
-                .map(|m| m.contains_key(&pk))
-                .unwrap_or(false)
-        );
+        {
+            let _guard = lookup_backoff_test_lock();
+            assert!(
+                lookup_backoff_map()
+                    .lock()
+                    .map(|m| m.contains_key(&norm))
+                    .unwrap_or(false)
+            );
+        }
         coord_invalidate_presence_on_network_change();
-        assert!(
-            lookup_backoff_map()
-                .lock()
-                .map(|m| !m.contains_key(&pk))
-                .unwrap_or(false)
-        );
+        {
+            let _guard = lookup_backoff_test_lock();
+            assert!(
+                lookup_backoff_map()
+                    .lock()
+                    .map(|m| !m.contains_key(&norm))
+                    .unwrap_or(false)
+            );
+        }
         clear_coord_lookup_backoff_for_pk(&pk);
     }
 
@@ -199,6 +207,8 @@ mod tests {
 
     #[test]
     fn sync_lookup_backoff_caps_map_growth() {
+        // Hold the test lock for the whole body so parallel tests cannot clear the map mid-fill.
+        let _guard = lookup_backoff_test_lock();
         let Ok(mut m) = lookup_backoff_map().lock() else {
             return;
         };
@@ -224,25 +234,19 @@ mod tests {
             );
         }
         assert_eq!(m.len(), MAX_LOOKUP_BACKOFF_ENTRIES);
-        drop(m);
-        let secret =
-            crate::identity::generate_secret(crate::identity::IdentityAlgorithm::Secp256k1)
-                .expect("secret");
-        let new_pk = hex::encode(
-            crate::identity::public_key_from_secret(
-                crate::identity::IdentityAlgorithm::Secp256k1,
-                &secret,
-            )
-            .expect("pk"),
+        // Cap path used by sync_coord_lookup_peer_not_found — insert under the same lock.
+        insert_lookup_backoff(
+            &mut m,
+            "new-peer-after-cap".into(),
+            CoordLookupBackoff {
+                next_allowed_ms: 9_000_000 + MAX_LOOKUP_BACKOFF_ENTRIES as u64,
+                step_ms: 800,
+            },
         );
-        sync_coord_lookup_peer_not_found(&new_pk, 800, 1_000_000);
-        let Ok(mut m2) = lookup_backoff_map().lock() else {
-            return;
-        };
-        assert_eq!(m2.len(), MAX_LOOKUP_BACKOFF_ENTRIES);
-        assert!(m2.contains_key(&new_pk));
-        assert!(!m2.contains_key("fill-0000"));
-        m2.clear();
+        assert_eq!(m.len(), MAX_LOOKUP_BACKOFF_ENTRIES);
+        assert!(m.contains_key("new-peer-after-cap"));
+        assert!(!m.contains_key("fill-0000"));
+        m.clear();
     }
 
     #[test]

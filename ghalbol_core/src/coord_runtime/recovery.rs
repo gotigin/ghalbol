@@ -6,6 +6,8 @@ use super::state::*;
 use std::sync::atomic::Ordering;
 
 pub fn clear_coord_lookup_backoff_for_pk(public_key_hex: &str) {
+    #[cfg(test)]
+    let _test = lookup_backoff_test_lock();
     let Ok(pk) = crate::public_key_util::normalize_contact_identity_wire(public_key_hex) else {
         return;
     };
@@ -16,6 +18,8 @@ pub fn clear_coord_lookup_backoff_for_pk(public_key_hex: &str) {
 
 /// Mirror `:p2p` `note_coord_lookup_not_found` so duplicate UI lookups do not fight native upkeep.
 pub fn sync_coord_lookup_peer_not_found(public_key_hex: &str, step_ms: u64, now_ms: i64) {
+    #[cfg(test)]
+    let _test = lookup_backoff_test_lock();
     let Ok(pk) = crate::public_key_util::normalize_contact_identity_wire(public_key_hex) else {
         return;
     };
@@ -89,6 +93,8 @@ pub fn mark_coord_relay_hop_lost() {
 /// Clear stale endpoint snapshot after a full WAN network handover (Wi‑Fi ↔ cell).
 /// Forces presence re-check / re-register so dials do not use pre-handover TCP endpoints.
 pub fn coord_invalidate_presence_on_network_change() {
+    #[cfg(test)]
+    let _test = lookup_backoff_test_lock();
     crate::flow_log::info(
         "coord",
         "network handover — invalidate published endpoints and re-establish presence",

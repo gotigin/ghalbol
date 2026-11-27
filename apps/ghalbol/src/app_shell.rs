@@ -18,14 +18,21 @@ fn exit_back_armed_at() -> &'static std::sync::Mutex<Option<Instant>> {
     SLOT.get_or_init(|| std::sync::Mutex::new(None))
 }
 
+fn lock_mx<T>(m: &std::sync::Mutex<T>) -> std::sync::MutexGuard<'_, T> {
+    match m.lock() {
+        Ok(g) => g,
+        Err(p) => p.into_inner(),
+    }
+}
+
 fn clear_exit_back_arm() {
-    *exit_back_armed_at().lock().unwrap() = None;
+    *lock_mx(exit_back_armed_at()) = None;
 }
 
 /// First Back at visit root → hint; second within [`EXIT_BACK_SECS`] → leave.
 fn note_exit_back_press(cx: &mut Cx) -> Result<bool, ()> {
     let now = Instant::now();
-    let mut armed = exit_back_armed_at().lock().unwrap();
+    let mut armed = lock_mx(exit_back_armed_at());
     if let Some(prev) = *armed
         && now.duration_since(prev) < Duration::from_secs(EXIT_BACK_SECS)
     {
@@ -411,7 +418,7 @@ impl App {
         };
         match event {
             Event::MouseDown(e) if e.button.is_primary() => {
-                let mut o = mouse.lock().unwrap();
+                let mut o = lock_mx(mouse);
                 if e.abs.x < 64.0 {
                     *o = Some((e.abs, Edge::Back));
                 } else if e.abs.x > width - 64.0 {
@@ -422,14 +429,14 @@ impl App {
                 false
             }
             Event::MouseUp(e) if e.button.is_primary() => {
-                if let Some((start, edge)) = mouse.lock().unwrap().take() {
+                if let Some((start, edge)) = lock_mx(mouse).take() {
                     go(edge, start, e.abs, self, cx)
                 } else {
                     false
                 }
             }
             Event::TouchUpdate(e) => {
-                let mut o = touch.lock().unwrap();
+                let mut o = lock_mx(touch);
                 let mut nav = None;
                 let mut se = None;
                 for t in &e.touches {
@@ -683,43 +690,63 @@ impl App {
             });
             return;
         }
-        if self.ui_locked && self.session.is_some() {
-            match host::reveal_secret(&self.namespace, &password) {
-                Ok(_) => {
-                    self.ui_locked = false;
-                    self.password.clear();
-                    let pk = self
-                        .session
-                        .as_ref()
-                        .map(|s| s.public_key_hex.clone())
-                        .unwrap_or_default();
-                    self.show_hub(cx, &pk, "");
-                }
-                Err(e) => {
-                    let e = crate::chat_helpers::clamp_ui_display_line(&e);
-                    script_eval!(cx, {
-                        mod.state.status = #(e)
-                        ui.identity_copy.render()
-                    });
-                }
-            }
+        if crate::bg_jobs::unlock_busy() {
+            script_eval!(cx, {
+                mod.state.status = "Still unlocking…"
+                ui.identity_copy.render()
+            });
             return;
         }
-        let creating = !host::keystore_exists(&self.namespace) && self.create_new;
-        let secret = if self.create_new { None } else { Some(self.secret.as_str()) };
-        let algo = if host::keystore_exists(&self.namespace) {
-            None
-        } else {
-            Some(self.algorithm.as_str())
+        let relock_only = self.ui_locked && self.session.is_some();
+        script_eval!(cx, {
+            mod.state.status = "Unlocking…"
+            ui.identity_copy.render()
+        });
+        if !crate::bg_jobs::start_unlock(
+            self.namespace.clone(),
+            password,
+            self.create_new,
+            self.algorithm.clone(),
+            self.secret.clone(),
+            relock_only,
+        ) {
+            script_eval!(cx, {
+                mod.state.status = "Still unlocking…"
+                ui.identity_copy.render()
+            });
+        }
+    }
+
+    /// Apply a finished unlock job from [`crate::bg_jobs`] (Signal / poll).
+    pub(crate) fn apply_unlock_outcome(&mut self, cx: &mut Cx) {
+        let Some(mut outcome) = crate::bg_jobs::take_unlock_result() else {
+            return;
         };
-        match host::unlock_with_options(&self.namespace, &password, algo, secret) {
-            Ok(session) => {
+        if matches!(&outcome, crate::bg_jobs::UnlockOutcome::RelockOk { .. }) {
+            let pk = self
+                .session
+                .as_ref()
+                .map(|s| s.public_key_hex.clone())
+                .unwrap_or_default();
+            crate::bg_jobs::patch_relock_pk(&mut outcome, pk);
+        }
+        match outcome {
+            crate::bg_jobs::UnlockOutcome::RelockOk { public_key_hex } => {
+                self.ui_locked = false;
+                self.password.clear();
+                script_eval!(cx, { ui.password_input.set_text("") });
+                self.show_hub(cx, &public_key_hex, "");
+            }
+            crate::bg_jobs::UnlockOutcome::Session {
+                session,
+                creating,
+                net_status,
+            } => {
                 self.password.clear();
                 script_eval!(cx, { ui.password_input.set_text("") });
                 self.configure_secret_field(cx, ids!(password_input), ids!(password_eye), true);
                 self.configure_secret_field(cx, ids!(secret_input), ids!(secret_eye), true);
                 let pk = session.public_key_hex.clone();
-                let ns = session.app_namespace.clone();
                 self.session = Some(session);
                 if creating {
                     self.needs_backup = true;
@@ -732,14 +759,9 @@ impl App {
                     );
                     return;
                 }
-                let net = host::start_network(&ns);
-                let status = match &net {
-                    Ok(_) => String::new(),
-                    Err(e) => format!("Network: {e}"),
-                };
-                self.show_hub(cx, &pk, &status);
+                self.show_hub(cx, &pk, &net_status);
             }
-            Err(e) => {
+            crate::bg_jobs::UnlockOutcome::Err(e) => {
                 let e = crate::chat_helpers::clamp_ui_display_line(&e);
                 script_eval!(cx, {
                     mod.state.status = #(e)
@@ -749,15 +771,43 @@ impl App {
         }
     }
 
-    /// Deep-link / argv invite waiting since before unlock. `None` = nothing pending.
-    pub(crate) fn take_pending_invite(&mut self) -> Option<(String, Result<String, String>)> {
+    /// Deep-link / argv invite waiting since before unlock.
+    pub(crate) fn take_pending_invite_raw(&mut self) -> Option<String> {
         let raw = std::mem::take(&mut self.pending_invite);
         let raw = raw.trim();
         if raw.is_empty() {
             return None;
         }
-        let invite = raw.to_string();
-        Some((invite.clone(), host::accept_invite(&self.namespace, &invite)))
+        Some(raw.to_string())
+    }
+
+    /// Apply a finished invite join from [`crate::bg_jobs`].
+    pub(crate) fn apply_invite_join_result(
+        &mut self,
+        cx: &mut Cx,
+        result: Result<String, String>,
+        invite_raw: Option<&str>,
+    ) {
+        match result {
+            Ok(pk) => {
+                self.roster_ver = u64::MAX;
+                if self.page == "join" {
+                    self.close_sheet(cx);
+                }
+                if self.page == "scan" {
+                    host::set_qr_scan_ui_active(false);
+                    self.end_qr_scan_ui();
+                    self.close_sheet(cx);
+                }
+                self.open_joined_peer_chat(cx, &pk);
+                self.show_call_line(
+                    cx,
+                    crate::app_chat::join_accept_status_line(&pk),
+                );
+            }
+            Err(e) if e == "Scan stopped" => {}
+            Err(e) => self.surface_invite_join_error(cx, e, invite_raw),
+        }
     }
 
     /// Join failures while the chat column is hidden → Join sheet; otherwise chat strip.
@@ -803,7 +853,7 @@ impl App {
     }
 
     pub(crate) fn show_hub(&mut self, cx: &mut Cx, public_key_hex: &str, status: &str) {
-        let pending_invite = self.take_pending_invite();
+        let pending_invite = self.take_pending_invite_raw();
         let status = crate::chat_helpers::clamp_ui_display_line(status);
         let self_line = format!("You  {}", short_key(public_key_hex));
         let roster = host::list_roster(&self.namespace).unwrap_or_else(|_| {
@@ -836,17 +886,8 @@ impl App {
         self.set_screen(cx, "hub");
         self.paint_nav_tabs(cx);
         self.apply_shell_layout(cx);
-        match pending_invite {
-            Some((_raw, Ok(pk))) => {
-                self.roster_ver = u64::MAX;
-                self.open_joined_peer_chat(cx, &pk);
-                self.show_call_line(
-                    cx,
-                    crate::app_chat::join_accept_status_line(&pk),
-                );
-            }
-            Some((raw, Err(e))) => self.surface_invite_join_error(cx, e, Some(&raw)),
-            None => {}
+        if let Some(raw) = pending_invite {
+            let _ = crate::bg_jobs::start_accept_invite(self.namespace.clone(), raw);
         }
         self.reopen_read_gate_if_needed();
     }
@@ -1158,11 +1199,17 @@ impl App {
                 self.show_sheet(cx, page, &i18n::phrase(&lang, "blocked"), body, &i18n::phrase(&lang, "toggle"));
             }
             "delivery" => {
+                let body = if crate::bg_jobs::delivery_busy() {
+                    "Loading delivery mailbox…".to_string()
+                } else {
+                    let _ = crate::bg_jobs::start_delivery_summary();
+                    "Loading delivery mailbox…".to_string()
+                };
                 self.show_sheet(
                     cx,
                     page,
                     &i18n::phrase(&lang, "delivery"),
-                    host::delivery_summary(),
+                    body,
                     &i18n::phrase(&lang, "refresh"),
                 );
                 // Paste a message_id then Save to extend TTL (+7 days) while still queued.
@@ -1249,17 +1296,14 @@ impl App {
         }
         self.needs_backup = false;
         let ns = self.namespace.clone();
-        let status = match host::start_network(&ns) {
-            Ok(_) => msg,
-            Err(e) => format!("{msg}\nNetwork: {e}"),
-        };
         let pk = self
             .session
             .as_ref()
             .map(|s| s.public_key_hex.clone())
             .unwrap_or_default();
         self.page.clear();
-        self.show_hub(cx, &pk, &status);
+        self.show_hub(cx, &pk, &msg);
+        let _ = crate::bg_jobs::start_network_bg(ns);
     }
 
     #[cfg(not(target_os = "android"))]
@@ -1374,28 +1418,20 @@ impl App {
     /// Decode an invite QR from a picture (desktop path or Android `content://` URI) and join.
     pub(crate) fn join_from_qr_picture(&mut self, cx: &mut Cx, picked: &str) {
         let ns = self.namespace.clone();
-        let joined = host::decode_qr_file(picked).and_then(|text| host::accept_invite(&ns, &text));
-        match joined {
-            Ok(pk) => {
-                let msg = crate::app_chat::join_accept_status_line(&pk);
-                if self.page == "scan" {
-                    self.end_qr_scan_ui();
-                    self.close_sheet(cx);
-                }
-                self.open_joined_peer_chat(cx, &pk);
-                self.show_call_line(cx, msg);
-            }
-            Err(e) => {
-                if self.page == "scan" {
-                    script_eval!(cx, {
-                        mod.state.sheet_body = #(e.clone())
-                        ui.sheet_copy.render()
-                    });
-                    self.sync_sheet_body_text(cx, &e);
-                } else {
-                    self.show_chat_error(cx, e);
-                }
-            }
+        if crate::bg_jobs::qr_join_busy() {
+            self.show_chat_error(cx, "Join already in progress.".into());
+            return;
+        }
+        if !crate::bg_jobs::start_qr_picture_join(ns, picked.to_string()) {
+            self.show_chat_error(cx, "Could not start join.".into());
+            return;
+        }
+        if self.page == "scan" {
+            script_eval!(cx, {
+                mod.state.sheet_body = "Joining…"
+                ui.sheet_copy.render()
+            });
+            self.sync_sheet_body_text(cx, "Joining…");
         }
     }
 

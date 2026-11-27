@@ -20,11 +20,22 @@ pub fn fetch_attachment(peer_public_key_hex: &str, offer_id: &str) -> Result<Str
     let v = p2p_runtime::p2p_attachment_fetch(&json!({
         "peer_public_key_hex": peer,
         "offer_id": offer,
+        "start_grace_ms": 0,
     }));
-    json_error(&v, "could not download attachment")?;
     if v.get("downloading").and_then(|x| x.as_bool()) == Some(true) {
         return Ok("Downloading".into());
     }
+    if v.get("ok").and_then(|x| x.as_bool()) == Some(false) {
+        let err = v
+            .get("error")
+            .and_then(|x| x.as_str())
+            .unwrap_or("could not download attachment");
+        if err.contains("already in progress") {
+            return Ok("Downloading".into());
+        }
+        return Err(err.to_string());
+    }
+    json_error(&v, "could not download attachment")?;
     Ok(v.get("local_path")
         .and_then(|x| x.as_str())
         .unwrap_or("")

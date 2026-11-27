@@ -330,6 +330,13 @@ pub(crate) mod android_pick {
     /// Chat that was open when Attach was tapped; the answer may arrive after a room switch.
     static ATTACH_PEER: Mutex<String> = Mutex::new(String::new());
 
+    fn lock_attach_peer(m: &Mutex<String>) -> std::sync::MutexGuard<'_, String> {
+        match m.lock() {
+            Ok(g) => g,
+            Err(p) => p.into_inner(),
+        }
+    }
+
     pub enum Answer {
         Picked(LiveId, String),
         Cancelled(LiveId),
@@ -347,17 +354,12 @@ pub(crate) mod android_pick {
     }
 
     pub fn pick_attachment(cx: &mut Cx, peer: &str) {
-        if let Ok(mut g) = ATTACH_PEER.lock() {
-            *g = peer.to_string();
-        }
+        *lock_attach_peer(&ATTACH_PEER) = peer.to_string();
         open(cx, ATTACHMENT, "Send a file", None);
     }
 
     pub fn take_attach_peer() -> String {
-        ATTACH_PEER
-            .lock()
-            .map(|mut g| std::mem::take(&mut *g))
-            .unwrap_or_default()
+        std::mem::take(&mut *lock_attach_peer(&ATTACH_PEER))
     }
 
     pub fn answer(action: &Action) -> Option<Answer> {

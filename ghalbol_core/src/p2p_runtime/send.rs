@@ -632,9 +632,49 @@ fn maybe_mirror_attachment_on_lan_fast_path(
     );
 }
 
-/// How long `p2p_attachment_fetch` waits for a start-up verdict before reporting
-/// the transfer as in progress.
+/// Default grace when `wait_for_start` / explicit `start_grace_ms` is used (tests, non-UI callers).
 const ATTACHMENT_FETCH_START_GRACE: Duration = Duration::from_millis(1500);
+
+fn attachment_fetch_start_grace(config: &Value) -> Duration {
+    if let Some(ms) = config.get("start_grace_ms").and_then(|v| v.as_u64()) {
+        return Duration::from_millis(ms);
+    }
+    if config.get("wait_for_start").and_then(|v| v.as_bool()) == Some(true) {
+        return ATTACHMENT_FETCH_START_GRACE;
+    }
+    Duration::ZERO
+}
+
+fn recv_attachment_fetch_verdict(
+    done_rx: &std::sync::mpsc::Receiver<Result<String, String>>,
+    grace: Duration,
+    offer_id: &str,
+) -> Value {
+    let verdict = if grace.is_zero() {
+        done_rx.try_recv()
+    } else {
+        done_rx.recv_timeout(grace).map_err(|e| match e {
+            std::sync::mpsc::RecvTimeoutError::Disconnected => {
+                std::sync::mpsc::TryRecvError::Disconnected
+            }
+            std::sync::mpsc::RecvTimeoutError::Timeout => std::sync::mpsc::TryRecvError::Empty,
+        })
+    };
+    match verdict {
+        Ok(Ok(local_path)) => json_ok(serde_json::json!({
+            "ok": true,
+            "offer_id": offer_id,
+            "local_path": local_path,
+        })),
+        Ok(Err(e)) => json_err(e),
+        Err(std::sync::mpsc::TryRecvError::Disconnected) => json_err("attachment fetch aborted"),
+        Err(std::sync::mpsc::TryRecvError::Empty) => json_ok(serde_json::json!({
+            "ok": true,
+            "offer_id": offer_id,
+            "downloading": true,
+        })),
+    }
+}
 
 pub fn p2p_attachment_fetch(config: &Value) -> Value {
     let peer = match config
@@ -683,21 +723,7 @@ pub fn p2p_attachment_fetch(config: &Value) -> Value {
     {
         return json_err("p2p fetch failed (node stopped?)");
     }
-    match done_rx.recv_timeout(ATTACHMENT_FETCH_START_GRACE) {
-        Ok(Ok(local_path)) => json_ok(serde_json::json!({
-            "ok": true,
-            "offer_id": offer_id,
-            "local_path": local_path,
-        })),
-        Ok(Err(e)) => json_err(e),
-        Err(std::sync::mpsc::RecvTimeoutError::Disconnected) => {
-            json_err("attachment fetch aborted")
-        }
-        Err(std::sync::mpsc::RecvTimeoutError::Timeout) => json_ok(serde_json::json!({
-            "ok": true,
-            "offer_id": offer_id,
-            "downloading": true,
-        })),
-    }
+    let grace = attachment_fetch_start_grace(config);
+    recv_attachment_fetch_verdict(&done_rx, grace, offer_id)
 }
 

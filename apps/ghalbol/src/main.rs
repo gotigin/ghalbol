@@ -14,6 +14,7 @@ mod splash_ui;
 mod chat_helpers;
 mod hub_history;
 mod env_load;
+mod bg_jobs;
 mod app_actions;
 mod app_chat;
 mod app_shell;
@@ -346,19 +347,18 @@ impl AppMain for App {
                 host::set_app_visible(true);
                 if let Some(url) = host::take_view_invite() {
                     if self.session.is_some() && !self.ui_locked {
-                        match host::accept_invite(&self.namespace, &url) {
-                            Ok(pk) => {
-                                self.roster_ver = u64::MAX;
-                                self.open_joined_peer_chat(cx, &pk);
-                                self.show_call_line(
-                                    cx,
-                                    crate::app_chat::join_accept_status_line(&pk),
-                                );
-                            }
-                            Err(e) => {
-                                self.roster_ver = u64::MAX;
-                                self.surface_invite_join_error(cx, e, Some(&url));
-                            }
+                        if crate::bg_jobs::start_accept_invite(self.namespace.clone(), url.clone())
+                        {
+                            script_eval!(cx, {
+                                mod.state.call_line = "Joining…"
+                                ui.chat_log.render()
+                            });
+                        } else if !crate::bg_jobs::invite_busy() {
+                            self.surface_invite_join_error(
+                                cx,
+                                "Could not start join.".into(),
+                                Some(&url),
+                            );
                         }
                     } else {
                         self.pending_invite = url;

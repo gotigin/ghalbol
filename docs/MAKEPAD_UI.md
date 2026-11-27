@@ -117,6 +117,23 @@ Makepad 2 does not give free scrolling. The shell fills that gap:
 - **Nesting rule:** fixed chrome (title bars, search, composer, sheet Back + primary action) stays **outside** the vertical scroller. Horizontal toolbars are **siblings**, not children, of vertical scrollers so list scroll does not fight toolbar pan.
 - **IME:** see **Android chrome** above — reflow, do not pan.
 
+## UI-thread rules
+
+Heavy or unbounded host work must not run on the Makepad event loop. The shell uses named background threads in `apps/ghalbol/src/bg_jobs.rs`; finished jobs wake the UI with `SignalToUI` and `drain_events` applies the result.
+
+| Work | Off UI thread? |
+|------|----------------|
+| Argon2 unlock / re-lock check | yes (`start_unlock`) |
+| `start_network` after backup import / first hub | yes (`start_network_bg`; unlock path already starts network in the unlock worker) |
+| Delivery mailbox summary | yes |
+| Password change | yes |
+| Extend mailbox TTL | yes |
+| Accept invite (paste / QR text / deep link / pending argv) | yes (`start_accept_invite`) |
+| QR **picture** decode + join | yes (`start_qr_picture_join`) |
+| Attachment tap **Download** | yes (`start_attachment_fetch`; host uses `start_grace_ms: 0` so the worker does not block-wait) |
+
+`host::poll_event` / `drain_events` cap work per signal (`MAX_HOST_POLL_PER_DRAIN`, poll skip cap in `ghalbol_core`) so a stuck queue cannot freeze the shell. Mutex locks in the app use poison recovery (`into_inner`) on swipe-exit and bg job slots.
+
 ## Run
 
 ```bash

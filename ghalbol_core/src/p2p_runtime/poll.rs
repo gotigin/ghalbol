@@ -13,6 +13,8 @@ use super::lifecycle::{pending_p2p_events_mx, poll_next_p2p_event};
 
 static LAST_POLL_MAINTENANCE_MS: AtomicI64 = AtomicI64::new(0);
 const POLL_MAINTENANCE_INTERVAL_MS: i64 = 5_000;
+/// Cap skipped replay frames per poll so a poisoned queue cannot wedge the UI thread.
+const MAX_POLL_REPLAY_SKIPS: usize = 512;
 
 fn maybe_maintain_poll_queue(now_ms: i64) {
     let last = LAST_POLL_MAINTENANCE_MS.load(Ordering::Relaxed);
@@ -150,7 +152,13 @@ fn enrich_transcript_poll_fields(j: &mut Value) {
 pub fn p2p_poll_event() -> Option<Value> {
     maybe_maintain_poll_queue(call_state::now_ms());
     let now = call_state::now_ms();
+    let mut skips = 0usize;
     loop {
+        if skips >= MAX_POLL_REPLAY_SKIPS {
+            native_log::warn("p2p", "poll_event skip cap hit — dropping frame");
+            return None;
+        }
+        skips = skips.saturating_add(1);
         let Some(ev) = poll_next_p2p_event() else {
             return None;
         };

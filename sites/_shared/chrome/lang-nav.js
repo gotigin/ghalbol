@@ -64,7 +64,13 @@
     try {
       // No history entry per language change; Makepad listens to hashchange.
       history.replaceState(null, "", location.pathname + location.search + next);
-      window.dispatchEvent(new HashChangeEvent("hashchange"));
+      try {
+        window.dispatchEvent(new HashChangeEvent("hashchange"));
+      } catch (__) {
+        try {
+          window.dispatchEvent(new Event("hashchange"));
+        } catch (___) {}
+      }
     } catch (_) {}
   }
 
@@ -194,6 +200,20 @@
     }
   }
 
+  function activeElementIsMakepadSinkOrEmpty() {
+    var ae = document.activeElement;
+    if (!ae || ae === document.body || ae === document.documentElement) return true;
+    if (ae.tagName === "CANVAS") return true;
+    if (
+      ae.tagName === "TEXTAREA" &&
+      ae.classList &&
+      ae.classList.contains("cx_webgl_textinput")
+    ) {
+      return true;
+    }
+    return false;
+  }
+
   function armFocusGuard(search) {
     if (focusGuard) {
       clearInterval(focusGuard);
@@ -210,8 +230,10 @@
       }
       var live = activeSearch() || search;
       if (!live || live.isConnected === false) return;
-      if (document.activeElement !== live) focusSearchHard(live);
-    }, 50);
+      if (document.activeElement !== live && activeElementIsMakepadSinkOrEmpty()) {
+        focusSearchHard(live);
+      }
+    }, 250);
   }
 
   function closeAllPops() {

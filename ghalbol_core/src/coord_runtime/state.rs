@@ -77,6 +77,17 @@ pub(super) fn lookup_backoff_map() -> &'static Mutex<HashMap<String, CoordLookup
     COORD_LOOKUP_BACKOFF.get_or_init(|| Mutex::new(HashMap::new()))
 }
 
+/// Serializes unit tests that mutate the process-global lookup backoff map.
+#[cfg(test)]
+pub(super) fn lookup_backoff_test_lock() -> std::sync::MutexGuard<'static, ()> {
+    static LOCK: OnceLock<Mutex<()>> = OnceLock::new();
+    let m = LOCK.get_or_init(|| Mutex::new(()));
+    match m.lock() {
+        Ok(g) => g,
+        Err(p) => p.into_inner(),
+    }
+}
+
 /// Bound daemon/UI + native upkeep backoff entries (large rosters).
 pub(super) const MAX_LOOKUP_BACKOFF_ENTRIES: usize = 4096;
 

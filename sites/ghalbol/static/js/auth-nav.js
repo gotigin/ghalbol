@@ -48,16 +48,6 @@
     if (dead && dead.parentNode) dead.parentNode.removeChild(dead);
   }
 
-  function t(key, english) {
-    var fn = window.siteT;
-    if (typeof fn === "function") return fn(key, english);
-    return english;
-  }
-
-  var lastUser = null;
-  var lastAuth = null;
-  var painted = false;
-
   function initialsFromName(name) {
     var parts = String(name || "").trim().split(/\s+/).filter(Boolean);
     if (parts.length >= 2) return (parts[0].charAt(0) + parts[1].charAt(0)).toUpperCase();
@@ -76,7 +66,7 @@
     if (email.length >= 1) return { kind: "text", text: email.slice(0, 2).toUpperCase(), label: email };
     var phone = (user.phoneNumber || "").replace(/\D/g, "");
     if (phone.length >= 2) return { kind: "text", text: phone.slice(-2), label: user.phoneNumber };
-    return { kind: "text", text: "Anonymous", label: "Anonymous", anon: true };
+    return { kind: "text", text: "Anonymous", label: "Anonymous" };
   }
 
   function ensureHost() {
@@ -94,9 +84,7 @@
   }
 
   function paint(user, auth) {
-    lastUser = user;
-    lastAuth = auth;
-    painted = true;
+    try {
     deadOverlay();
     var n = nav();
     if (!n) return;
@@ -115,8 +103,6 @@
     host.className = "site-auth-chrome site-auth-chrome--menu";
 
     var id = identity(user);
-    var avatarText = id.anon ? t("anonymous", "Anonymous") : id.text;
-    var avatarLabel = id.anon ? t("anonymous", "Anonymous") : id.label;
     var who;
     if (id.kind === "photo") {
       who = el("button", {
@@ -134,9 +120,9 @@
         type: "button",
         className:
           "site-auth-avatar site-auth-avatar--text" +
-          (id.anon ? " site-auth-avatar--anon" : ""),
-        title: avatarLabel,
-        text: avatarText,
+          (id.text === "Anonymous" ? " site-auth-avatar--anon" : ""),
+        title: id.label,
+        text: id.text,
         "aria-haspopup": "menu",
         "aria-expanded": "false",
       });
@@ -152,7 +138,7 @@
         className: "site-auth-menu-item",
         href: ACCOUNT,
         role: "menuitem",
-        text: t("account", "Account"),
+        text: "Account",
       })
     );
     menu.appendChild(
@@ -160,7 +146,7 @@
         type: "button",
         className: "site-auth-menu-item site-auth-logout",
         role: "menuitem",
-        text: t("logout", "Logout"),
+        text: "Logout",
         onClick: function () {
           menu.hidden = true;
           who.setAttribute("aria-expanded", "false");
@@ -179,14 +165,44 @@
 
     host.appendChild(who);
     host.appendChild(menu);
+    } catch (_) {
+      try {
+        deadOverlay();
+        var nFail = nav();
+        if (!nFail) return;
+        var linkFail = loginLink();
+        var hostFail = ensureHost();
+        if (hostFail) hostFail.textContent = "";
+        if (linkFail) linkFail.hidden = false;
+      } catch (__) {}
+    }
   }
 
   function bind(auth) {
-    paint(auth.currentUser || null, auth);
-    if (typeof auth.onAuthStateChanged === "function") {
-      auth.onAuthStateChanged(function (user) {
-        paint(user, auth);
-      });
+    try {
+      paint(auth.currentUser || null, auth);
+      if (typeof auth.onAuthStateChanged === "function") {
+        auth.onAuthStateChanged(
+          function (user) {
+            try {
+              paint(user, auth);
+            } catch (_) {
+              try {
+                paint(null, auth);
+              } catch (__) {}
+            }
+          },
+          function () {
+            try {
+              paint(null, auth);
+            } catch (_) {}
+          }
+        );
+      }
+    } catch (_) {
+      try {
+        paint(null, auth);
+      } catch (__) {}
     }
   }
 
@@ -198,7 +214,13 @@
       n += 1;
       if (window.__SITE_AUTH__) {
         clearInterval(t);
-        bind(window.__SITE_AUTH__);
+        try {
+          bind(window.__SITE_AUTH__);
+        } catch (_) {
+          try {
+            paint(null, null);
+          } catch (__) {}
+        }
         return;
       }
       if (n > 100) {
@@ -207,11 +229,6 @@
       }
     }, 50);
   }
-
-  window.addEventListener("site:i18n", function () {
-    if (!painted) return;
-    paint(lastUser, lastAuth);
-  });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
   else start();
