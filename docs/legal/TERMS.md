@@ -6,7 +6,7 @@ _Last updated: 20 November 2026_
 
 By installing or using the Ghal Bol messenger (Android, Linux, or Windows) or ghalbol.com, you agree to these Terms.
 
-**Ghal Bol** is a brand of **GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED** (the company; “we”). **Gotigin** is the company’s trademark. CIN U62011GJ2026PTC179660. Registered office: Gosiya Manzil, Darbargadh, Dhoraji, Rajkot, Gujarat 360410, India.
+**Ghal Bol** is a brand of **GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED** (the company; “we”). **Gotigin** is the company’s trademark. CIN U62011GJ2026PTC179660 · Udyam UDYAM-GJ-20-0301312. Registered office: Gosiya Manzil, Darbargadh, Dhoraji, Rajkot, Gujarat 360410, India.
 
 Privacy: [ghalbol.com/privacy](https://ghalbol.com/privacy)  
 Support: [ghalbol.com/support](https://ghalbol.com/support)  

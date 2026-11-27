@@ -6,11 +6,11 @@ description = "Ghal Bol coordination server (presence, endpoint discovery)"
 publish = false
 
 [[bin]]
-name = "ghalbol_coord"
+name = "ghalbol-coord"
 path = "src/main.rs"
 
 [[bin]]
-name = "coord_client"
+name = "coord-client"
 path = "src/bin/coord_client.rs"
 
 [dependencies]

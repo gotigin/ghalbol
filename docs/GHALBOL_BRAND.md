@@ -5,7 +5,7 @@
 | Word | What it is | Not |
 | --- | --- | --- |
 | **Gotigin** | **Trademark** / house mark. Pronounced *go-tee-geen*; Memon for *find it*. Slogan: *Where Technology Meets Discovery*. | Not a product name |
-| **GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED** | Legal **company** (CIN U62011GJ2026PTC179660). Contact [mearaj@gotigin.com](mailto:mearaj@gotigin.com). Site [gotigin.com](https://gotigin.com). | Not interchangeable with the brand in product UI |
+| **GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED** | Legal **company** (CIN U62011GJ2026PTC179660 · Udyam UDYAM-GJ-20-0301312). Contact [mearaj@gotigin.com](mailto:mearaj@gotigin.com). Site [gotigin.com](https://gotigin.com). | Not interchangeable with the brand in product UI |
 | **Ghal Bol** | Communication **brand**. Site [ghalbol.com](https://ghalbol.com). The name means communication. | Not spelled **GhalBol** |
 | **Ghal Bol messenger** | Shipping **product** (`com.ghalbol`, crate `ghalbol_app` under `apps/ghalbol/`). Public app name is **Ghal Bol**. | Not a second brand |
 

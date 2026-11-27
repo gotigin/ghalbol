@@ -1,13 +1,9 @@
 #!/usr/bin/env bash
-# Stage the Hosting tree and serve it locally (SPA rewrites for /connect/…).
-# Does NOT deploy. Same shape as kumkaj/khaynjo preview-web.sh.
+# Stage the Hosting tree (wasm + static) and serve it locally. No deploy.
 #
 #   ./sites/ghalbol/scripts/preview-web.sh
-#   ./sites/ghalbol/scripts/preview-web.sh --no-build   # re-serve last public/
+#   ./sites/ghalbol/scripts/preview-web.sh --no-build
 #   PORT=8080 ./sites/ghalbol/scripts/preview-web.sh
-#
-# Open http://127.0.0.1:8080/ (or $PORT). Try:
-#   /  /download/linux  /privacy  /connect/<64-or-66-hex>?alias=Name
 set -euo pipefail
 
 SITE="$(cd "$(dirname "$0")/.." && pwd)"
@@ -19,7 +15,7 @@ for arg in "$@"; do
   case "$arg" in
     --no-build) DO_BUILD=0 ;;
     -h|--help)
-      sed -n '2,14p' "$0"
+      sed -n '2,12p' "$0"
       exit 0
       ;;
     *)
@@ -38,7 +34,6 @@ else
   fi
 fi
 
-# Free :$PORT if a previous preview still holds it.
 if command -v fuser >/dev/null 2>&1; then
   if fuser "${PORT}/tcp" >/dev/null 2>&1; then
     echo "Port ${PORT} in use — stopping previous listener."
@@ -48,9 +43,10 @@ if command -v fuser >/dev/null 2>&1; then
 fi
 
 echo "Serving $OUT at http://127.0.0.1:${PORT}/ (Ctrl+C to stop)"
-echo "    SPA fallback: unknown paths → /index.html (like Firebase rewrites)"
+echo "    / = Makepad; /privacy /connect/<hex> /download/linux = HTML"
 cd "$OUT"
-# Tiny SPA server: existing files win; otherwise index.html (Hosting rewrite).
+# Existing files win; directories with index.html work; Firebase-style rewrites
+# for /connect/<hex> → /connect/index.html and unknown → /index.html.
 exec python3 - "$PORT" <<'PY'
 import http.server, socketserver, sys, urllib.parse
 from pathlib import Path
@@ -73,7 +69,13 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         if path.is_dir() and (path / "index.html").is_file():
             self.path = ("/" + rel.rstrip("/") + "/index.html") if rel else "/index.html"
             return super().send_head()
-        # Firebase Hosting rewrite: ** → /index.html
+        parts = [p for p in rel.split("/") if p]
+        if parts and parts[0] == "connect":
+            self.path = "/connect/index.html"
+            return super().send_head()
+        if len(parts) >= 2 and parts[0] == "download" and parts[1] == "linux":
+            self.path = "/download/linux/index.html"
+            return super().send_head()
         self.path = "/index.html"
         return super().send_head()
 

@@ -11,14 +11,14 @@ WORKSPACE_ROOT="$(cd "${DEPLOY_DIR}/../.." && pwd)"
 
 # --- home coord config (edit here if needed) ---
 COORD1_USER="$(id -un)"
-COORD1_BIN="/home/${COORD1_USER}/bin/ghalbol_coord"
+COORD1_BIN="/home/${COORD1_USER}/bin/ghalbol-coord"
 GHALBOL_COORD_LISTEN="127.0.0.1:8765"
 GHALBOL_COORD_PUBLIC_URL="https://coord1.ghalbol.com:8443"
 GHALBOL_DDNS_CREDENTIALS="${DEPLOY_DIR}/godaddy-ddns-coord1.credentials"
 # --- end config ---
 
 export CARGO_TARGET_DIR="${CARGO_TARGET_DIR:-${WORKSPACE_ROOT}/build/ghalbol_coord-target}"
-BIN="${CARGO_TARGET_DIR}/release/ghalbol_coord"
+BIN="${CARGO_TARGET_DIR}/release/ghalbol-coord"
 DEST="${COORD1_BIN}"
 UNIT_NAME="ghalbol-coord1"
 LEGACY_UNIT_NAMES=("ghalbol-coord-coord1" "ghalbol-server-coord1")
@@ -37,7 +37,7 @@ cd "${WORKSPACE_ROOT}"
 
 echo "== build ghalbol_coord (release) =="
 export RUSTFLAGS="${RUSTFLAGS:--D warnings}"
-cargo build --release -p ghalbol_coord --bin ghalbol_coord
+cargo build --release -p ghalbol_coord --bin ghalbol-coord
 
 if [[ ! -x "${BIN}" ]]; then
   echo "error: ${BIN} missing after build" >&2

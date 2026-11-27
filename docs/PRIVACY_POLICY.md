@@ -9,6 +9,7 @@
 | **Brand** | **Ghal Bol** — [ghalbol.com](https://ghalbol.com) |
 | **Product** | Ghal Bol messenger (`com.ghalbol`) |
 | CIN | U62011GJ2026PTC179660 |
+| Udyam | UDYAM-GJ-20-0301312 |
 | Registered office | C/O Mearaj AB, Gosiya Manzil, Darbargadh, Dhoraji, Rajkot, Gujarat 360410, India |
 | Contact | [support@gotigin.com](mailto:support@gotigin.com) |
 

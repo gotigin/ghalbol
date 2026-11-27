@@ -1,0 +1,26 @@
+diff --git a/libs/vulkan/bitflags/Cargo.toml b/libs/vulkan/bitflags/Cargo.toml
+index f6788694..097275ac 100644
+--- a/libs/vulkan/bitflags/Cargo.toml
++++ b/libs/vulkan/bitflags/Cargo.toml
+@@ -12,7 +12,7 @@
+ [package]
+ edition = "2021"
+ rust-version = "1.56.0"
+-name = "bitflags"
++name = "makepad-vulkan-bitflags"
+ version = "2.10.0"
+ authors = ["The Rust Project Developers"]
+ build = false
+diff --git a/libs/vulkan/cfg-if/Cargo.toml b/libs/vulkan/cfg-if/Cargo.toml
+index 450f7a2d..b76fe77a 100644
+--- a/libs/vulkan/cfg-if/Cargo.toml
++++ b/libs/vulkan/cfg-if/Cargo.toml
+@@ -12,7 +12,7 @@
+ [package]
+ edition = "2018"
+ rust-version = "1.32"
+-name = "cfg-if"
++name = "makepad-vulkan-cfg-if"
+ version = "1.0.4"
+ authors = ["Alex Crichton <alex@alexcrichton.com>"]
+ build = false

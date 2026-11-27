@@ -1,0 +1,86 @@
+--- a/draw/src/text/fonts.rs
++++ b/draw/src/text/fonts.rs
+@@ -58,6 +58,8 @@
+         // compiled multi‑hundred‑KB Slug shaders on first open and left a
+         // black SurfaceView for ~70s after install. MSDF for every size.
+         OsType::Android(_) | OsType::Ios(_) => f32::MAX,
++        // Web: never Slug — Slug path paints solid pink bars on wasm.
++        OsType::Web(_) => f32::MAX,
+         _ => rasterizer.msdf_resolution().max_dpxs_per_em,
+     }
+ }
+@@ -81,6 +83,9 @@
+     slug_built_glyphs_this_redraw: usize,
+     msdf_job_sender: FromUISender<QueuedMsdfJob>,
+     msdf_result_receiver: ToUIReceiver<CompletedMsdfJob>,
++    /// False on wasm `--no-threads` (no atomics): MSDF runs on the UI thread.
++    msdf_worker_live: bool,
++    msdfer_settings: super::msdfer::Settings,
+ }
+ 
+ impl Fonts {
+@@ -101,7 +106,7 @@
+             .receiver()
+             .expect("MSDF worker receiver is taken exactly once");
+         let worker_tx = msdf_result_receiver.sender();
+-        if let Ok(task) = cx.spawn_worker(move || {
++        let msdf_worker_live = match cx.spawn_worker(move || {
+             let mut msdfer = Msdfer::new(msdfer_settings);
+             while let Ok(job) = worker_rx.recv() {
+                 let mut msdf = Image::<Bgra>::new(job.key.size);
+@@ -122,8 +127,12 @@
+                 }
+             }
+         }) {
+-            task.detach();
+-        }
++            Ok(task) => {
++                task.detach();
++                true
++            }
++            Err(_) => false,
++        };
+ 
+         Self {
+             layouter,
+@@ -146,6 +155,8 @@
+             slug_built_glyphs_this_redraw: 0,
+             msdf_job_sender,
+             msdf_result_receiver,
++            msdf_worker_live,
++            msdfer_settings,
+         }
+     }
+ 
+@@ -392,8 +403,30 @@
+             .rasterizer()
+             .borrow_mut()
+             .take_queued_msdf_jobs();
++        if self.msdf_worker_live {
++            for job in jobs {
++                let _ = self.msdf_job_sender.send(job);
++            }
++            return;
++        }
++        // wasm --no-threads: no worker pool. Rasterize MSDF on the UI thread so
++        // glyphs are not left forever-pending (invisible text / empty buttons).
++        let mut msdfer = Msdfer::new(self.msdfer_settings);
+         for job in jobs {
+-            let _ = self.msdf_job_sender.send(job);
++            let mut msdf = Image::<Bgra>::new(job.key.size);
++            msdfer.outline_to_msdf(
++                &job.outline,
++                job.dpxs_per_em,
++                &mut msdf.subimage_mut(super::geom::Rect::from(job.key.size)),
++            );
++            self.layouter
++                .rasterizer()
++                .borrow_mut()
++                .apply_completed_msdf_job(CompletedMsdfJob {
++                    key: job.key,
++                    pixels: msdf.into_pixels(),
++                    epoch: job.epoch,
++                });
+         }
+     }
+ 

@@ -9,7 +9,7 @@ publish = false
 path = "src/lib.rs"
 
 [[bin]]
-name = "ghalbol_delivery"
+name = "ghalbol-delivery"
 path = "src/main.rs"
 
 [dependencies]

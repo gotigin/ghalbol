@@ -20,7 +20,7 @@ if [[ "${LIVE_ONLY:-0}" != "1" ]]; then
   cargo test -p ghalbol_coord --test e2e_production
 fi
 
-echo "== build server + coord_client =="
+echo "== build server + coord-client =="
 export CARGO_TARGET_DIR="${CARGO_TARGET_DIR:-${WORKSPACE_ROOT}/target}"
 cargo build --release -p ghalbol_coord
 
@@ -33,8 +33,8 @@ if [[ -z "${COORD_URL}" ]]; then
   exit 0
 fi
 
-CLIENT="${CARGO_TARGET_DIR}/release/coord_client"
-# -k must come before <base_url> (coord_client parse order).
+CLIENT="${CARGO_TARGET_DIR}/release/coord-client"
+# -k must come before <base_url> (coord-client parse order).
 CLIENT_ARGS=()
 if [[ "${COORD_INSECURE_TLS}" == "1" ]]; then
   CLIENT_ARGS+=(-k)

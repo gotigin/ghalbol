@@ -19,7 +19,7 @@ GHALBOL_COORD_LISTEN=127.0.0.1:8765
 # --- end deploy config ---
 
 export CARGO_TARGET_DIR="${CARGO_TARGET_DIR:-${WORKSPACE_ROOT}/build/ghalbol_coord-target}"
-BIN="${CARGO_TARGET_DIR}/release/ghalbol_coord"
+BIN="${CARGO_TARGET_DIR}/release/ghalbol-coord"
 
 render_deploy_unit() {
   local src="$1" dst="$2"
@@ -72,7 +72,7 @@ if [[ ! -x "${BIN}" ]]; then
 fi
 
 echo "== copy to ${REMOTE} =="
-gcloud compute scp "${BIN}" "${REMOTE}:~/ghalbol_coord.new" "${GCLOUD[@]}"
+gcloud compute scp "${BIN}" "${REMOTE}:~/ghalbol-coord.new" "${GCLOUD[@]}"
 gcloud compute scp \
   "${STAGING}/ghalbol-coord.service" \
   "${STAGING}/coord-stats-logrotate" \
@@ -103,8 +103,8 @@ sudo cp "${HOME}/coord-vm-monitor.service" /etc/systemd/system/coord-vm-monitor.
 sudo cp "${HOME}/coord-vm-monitor.timer" /etc/systemd/system/coord-vm-monitor.timer
 
 sudo systemctl stop ghalbol-coord 2>/dev/null || true
-mv "${HOME}/ghalbol_coord.new" "${HOME}/ghalbol_coord"
-chmod +x "${HOME}/ghalbol_coord"
+mv "${HOME}/ghalbol-coord.new" "${HOME}/ghalbol-coord"
+chmod +x "${HOME}/ghalbol-coord"
 
 sudo systemctl daemon-reload
 sudo systemctl enable ghalbol-coord coord-vm-monitor.timer

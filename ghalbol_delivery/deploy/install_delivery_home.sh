@@ -10,12 +10,12 @@ DEPLOY_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 WORKSPACE_ROOT="$(cd "${DEPLOY_DIR}/../.." && pwd)"
 
 DELIVERY_USER="$(id -un)"
-DELIVERY_BIN="/home/${DELIVERY_USER}/bin/ghalbol_delivery"
+DELIVERY_BIN="/home/${DELIVERY_USER}/bin/ghalbol-delivery"
 GHALBOL_DELIVERY_LISTEN="127.0.0.1:8770"
 GHALBOL_DDNS_CREDENTIALS="${DEPLOY_DIR}/godaddy-ddns-delivery.credentials"
 
 export CARGO_TARGET_DIR="${CARGO_TARGET_DIR:-${WORKSPACE_ROOT}/build/ghalbol_delivery-target}"
-BIN="${CARGO_TARGET_DIR}/release/ghalbol_delivery"
+BIN="${CARGO_TARGET_DIR}/release/ghalbol-delivery"
 DEST="${DELIVERY_BIN}"
 UNIT_NAME="ghalbol-delivery"
 USER_UNIT_DIR="${HOME}/.config/systemd/user"
@@ -32,7 +32,7 @@ cd "${WORKSPACE_ROOT}"
 
 echo "== build ghalbol_delivery (release) =="
 export RUSTFLAGS="${RUSTFLAGS:--D warnings}"
-cargo build --release -p ghalbol_delivery --bin ghalbol_delivery
+cargo build --release -p ghalbol_delivery --bin ghalbol-delivery
 
 if [[ ! -x "${BIN}" ]]; then
   echo "error: ${BIN} missing after build" >&2

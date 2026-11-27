@@ -139,7 +139,7 @@ Manual CLI:
 
 ```bash
 cargo build -p ghalbol_coord --release
-./target/release/coord_client http://127.0.0.1:8765 demo-two-peers
+./target/release/coord-client http://127.0.0.1:8765 demo-two-peers
 ```
 
 Point the app at your server: set `GHALBOL_COORD_URLS` to a reachable `http://…:8765` (or HTTPS) and restart after unlock/`start_network`.

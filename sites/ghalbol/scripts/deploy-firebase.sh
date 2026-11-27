@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
-# Deploy ghalbol.com Hosting tree (Khaynjo/Wadhu pattern).
+# Deploy ghalbol.com Hosting tree (Makepad home + legal/connect/linux HTML).
 # Firebase project: ghalbol (.firebaserc). Custom domains: ghalbol.com, www.
 #
 #   ./sites/ghalbol/scripts/deploy-firebase.sh
 #   ./sites/ghalbol/scripts/deploy-firebase.sh --dry-run
-#
-# One-time: npm i -g firebase-tools && firebase login
-# Linux tarball (optional): ./scripts/package_linux_release.sh before deploy.
 set -euo pipefail
 
 SITE="$(cd "$(dirname "$0")/.." && pwd)"
@@ -35,8 +32,6 @@ fi
 
 "$SITE/scripts/stage-public.sh"
 
-# Packs are staged by stage-public.sh; copy again so a Hosting upload
-# always has /i18n/<code>.tsv even if staging is adjusted later.
 mkdir -p "$SITE/public/i18n"
 cp "$SITE"/translations/*.tsv "$SITE/public/i18n/"
 if [[ ! -f "$SITE/public/i18n/hi.tsv" || ! -f "$SITE/public/i18n/ur.tsv" ]]; then
@@ -48,13 +43,23 @@ if [[ ! -f "$SITE/public/index.html" || ! -f "$SITE/public/js/firebase-init.js" 
   echo "error: staging incomplete under $SITE/public" >&2
   exit 1
 fi
+if ! grep -qE 'ghalbol-site(\.[0-9a-f]+)?\.wasm|web_gl|full_canvas' "$SITE/public/index.html"; then
+  echo "error: public/index.html is not the Makepad home" >&2
+  exit 1
+fi
 if [[ ! -f "$SITE/public/.well-known/assetlinks.json" ]]; then
   echo "error: missing assetlinks.json in public/" >&2
   exit 1
 fi
+if [[ ! -f "$SITE/public/connect/index.html" || ! -f "$SITE/public/download/linux/index.html" ]]; then
+  echo "error: missing connect or download/linux after stage" >&2
+  exit 1
+fi
+if ! grep -q 'lang-nav.js' "$SITE/public/index.html"; then
+  echo "error: wasm shell missing lang-nav.js" >&2
+  exit 1
+fi
 
-# Always pass --project (the default in .firebaserc): without it the CLI uses
-# whatever `firebase use` last set for this folder, which can be another site.
 PROJECT="$(sed -n 's/.*"default"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' "$SITE/.firebaserc" 2>/dev/null | head -1)"
 if [[ -z "$PROJECT" ]]; then
   echo "error: no default project in sites/ghalbol/.firebaserc" >&2
@@ -68,4 +73,4 @@ else
   firebase deploy --only hosting --project "$PROJECT"
 fi
 
-echo "Done → https://ghalbol.com/ (confirm /privacy, /download/linux, /.well-known/assetlinks.json)"
+echo "Done → https://ghalbol.com/ (confirm /privacy, /connect/…, /download/linux, /.well-known/assetlinks.json)"

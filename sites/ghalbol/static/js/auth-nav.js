@@ -48,8 +48,10 @@
     if (dead && dead.parentNode) dead.parentNode.removeChild(dead);
   }
 
-  function siteT(key, english) {
-    return window.siteT ? window.siteT(key, english) : english;
+  function t(key, english) {
+    var fn = window.siteT;
+    if (typeof fn === "function") return fn(key, english);
+    return english;
   }
 
   var lastUser = null;
@@ -113,8 +115,8 @@
     host.className = "site-auth-chrome site-auth-chrome--menu";
 
     var id = identity(user);
-    var avatarText = id.anon ? siteT("anonymous", "Anonymous") : id.text;
-    var avatarLabel = id.anon ? siteT("anonymous", "Anonymous") : id.label;
+    var avatarText = id.anon ? t("anonymous", "Anonymous") : id.text;
+    var avatarLabel = id.anon ? t("anonymous", "Anonymous") : id.label;
     var who;
     if (id.kind === "photo") {
       who = el("button", {
@@ -150,7 +152,7 @@
         className: "site-auth-menu-item",
         href: ACCOUNT,
         role: "menuitem",
-        text: siteT("account", "Account"),
+        text: t("account", "Account"),
       })
     );
     menu.appendChild(
@@ -158,7 +160,7 @@
         type: "button",
         className: "site-auth-menu-item site-auth-logout",
         role: "menuitem",
-        text: siteT("logout", "Logout"),
+        text: t("logout", "Logout"),
         onClick: function () {
           menu.hidden = true;
           who.setAttribute("aria-expanded", "false");

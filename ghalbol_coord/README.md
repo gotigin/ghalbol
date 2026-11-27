@@ -37,7 +37,7 @@ COORD_URL=http://127.0.0.1:8765 ./ghalbol_coord/deploy/smoke_coord.sh
 COORD_URL=https://coord1.ghalbol.com:8443 ./ghalbol_coord/deploy/smoke_coord.sh
 ```
 
-Manual CLI: `cargo build -p ghalbol_coord --release` then `./target/release/coord_client http://127.0.0.1:8765 demo-two-peers`. See [docs/COORDINATION_SERVER.md](../docs/COORDINATION_SERVER.md).
+Manual CLI: `cargo build -p ghalbol_coord --release` then `./target/release/coord-client http://127.0.0.1:8765 demo-two-peers`. See [docs/COORDINATION_SERVER.md](../docs/COORDINATION_SERVER.md).
 
 ## Test
 

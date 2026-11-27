@@ -28,7 +28,7 @@ trap 'rm -rf "$STAGE"' EXIT
 PKG="$STAGE/ghalbol"
 mkdir -p "$PKG" "$DOWNLOADS"
 LINUX_BIN="$PKG/$(desktop_bin_name)"
-BUILT="$(cargo_target_dir)/release/ghalbol_app"
+BUILT="$(cargo_target_dir)/release/ghalbol-app"
 if [[ ! -f "$BUILT" ]]; then
   echo "Built binary not found: $BUILT" >&2
   exit 1

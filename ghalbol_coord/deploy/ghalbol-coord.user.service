@@ -19,7 +19,7 @@ Wants=network-online.target
 [Service]
 Type=simple
 WorkingDirectory=@WORKSPACE@
-ExecStart=@WORKSPACE@/build/ghalbol_coord-target/release/ghalbol_coord
+ExecStart=@WORKSPACE@/build/ghalbol_coord-target/release/ghalbol-coord
 Environment=GHALBOL_COORD_LISTEN=127.0.0.1:8765
 Environment=GHALBOL_COORD_DB=%h/.local/share/com.ghalbol.coord/ghalbol_server
 Environment=RUST_LOG=info

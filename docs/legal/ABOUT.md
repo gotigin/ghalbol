@@ -25,6 +25,7 @@ Ghal Bol is encrypted 1:1 chat and voice/video calls. Identity and transcripts s
 | --- | --- |
 | Legal name | GOTIGIN SOFTWARE & HARDWARE PRIVATE LIMITED |
 | CIN | U62011GJ2026PTC179660 |
+| Udyam | UDYAM-GJ-20-0301312 |
 | Incorporation | 24 June 2026 |
 | Registered office | Gosiya Manzil, Darbargadh, Dhoraji, Rajkot, Gujarat 360410, India |
 | Support | [support@gotigin.com](mailto:support@gotigin.com) |

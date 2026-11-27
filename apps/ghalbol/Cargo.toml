@@ -36,3 +36,8 @@ rfd = "0.15"
 # Must match makepad-platform's crates.io pin so JNI_OnLoad is not linked twice.
 [target.'cfg(target_os = "android")'.dependencies]
 makepad-android-state = "0.1.0"
+
+# Package stays `ghalbol_app` (Makepad/Android `-p` + resource folder). Binary is kebab-case.
+[[bin]]
+name = "ghalbol-app"
+path = "src/main.rs"

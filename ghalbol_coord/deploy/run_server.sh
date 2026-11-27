@@ -14,7 +14,7 @@ source "${DEPLOY_DIR}/load_env.sh"
 load_server_env "${SERVER_DIR}" ".env.development"
 
 export CARGO_TARGET_DIR="${CARGO_TARGET_DIR:-${WORKSPACE_ROOT}/build/ghalbol_coord-target}"
-BIN="${CARGO_TARGET_DIR}/release/ghalbol_coord"
+BIN="${CARGO_TARGET_DIR}/release/ghalbol-coord"
 
 cd "${WORKSPACE_ROOT}"
 
@@ -30,7 +30,7 @@ fi
 
 if [[ "${need_build}" -eq 1 ]]; then
   export RUSTFLAGS="${RUSTFLAGS:--D warnings}"
-  cargo build --release -p ghalbol_coord --bin ghalbol_coord
+  cargo build --release -p ghalbol_coord --bin ghalbol-coord
 fi
 
 if [[ ! -x "${BIN}" ]]; then

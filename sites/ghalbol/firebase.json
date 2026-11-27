@@ -26,6 +26,18 @@
             "value": "SAMEORIGIN"
           },
           {
+            "key": "Cross-Origin-Opener-Policy",
+            "value": "same-origin"
+          },
+          {
+            "key": "Cross-Origin-Embedder-Policy",
+            "value": "require-corp"
+          },
+          {
+            "key": "Cross-Origin-Resource-Policy",
+            "value": "same-origin"
+          },
+          {
             "key": "Content-Security-Policy",
             "value": "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.googleapis.com https://*.google-analytics.com https://*.firebaseio.com https://*.firebasedatabase.app https://*.cloudfunctions.net https://firebase.googleapis.com https://firebaseinstallations.googleapis.com https://*.firebaseapp.com"
           }
@@ -141,15 +153,15 @@
       },
       {
         "source": "/connect",
-        "destination": "/index.html"
+        "destination": "/connect/index.html"
       },
       {
         "source": "/connect/**",
-        "destination": "/index.html"
+        "destination": "/connect/index.html"
       },
       {
-        "source": "/download/**",
-        "destination": "/index.html"
+        "source": "/download/linux",
+        "destination": "/download/linux/index.html"
       },
       {
         "source": "/account",

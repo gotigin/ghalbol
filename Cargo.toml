@@ -11,6 +11,7 @@ members = [
     "tools/ghalbol-dev",
     "tools/ghalbol-android-dev",
     "tools/ghalbol-windows-dev",
+    "sites/ghalbol",
 ]
 exclude = [
     "vendor/makepad",

@@ -1,0 +1,10 @@
+[package]
+name = "ghalbol-site"
+version = "0.1.0"
+edition = "2024"
+description = "ghalbol.com — Makepad 2 brand website (wasm / native)"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[dependencies]
+makepad-widgets = { git = "https://github.com/makepad/makepad", rev = "1f60033ed3b1158cb7bf93accf1c91e0166c9373" }

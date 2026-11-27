@@ -37,9 +37,9 @@ source "$ROOT/scripts/cargo-target-dir.sh"
 TARGET_DIR="$(cargo_target_dir)"
 EXE=""
 for cand in \
-  "$TARGET_DIR/$TARGET/release/ghalbol_app.exe" \
-  "$TARGET_DIR/$TARGET/release/ghalbol_app" \
-  "$TARGET_DIR/release/ghalbol_app.exe"
+  "$TARGET_DIR/$TARGET/release/ghalbol-app.exe" \
+  "$TARGET_DIR/$TARGET/release/ghalbol-app" \
+  "$TARGET_DIR/release/ghalbol-app.exe"
 do
   if [[ -f "$cand" ]]; then
     EXE="$cand"
